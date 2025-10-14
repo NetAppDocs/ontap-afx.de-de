@@ -1,0 +1,44 @@
+---
+section: svm-admin
+title: Verwalten Sie Ihre Speicher-VMs und Daten
+entries:
+- title: Daten verwalten
+  entries:
+  - title: Bereiten Sie sich auf die Verwaltung Ihrer Daten vor
+    url: "/manage-data/prepare-manage-data.html"
+  - title: Erstellen und Konfigurieren eines Volumes
+    url: "/manage-data/create-configure-volume.html"
+  - title: Verwalten von Volumes
+    url: "/manage-data/manage-volumes.html"
+  - title: Erstellen und Konfigurieren eines Buckets
+    url: "/manage-data/create-configure-bucket.html"
+  - title: Buckets verwalten
+    url: "/manage-data/manage-buckets.html"
+  - title: Speicher überwachen und Fehler beheben
+    url: "/manage-data/monitor-debug-storage.html"
+- title: Daten schützen
+  entries:
+  - title: Bereiten Sie sich auf den Schutz Ihrer Daten vor
+    url: "/protect-data/prepare-protect-data.html"
+  - title: Erstellen einer Konsistenzgruppe
+    url: "/protect-data/create-consistency-group.html"
+  - title: Verwalten von Konsistenzgruppen
+    url: "/protect-data/manage-consistency-groups.html"
+  - title: Erstellen eines Snapshots
+    url: "/protect-data/create-snapshot.html"
+  - title: Verwalten von Snapshots
+    url: "/protect-data/manage-snapshots.html"
+  - title: Erstellen einer SVM-Peer-Beziehung
+    url: "/protect-data/create-peer-relationship.html"
+  - title: Einrichten und Verwalten der Snapshot-Replikation
+    url: "/protect-data/snapshot-replication.html"
+  - title: Verwalten von Richtlinien und Zeitplänen
+    url: "/protect-data/policies-schedules.html"
+- title: Sichere Daten
+  entries:
+  - title: Bereiten Sie sich auf die Sicherung Ihrer Daten vor
+    url: "/secure-data/prepare-secure-data.html"
+  - title: Verschlüsseln ruhender Daten
+    url: "/secure-data/encrypt-data-at-rest.html"
+- title: Zusätzliche Verwaltung
+  url: "/administer/additional-ontap-svm.html"

@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: protect-data/manage-consistency-groups.html 
+keywords: afx, afx system, consistency group, manage consistency group 
+summary: Sie können die Konsistenzgruppen auf einem AFX-System verwalten.  Dies kann Ihre Speicherverwaltung rationalisieren. 
+---
+= Verwalten von Konsistenzgruppen auf einem AFX-Speichersystem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Konsistenzgruppen auf einem AFX-System verwalten.  Dies kann Ihre Speicherverwaltung rationalisieren.
+
+
+
+== Hinzufügen des Snapshot-Datenschutzes zu einer Konsistenzgruppe
+
+Wenn Sie einer Konsistenzgruppe Snapshot-Datenschutz hinzufügen, können lokale Snapshots der Konsistenzgruppe in regelmäßigen Abständen basierend auf einem vordefinierten Zeitplan erstellt werden.
+
+.Schritte
+. Wählen Sie im System Manager *Schutz* und dann *Konsistenzgruppen* aus.
+. Bewegen Sie den Mauszeiger über die Konsistenzgruppe, die Sie schützen möchten.
+. Wählenimage:icon_kabob.gif["drei vertikale blaue Punkte"] ; wählen Sie dann *Bearbeiten*.
+. Wählen Sie unter *Lokaler Schutz* die Option *Schnappschüsse planen*.
+. Wählen Sie eine Snapshot-Richtlinie aus.
++
+Akzeptieren Sie die Standard-Snapshot-Richtlinie, wählen Sie eine vorhandene Richtlinie aus oder erstellen Sie eine neue Richtlinie.
+
++
+[cols="2,6a"]
+|===
+| Option | Schritte 
+
+
+| Auswählen einer vorhandenen Snapshot-Richtlinie  a| 
+Wählenimage:icon_dropdown_arrow.gif["nach unten zeigender blauer Pfeil"] neben der Standardrichtlinie; wählen Sie dann die vorhandene Richtlinie aus, die Sie verwenden möchten.
+
+
+
+| Erstellen einer neuen Snapshot-Richtlinie  a| 
+.. Wählenimage:icon_add.gif["blaues Pluszeichen gefolgt vom Wort „Add“"] ; geben Sie dann den neuen Richtliniennamen ein.
+.. Wählen Sie den Richtlinienbereich aus.
+.. Wählen Sie unter *Zeitpläne*image:icon_add.gif["blaues Pluszeichen gefolgt vom Wort „Add“"] .
+.. Wählen Sie den Namen aus, der unter *Zeitplanname* angezeigt wird.
++
+dannimage:icon_dropdown_arrow.gif["blauer Pfeil nach unten"] .
+
+.. Wählen Sie den Richtlinienzeitplan aus.
+.. Geben Sie unter *Maximale Snapshots* die maximale Anzahl von Snapshots ein, die Sie von der Konsistenzgruppe behalten möchten.
+.. Optional können Sie unter * SnapMirror -Bezeichnung* eine SnapMirror -Bezeichnung eingeben.
+.. Wählen Sie *Speichern*.
+
+
+|===
+. Wählen Sie *Bearbeiten*.
+
+
+
+
+== Ähnliche Informationen
+
+* https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["Erfahren Sie mehr über ONTAP Consistency Groups"^]
+

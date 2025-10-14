@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: install-setup/deploy-hardware.html 
+keywords: afx, afx 1k, install, setup, hardware, deploy 
+summary: Erfahren Sie, wie Sie die Schienensätze für das AFX 1K-Speichersystem und die Speicherregale installieren und die AFX-Hardware im Schrank oder Telco-Rack sichern. 
+---
+= Installieren Sie Ihr AFX 1K-Speichersystem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie die Switches installiert haben, sollten Sie die Hardware für Ihr AFX 1K-Speichersystem installieren.  Installieren Sie zuerst die Schienensätze.  Installieren und sichern Sie dann Ihr Speichersystem in einem Schrank oder Telco-Rack.
+
+.Bevor Sie beginnen
+* Stellen Sie sicher, dass Sie die dem Schienensatz beiliegende Anleitung haben.
+* Machen Sie sich mit den Sicherheitsbedenken im Zusammenhang mit dem Gewicht des Lagersystems und des Lagerregals vertraut.
+* Beachten Sie, dass der Luftstrom durch das Speichersystem von vorne eintritt, wo die Blende oder Endkappen installiert sind, und von hinten, wo sich die Anschlüsse befinden, ausströmt.
+
+
+.Schritte
+. Installieren Sie die Schienensätze für Ihr Lagersystem und die Lagerregale nach Bedarf anhand der den Sätzen beiliegenden Anweisungen.
+. Installieren und sichern Sie Ihren Controller im Schrank oder Telco-Rack:
++
+.. Positionieren Sie das Speichersystem auf den Schienen in der Mitte des Schranks oder Telco-Racks, stützen Sie das Speichersystem dann von unten ab und schieben Sie es an seinen Platz.
+.. Befestigen Sie das Speichersystem mit den mitgelieferten Befestigungsschrauben am Schrank oder Telco-Rack.
+
+
+. Befestigen Sie die Blende an der Vorderseite des Controllers.
+. Wenn Ihr AFX 1K-Speichersystem mit einem Kabelmanagementgerät geliefert wurde, befestigen Sie es an der Rückseite des Speichersystems.
++
+image::../media/drw_affa1k_install_cable_mgmt_ieops-1697.svg[Kabelmanagementgerät installieren]
+
+. Lagerregal montieren und befestigen:
++
+.. Positionieren Sie die Rückseite des Lagerregals auf den Schienen, stützen Sie das Regal dann von unten ab und schieben Sie es in den Schrank oder das Telco-Rack.
++
+Generell sollten Ablagefächer und Controller in unmittelbarer Nähe der Switches installiert werden.  Wenn Sie mehrere Lagerregale installieren, platzieren Sie das erste Lagerregal direkt über den Controllern.  Platzieren Sie das zweite Ablagefach direkt unter den Controllern.  Wiederholen Sie dieses Muster für alle weiteren Lagerregale.
+
+.. Befestigen Sie das Lagerregal mit den mitgelieferten Befestigungsschrauben am Schrank oder Telco-Rack.
+
+
+
+
+.Wie geht es weiter?
+Nachdem Sie die Hardware für Ihr AFX-System installiert haben, überprüfen Sie dielink:afx-cable-overview.html["unterstützte Verkabelungskonfigurationen für Ihr AFX 1K-Speichersystem"] .

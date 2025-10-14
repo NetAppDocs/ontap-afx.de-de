@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: manage-data/create-configure-volume.html 
+keywords: afx, afx system, create volume, volume 
+summary: Sie können ein Volume erstellen und es an eine Daten-SVM anhängen.  Jedes Volume kann Clients mithilfe eines der von AFX unterstützten Zugriffsprotokolle zugänglich gemacht werden. 
+---
+= Erstellen und Konfigurieren eines Volumes auf einem AFX-Speichersystem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Volume erstellen und es an eine Daten-SVM anhängen.  Jedes Volume kann Clients mithilfe eines der von AFX unterstützten Zugriffsprotokolle zugänglich gemacht werden.
+
+.Informationen zu diesem Vorgang
+Beim Erstellen eines Volumes müssen Sie eine Mindestmenge an Konfigurationsdetails angeben.  Zusätzliche Details können während der Erstellung oder nachträglich durch Bearbeiten des Datenträgers angegeben werden.  Sie müssen die SVM für das Volume auswählen, wenn Sie zusätzliche Daten-SVMs erstellt haben.
+
+.Schritte
+. Wählen Sie im System-Manager *Speicher* und dann *Volumes*.
+. Wählenimage:icon_add_blue_bg.png["Mit blauem Hintergrund hinzufügen"] und geben Sie die grundlegende Konfiguration einschließlich Name, Kapazität und Optimierung an.
+. Wählen Sie optional *Weitere Optionen* für zusätzliche Konfigurationen in Bezug auf Datenschutz, SnapLock und NFS-Zugriff.
+. Wählen Sie *Speichern*, um das Volumen hinzuzufügen.
+

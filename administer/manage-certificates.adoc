@@ -1,0 +1,136 @@
+---
+sidebar: sidebar 
+permalink: administer/manage-certificates.html 
+keywords: afx, afx system, certificates, pki 
+summary: Abhängig von Ihrer Umgebung müssen Sie im Rahmen der AFX-Verwaltung digitale Zertifikate erstellen und verwalten.  Sie können mehrere damit verbundene Aufgaben ausführen. 
+---
+= Verwalten von Zertifikaten auf einem AFX-Speichersystem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Abhängig von Ihrer Umgebung müssen Sie im Rahmen der AFX-Verwaltung digitale Zertifikate erstellen und verwalten.  Sie können mehrere damit verbundene Aufgaben ausführen.
+
+
+
+== Generieren einer Zertifikatsignieranforderung
+
+Um mit der Verwendung eines digitalen Zertifikats zu beginnen, müssen Sie eine Zertifikatsignieranforderung (CSR) generieren.  Mit einem CSR wird ein signiertes Zertifikat von einer Zertifizierungsstelle (CA) angefordert. Dabei erstellt ONTAP ein öffentliches/privates Schlüsselpaar und fügt den öffentlichen Schlüssel in den CSR ein.
+
+.Schritte
+. Wählen Sie im System-Manager *Cluster* und dann *Einstellungen*.
+. Wählen Sie unter *Sicherheit* und neben *Zertifikate*image:icon_arrow.gif["blauer Pfeil nach rechts"]
+. Wählenimage:icon_generate_csr.png["blaues Rechteck mit einem Pluszeichen gefolgt von den Worten „Generate CSR“"] .
+. Geben Sie den allgemeinen Namen und das Land des Betreffs an. Geben Sie optional die Organisation und die Organisationseinheit an.
+. Um die Standardwerte zu ändern, die das Zertifikat definieren, wählen Sieimage:icon_more_options.png["zwei diagonal entgegengesetzte Pfeile, gefolgt von den Worten „Weitere Optionen“"] und nehmen Sie die gewünschten Aktualisierungen vor.
+. Wählen Sie *Generieren*.
+
+
+.Ergebnis
+Sie haben eine CSR generiert, mit der Sie ein Public-Key-Zertifikat anfordern können.
+
+
+
+== Fügen Sie eine vertrauenswürdige Zertifizierungsstelle hinzu
+
+ONTAP bietet einen Standardsatz vertrauenswürdiger Stammzertifikate zur Verwendung mit Transport Layer Security (TLS) und anderen Protokollen.  Sie können bei Bedarf weitere vertrauenswürdige Zertifizierungsstellen hinzufügen.
+
+.Schritte
+. Wählen Sie im System-Manager *Cluster* und dann *Einstellungen*.
+. Wählen Sie unter *Sicherheit* und neben *Zertifikate*image:icon_arrow.gif["blauer Pfeil nach rechts"] .
+. Wählen Sie den Reiter *Vertrauenswürdige Zertifizierungsstellen* und wählen Sie dannimage:icon_add_blue_bg.png["blaues Rechteck mit einem Pluszeichen, gefolgt vom Wort „Add“ in weißen Buchstaben"] .
+. Geben Sie die Konfigurationsinformationen an, einschließlich Name, Umfang, allgemeiner Name, Typ und Zertifikatsdetails. Sie können das Zertifikat stattdessen importieren, indem Sie *Importieren* auswählen.
+. Wählen Sie *Hinzufügen*.
+
+
+.Ergebnis
+Sie haben Ihrem AFX-System eine vertrauenswürdige Zertifizierungsstelle hinzugefügt.
+
+
+
+== Erneuern oder Löschen einer vertrauenswürdigen Zertifizierungsstelle
+
+Vertrauenswürdige Zertifizierungsstellen müssen jährlich erneuert werden.  Wenn Sie ein abgelaufenes Zertifikat nicht erneuern möchten, sollten Sie es löschen.
+
+.Schritte
+. Wählen Sie *Cluster* und dann *Einstellungen*.
+. Wählen Sie unter *Sicherheit* und neben *Zertifikate*image:icon_arrow.gif["blauer Pfeil nach rechts"] .
+. Wählen Sie den Reiter *Vertrauenswürdige Zertifizierungsstellen*.
+. Wählen Sie die vertrauenswürdige Zertifizierungsstelle aus, die Sie erneuern oder löschen möchten.
+. Erneuern oder löschen Sie die Zertifizierungsstelle.
++
+[cols="2"]
+|===
+| So erneuern Sie die Zertifizierungsstelle: | So löschen Sie die Zertifizierungsstelle: 
+
+
+ a| 
+.. Wählenimage:icon_kabob.gif["drei vertikale blaue Punkte"] und wählen Sie dann *Erneuern*.
+.. Geben Sie die Zertifikatsinformationen ein oder importieren Sie sie und wählen Sie *Erneuern*.
+
+ a| 
+.. Wählenimage:icon_kabob.gif["drei vertikale blaue Punkte"] und wählen Sie dann *Löschen*.
+.. Bestätigen Sie, dass Sie löschen möchten, und wählen Sie *Löschen*.
+
+
+|===
+
+
+.Ergebnis
+Sie haben eine vorhandene vertrauenswürdige Zertifizierungsstelle auf Ihrem AFX-System erneuert oder gelöscht.
+
+
+
+== Fügen Sie ein Client-/Server-Zertifikat oder eine lokale Zertifizierungsstelle hinzu
+
+Sie können im Rahmen der Aktivierung sicherer Webdienste ein Client-/Server-Zertifikat oder eine lokale Zertifizierungsstelle hinzufügen.
+
+.Schritte
+. Wählen Sie im System-Manager *Cluster* und dann *Einstellungen*.
+. Wählen Sie unter *Sicherheit* und neben *Zertifikate*image:icon_arrow.gif["blauer Pfeil nach rechts"] .
+. Wählen Sie je nach Bedarf entweder *Client-/Server-Zertifikate* oder *Lokale Zertifizierungsstellen* aus.
+. Fügen Sie die Zertifikatsinformationen hinzu und wählen Sie *Speichern*.
+
+
+.Ergebnis
+Sie haben Ihrem AFX-System ein neues Client-/Server-Zertifikat oder lokale Autoritäten hinzugefügt.
+
+
+
+== Erneuern oder Löschen eines Client-/Server-Zertifikats oder lokaler Zertifizierungsstellen
+
+Client-/Server-Zertifikate und lokale Zertifizierungsstellen müssen jährlich erneuert werden.  Wenn Sie ein abgelaufenes Zertifikat oder lokale Zertifizierungsstellen nicht erneuern möchten, sollten Sie diese löschen.
+
+.Schritte
+. Wählen Sie *Cluster* und dann *Einstellungen*.
+. Wählen Sie unter *Sicherheit* neben Zertifikateimage:icon_arrow.gif["blauer Pfeil nach rechts"] .
+. Wählen Sie je nach Bedarf entweder *Client-/Server-Zertifikate* oder *Lokale Zertifizierungsstellen* aus.
+. Wählen Sie das Zertifikat aus, das Sie erneuern oder löschen möchten.
+. Erneuern oder löschen Sie die Zertifizierungsstelle.
++
+[cols="2"]
+|===
+| So erneuern Sie die Zertifizierungsstelle: | So löschen Sie die Zertifizierungsstelle: 
+
+
+ a| 
+.. Wählenimage:icon_kabob.gif["drei vertikale blaue Punkte"] und wählen Sie dann *Erneuern*.
+.. Geben Sie die Zertifikatsinformationen ein oder importieren Sie sie und wählen Sie *Erneuern*.
+
+ a| 
+Wählenimage:icon_kabob.gif["drei vertikale blaue Punkte"] und wählen Sie dann *Löschen*.
+
+|===
+
+
+.Ergebnis
+Sie haben ein vorhandenes Client-/Server-Zertifikat oder eine lokale Zertifizierungsstelle auf Ihrem AFX-System erneuert oder gelöscht.
+
+
+
+== Ähnliche Informationen
+
+* https://docs.netapp.com/us-en/ontap/authentication/manage-certificates-sm-task.html["Verwalten Sie ONTAP -Zertifikate mit System Manager"^]
+

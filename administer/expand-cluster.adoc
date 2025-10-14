@@ -1,0 +1,148 @@
+---
+sidebar: sidebar 
+permalink: administer/expand-cluster.html 
+keywords: afx, afx system, expansion, cluster expansion, expand cluster, add nodes 
+summary: Sie können die Rechenkapazität eines AFX-Clusters unabhängig von der Speicherkapazität erweitern.  Die Erweiterung erfolgt ohne Unterbrechung und steigert die Leistung linear, während die Volumes über die Knoten neu ausgeglichen werden.  Diese Funktion ist ein erheblicher Vorteil, wenn Sie sich an die laufenden Anforderungen Ihrer AFX-Benutzer anpassen. 
+---
+= Erweitern eines AFX-Speichersystemclusters
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Rechenkapazität eines AFX-Clusters unabhängig von der Speicherkapazität erweitern.  Die Erweiterung erfolgt ohne Unterbrechung und steigert die Leistung linear, während die Volumes über die Knoten neu ausgeglichen werden.  Diese Funktion ist ein erheblicher Vorteil, wenn Sie sich an die laufenden Anforderungen Ihrer AFX-Systembenutzer anpassen.
+
+
+
+== Vorbereiten der Erweiterung eines Clusters
+
+Bevor Sie einen AFX-Cluster erweitern, sollten Sie mit den grundlegenden Anforderungen und der allgemeinen Vorgehensweise zur Fehlerbehebung vertraut sein.
+
+
+
+=== Anforderungen
+
+Sie benötigen die Anmeldeinformationen für ein Cluster-Administratorkonto und müssen in der Lage sein, per SSH eine Verbindung zur ONTAP -CLI herzustellen.  Beim Erweitern eines Clusters müssen Sie eine gerade Anzahl von Knoten hinzufügen und die Größenbeschränkungen Ihres AFX-Systems basierend auf der Version einhalten.
+
+
+
+=== Fehlerbehebung
+
+Es gibt einige Konzepte und Szenarien zur Fehlerbehebung, die Sie bei der Clustererweiterung beachten sollten.
+
+
+
+==== Automatische Lautstärkeanpassung
+
+Automated Topology Management (ATM) ist eine interne AFX-Systemkomponente, die Zuordnungsungleichgewichte erkennt und die Volumes über die Clusterknoten hinweg neu ausgleicht.  Es basiert auf der Zero Copy Volume Move (ZCVM)-Technologie, um Volumes mithilfe von Metadatenaktualisierungen zu verschieben, anstatt die Daten zu kopieren.  ZCVM ist die standardmäßige Volume-Verschiebungstechnologie, die bei AFX-Speichersystemen verfügbar ist.
+
+
+
+==== Mögliche Szenarien zur Fehlerbehebung
+
+Es gibt mehrere Szenarien, die Sie möglicherweise während der Volumenverschiebungen im Zusammenhang mit der Erweiterung eines AFX-Clusters untersuchen müssen.
+
+Die Datenmengen werden nicht per ATM bewegt:: Dies kann auftreten, wenn der Cluster bereits ausgeglichen ist oder wenn keine geeigneten Volumes zum Verschieben vorhanden sind.
+Verwirrung darüber, wie oder wann ATM aktiv sein sollte:: Es kann vorkommen, dass die Mengen nicht so schnell verteilt werden wie erwartet.  ATM versucht alle fünf Minuten, Hardwareereignisse zu erkennen und darauf zu reagieren.  Im schlimmsten Fall wird 40 Minuten nach Abschluss des letzten Vorgangs ein neuer Ausgleichsvorgang gestartet.
+
+
+
+
+==== CLI-Befehle
+
+Es gibt mehrere Befehle, mit denen Sie einen Clustererweiterungsvorgang überwachen können.
+
+* `volume move show`
+* `volume move show -instance`
+
+
+Für weitere Unterstützung sollten Sie sich bei Bedarf an den NetApp Support wenden.
+
+
+
+== Hinzufügen von Knoten zum Erweitern eines Clusters
+
+Dieses Verfahren beschreibt, wie einem vorhandenen Cluster ein Knotenpaar hinzugefügt wird, und kann an andere Bereitstellungsumgebungen angepasst werden.  Sie müssen sowohl die ONTAP CLI als auch die System Manager-Verwaltungsschnittstellen verwenden.
+
+.Schritte
+. Stellen Sie eine Verbindung zur ONTAP CLI her und legen Sie die erweiterte Berechtigungsebene fest:
++
+`afx> set advanced`
+
+. Zeigen Sie die Volume-Standorte der aktuellen Knoten an. Beachten Sie die Anzahl der Volumes pro Knoten:
++
+`afx> vol show -fields node,size,constituent-count -is-constituent true -node *`
+
+. Zeigen Sie die IP-Adressen der Cluster-Verbindung an und speichern Sie sie zur Verwendung in späteren Schritten:
++
+`afx> net int show -role cluster`
+
+. Melden Sie sich beim Serviceprozessor jedes Knotens an, den Sie dem Cluster hinzufügen möchten.
+. Geben Sie in der Eingabeaufforderung *Systemkonsole* ein, um auf die Konsole des Knotens zuzugreifen.
+. Starten Sie den Knoten, um die Eingabeaufforderung des Startmenüs anzuzeigen:
++
+`LOADER> boot_ontap menu`
+
++
+Wenn das Menü nicht geladen wird, verwenden Sie die Tastenkombination *Strg+C*, um auf das Startmenü zuzugreifen.
+
+. Wählen Sie eine der entsprechenden Startoptionen aus dem Menü aus. Wenn Sie dazu aufgefordert werden, geben Sie *Ja* ein, um fortzufahren.
++
+Wenn Sie von hier aus zurück zu LOADER geschickt werden, geben Sie an der LOADER-Eingabeaufforderung *boot_ontap* ein.
+
+. Verwenden Sie den Cluster-Setup-Assistenten, um ein LIF, ein Subnetz und ein Gateway für die Knotenverwaltung zu konfigurieren.
++
+Diese Konfiguration wird vom System Manager verwendet, um den Knoten zu erkennen, der dem Cluster hinzugefügt werden soll.  Geben Sie die Werte wie aufgefordert ein, einschließlich Port, IP-Adresse, Netzmaske und Standard-Gateway.
+
+. Drücken Sie *STRG+C*, um auf die CLI zuzugreifen.
+. Ändern Sie die Cluster-Interconnect-Adressen, sodass sie in Ihrem Netzwerk geroutet werden können. Verwenden Sie die für Ihre Umgebung geeignete Konfiguration:
++
+`afx> net int show -role cluster`
+
++
+`afx> net int modify -vserver Cluster -lif clus1 -address 192.168.100.201`
+
++
+`afx> net int modify -vserver Cluster -lif clus2 -address 192.168.100.202`
+
++
+Dieser Schritt ist nur erforderlich, wenn die anderen Schnittstellen nicht die von ONTAP automatisch erstellten Adressen 169.254.xx verwenden.
+
+. Wiederholen Sie die obigen Schritte auf dem anderen AFX-Knotencontroller.
+. Greifen Sie über die IP-Adresse der Clusterverwaltung auf den Systemmanager zu.
+. Wählen Sie im System Manager *Cluster* und dann *Übersicht*; wählen Sie die Registerkarte *Knoten*.
+. Suchen Sie den Abschnitt *Nicht Teil dieses Clusters*; wählen Sieimage:icon_add_blue_bg.png["blaues Rechteck mit einem Pluszeichen, gefolgt vom Wort „Add“ in weißen Buchstaben"] .
++
+** Wenn die Knoten erkannt wurden, bevor die IP-Adressen der Clusterverbindung geändert wurden, müssen Sie die Knoten erneut erkennen, indem Sie das Fenster verlassen und zurück navigieren.
+** Sie können optional die CLI verwenden, um die Knoten anstelle des System Managers hinzuzufügen. Siehe den Befehl `cluster add-node` .
+
+
+. Geben Sie die Konfigurationsdetails im Menü *Knoten hinzufügen* ein. Sie können Verwaltungs-IP-Adressen manuell oder mithilfe eines Subnetzes hinzufügen.
+. Stellen Sie eine Verbindung zur ONTAP -CLI her, um den Status des Knoten-Hinzufügungsvorgangs zu überwachen:
++
+`afx> add-node-status`
+
+. Nachdem die Vorgänge abgeschlossen sind, bestätigen Sie die Volumeplatzierung auf allen Knoten. Geben Sie den Befehl einmal für jeden Knoten unter Verwendung des entsprechenden Knotennamens ein:
++
+`afx> set advanced`
+
++
+`afx> vol show -fields node,size,constituent-count -is-constituent true -node NODE_NAME`
+
+
+
+.Ergebnis
+* Das Hinzufügen neuer Knoten zum Cluster erfolgt ohne Unterbrechung.
+* Volumenbewegungen sollten automatisch erfolgen.
+* Die Leistung wird linear skaliert.
+
+
+
+
+== Ähnliche Informationen
+
+* link:../get-started/prepare-cluster-admin.html["Bereiten Sie sich auf die Verwaltung Ihres AFX-Systems vor"]
+* link:../faq-ontap-afx.html["FAQ zu ONTAP AFX-Speichersystemen"]
+* https://mysupport.netapp.com/["NetApp Support Site"^]
+

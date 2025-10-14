@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: administer/view-events-log.html 
+keywords: afx, afx system, events, audit log 
+summary: Sie können die von AFX generierten Ereignisse und Überwachungsprotokollmeldungen überprüfen, um die interne Verarbeitung zu verfolgen und potenzielle Probleme zu diagnostizieren.  Das AFX-System kann so konfiguriert werden, dass diese Informationen zusammen mit anderen zugehörigen Daten zur weiteren Verarbeitung und Archivierung weitergeleitet werden. 
+---
+= Anzeigen von AFX-Speichersystemereignissen und Überwachungsprotokoll
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die von AFX generierten Ereignisse und Überwachungsprotokollmeldungen überprüfen, um die interne Verarbeitung zu verfolgen und potenzielle Probleme zu diagnostizieren.  Das AFX-System kann so konfiguriert werden, dass diese Informationen zusammen mit anderen zugehörigen Daten zur weiteren Verarbeitung und Archivierung weitergeleitet werden.
+
+
+
+== Veranstaltungen
+
+Die Ereignismeldungen liefern wertvolle Aufzeichnungen der Systemaktivität.  Jedes Ereignis enthält eine Beschreibung und eine eindeutige Kennung sowie eine empfohlene Aktion.
+
+. Wählen Sie im System Manager *Ereignisse und Jobs* und dann *Ereignisse*.
+. Überprüfen Sie die oben auf der Seite empfohlenen Aktionen und reagieren Sie darauf, beispielsweise durch Aktivieren der automatischen Aktualisierung.
+. Wählen Sie die Registerkarte *Ereignisprotokoll*, um eine Liste der Nachrichten anzuzeigen.
+. Wählen Sie eine Ereignismeldung aus, um sie genauer zu untersuchen, einschließlich der Sequenznummer, Beschreibung, des Ereignisses und der empfohlenen Aktion.
+. Wählen Sie optional die Registerkarte * Active IQ -Vorschläge* aus und registrieren Sie sich bei Active IQ, um detaillierte Risikoinformationen für den Cluster zu erhalten.
+
+
+
+
+== Überwachungsprotokoll
+
+Das Prüfprotokoll enthält eine Aufzeichnung der Systemaktivität basierend auf der Verwendung von Zugriffsprotokollen wie HTTP.
+
+. Wählen Sie im System Manager *Ereignisse und Jobs* und dann *Überwachungsprotokolle*.
+. Wählen Sie *Einstellungen*, um die verfolgten Vorgänge zu aktivieren oder zu deaktivieren.
+. Wählen Sie optional *Auditziele verwalten*; überprüfen<<Benachrichtigungen verwalten>> für weitere Informationen.
+
+
+
+
+== Benachrichtigungen verwalten
+
+Es gibt mehrere von AFX unterstützte Benachrichtigungstypen, die Sie weiterleiten können.
+
+.Schritte
+. Wählen Sie im System-Manager *Cluster* und dann *Einstellungen*.
+. Navigieren Sie zu *Benachrichtigungsverwaltung* und wählen Sieimage:icon_kabob.gif["drei vertikale blaue Punkte"] .
+. Wählen Sie die entsprechende Aktion aus, um die von AFX verwendeten Ziele anzuzeigen oder zu konfigurieren.  So konfigurieren Sie beispielsweise:
++
+.. _Ereignisziele:_ Wählen Sie *Ereignisziele anzeigen*
+.. _Audit-Protokollziele:_ Wählen Sie *Auditziele anzeigen*
+
+
+. Wählenimage:icon_add_blue_bg.png["blaues Rechteck mit einem Pluszeichen, gefolgt vom Wort „Add“ in weißen Buchstaben"] gegebenenfalls und geben Sie die Zielinformationen an.
+. Wählen Sie *Speichern*.
+
+
+.Ähnliche Informationen
+* https://docs.netapp.com/us-en/ontap/event-performance-monitoring/index.html["ONTAP Ereignis-, Leistungs- und Integritätsüberwachung"^]
+

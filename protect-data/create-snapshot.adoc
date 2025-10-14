@@ -1,0 +1,155 @@
+---
+sidebar: sidebar 
+permalink: protect-data/create-snapshot.html 
+keywords: afx, afx system, snapshots, create snapshot 
+summary: Um Daten auf Ihrem AFX-System zu sichern, müssen Sie einen Snapshot erstellen.  Sie können einen Snapshot manuell erstellen oder die automatische Erstellung mithilfe einer Konsistenzgruppe planen. 
+---
+= Erstellen eines Snapshots auf einem AFX-Speichersystem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um Daten auf Ihrem AFX-System zu sichern, müssen Sie einen Snapshot erstellen.  Sie können einen Snapshot manuell erstellen oder die automatische Erstellung mithilfe einer Konsistenzgruppe planen.
+
+
+
+== Bevor Sie beginnen
+
+Ein Snapshot ist eine lokale, schreibgeschützte Kopie Ihrer Daten, mit der Sie Volumes zu bestimmten Zeitpunkten wiederherstellen können.  Snapshots können manuell bei Bedarf oder automatisch in regelmäßigen Abständen basierend auf einemlink:policies-schedules.html["Snapshot-Richtlinie und -Zeitplan"] .
+
+Die Snapshot-Richtlinie und der Snapshot-Zeitplan geben die Details an, einschließlich des Zeitpunkts der Snapshot-Erstellung, der Anzahl der aufzubewahrenden Kopien, der Benennung und der Kennzeichnung für die Replikation.  Beispielsweise könnte ein System jeden Tag um 0:10 Uhr einen Snapshot erstellen, die beiden aktuellsten Kopien behalten, sie „täglich“ nennen (mit einem angehängten Zeitstempel versehen) und sie für die Replikation mit „täglich“ kennzeichnen.
+
+.Arten von Snapshots
+Sie können einen On-Demand-Snapshot eines einzelnen Volumes oder einer Konsistenzgruppe erstellen.  Sie können auch automatisierte Snapshots einer Konsistenzgruppe erstellen, die mehrere Volumes enthält.  Sie können jedoch keine automatisierten Snapshots eines einzelnen Volumes erstellen.
+
+* On-Demand-Schnappschüsse
++
+Sie können jederzeit einen On-Demand-Snapshot eines Volumes erstellen.  Das Volume muss kein Mitglied einer Konsistenzgruppe sein, um durch einen On-Demand-Snapshot geschützt zu werden.  Wenn Sie einen Snapshot eines Volumes erstellen, das Mitglied einer Konsistenzgruppe ist, werden die anderen Volumes in der Konsistenzgruppe nicht in den Snapshot aufgenommen.  Wenn Sie einen On-Demand-Snapshot einer Konsistenzgruppe erstellen, werden alle Volumes in der Konsistenzgruppe einbezogen.
+
+* Automatisierte Snapshots
++
+Basierend auf den Snapshot-Richtliniendefinitionen werden automatisierte Snapshots erstellt.  Um eine Snapshot-Richtlinie auf ein Volume zur automatischen Snapshot-Erstellung anzuwenden, müssen die Volumes Mitglied derselben Konsistenzgruppe sein.  Wenn Sie eine Snapshot-Richtlinie auf eine Konsistenzgruppe anwenden, sind alle Volumes in der Konsistenzgruppe geschützt.
+
+
+
+
+
+== Erstellen eines Snapshots
+
+Erstellen Sie einen Snapshot eines Volumes oder einer Konsistenzgruppe.
+
+[role="tabbed-block"]
+====
+.Snapshot einer Konsistenzgruppe
+--
+.Schritte
+. Wählen Sie im System Manager *Schutz* und dann *Konsistenzgruppen* aus.
+. Bewegen Sie den Mauszeiger über den Namen der Konsistenzgruppe, die Sie schützen möchten.
+. Wählenimage:icon_kabob.gif["drei vertikale blaue Punkte"] ; wählen Sie dann *Schützen*.
+. Wenn Sie bei Bedarf sofort einen Snapshot erstellen möchten, wählen Sie unter *Lokaler Schutz* die Option *Jetzt einen Snapshot hinzufügen*.
++
+Der lokale Schutz erstellt den Snapshot auf demselben Cluster, der das Volume enthält.
+
++
+.. Geben Sie einen Namen für den Snapshot ein oder akzeptieren Sie den Standardnamen. Geben Sie anschließend optional eine SnapMirror -Bezeichnung ein.
++
+Das SnapMirror -Label wird vom Remote-Ziel verwendet.
+
+
+
+. Wenn Sie mithilfe einer Snapshot-Richtlinie automatisierte Snapshots erstellen möchten, wählen Sie *Snapshots planen*.
++
+.. Wählen Sie eine Snapshot-Richtlinie aus.
++
+Akzeptieren Sie die Standard-Snapshot-Richtlinie, wählen Sie eine vorhandene Richtlinie aus oder erstellen Sie eine neue Richtlinie.
+
++
+[cols="2,6a"]
+|===
+| Option | Schritte 
+
+
+| Auswählen einer vorhandenen Snapshot-Richtlinie  a| 
+Wählenimage:icon_dropdown_arrow.gif["nach unten zeigender blauer Pfeil"] neben der Standardrichtlinie; wählen Sie dann die vorhandene Richtlinie aus, die Sie verwenden möchten.
+
+
+
+| Erstellen einer neuen Snapshot-Richtlinie  a| 
+... Wählenimage:icon_add.gif["blaues Pluszeichen gefolgt vom Wort „Add“"] ; geben Sie dann die Parameter der Snapshot-Richtlinie ein.
+... Wählen Sie *Richtlinie hinzufügen*.
+
+
+|===
+
+
+. Wenn Sie Ihre Snapshots auf einen Remote-Cluster replizieren möchten, wählen Sie unter *Remote-Schutz* die Option *Auf einen Remote-Cluster replizieren*.
++
+.. Wählen Sie den Quellcluster und die Speicher-VM aus und wählen Sie dann die Replikationsrichtlinie aus.
++
+Die anfängliche Datenübertragung für die Replikation beginnt standardmäßig sofort.
+
+
+
+. Wählen Sie *Speichern*.
+
+
+--
+.Snapshot eines Volumes
+--
+.Schritte
+. Wählen Sie im System-Manager *Speicher* und dann *Volumes*.
+. Bewegen Sie den Mauszeiger über den Namen des Volumes, das Sie schützen möchten.
+. Wählenimage:icon_kabob.gif["drei vertikale blaue Punkte"] ; wählen Sie dann *Schützen*.  Wenn Sie bei Bedarf sofort einen Snapshot erstellen möchten, wählen Sie unter *Lokaler Schutz* die Option *Jetzt einen Snapshot hinzufügen*.
++
+Der lokale Schutz erstellt den Snapshot auf demselben Cluster, der das Volume enthält.
+
+. Geben Sie einen Namen für den Snapshot ein oder akzeptieren Sie den Standardnamen. Geben Sie anschließend optional eine SnapMirror -Bezeichnung ein.
++
+Das SnapMirror -Label wird vom Remote-Ziel verwendet.
+
+. Wenn Sie mithilfe einer Snapshot-Richtlinie automatisierte Snapshots erstellen möchten, wählen Sie *Snapshots planen*.
++
+.. Wählen Sie eine Snapshot-Richtlinie aus.
++
+Akzeptieren Sie die Standard-Snapshot-Richtlinie, wählen Sie eine vorhandene Richtlinie aus oder erstellen Sie eine neue Richtlinie.
+
++
+[cols="2,6a"]
+|===
+| Option | Schritte 
+
+
+| Auswählen einer vorhandenen Snapshot-Richtlinie  a| 
+Wählenimage:icon_dropdown_arrow.gif["nach unten zeigender blauer Pfeil"] neben der Standardrichtlinie; wählen Sie dann die vorhandene Richtlinie aus, die Sie verwenden möchten.
+
+
+
+| Erstellen einer neuen Snapshot-Richtlinie  a| 
+... Wählenimage:icon_add.gif["blaues Pluszeichen gefolgt vom Wort „Add“"] ; geben Sie dann die Parameter der Snapshot-Richtlinie ein.
+... Wählen Sie *Richtlinie hinzufügen*.
+
+
+|===
+
+
+. Wenn Sie Ihre Snapshots auf einen Remote-Cluster replizieren möchten, wählen Sie unter *Remote-Schutz* die Option *Auf einen Remote-Cluster replizieren*.
++
+.. Wählen Sie den Quellcluster und die Speicher-VM aus und wählen Sie dann die Replikationsrichtlinie aus.
++
+Die anfängliche Datenübertragung für die Replikation beginnt standardmäßig sofort.
+
+
+
+. Wählen Sie *Speichern*.
+
+
+--
+====
+
+
+== Ähnliche Informationen
+
+* https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["Erstellen einer ONTAP Snapshot-Richtlinie"^]
+

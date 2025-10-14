@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: install-setup/install-setup-workflow.html 
+keywords: afx, afx 1k, install, setup, workflow 
+summary: Beginnen Sie mit der Installation und Einrichtung des AFX 1K-Speichersystems und stellen Sie es in Ihrer ONTAP Umgebung bereit. 
+---
+= Installations- und Einrichtungsablauf für AFX 1K-Speichersysteme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um Ihr AFX 1K-Speichersystem zu installieren und zu konfigurieren, überprüfen Sie die Hardwareanforderungen, bereiten Ihren Standort vor, installieren die Switches, installieren und verkabeln die Hardwarekomponenten, schalten das System ein und richten Ihren ONTAP AFX-Cluster ein.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"]link:install-setup-requirements.html["Überprüfen Sie die Hardwareinstallationsanforderungen"]
+[role="quick-margin-para"]
+Überprüfen Sie die Hardwareanforderungen zur Installation Ihres AFX 1K-Speichersystems.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]link:prepare-hardware.html["Bereiten Sie die Installation Ihres AFX 1K-Speichersystems vor"]
+[role="quick-margin-para"]
+Bereiten Sie die Installation Ihres AFX 1K-Speichersystems vor, indem Sie den Standort vorbereiten, die Umgebungs- und elektrischen Anforderungen prüfen, für ausreichend Platz im Rack sorgen, die Geräte auspacken, den Inhalt anhand des Lieferscheins überprüfen und die Hardware für den Support registrieren.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"]link:install-switches.html["Installieren Sie die Switches für Ihr AFX 1K-Speichersystem"]
+[role="quick-margin-para"]
+Installieren Sie Cisco Nexus 9332D-GX2B- oder 9364D-GX2A-Switches im Schrank oder Rack.  Installieren Sie ein Pass-Through-Panel-Kit, wenn Sie den Cisco Nexus 9364D-GX2A-Switch verwenden.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Vier"]link:deploy-hardware.html["Installieren Sie die Hardware für Ihr AFX 1K-Speichersystem"]
+[role="quick-margin-para"]
+Installieren Sie die Schienensätze für Ihr Lagersystem und Ihre Regale.  Sichern Sie Ihr Speichersystem im Schrank oder Telekommunikations-Rack.  Schieben Sie anschließend die Regale auf die installierten Schienen.  Bringen Sie abschließend Kabelmanagementgeräte an der Rückseite des Speichersystems an, um eine geordnete Kabelführung zu gewährleisten.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Fünf"]link:cable-hardware.html["Verkabeln Sie die Controller und Regale für Ihr AFX 1K-Speichersystem"]
+[role="quick-margin-para"]
+Um die Hardware zu verkabeln, verbinden Sie zuerst die Speichercontrollerknoten mit Ihrem Netzwerk und verbinden Sie dann die Controllerknoten und Speicherregale mit den Cluster-Switches.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Sechs"]link:power-on-configure-switch.html["Schalten Sie die Switches für Ihr AFX 1K-Speichersystem ein und konfigurieren Sie sie"]
+[role="quick-margin-para"]
+Verkabeln Sie die Hardware, schalten Sie die Switches ein und konfigurieren Sie sie für Ihr AFX 1K-Speichersystem.  Überprüfen Sie die Konfigurationsanweisungen für die Cisco Nexus-Switches 9332D-GX2B und 9364D-GX2A.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Sieben"]link:power-on-hardware.html["Schalten Sie Ihr AFX 1K-Speichersystem ein"]
+[role="quick-margin-para"]
+Schalten Sie jedes Speicherregal ein und weisen Sie vor dem Einschalten der Controllerknoten eine eindeutige Regal-ID zu, um jedes Regal im Setup eindeutig zu identifizieren.

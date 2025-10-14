@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: manage-data/manage-buckets.html 
+keywords: afx, afx system, manage buckets 
+summary: Im Rahmen der Verwaltung von AFX S3-Buckets und Clientzugriff können Sie verschiedene Verwaltungsaufgaben ausführen.  Die S3-Konfiguration und -Unterstützung in AFX ist dieselbe wie bei Unified ONTAP.  Weitere Informationen finden Sie in der Unified ONTAP -Dokumentation. 
+---
+= Verwalten der AFX-Speichersystem-Buckets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Rahmen der Verwaltung von AFX S3-Buckets und Clientzugriff können Sie verschiedene Verwaltungsaufgaben ausführen.  Die S3-Konfiguration und -Unterstützung in AFX ist dieselbe wie bei Unified ONTAP.  Weitere Informationen finden Sie in der Unified ONTAP -Dokumentation.
+
+.Ähnliche Informationen
+https://docs.netapp.com/us-en/ontap/s3-config/index.html["Erfahren Sie mehr über die ONTAP S3-Konfiguration"^]

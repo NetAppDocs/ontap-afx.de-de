@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: protect-data/prepare-protect-data.html 
+keywords: afx, afx system, prepare, prepare protect, prepare protect data 
+summary: Bevor Sie Ihre AFX-Daten schützen, sollten Sie mit einigen der wichtigsten Konzepte und dem aktuellen Status Ihres Speichers vertraut sein. 
+---
+= Bereiten Sie sich auf den Schutz Ihrer AFX-Speichersystemdaten vor
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie Ihre AFX-Daten schützen, sollten Sie mit einigen der wichtigsten Konzepte und Funktionen vertraut sein.
+
+
+TIP: Da viele der auf AFF und FAS -Systemen verfügbaren Konzepte und Verwaltungsverfahren mit denen von AFX-Speichersystemen identisch sind, kann es hilfreich sein, die Unified ONTAP -Dokumentation durchzusehen.
+
+
+
+== Terminologie und Optionen
+
+Es gibt mehrere Begriffe im Zusammenhang mit dem AFX-Datenschutz, mit denen Sie vertraut sein sollten.
+
+Schnappschuss:: Ein Snapshot ist ein schreibgeschütztes, zeitpunktbezogenes Abbild eines Datenträgers.  Es handelt sich um eine grundlegende Technologie für die Replikations- und Datenschutzdienste von ONTAP.
+Konsistenzgruppe:: Eine Konsistenzgruppe ist eine Sammlung von Volumes, die als eine Einheit verwaltet werden.  Sie können Konsistenzgruppen erstellen, um die Speicherverwaltung und den Datenschutz für Anwendungs-Workloads zu vereinfachen.  Sie können beispielsweise in einem Vorgang einen Snapshot mehrerer Volumes erstellen, indem Sie die Konsistenzgruppe anstelle der einzelnen Volumes verwenden.
+Hierarchische Konsistenzgruppe:: Hierarchische Konsistenzgruppen wurden mit ONTAP 9.16.1 eingeführt und sind mit AFX verfügbar.  Bei einer hierarchischen Struktur können eine oder mehrere Konsistenzgruppen als untergeordnete Elemente unter einem übergeordneten Element konfiguriert werden.  Mit diesen hierarchischen Gruppen können Sie individuelle Snapshot-Richtlinien auf untergeordnete Konsistenzgruppen anwenden und die Snapshots aller untergeordneten Elemente durch Replikation des übergeordneten Elements als einzelne Einheit auf einem Remote-Cluster replizieren.
+SnapLock:: SnapLock ist eine ONTAP Funktion, mit der Sie Ihre Dateien schützen können, indem Sie sie in einen WORM-Zustand (Write Once Read Many) versetzen.  Dadurch wird eine Änderung oder Löschung für einen festgelegten Aufbewahrungszeitraum verhindert.  SnapLock -Volumes können nach der Erstellung basierend auf der Aufbewahrung nicht aus Nicht- SnapLock -Volumes konvertiert werden.
+
+
+
+
+== Ähnliche Informationen
+
+* link:../administer/additional-ontap-svm.html["Zusätzliche AFX SVM-Verwaltung"]
+* link:../get-started/prepare-cluster-admin.html["Bereiten Sie sich auf die Verwaltung Ihres AFX-Systems vor"]
+

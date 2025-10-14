@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: get-started/ontap-afx-storage.html 
+keywords: afx, afx system, learn, workloads, hardware, afx 1k, nx224, cisco 
+summary: Das NetApp AFX-Speichersystem basiert auf einer Speicherarchitektur der nächsten Generation, die das ONTAP -Speichermodell zu einer disaggregierten Hochleistungs-NAS-Lösung weiterentwickelt.  AFX unterstützt sowohl Datei- als auch Objekt-Workloads mit fortschrittlichen Technologien und Verarbeitungstechniken, die eine extrem hohe Leistung bieten. 
+---
+= Erfahren Sie mehr über AFX-Speichersysteme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das NetApp AFX-Speichersystem basiert auf einer Speicherarchitektur der nächsten Generation, die das ONTAP -Speichermodell zu einer disaggregierten Hochleistungs-NAS-Lösung weiterentwickelt.  AFX unterstützt sowohl Datei- als auch Objekt-Workloads mit fortschrittlichen Technologien und Verarbeitungstechniken, die eine extrem hohe Leistung bieten.
+
+
+
+== Typische Anwendungs-Workloads
+
+AFX-Speicher erfüllt die einzigartigen Anforderungen, die für KI/ML-Umgebungen und andere verwandte datenzentrierte Anwendungen typisch sind.  Das AFX-Speichersystem ist ideal für Organisationen, die mehrere unterschiedliche Workloads verwalten, darunter:
+
+* Training und iterative Modellverfeinerung im Zusammenhang mit Deep Learning, wo kontinuierlich eine hohe Bandbreite und Zugriff auf riesige Datensätze erforderlich sind.
+* Verarbeitung verschiedener Datentypen, einschließlich Text, Bildern und Videos.
+* Echtzeit-Inferenzanwendungen mit geringer Latenz, bei denen strenge Antwortzeitfenster erforderlich sind.
+* Data Science- und Machine Learning-Pipelines, die von der Self-Service-Datenverwaltung durch Dateningenieure und Datenwissenschaftler profitieren können.
+* Workloads, die eine hohe Gleichzeitigkeit und parallele E/A erfordern, wie z. B. Multi-GPU-Systeme mit RDMA-Transport.
+
+
+
+
+== Hardware-Infrastruktur
+
+Das NetApp AFX-Speichersystem bietet eine einheitliche Hardware- und Softwarelösung, die ein vereinfachtes Erlebnis bietet, das speziell auf die Anforderungen von Hochleistungs-NAS-Kunden zugeschnitten ist.
+
+Die folgenden Hardwarekomponenten werden bei AFX-Clustern verwendet:
+
+* AFX 1K-Controller
+* NX224 Regale
+* Cisco Nexus 9332D-GX2B- oder Nexus 9364D-GX2A-Switches
+

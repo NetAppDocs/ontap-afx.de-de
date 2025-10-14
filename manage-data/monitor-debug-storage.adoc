@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: manage-data/monitor-debug-storage.html 
+keywords: afx, afx system, monitor, troubleshoot, debug 
+summary:  
+---
+= Überwachen und Fehlerbeheben eines AFX-Speichersystems
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das AFX-System umfasst mehrere Optionen zur Überwachung des von jedem Cluster verwalteten Speichers.
+
+
+
+== NAS-Clients anzeigen
+
+Sie können eine Liste der NFS- und SMB/CIFS-Clients anzeigen, die derzeit mit dem AFX-Cluster verbunden sind.
+
+.Schritte
+. Wählen Sie im System-Manager im Navigationsbereich *Clients* aus.
+. Wählen Sie je nach Wunsch den Reiter *NFS* oder *SMB/CIFS*.
+. Passen Sie die Anzeige an und suchen und laden Sie die Kundeninformationen nach Bedarf herunter.
+
+
+
+
+== Ähnliche Informationen
+
+* link:../manage-data/prepare-manage-data.html["Bereiten Sie sich auf die Verwaltung Ihrer AFX-Daten vor"]
+

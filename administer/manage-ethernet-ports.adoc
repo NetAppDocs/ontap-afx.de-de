@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: administer/manage-ethernet-ports.html 
+keywords: afx, afx system, ethernet, ethernet ports 
+summary: Die vom AFX-System verwendeten Ports bilden die Grundlage für Netzwerkkonnektivität und -kommunikation.  Es stehen mehrere Konfigurationsoptionen zur Verfügung, um den Layer-2-Aspekt Ihres Netzwerks anzupassen. 
+---
+= Verwalten der Ethernet-Ports des AFX-Speichersystems
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die vom AFX-System verwendeten Ports bilden die Grundlage für Netzwerkkonnektivität und -kommunikation.  Es stehen mehrere Optionen zur Verfügung, um die Layer-2-Konfiguration Ihres Netzwerks anzupassen.
+
+
+
+== Erstellen eines VLAN
+
+Ein VLAN besteht aus Switch-Ports, die in einer Broadcast-Domäne zusammengefasst sind.  Mithilfe von VLANs können Sie die Sicherheit erhöhen, potenzielle Probleme isolieren und verfügbare Pfade innerhalb Ihrer IP-Netzwerkinfrastruktur einschränken.
+
+.Bevor Sie beginnen
+Die im Netzwerk eingesetzten Switches müssen entweder den IEEE 802.1Q-Standards entsprechen oder über eine herstellerspezifische Implementierung von VLANs verfügen.
+
+.Informationen zu diesem Vorgang
+Beachten Sie Folgendes:
+
+* Sie können kein VLAN auf einem Schnittstellengruppenport ohne Mitgliedsports erstellen.
+* Wenn Sie zum ersten Mal ein VLAN über einen Port konfigurieren, kann es vorkommen, dass der Port ausfällt, was zu einer vorübergehenden Trennung des Netzwerks führt.  Nachfolgende VLAN-Ergänzungen zum gleichen Port haben keinen Einfluss auf den Portstatus.
+* Sie sollten auf einer Netzwerkschnittstelle kein VLAN mit derselben Kennung wie das native VLAN des Switches erstellen.  Wenn sich die Netzwerkschnittstelle e0b beispielsweise auf dem nativen VLAN 10 befindet, sollten Sie auf dieser Schnittstelle kein VLAN e0b-10 erstellen.
+
+
+.Schritte
+. Wählen Sie im System-Manager *Netzwerk* und dann *Ethernet-Ports*.
+. Wählenimage:icon_vlan.png["ein blaues Pluszeichen gefolgt vom Wort „VLAN“"] .
+. Geben Sie die Konfigurationsdetails an, einschließlich ID, Broadcast-Domäne und Ports für die gewünschten Knoten.
++
+Das VLAN kann nicht an einen Port angeschlossen werden, der ein Cluster-LIF hostet, oder an Ports, die dem Cluster-IPspace zugewiesen sind.
+
+. Wählen Sie *Speichern*.
+
+
+.Ergebnis
+Sie haben ein VLAN erstellt, um die Sicherheit zu erhöhen, Probleme zu isolieren und verfügbare Pfade innerhalb Ihrer IP-Netzwerkinfrastruktur einzuschränken.
+
+
+
+== Erstellen eines LAG
+
+Eine Link Aggregate Group (LAG) ist eine Technik, die mehrere physische Netzwerkverbindungen zu einer einzigen logischen Verbindung kombiniert.  Sie können es verwenden, um die Bandbreite zu erhöhen und Redundanz zwischen Knoten bereitzustellen.
+
+.Schritte
+. Wählen Sie im System-Manager *Netzwerk* und dann *Ethernet-Ports*.
+. Wählen Sie *Aggregatgruppe verknüpfen*.
+. Geben Sie die Konfigurationsdetails an, einschließlich Knoten, Broadcast-Domäne, Ports, Modus und Lastverteilung.
+. Wählen Sie *Speichern*.
+
+
+
+
+== Ähnliche Informationen
+
+* link:../administer/manage-cluster-networking.html["Verwalten des AFX-Clusternetzwerks"]
+* https://docs.netapp.com/us-en/ontap/networking/configure_network_ports_cluster_administrators_only_overview.html["Erfahren Sie mehr über die ONTAP Netzwerkportkonfiguration"^]
+* https://docs.netapp.com/us-en/ontap/networking/combine_physical_ports_to_create_interface_groups.html["Kombinieren Sie physische Ports, um ONTAP Schnittstellengruppen zu erstellen"^]
+

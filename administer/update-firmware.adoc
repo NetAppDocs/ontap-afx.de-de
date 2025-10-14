@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: administer/update-firmware.html 
+keywords: afx, afx system, upgrade firmware, firmware 
+summary: ONTAP lädt standardmäßig automatisch Firmware und Systemdateien auf Ihrem AFX-Speichersystem herunter und aktualisiert sie.  Wenn Sie die empfohlenen Updates anzeigen möchten, bevor sie heruntergeladen und installiert werden, können Sie automatische Updates deaktivieren.  Sie können auch Update-Parameter bearbeiten, um Benachrichtigungen über verfügbare Updates anzuzeigen, bevor eine Aktion ausgeführt wird. 
+---
+= Aktualisieren der Firmware auf einem AFX-Speichersystem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP lädt standardmäßig automatisch Firmware und Systemdateien auf Ihrem AFX-Speichersystem herunter und aktualisiert sie.  Wenn Sie die empfohlenen Updates anzeigen möchten, bevor sie heruntergeladen und installiert werden, können Sie automatische Updates deaktivieren.  Sie können auch Update-Parameter bearbeiten, um Benachrichtigungen über verfügbare Updates anzuzeigen, bevor eine Aktion ausgeführt wird.
+
+
+
+== Automatische Updates aktivieren
+
+Wenn Sie automatische Updates für Ihren AFX-Cluster aktivieren, werden empfohlene Updates für Speicher-Firmware, SP/ BMC -Firmware und Systemdateien standardmäßig automatisch heruntergeladen und installiert.
+
+.Schritte
+. Wählen Sie im System-Manager *Cluster* und dann *Einstellungen*.
+. Wählen Sie unter *Software-Updates* die Option *Aktivieren* aus.
+. Lesen Sie die EULA.
+. Akzeptieren Sie die Standardeinstellung „Benachrichtigung über empfohlene Updates anzeigen“.  Wählen Sie optional „Automatisch aktualisieren“ oder „Empfohlene Updates automatisch ablehnen“ aus.
+. Wählen Sie diese Option aus, um zu bestätigen, dass Ihre Update-Änderungen auf alle aktuellen und zukünftigen Updates angewendet werden.
+. Wählen Sie *Speichern*.
+
+
+.Ergebnis
+Empfohlene Updates werden basierend auf Ihrer Update-Auswahl automatisch heruntergeladen und auf Ihrem OTAP AFX-System installiert.
+
+
+
+== Automatische Updates deaktivieren
+
+Deaktivieren Sie automatische Updates, wenn Sie die Flexibilität haben möchten, empfohlene Updates anzuzeigen, bevor sie installiert werden.  Wenn Sie automatische Updates deaktivieren, müssen Sie Firmware- und Systemdatei-Updates manuell durchführen.
+
+.Schritte
+. Wählen Sie im System-Manager *Cluster > Einstellungen*.
+. Wählen Sie unter *Softwareupdates* die Option *Deaktivieren*.
+
+
+.Ergebnis
+Automatische Updates sind deaktiviert.  Sie sollten regelmäßig nach empfohlenen Updates suchen und entscheiden, ob Sie eine manuelle Installation durchführen möchten.
+
+
+
+== Automatische Updates anzeigen
+
+Zeigen Sie eine Liste der Firmware- und Systemdatei-Updates an, die auf Ihren Cluster heruntergeladen wurden und für die automatische Installation geplant sind.  Zeigen Sie auch Updates an, die zuvor automatisch installiert wurden.
+
+.Schritte
+. Wählen Sie im System-Manager *Cluster > Einstellungen*.
+. Wählen Sie neben *Software-Updates*image:icon_arrow.gif["blauer Pfeil nach rechts"] und wählen Sie dann *Alle automatischen Updates anzeigen*.
+
+
+
+
+== Automatische Updates bearbeiten
+
+Sie können wählen, ob empfohlene Updates für Ihre Speicher-Firmware, SP/ BMC -Firmware und Ihre Systemdateien automatisch heruntergeladen und auf Ihrem Cluster installiert werden sollen, oder ob empfohlene Updates automatisch abgelehnt werden sollen.  Wenn Sie die Installation oder Ablehnung von Updates manuell steuern möchten, wählen Sie aus, dass Sie benachrichtigt werden möchten, wenn ein empfohlenes Update verfügbar ist. Anschließend können Sie manuell auswählen, ob es installiert oder abgelehnt werden soll.
+
+.Schritte
+. Wählen Sie im System-Manager *Cluster > Einstellungen*.
+. Wählen Sie neben *Software-Updates*image:icon_arrow.gif["blauer Pfeil nach rechts"] und wählen Sie dann *Alle anderen Updates*.
+. Aktualisieren Sie die Auswahl für automatische Updates.
+. Wählen Sie *Speichern*.
+
+
+.Ergebnis
+Automatische Updates werden basierend auf Ihrer Auswahl geändert.
+
+
+
+== Firmware manuell aktualisieren
+
+Wenn Sie die Flexibilität wünschen, empfohlene Updates anzuzeigen, bevor sie heruntergeladen und installiert werden, können Sie automatische Updates deaktivieren und Ihre Firmware manuell aktualisieren.
+
+.Schritte
+. Laden Sie Ihre Firmware-Update-Datei auf einen Server oder lokalen Client herunter.
+. Wählen Sie im System Manager *Cluster > Übersicht* und dann *Alle anderen Updates*.
+. Wählen Sie unter *Manuelle Updates* die Option *Firmware-Dateien hinzufügen* und anschließend *Vom Server herunterladen* oder *Vom lokalen Client hochladen*.
+. Installieren Sie die Firmware-Update-Datei.
+
+
+.Ergebnis
+Ihre Firmware ist aktualisiert.

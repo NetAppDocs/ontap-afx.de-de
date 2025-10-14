@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: administer/additional-ontap-cluster.html 
+keywords: afx, afx system, additional administration, advanced administration 
+summary: Zusätzlich zur typischen AFX-Clusterverwaltung müssen Sie je nach Ihrer Umgebung möglicherweise noch weitere Aufgaben ausführen.  Die meisten zusätzlichen Aufgaben können mit System Manager ausgeführt werden, in einigen Fällen müssen Sie jedoch möglicherweise die CLI verwenden. 
+---
+= Zusätzliche Administration für einen AFX-Speichersystemcluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zusätzlich zur typischen AFX-Clusterverwaltung müssen Sie je nach Ihrer Umgebung möglicherweise noch weitere Aufgaben ausführen.  Die meisten zusätzlichen Aufgaben können mit System Manager ausgeführt werden, in einigen Fällen müssen Sie jedoch möglicherweise die CLI verwenden.
+
+
+NOTE: Die beschriebenen ONTAP -Funktionen und -Verwaltung gelten für AFX-Speichersysteme und AFF oder FAS -Systeme mit Unified ONTAP.  Links zur entsprechenden Unified ONTAP Dokumentation sind gegebenenfalls enthalten.
+
+
+
+== Lizenzierung
+
+AFX-Systeme werden auf ähnliche Weise lizenziert wie Unified ONTAP AFF und FAS Systeme.  Ein AFX-Cluster enthält standardmäßig die meisten Funktionen für die unterstützten Protokolle.
+
+
+
+=== ONTAP -Lizenzverwaltung
+
+Eine ONTAP -Lizenz ist ein Datensatz mit einer oder mehreren Softwareberechtigungen.  Alle Lizenzen werden mithilfe einer NetApp Lizenzdatei (NLF) definiert und bereitgestellt. Siehe https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["ONTAP -Lizenzübersicht"^] für weitere Informationen.
+
+
+
+=== Installieren einer Lizenz auf einem AFX-System
+
+Sie können Lizenzdateien installieren, um bei Bedarf zusätzliche Funktionen für Ihr AFX-Speichersystem zu aktivieren.
+
+.Schritte
+. Wählen Sie im System-Manager *Cluster* und dann *Einstellungen*.
+. Wählen Sie neben *Lizenzen*image:icon_arrow.gif["blauer Pfeil nach rechts"] .
+. Wählen Sie die Registerkarte *Funktionen*, um die verfügbaren ONTAP -Funktionen anzuzeigen.
+. Um optional eine Lizenz zu installieren, wählen Sie die Registerkarte *Installierte Lizenzen*.
+. Wählenimage:icon_add_blue_bg.png["blaues Rechteck mit einem Pluszeichen, gefolgt vom Wort „Add“ in weißen Buchstaben"] .
+. Wählen Sie eine lokale Lizenzdatei aus und wählen Sie *Hinzufügen*.
+
+
+
+
+== Sicherheit
+
+Es gibt mehrere optionale Sicherheitsfunktionen, die Sie konfigurieren und mit Ihrer AFX-Bereitstellung verwenden können.
+
+
+
+=== ONTAP Sicherheit und Datenverschlüsselung
+
+Es ist wichtig, die Sicherheit und Privatsphäre Ihres AFX-Speichersystems zu schützen. Weitere Informationen finden Sie unter  https://docs.netapp.com/us-en/ontap/security-encryption/index.html["Sicherheit und Datenverschlüsselung"^]
+
+
+
+=== ONTAP Authentifizierung und Zugriffskontrolle
+
+Das AFX-Speichersystem bietet mehrere Optionen zum Konfigurieren von Authentifizierungs- und Zugriffskontrolldiensten. Siehe https://docs.netapp.com/us-en/ontap/authentication-access-control/index.html["Authentifizierung und Zugriffskontrolle"^] für weitere Informationen.
+
+
+
+=== OAuth 2.0 auf einem AFX-System verwalten
+
+OAuth 2.0 ist das branchenübliche Autorisierungsframework, das zum Einschränken und Kontrollieren des Zugriffs auf geschützte Ressourcen mithilfe signierter Zugriffstoken verwendet wird.
+
+.Schritte
+. Wählen Sie im System-Manager *Cluster* und dann *Einstellungen*.
+. Wählen Sie im Abschnitt *Sicherheit* neben *OAuth 2.0-Autorisierung*image:icon_arrow.gif["blauer Pfeil nach rechts"] .
+. OAuth 2.0 aktivieren
+. Wählen Sie *Konfiguration hinzufügen* und geben Sie die Konfigurationsdetails ein.
+. Wählen Sie *Speichern*.
+
+
+
+
+== Ähnliche Informationen
+
+* link:../faq-ontap-afx.html["FAQ zu AFX-Speichersystemen"]
+* https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["Übersicht über die ONTAP OAuth 2.0-Implementierung"^]
+* link:../administer/additional-ontap-svm.html["Zusätzliche Verwaltung für AFX SVMs"]
+

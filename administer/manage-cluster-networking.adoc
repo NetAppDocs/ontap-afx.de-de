@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: administer/manage-cluster-networking.html 
+keywords: afx, afx system, networking, cluster networking, broadcast domain, ipsace, subnet, network interface 
+summary: Sie müssen das Netzwerk Ihres AFX-Speichersystems konfigurieren.  Die Netzwerkumgebung unterstützt mehrere Verbindungsszenarien, darunter Clients, die auf Daten bei den SVMs zugreifen, und die Kommunikation zwischen Clustern. 
+---
+= Verwalten der Cluster-Netzwerke des AFX-Speichersystems
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen das Netzwerk Ihres AFX-Speichersystems konfigurieren.  Die Netzwerkumgebung unterstützt mehrere Szenarien, darunter Clients, die auf Daten bei den SVMs zugreifen, und die Kommunikation zwischen Clustern.
+
+
+NOTE: Das Erstellen einer Netzwerkressource ist ein wichtiger erster Schritt.  Sie müssen bei Bedarf auch zusätzliche Verwaltungsaktionen durchführen, beispielsweise Netzwerkdefinitionen bearbeiten oder löschen.
+
+
+
+== Erstellen einer Broadcastdomäne
+
+Eine Broadcast-Domäne vereinfacht die Verwaltung Ihres Cluster-Netzwerks durch Gruppierung von Ports, die Teil desselben Layer-2-Netzwerks sind.  Den Storage Virtual Machines (SVMs) können dann Ports in der Gruppe für Daten- oder Verwaltungsverkehr zugewiesen werden.
+
+Während der Clustereinrichtung werden mehrere Broadcastdomänen erstellt, darunter:
+
+Standard:: Diese Broadcast-Domäne enthält Ports im „Standard“-IP-Bereich.  Diese Ports werden hauptsächlich zum Bereitstellen von Daten verwendet.  Cluster-Management- und Knotenverwaltungsports sind ebenfalls enthalten.
+Cluster:: Diese Broadcast-Domäne enthält Ports im IP-Bereich „Cluster“.  Diese Ports werden für die Clusterkommunikation verwendet und umfassen alle Clusterports aller Knoten im Cluster.
+
+
+Sie können zusätzliche Broadcast-Domänen erstellen, nachdem Ihr Cluster initialisiert wurde.  Wenn Sie eine Broadcast-Domäne erstellen, wird automatisch eine Failover-Gruppe erstellt, die dieselben Ports enthält.
+
+.Informationen zu diesem Vorgang
+Der MTU-Wert (Maximum Transmission Unit) der für eine Broadcast-Domäne definierten Ports wird auf den in der Broadcast-Domäne festgelegten MTU-Wert aktualisiert.
+
+.Schritte
+. Wählen Sie im System-Manager *Netzwerk* und dann *Übersicht*.
+. Wählen Sie unter *Broadcast-Domänen*image:icon_add_blue_bg.png["blaues Rechteck mit einem Pluszeichen, gefolgt vom Wort „Add“ in weißen Buchstaben"] .
+. Geben Sie den Namen der Broadcast-Domäne ein oder akzeptieren Sie die Standardeinstellung.
++
+Alle Broadcast-Domänennamen müssen innerhalb eines IP-Bereichs eindeutig sein.
+
+. Geben Sie die maximale Übertragungseinheit (MTU) an.
++
+Die MTU ist das größte Datenpaket, das im Broadcast-Bereich akzeptiert werden kann.
+
+. Wählen Sie die gewünschten Ports aus und wählen Sie *Speichern*.
+
+
+
+
+== Erstellen Sie einen IPspace
+
+Ein IPspace ist eine Verwaltungsdomäne für IP-Adressen und die zugehörige Netzwerkkonfiguration.  Diese Bereiche können zur Unterstützung Ihrer SVMs durch isolierte Verwaltung und Weiterleitung verwendet werden.  Sie sind beispielsweise nützlich, wenn Clients überlappende IP-Adressen aus demselben IP-Adress- und Subnetzbereich haben.
+
+
+TIP: Sie müssen über einen IP-Bereich verfügen, bevor Sie ein Subnetz erstellen können.
+
+.Schritte
+. Wählen Sie im System-Manager *Netzwerk* und dann *Übersicht*.
+. Wählen Sie unter *IPspaces*image:icon_add_blue_bg.png["blaues Rechteck mit einem Pluszeichen, gefolgt vom Wort „Add“ in weißen Buchstaben"] .
+. Geben Sie den Namen des IPspaces ein oder akzeptieren Sie die Standardeinstellung.
++
+Alle IPspace-Namen müssen innerhalb eines Clusters eindeutig sein.
+
+. Wählen Sie *Speichern*.
+
+
+.Was kommt als nächstes
+Sie können den IPspace verwenden, um ein Subnetz zu erstellen.
+
+
+
+== Erstellen eines Subnetzes
+
+Ein Subnetz oder Subnetz erzwingt eine logische Aufteilung des IP-Adressraums in Ihrem Netzwerk.  Es ermöglicht Ihnen, dedizierte IP-Adressblöcke für die Erstellung einer Netzwerkschnittstelle (LIF) zuzuweisen.  Subnetze vereinfachen die LIF-Erstellung, indem sie es Ihnen ermöglichen, den Subnetznamen anstelle einer bestimmten Kombination aus IP-Adresse und Netzwerkmaske zu verwenden.
+
+.Bevor Sie beginnen
+Sie müssen über eine Broadcast-Domäne und einen IP-Bereich verfügen, in dem das Subnetz definiert wird.  Beachten Sie außerdem:
+
+* Alle Subnetznamen müssen innerhalb eines bestimmten IP-Bereichs eindeutig sein.
+* Der für ein Subnetz verwendete IP-Adressbereich darf sich nicht mit den IP-Adressen anderer Subnetze überschneiden.
+
+
+.Schritte
+. Wählen Sie im System-Manager *Netzwerk* und dann *Übersicht*.
+. Wählen Sie auf der Registerkarte *Subnetze*image:icon_add_blue_bg.png["blaues Rechteck mit einem Pluszeichen, gefolgt vom Wort „Add“ in weißen Buchstaben"] .
+. Geben Sie die Konfigurationsdetails an, einschließlich des Namens des Subnetzes, der IP-Adressdetails und der Broadcast-Domäne.
+. Wählen Sie *Speichern*.
+
+
+.Was kommt als nächstes
+Das neue Subnetz vereinfacht die Erstellung Ihrer Netzwerkschnittstellen.
+
+
+
+== Erstellen einer Netzwerkschnittstelle
+
+Eine logische Netzwerkschnittstelle (LIF) besteht aus einer IP-Adresse und zugehörigen Netzwerkkonfigurationsparametern.  Es kann einem physischen oder logischen Port zugeordnet werden und wird normalerweise von den Clients verwendet, um auf von einer SVM bereitgestellte Daten zuzugreifen.  LIFs bieten Ausfallsicherheit im Falle eines Fehlers und können zwischen den Knotenports migrieren, sodass die Kommunikation nicht unterbrochen wird.
+
+.Schritte
+. Wählen Sie im System-Manager *Netzwerk* und dann *Übersicht*.
+. Wählen Sie auf der Registerkarte *Netzwerkschnittstellen*image:icon_add_blue_bg.png["blaues Rechteck mit einem Pluszeichen, gefolgt vom Wort „Add“ in weißen Buchstaben"] .
+. Geben Sie die Konfigurationsdetails an, einschließlich des Namens der Schnittstelle, des Schnittstellentyps, der zulässigen Protokolle und der IP-Adressdetails.
+. Wählen Sie *Speichern*.
+
+
+
+
+== Ähnliche Informationen
+
+* link:../administer/manage-ethernet-ports.html["Verwalten von AFX-Ethernet-Ports"]
+* https://docs.netapp.com/us-en/ontap/networking/configure_broadcast_domains_cluster_administrators_only_overview.html["Erfahren Sie mehr über ONTAP Broadcast-Domänen"^]
+* https://docs.netapp.com/us-en/ontap/networking/configure_ipspaces_cluster_administrators_only_overview.html["Erfahren Sie mehr über die ONTAP IPspace-Konfiguration"^]
+* https://docs.netapp.com/us-en/ontap/networking/configure_subnets_cluster_administrators_only_overview.html["Erfahren Sie mehr über Subnetze für das ONTAP -Netzwerk"^]
+* https://docs.netapp.com/us-en/ontap/concepts/network-connectivity-concept.html["Übersicht über die Netzwerkarchitektur"^]
+

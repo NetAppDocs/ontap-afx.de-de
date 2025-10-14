@@ -1,0 +1,109 @@
+---
+sidebar: sidebar 
+permalink: administer/manage-autosupport.html 
+keywords: afx, afx system, autosupport 
+summary: AutoSupport ist eine NetApp -Technologie, mit der Sie den Zustand Ihrer AFX-Speichersysteme proaktiv überwachen können.  Es kann automatisch Nachrichten an den technischen Support von NetApp , Ihre interne Supportorganisation oder einen Supportpartner senden. 
+---
+= Verwalten von AutoSupport für einen AFX-Speichersystemcluster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AutoSupport ist eine NetApp -Technologie, mit der Sie den Zustand Ihrer AFX-Speichersysteme proaktiv überwachen können.  Es kann automatisch Nachrichten an den technischen Support von NetApp , Ihre interne Supportorganisation oder einen Supportpartner senden.
+
+AutoSupport ist standardmäßig aktiviert, wenn Sie einen AFX-Cluster einrichten, und es werden Nachrichten an den technischen Support von NetApp gesendet.  Um Nachrichten an Ihre interne Supportorganisation zu senden, müssen Sie Ihren Cluster richtig konfigurieren und einen gültigen E-Mail-Host angeben.  AFX beginnt 24 Stunden nach seiner Aktivierung mit dem Senden von AutoSupport -Nachrichten.
+
+
+NOTE: Sie müssen sich mit einem Clusteradministratorkonto beim System Manager anmelden, um AutoSupport zu verwalten.
+
+
+
+== Testen Sie die AutoSupport Konnektivität
+
+Nachdem Sie Ihren Cluster eingerichtet haben, sollten Sie Ihre AutoSupport Konnektivität testen, um sicherzustellen, dass der technische Support die von AutoSupport generierten Nachrichten empfangen kann.
+
+.Schritte
+. Wählen Sie im System-Manager *Cluster* und dann *Einstellungen*.
+. Wählen Sie neben * AutoSupport*image:icon_kabob.gif["drei vertikale blaue Punkte"] und dann *Konnektivität testen*.
+. Geben Sie einen Betreff für die AutoSupport -Nachricht ein und wählen Sie *Test AutoSupport -Nachricht senden*.
+
+
+
+
+== AutoSupport -Empfänger hinzufügen
+
+Sie können optional Mitglieder Ihrer internen Supportorganisation zur Liste der E-Mail-Adressen hinzufügen, die AutoSupport Nachrichten erhalten.
+
+.Schritte
+. Wählen Sie im System-Manager *Cluster* und dann *Einstellungen*.
+. Wählen Sie neben * AutoSupport*image:icon_kabob.gif["drei vertikale blaue Punkte"] und dann *Weitere Optionen*.
+. Wählen Sie neben *E-Mail*image:icon_edit_pencil_blue_outline.png["Bleistiftsymbol"] und dannimage:icon_add.gif["blaues Pluszeichen gefolgt vom Wort „Add“"] .
+. Geben Sie die E-Mail-Adresse des Empfängers ein. Wählen Sie als Empfängerkategorie:
++
+** *Partner* für Ihre Partner
+** *Allgemein* für Mitglieder Ihrer internen Supportorganisation
+
+
+. Wählen Sie *Speichern*.
+
+
+.Ergebnis
+Die von Ihnen hinzugefügten E-Mail-Adressen erhalten neue AutoSupport -Nachrichten für ihre spezifische Empfängerkategorie.
+
+
+
+== AutoSupport -Daten senden
+
+Wenn bei Ihrem AFX-System ein Problem auftritt, sollten Sie die AutoSupport Daten manuell senden.  Dadurch kann die Zeit, die zum Identifizieren und Beheben des Problems benötigt wird, erheblich verkürzt werden.
+
+.Schritte
+. Wählen Sie im System-Manager *Cluster* und dann *Einstellungen*.
+. Wählen Sie neben * AutoSupport*image:icon_kabob.gif["drei vertikale blaue Punkte"] und dann *Generieren und senden*.
+. Geben Sie einen Betreff für die AutoSupport -Nachricht ein.
+. Wählen Sie *Senden*.
+
+
+.Ergebnis
+Ihre AutoSupport Daten werden an den technischen Support gesendet.
+
+
+
+== Unterdrücken der Supportfallgenerierung
+
+Wenn Sie ein Upgrade oder eine Wartung an Ihrem AFX-System durchführen, möchten Sie möglicherweise die Generierung von AutoSupport Supportfällen unterdrücken, bis Ihr Upgrade oder Ihre Wartung abgeschlossen ist.
+
+.Schritte
+. Wählen Sie im System-Manager *Cluster* und dann *Einstellungen*.
+. Wählen Sie neben * AutoSupport*image:icon_kabob.gif["drei vertikale blaue Punkte"] und dann *Supportfallgenerierung unterdrücken*.
+. Geben Sie die Anzahl der Stunden an, für die die Generierung von Supportfällen unterdrückt werden soll, und die Knoten, für die keine Fälle generiert werden sollen.
+. Wählen Sie *Senden*.
+
+
+.Ergebnis
+Während der von Ihnen angegebenen Zeit werden keine AutoSupport -Fälle generiert.  Wenn Sie Ihr Upgrade oder Ihre Wartung vor Ablauf der angegebenen Zeit abschließen, sollten Sie die Generierung von Supportfällen sofort wieder aufnehmen.
+
+
+
+== Fortsetzen der Supportfallgenerierung
+
+Wenn Sie die Generierung von Supportfällen während eines Upgrade- oder Wartungsfensters unterdrückt haben, sollten Sie die Generierung von Supportfällen unmittelbar nach Abschluss Ihres Upgrades oder Ihrer Wartung wieder aufnehmen.
+
+.Schritte
+. Wählen Sie im System-Manager *Cluster* und dann *Einstellungen*.
+. Wählen Sie neben * AutoSupport*image:icon_kabob.gif["drei vertikale blaue Punkte"] und dann *Supportfallgenerierung fortsetzen*.
+. Wählen Sie die Knoten aus, für die Sie die AutoSupport Fallgenerierung fortsetzen möchten.
+. Wählen Sie *Senden*.
+
+
+.Ergebnis
+AutoSupport -Fälle werden bei Bedarf automatisch für Ihr AFX-System generiert.
+
+
+
+== Ähnliche Informationen
+
+* https://docs.netapp.com/us-en/ontap/system-admin/manage-autosupport-concept.html["Erfahren Sie mehr über ONTAP AutoSupport"^]
+* https://docs.netapp.com/us-en/ontap/system-admin/requirements-autosupport-reference.html["Bereiten Sie sich auf die Verwendung von ONTAP AutoSupport vor"^]
+

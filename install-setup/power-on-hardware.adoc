@@ -1,0 +1,162 @@
+---
+sidebar: sidebar 
+permalink: install-setup/power-on-hardware.html 
+keywords: afx, afx 1k, power on 
+summary: Schalten Sie jedes Regal ein, um eine eindeutige Regal-ID zuzuweisen, schalten Sie die AFX-Controllerknoten ein und sichern Sie die Stromkabel. 
+---
+= Schalten Sie Ihr AFX 1K-Speichersystem ein
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie die Rack-Hardware für Ihr AFX 1K-Speichersystem installiert und die Kabel für die Controller-Knoten und Speicherregale installiert haben, sollten Sie Ihre Speicherregale und Controller-Knoten einschalten.
+
+
+
+== Schritt 1: Schalten Sie das Regal ein und weisen Sie die Regal-ID zu
+
+Jedes Regal hat eine eindeutige Regal-ID, die seine Unterscheidung in der Einrichtung Ihres Lagersystems gewährleistet.
+
+.Informationen zu diesem Vorgang
+* Eine gültige Regal-ID ist 01 bis 99.
+* Sie müssen ein Regal aus- und wieder einschalten (beide Netzkabel abziehen, mindestens 10 Sekunden warten und sie dann wieder einstecken), damit die Regal-ID wirksam wird.
+
+
+.Schritte
+. Schalten Sie das Regal ein, indem Sie die Netzkabel zuerst an das Regal anschließen, sie mit der Netzkabelhalterung an Ort und Stelle sichern und dann die Netzkabel an Stromquellen in verschiedenen Stromkreisen anschließen.
++
+Das Regal schaltet sich automatisch ein und bootet, wenn es eingesteckt wird.
+
+. Entfernen Sie die linke Endkappe, um auf die Regal-ID-Taste hinter der Frontplatte zuzugreifen.
++
+image::../media/drw_tp_change_shelf_id_ieops-2381.svg[NX224-Regal-ID ändern]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout Nummer 1]
+ a| 
+Regalabschlusskappe
+
+
+
+ a| 
+image::../media/icon_round_2.png[[Hinweis Nummer 2]
+ a| 
+Regalblende
+
+
+
+ a| 
+image::../media/icon_round_3.png[[Hinweis Nummer 3]
+ a| 
+Regal-ID-Nummer
+
+
+
+ a| 
+image::../media/icon_round_4.png[[Hinweis Nummer 4]
+ a| 
+Schaltfläche „Regal-ID“
+
+|===
+. Ändern Sie die erste Ziffer der Regal-ID:
++
+.. Führen Sie das gerade Ende einer Büroklammer oder eines Kugelschreibers mit schmaler Spitze in das kleine Loch ein, um die Regal-ID-Taste vorsichtig zu drücken.
+.. Halten Sie die Regal-ID-Taste leicht gedrückt, bis die erste Zahl auf der Digitalanzeige blinkt, und lassen Sie die Taste dann los.
++
+Die Zahl blinkt innerhalb von 15 Sekunden und aktiviert den Regal-ID-Programmiermodus.
+
++
+
+NOTE: Wenn das Blinken der ID länger als 15 Sekunden dauert, halten Sie die Regal-ID-Taste erneut gedrückt und achten Sie darauf, sie vollständig durchzudrücken.
+
+.. Drücken und lassen Sie die Regal-ID-Taste los, um die Nummer zu erhöhen, bis Sie die gewünschte Zahl zwischen 0 und 9 erreicht haben.
++
+Die Dauer jedes Drückens und Loslassens kann nur eine Sekunde betragen.
+
++
+Die erste Zahl blinkt weiterhin.
+
+
+
+. Ändern Sie die zweite Ziffer der Regal-ID:
++
+.. Halten Sie die Taste gedrückt, bis die zweite Zahl auf der Digitalanzeige blinkt.
++
+Es kann bis zu drei Sekunden dauern, bis die Zahl blinkt.
+
++
+Die erste Zahl auf der Digitalanzeige hört auf zu blinken.
+
+.. Drücken und lassen Sie die Regal-ID-Taste los, um die Nummer zu erhöhen, bis Sie die gewünschte Zahl zwischen 0 und 9 erreicht haben.
++
+Die zweite Zahl blinkt weiterhin.
+
+
+
+. Sperren Sie die gewünschte Nummer und verlassen Sie den Programmiermodus, indem Sie die Regal-ID-Taste gedrückt halten, bis die zweite Nummer nicht mehr blinkt.
++
+Es kann bis zu drei Sekunden dauern, bis die Zahl aufhört zu blinken.
+
++
+Beide Zahlen auf der Digitalanzeige beginnen zu blinken und die gelbe LED leuchtet nach etwa fünf Sekunden auf, um Sie darauf hinzuweisen, dass die ausstehende Regal-ID noch nicht wirksam geworden ist.
+
+. Schalten Sie das Regal mindestens 10 Sekunden lang aus und wieder ein, damit die Regal-ID wirksam wird.
++
+.. Ziehen Sie das Netzkabel von beiden Netzteilen im Regal ab.
+.. Warten Sie 10 Sekunden.
+.. Stecken Sie die Netzkabel wieder in die Netzteile des Regals, um den Stromzyklus abzuschließen.
++
+Das Netzteil schaltet sich ein, sobald Sie das Netzkabel einstecken.  Die zweifarbige LED sollte grün leuchten.
+
+
+
+. Setzen Sie die linke Endkappe wieder auf.
+
+
+
+
+== Schritt 2: Schalten Sie die Controller-Knoten ein
+
+Nachdem Sie Ihre Speicherregale eingeschaltet und ihnen eindeutige IDs zugewiesen haben, schalten Sie die Stromversorgung der Speichercontrollerknoten ein.
+
+.Schritte
+. Schließen Sie Ihren Laptop an den seriellen Konsolenanschluss an.  Auf diese Weise können Sie die Startreihenfolge überwachen, wenn die Controller eingeschaltet sind.
++
+.. Stellen Sie den seriellen Konsolenport auf dem Laptop mit N-8-1 auf 115.200 Baud ein.
++
+Anweisungen zum Konfigurieren des seriellen Konsolenports finden Sie in der Online-Hilfe Ihres Laptops.
+
+.. Schließen Sie das Konsolenkabel an den Laptop an und verbinden Sie den seriellen Konsolenanschluss am Controller mit dem Konsolenkabel, das mit Ihrem Speichersystem geliefert wurde.
+.. Verbinden Sie den Laptop mit dem Switch im Verwaltungssubnetz.
++
+image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[Konsolenverbindungen]
+
+
+
+
+
+. Weisen Sie dem Laptop eine TCP/IP-Adresse zu und verwenden Sie eine Adresse, die sich im Verwaltungssubnetz befindet.
+. Stecken Sie die Netzkabel in die Netzteile der Steuerung und verbinden Sie sie dann mit Stromquellen in verschiedenen Stromkreisen.
++
+image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[A1K-Speichersystem und A70- oder A90-Stromanschlussdiagramm]
+
++
+** Das System beginnt zu booten.  Der erste Startvorgang kann bis zu acht Minuten dauern.
+** Die LEDs blinken und die Lüfter starten, was darauf hinweist, dass die Controller eingeschaltet werden.
+** Beim Starten können die Lüfter laut sein, was normal ist.
+
+
+
+
+. Sichern Sie die Netzkabel mit der Sicherungsvorrichtung an jedem Netzteil.
+
+
+.Wie geht es weiter?
+Nachdem Sie Ihr AFX 1K-Speichersystem eingeschaltet haben,link:../install-setup/cluster-setup.html["Einrichten eines AFX-Clusters"] .

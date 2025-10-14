@@ -1,0 +1,109 @@
+---
+sidebar: sidebar 
+permalink: install-setup/cluster-setup.html 
+keywords: afx, afx system, cluster setup, setup 
+summary: Nachdem Ihre AFX-Hardware installiert wurde, können Sie die Cluster-Einrichtung abschließen.  Dieser Prozess umfasst zwei miteinander verbundene Konfigurationsphasen, die Sie nacheinander durchführen müssen. 
+---
+= Richten Sie Ihren AFX-Speichersystem- ONTAP Cluster ein
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Ihre AFX-Hardware installiert wurde, können Sie die Einrichtung des ONTAP Clusters abschließen.  Dieser Prozess umfasst zwei miteinander verbundene Konfigurationsphasen, die Sie nacheinander durchführen müssen.
+
+
+
+== Durchführen der ersten Clustereinrichtung
+
+Sie können Ihr Laptop-Gerät mit dem AFX-Cluster verbinden und mehrere globale Konfigurationseinstellungen festlegen.
+
+.Informationen zu diesem Vorgang
+Es gibt vier Bereiche des AFX-Clusters, die zunächst konfiguriert werden müssen.  Die ersten drei sind erforderlich, während der letzte optional ist.
+
+.Bevor Sie beginnen
+Sie benötigen folgende Informationen:
+
+* IP-Adresse für die Clusterverwaltung
++
+Die Clusterverwaltungs-IP-Adresse ist eine eindeutige IPv4-Adresse für die Clusterverwaltungsschnittstelle, die vom Clusteradministrator verwendet wird, um auf die Admin-SVM zuzugreifen und den Cluster zu verwalten.  Diese IP-Adresse erhalten Sie von dem Administrator, der in Ihrer Organisation für die Vergabe von IP-Adressen zuständig ist.
+
+* Netzwerk-Subnetzmaske
++
+Während der Clustereinrichtung benötigt ONTAP eine Reihe von Netzwerkschnittstellen, die für Ihre Konfiguration geeignet sind.  Sie können die Empfehlung bei Bedarf anpassen.
+
+
+
+Sie benötigen außerdem Folgendes:
+
+* IP-Adresse des Netzwerk-Gateways
+* DNS-Domänennamen
+* IP-Adressen des DNS-Nameservers
+* NTP-Server-IP-Adressen
+* Daten-Subnetzmaske
+
+
+.Schritte
+. Entdecken Sie Ihr Clusternetzwerk.
++
+.. Verbinden Sie Ihren Laptop mit dem Verwaltungsswitch und greifen Sie auf die Netzwerkcomputer und -geräte zu.
+.. Öffnen Sie den Datei-Explorer.
+.. Wählen Sie *Netzwerk*, klicken Sie dann mit der rechten Maustaste und wählen Sie *Aktualisieren*.
+.. Wählen Sie eines der ONTAP -Symbole aus und akzeptieren Sie dann alle auf Ihrem Bildschirm angezeigten Zertifikate.
++
+Die Benutzeroberfläche des System Managers wird angezeigt.
+
+
+
+. Legen Sie das Administratorkennwort fest.
++
+Geben Sie das Passwort für die `admin` Konto. Wählen Sie *Weiter*.
+
+. Konfigurieren Sie die IP-Adressen für die Cluster- und Controller-Knoten.
++
+Geben Sie IP-Adressen und Subnetzmasken an.
+
+. Konfigurieren Sie die Netzwerkdienste. Wählen Sie *Weiter*.
++
+Definieren Sie die Details für Ihre DNS- und NTP-Server.
+
+. Optional können Sie eine Verschlüsselung einrichten.
++
+Sie können die Details für die Cluster-Verschlüsselung definieren. Wählen Sie *Weiter*.
+
+
+
+.Was kommt als nächstes
+Sie werden zur Anmeldeseite des Systemmanagers weitergeleitet.  Führen Sie die in<<Vollständige Clustereinrichtung>> .
+
+
+
+== Vollständige Clustereinrichtung
+
+Nachdem die Erstkonfiguration durchgeführt wurde, können Sie die Einrichtung des ONTAP Clusters mit dem System Manager abschließen.
+
+.Informationen zu diesem Vorgang
+Während der Einrichtung werden drei Bereiche des AFX-System ONTAP Clusters konfiguriert.  Füllen Sie nach Möglichkeit alle drei aus, aber nur der erste ist erforderlich.
+
+.Bevor Sie beginnen
+Sie benötigen folgende Informationen:
+
+* VLAN-Konfigurationsdetails.
+* NAS- und/oder S3-Konfigurationsdetails.
+
+
+.Schritte
+. Sign in , das Sie bei der Ersteinrichtung des Clusters angegeben haben.  Beachten Sie das Popup-Fenster oben rechts mit drei Konfigurationsoptionen.
+. Wählen Sie *VLAN und Tagging* und wählen Sie die für Ihre Umgebung geeigneten Netzwerkoptionen.
+. Wählen Sie *Netzwerkdienste* und konfigurieren Sie die Clientzugriffsprotokolle für die Standarddaten-SVM.
+. Wählen Sie *Datencontainer* und erstellen Sie ein Volume oder einen S3-Bucket.
+
+
+.Was kommt als nächstes
+Du solltestlink:../get-started/prepare-cluster-admin.html["Vorbereiten der AFX-Verwaltung"] bevor Sie Ihren AFX-Cluster in einer Produktionsumgebung verwenden.
+
+.Ähnliche Informationen
+* link:../administer/configure-svm.html["Konfigurieren einer AFX-Daten-SVM"]
+* link:../get-started/prepare-cluster-admin.html["Vorbereiten der AFX-Verwaltung"]
+

@@ -1,0 +1,126 @@
+---
+sidebar: sidebar 
+permalink: install-setup/prepare-hardware.html 
+keywords: prepare, hardware installation, afx, afx 1k 
+summary: Bereiten Sie die Installation des AFX 1K-Speichersystems in Ihrer ONTAP Umgebung vor und registrieren Sie die Hardware, um auf Supportvorteile zuzugreifen. 
+---
+= Bereiten Sie die Installation Ihres AFX 1K-Speichersystems vor
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bereiten Sie die Installation Ihres AFX 1K-Speichersystems vor, indem Sie den Standort vorbereiten, die Kartons auspacken, den Inhalt der Kartons mit dem Lieferschein vergleichen und das System registrieren, um auf Supportleistungen zugreifen zu können.
+
+
+
+== Schritt 1: Bereiten Sie die Site vor
+
+Stellen Sie bei der Installation Ihres AFX 1K-Speichersystems sicher, dass der Standort und der Schrank oder das Rack, das Sie verwenden möchten, den Spezifikationen für Ihre Konfiguration entsprechen.
+
+.Schritte
+. Verwenden https://hwu.netapp.com["NetApp Hardware Universe"^] um zu bestätigen, dass Ihr Standort die Umwelt- und elektrischen Anforderungen für Ihr Speichersystem erfüllt.
+. Stellen Sie sicher, dass Sie über ausreichend Platz im Schrank oder Rack für Ihr Speichersystem, Ihre Regale und Ihre Switches verfügen:
++
+** 2U für jeden AFX-Controllerknoten und jedes NX224-Regal
+** 1U oder 2U pro Switch, je nach Switch-Modell.
+
+
+
+
+
+
+== Schritt 2: Auspacken der Kartons
+
+Nachdem Sie sichergestellt haben, dass Standort und Schrank den Spezifikationen entsprechen, packen Sie die Kartons aus und vergleichen Sie den Inhalt mit dem Lieferschein.
+
+.Schritte
+. Öffnen Sie alle Kartons vorsichtig und legen Sie den Inhalt geordnet aus.
+. Vergleichen Sie den ausgepackten Inhalt mit der Liste auf dem Lieferschein.  Sollten Sie Unstimmigkeiten feststellen, erfassen Sie diese für weitere Maßnahmen.
++
+Sie erhalten Ihre Packliste, indem Sie den QR-Code an der Seite des Versandkartons scannen.
+
++
+Die folgenden Elemente sind einige der Inhalte, die Sie möglicherweise in den Kartons sehen.
+
++
+[cols="12,9,4"]
+|===
+
+
+| *Hardware* | *Kabel* |  
+
+
+ a| 
+** Lünette
+** Speichersystem
+** Schienenbausätze mit Anleitung
+** Ablageboden
+** Cisco Nexus 9332D-GX2B- oder 9364D-GX2A-Switch
+
+ a| 
+** Management-Ethernet-Kabel (RJ-45-Kabel)
+** Netzwerkkabel
+** Netzkabel
+** Speicherkabel
+** USB-C-Kabel für seriellen Anschluss
+
+|  
+|===
+
+
+
+
+== Schritt 3: Registrieren Sie Ihr Speichersystem
+
+Nachdem Sie sichergestellt haben, dass Ihr Standort die Anforderungen für die Spezifikationen Ihres AFX 1K-Speichersystems erfüllt, und überprüft haben, dass Sie alle bestellten Teile haben, registrieren Sie Ihr Speichersystem.
+
+.Schritte
+. Suchen Sie die Seriennummern für Ihr Speichersystem.
++
+Sie finden die Seriennummern an folgenden Orten:
+
++
+** Auf dem Lieferschein
+** In Ihrer Bestätigungs-E-Mail
+** Auf jedem Controller oder bei einigen Systemen auf dem Systemverwaltungsmodul jedes Controllers
++
+image::../media/drw_ssn_label.svg[Beispiel für die Systemseriennummer]
+
+
+
+. Gehen Sie zum http://mysupport.netapp.com/["NetApp Support Site"^] .
+. Entscheiden Sie, ob Sie Ihr Speichersystem registrieren müssen:
++
+[cols="1a,2a"]
+|===
+| Wenn Sie ein... sind | Befolgen Sie diese Schritte... 
+
+
+ a| 
+Bestehender NetApp Kunde
+ a| 
+.. Sign in .
+.. Wählen Sie *Systeme* > *Meine Systeme*.
+.. Bestätigen Sie, dass die neue Seriennummer aufgeführt ist.
+.. Wenn die Seriennummer nicht aufgeführt ist, folgen Sie den Anweisungen für neue NetApp -Kunden.
+
+
+
+
+ a| 
+Neuer NetApp Kunde
+ a| 
+.. Klicken Sie auf *Jetzt registrieren* und erstellen Sie ein Konto.
+.. Wählen Sie *Systeme* > *Systeme registrieren*.
+.. Geben Sie die Seriennummer des Speichersystems und die gewünschten Details ein.
+
+
+Sobald NetApp Ihre Registrierung genehmigt hat, können Sie die erforderliche Software herunterladen.  Die Genehmigung dauert bis zu 24 Stunden.
+
+|===
+
+
+.Wie geht es weiter?
+Nachdem Sie die Installation Ihrer AFX 1K-Hardware vorbereitet haben,link:install-switches.html["Installieren Sie die Switches für Ihr AFX 1K-Speichersystem"] .

@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: manage-data/manage-volumes.html 
+keywords: afx, afx system, manage volumes 
+summary: Es gibt mehrere Verwaltungsaufgaben, die Sie im Rahmen der Verwaltung der in Ihrem AFX-Cluster definierten Volumes ausführen können. 
+---
+= Verwalten der AFX-Speichersystemvolumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es gibt mehrere Verwaltungsaufgaben, die Sie im Rahmen der Verwaltung der in Ihrem AFX-Cluster definierten Volumes ausführen können.
+
+
+
+== Erstellen Sie einen Qtree
+
+Ein Qtree ist eine logische Unterteilung innerhalb eines Datenträgers, die Sie zum Organisieren und Verwalten von Daten erstellen können.
+
+.Schritte
+. Wählen Sie im System Manager *Speicher* und dann *Qtrees*.
+. Wählenimage:icon_add_blue_bg.png["Mit blauem Hintergrund hinzufügen"] und geben Sie die grundlegende Konfiguration an, einschließlich Name, Volume und Sicherheitsstil. Konfigurieren Sie optional ein Kontingent.
+. Wählen Sie *Speichern*, um den Qtree hinzuzufügen.
+
+
+
+
+== Erstellen Sie ein Kontingent
+
+Ein Kontingent ist eine Begrenzung der Speicherplatzmenge oder der Anzahl der Dateien, die von einem Benutzer, einer Gruppe oder einem Qtree verwendet werden können.  Kontingente werden verwendet, um die Ressourcennutzung innerhalb eines AFX-Systems zu verwalten und zu steuern.
+
+.Schritte
+. Wählen Sie im System-Manager *Speicher* und dann *Kontingente*.
+. Wählen Sie die Registerkarte *Nutzung* aus, um eine Liste der aktiven Kontingente aller Volumes anzuzeigen.
+. Wählen Sie die Registerkarte *Volumes* aus, um eine Liste der im AFX-Cluster definierten Volumes anzuzeigen. Wählen Sie ein bestimmtes Volume aus, um zusätzliche Informationen anzuzeigen.
+. Um ein Kontingent festzulegen, wählen Sie die Registerkarte *Regeln*.
+. Geben Sie die Konfigurationsdetails an, einschließlich Kontingentziel, Typ und Grenzwerte.
+. Wählen Sie *Speichern*, um das Kontingent hinzuzufügen.
+

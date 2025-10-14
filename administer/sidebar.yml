@@ -1,0 +1,56 @@
+---
+section: administer
+title: Verwalten Ihres Clusters
+entries:
+- title: Überwachen von Clusterprozessen
+  entries:
+  - title: Dashboard und Clusterstatus anzeigen
+    url: "/administer/view-dashboard.html"
+  - title: Einblicke anzeigen
+    url: "/administer/view-insights.html"
+  - title: Überwachen der Leistung
+    url: "/administer/monitor-cluster-performance.html"
+  - title: Ereignisse und Protokoll anzeigen
+    url: "/administer/view-events-log.html"
+  - title: Jobs anzeigen
+    url: "/administer/view-jobs.html"
+- title: Verwalten von Netzwerken und Sicherheit
+  entries:
+  - title: Verwalten des Clusternetzwerks
+    url: "/administer/manage-cluster-networking.html"
+  - title: Verwalten von Ethernet-Ports
+    url: "/administer/manage-ethernet-ports.html"
+  - title: Vorbereiten von Authentifizierungsdiensten
+    url: "/administer/prepare-authentication.html"
+  - title: Verwalten von Benutzern und Rollen
+    url: "/administer/manage-users-roles.html"
+  - title: Zertifikate verwalten
+    url: "/administer/manage-certificates.html"
+- title: Verwalten von Speicher-VMs
+  entries:
+  - title: Zeigen Sie Ihre SVMs an
+    url: "/administer/display-svms.html"
+  - title: Erstellen einer Daten-SVM
+    url: "/administer/create-svm.html"
+  - title: Konfigurieren einer Daten-SVM
+    url: "/administer/configure-svm.html"
+  - title: Migrieren einer SVM
+    url: "/administer/migrate-svm.html"
+- title: Unterstützen Sie den Cluster
+  entries:
+  - title: AutoSupport verwalten
+    url: "/administer/manage-autosupport.html"
+  - title: Supportfälle anzeigen und übermitteln
+    url: "/administer/submit-view-case.html"
+- title: Aktualisieren und Warten des Clusters
+  entries:
+  - title: Cluster erweitern
+    url: "/administer/expand-cluster.html"
+  - title: ONTAP -Upgrade
+    url: "/administer/upgrade-ontap.html"
+  - title: Firmware aktualisieren
+    url: "/administer/update-firmware.html"
+  - title: Warten Sie die Hardware
+    url: "/administer/maintain-hardware.html"
+- title: Zusätzliche Verwaltung
+  url: "/administer/additional-ontap-cluster.html"

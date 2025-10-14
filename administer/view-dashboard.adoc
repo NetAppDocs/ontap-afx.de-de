@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: administer/view-dashboard.html 
+keywords: afx, afx system, dashboard, view dashboard, cluster status 
+summary: Sie können sich beim System Manager anmelden, um auf das AFX-Dashboard zuzugreifen und den Clusterstatus anzuzeigen.  Dies ist ein guter erster Schritt, bevor Sie mit Ihren AFX-Verwaltungsaufgaben beginnen oder wenn Sie ein Betriebsproblem vermuten. 
+---
+= Dashboard des AFX-Speichersystems anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können sich beim System Manager anmelden, um auf das AFX-Dashboard zuzugreifen und den Clusterstatus anzuzeigen.  Dies ist ein guter erster Schritt, bevor Sie mit Ihren AFX-Verwaltungsaufgaben beginnen oder wenn Sie ein Betriebsproblem vermuten.
+
+.Bevor Sie beginnen
+Sie benötigen Folgendes:
+
+* IP-Adresse oder Domänenname des Cluster-Management-LIF
+* Anmeldeinformationen des Administratorkontos
+
+
+.Schritte
+. Stellen Sie über einen Browser und die IP-Adresse der Clusterverwaltung eine Verbindung zum System Manager her:
++
+`\https://$FQDN_IPADDR/`
+
++
+*Beispiel*
+
++
+`\https://10.61.25.33/`
+
+. Geben Sie den Benutzernamen und das Kennwort für das Administratorkonto ein und wählen Sie * Sign in*.
+. Wählen Sie im linken Navigationsbereich *Dashboard* aus und überprüfen Sie die Kacheln auf der Seite, einschließlich des Clusters *Health*.
+. Wählen Sie im Navigationsbereich *Cluster* und dann *Übersicht* aus.
+. Überprüfen Sie den Clusternamen, die Version, die ONTAP Persönlichkeit und die anderen Details.
+. Wählen Sie oben auf der Übersichtsseite *Verkabelung* aus, um eine visuelle Anzeige der Cluster-Hardware und -Verbindungen zu erhalten.
+. Wählen Sie im Navigationsbereich *Ereignisse und Jobs* und dann *Systemwarnungen* aus, um die Systemwarnungen anzuzeigen und zu überprüfen.
+

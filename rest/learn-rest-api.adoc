@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: rest/learn-rest-api.html 
+keywords: afx, afx system, rest api, rest, automation 
+summary: Die mit AFX bereitgestellte REST-API basiert auf der Unified ONTAP REST-API.  Es gibt eine Reihe von Änderungen, die es an die einzigartigen Eigenschaften und Fähigkeiten der AFX-Persönlichkeit anpassen. 
+---
+= Erfahren Sie mehr über die REST-API des AFX-Speichersystems
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die mit AFX bereitgestellte REST-API basiert auf der Unified ONTAP REST-API.  Es gibt eine Reihe von Änderungen, die es an die einzigartigen Eigenschaften und Fähigkeiten der AFX-Persönlichkeit anpassen.
+
+
+
+== Nicht unterstützte Funktionen
+
+AFX ist ein leistungsstarkes NAS- und S3-Speichersystem.  Es ermöglicht Clients den Datenzugriff über NFS, SMB/CIFS und S3.  Aufgrund dieser Spezialisierung gibt es mehrere nicht unterstützte Funktionen, darunter:
+
+* Metrocluster
+* Speicherbereichsnetzwerk (SAN)
+* Festplattenaggregate
+
+
+
+
+== Entfernte API-Endpunkte
+
+Mehrere Endpunkte wurden aus der REST-API entfernt, die den nicht unterstützten Funktionen entsprechen.
+
+.Liste nicht unterstützter Endpunkte
+[%collapsible]
+====
+[source, text]
+----
+/cluster/counter/tables
+/cluster/metrocluster
+/cluster/metrocluster/diagnostics
+/cluster/metrocluster/dr-groups
+/cluster/metrocluster/interconnects
+/cluster/metrocluster/nodes
+/cluster/metrocluster/operations
+/cluster/metrocluster/svms
+/network/fc/fabrics
+/network/fc/interfaces
+/network/fc/logins
+/network/fc/ports
+/network/fc/wwpn-aliases
+/protocols/nvme/interfaces
+/protocols/nvme/services
+/protocols/nvme/subsystem-controllers
+/protocols/nvme/subsystem-maps
+/protocols/nvme/subsystems
+/protocols/san/fcp/services
+/protocols/san/igroups
+/protocols/san/initiators
+/protocols/san/iscsi/credentials
+/protocols/san/iscsi/services
+/protocols/san/iscsi/sessions
+/protocols/san/lun-maps
+/protocols/san/portsets
+/protocols/san/vvol-bindings
+/storage/luns
+/storage/namespaces
+----
+====
+
+
+== Ähnliche Informationen
+
+* https://docs.netapp.com/us-en/ontap-automation["ONTAP Automatisierung"^]
+* https://docs.netapp.com/us-en/asa-r2/learn-more/rest-api-support.html["REST-API-Unterstützung für ASA r2"^]
+

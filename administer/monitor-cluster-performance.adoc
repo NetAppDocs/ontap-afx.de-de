@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: administer/monitor-cluster-performance.html 
+keywords: afx, afx system, cluster performance 
+summary: Sie können eine allgemeine Übersicht über die Leistung Ihres AFX-Clusters anzeigen. 
+---
+= Überwachen der Clusterleistung des AFX-Speichersystems
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine allgemeine Übersicht über die Leistung Ihres AFX-Clusters anzeigen.
+
+
+
+== Speicherkapazität
+
+Das System Manager-Dashboard enthält eine allgemeine Anzeige der Speicherauslastung für den Cluster.
+
+.Schritte
+. Wählen Sie im System-Manager im Navigationsbereich *Dashboard* aus.
+. Suchen Sie die Kachel *Kapazität* und zeigen Sie den verfügbaren und verwendeten physischen Speicher an.
+. Wählen Sie *Verlauf*, um auf Active IQ zuzugreifen und die Verlaufsdaten anzuzeigen.
+
+
+
+
+== Cluster-Leistung
+
+System Manager bietet einen detaillierten Überblick über die Leistung des AFX-Clusters.
+
+.Schritte
+. Wählen Sie im System-Manager *Analyse* und dann *Leistung*.
+. Überprüfen Sie oben die Zusammenfassung der Clusterleistung, einschließlich Latenz und Durchsatz.
+. Wählen Sie unter der Registerkarte *Top-Akteure* die gewünschte SVM aus und aktivieren Sie dann bei Bedarf die *Aktivitätsverfolgung*.
+. Zeigen Sie auf der Registerkarte *Volume-Leistung* die Leistungsdetails eines bestimmten Volumes an.
+
+
+
+
+== Ähnliche Informationen
+
+* link:../administer/additional-ontap-cluster.html["Zusätzliche AFX-Clusterverwaltung"]
+

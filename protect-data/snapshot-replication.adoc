@@ -1,0 +1,183 @@
+---
+sidebar: sidebar 
+permalink: protect-data/snapshot-replication.html 
+keywords: afx, afx system, manage replication, manage snapshot replication 
+summary: Bei der Snapshot-Replikation handelt es sich um einen Prozess, bei dem Konsistenzgruppen auf Ihrem AFX-System an einen geografisch entfernten Standort kopiert werden.  Nach der ersten Replikation werden Änderungen an Konsistenzgruppen basierend auf einer Replikationsrichtlinie an den Remote-Standort kopiert.  Replizierte Konsistenzgruppen können zur Notfallwiederherstellung oder Datenmigration verwendet werden. 
+---
+= Verwalten der Snapshot-Replikation auf einem AFX-Speichersystem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei der Snapshot-Replikation handelt es sich um einen Prozess, bei dem Konsistenzgruppen auf Ihrem AFX-System an einen geografisch entfernten Standort kopiert werden.  Nach der ersten Replikation werden Änderungen an Konsistenzgruppen basierend auf einer Replikationsrichtlinie an den Remote-Standort kopiert.  Replizierte Konsistenzgruppen können zur Notfallwiederherstellung oder Datenmigration verwendet werden.
+
+Um die Snapshot-Replikation einzurichten, müssen Sie eine Replikationsbeziehung zwischen Ihrem AFX-Speichersystem und dem Remote-Standort herstellen.  Die Replikationsbeziehung wird durch eine Replikationsrichtlinie geregelt.  Während der Clustereinrichtung wird eine Standardrichtlinie zum Replizieren aller Snapshots erstellt.  Sie können die Standardrichtlinie verwenden oder optional eine neue Richtlinie erstellen.
+
+
+
+== Schritt 1: Erstellen einer Cluster-Peer-Beziehung
+
+Bevor Sie Ihre Daten durch Replikation auf einen Remote-Cluster schützen können, müssen Sie eine Cluster-Peer-Beziehung zwischen dem lokalen und dem Remote-Cluster erstellen.
+
+.Bevor Sie beginnen
+Die Voraussetzungen für Cluster-Peering sind für AFX-Systeme dieselben wie für andere ONTAP Systeme. link:https://docs.netapp.com/us-en/ontap/peering/prerequisites-cluster-peering-reference.html["Überprüfen der Voraussetzungen für Cluster-Peering"^] .
+
+.Schritte
+. Wählen Sie im lokalen Cluster im System Manager *Cluster > Einstellungen*.
+. Wählen Sie unter *Intercluster-Einstellungen* neben *Cluster-Peers*image:icon_kabob.gif["drei vertikale blaue Punkte"] und wählen Sie dann *Cluster-Peer hinzufügen*.
+. Wählen Sie *Remote-Cluster starten*. Dadurch wird eine Passphrase generiert, die Sie zur Authentifizierung beim Remote-Cluster verwenden.
+. Nachdem die Passphrase für den Remote-Cluster generiert wurde, fügen Sie sie unter *Passphrase* im lokalen Cluster ein.
+. Wählenimage:icon_add.gif["blaues Pluszeichen gefolgt vom Wort „Add“ in blauen Buchstaben"] ; geben Sie dann die IP-Adresse der Cluster-übergreifenden Netzwerkschnittstelle ein.
+. Wählen Sie *Cluster-Peering initiieren*.
+
+
+.Wie geht es weiter?
+Sie haben mit einem Remote-Cluster eine Peering-Verbindung für einen lokalen AFX-Cluster hergestellt.  Sie können jetzt eine Replikationsbeziehung erstellen.
+
+
+
+== Schritt 2: Optional eine Replikationsrichtlinie erstellen
+
+Die Snapshot-Replikationsrichtlinie definiert, wann auf dem AFX-Cluster durchgeführte Updates auf den Remote-Standort repliziert werden.
+
+.Schritte
+. Wählen Sie im System Manager *Schutz > Richtlinien* und dann *Replikationsrichtlinien*.
+. Wählenimage:icon_add_blue_bg.png["blaues Rechteck mit einem Pluszeichen, gefolgt vom Wort „Add“ in weißen Buchstaben"] .
+. Geben Sie einen Namen für die Replikationsrichtlinie ein oder akzeptieren Sie den Standardnamen. Geben Sie anschließend eine Beschreibung ein.
+. Wählen Sie den *Richtlinienumfang* aus.
++
+Wenn Sie die Replikationsrichtlinie auf den gesamten Cluster anwenden möchten, wählen Sie *Cluster* aus.  Wenn die Replikationsrichtlinie nur auf das Volume in einer bestimmten Speicher-VM angewendet werden soll, wählen Sie *Speicher-VM*.
+
+. Wählen Sie den *Richtlinientyp* aus.
++
+[cols="2,6a"]
+|===
+| Option | Schritte 
+
+
+| Kopieren Sie Daten an den Remote-Standort, nachdem sie in die Quelle geschrieben wurden.  a| 
+.. Wählen Sie *Asynchron*.
+.. Akzeptieren Sie unter *Snapshots von Quelle übertragen* den Standardübertragungszeitplan oder wählen Sie einen anderen aus.
+.. Wählen Sie aus, ob alle Snapshots übertragen werden sollen oder ob Regeln erstellt werden sollen, um zu bestimmen, welche Snapshots übertragen werden sollen.
+.. Aktivieren Sie optional die Netzwerkkomprimierung.
+
+
+
+
+| Schreiben Sie Daten gleichzeitig auf die Quell- und Remote-Sites.  a| 
+.. Wählen Sie *Synchron*.
+
+
+|===
+. Wählen Sie *Speichern*.
+
+
+.Wie geht es weiter?
+Sie haben eine Replikationsrichtlinie erstellt und sind nun bereit, eine Replikationsbeziehung zwischen Ihrem AFX-System und Ihrem Remote-Standort zu erstellen.
+
+
+
+== Schritt 3: Erstellen einer Replikationsbeziehung
+
+Eine Snapshot-Replikationsbeziehung stellt eine Verbindung zwischen Ihrem AFX-System und einem Remotestandort her, sodass Sie Konsistenzgruppen auf einen Remotecluster replizieren können.  Replizierte Konsistenzgruppen können zur Notfallwiederherstellung oder zur Datenmigration verwendet werden.
+
+Zum Schutz vor Ransomware-Angriffen können Sie beim Einrichten Ihrer Replikationsbeziehung die Ziel-Snapshots sperren.  Gesperrte Snapshots können nicht versehentlich oder böswillig gelöscht werden.  Sie können gesperrte Snapshots verwenden, um Daten wiederherzustellen, wenn ein Volume durch einen Ransomware-Angriff kompromittiert wurde.
+
+.Bevor Sie beginnen
+Wenn Sie Ihre Ziel-Snapshots sperren möchten, müssen Sielink:../secure-data/ransomware-protection.html#initialize-the-snaplock-compliance-clock["Initialisieren Sie die Snapshot-Compliance-Uhr"] bevor Sie die Replikationsbeziehung erstellen.
+
+Erstellen Sie eine Replikationsbeziehung mit oder ohne gesperrte Ziel-Snapshots.
+
+[role="tabbed-block"]
+====
+.Mit gesperrten Snapshots
+--
+.Schritte
+. Wählen Sie im System Manager *Schutz > Konsistenzgruppen*.
+. Wählen Sie eine Konsistenzgruppe aus.
+. Wählenimage:icon_kabob.gif["drei vertikale blaue Punkte"] ; wählen Sie dann *Schützen*.
+. Wählen Sie unter *Remote-Schutz* die Option *Auf einen Remote-Cluster replizieren* aus.
+. Wählen Sie die *Replikationsrichtlinie* aus.
++
+Sie müssen eine _Vault_-Replikationsrichtlinie auswählen.
+
+. Wählen Sie *Zieleinstellungen*.
+. Wählen Sie *Ziel-Snapshots sperren, um Löschung zu verhindern*
+. Geben Sie die maximale und minimale Datenaufbewahrungsdauer ein.
+. Um den Beginn der Datenübertragung zu verzögern, deaktivieren Sie *Übertragung sofort starten*.
++
+Die erste Datenübertragung beginnt standardmäßig sofort.
+
+. Um den Standardübertragungszeitplan zu überschreiben, wählen Sie optional *Zieleinstellungen* und dann *Übertragungszeitplan überschreiben*.
++
+Ihr Transferplan muss mindestens 30 Minuten betragen, um unterstützt zu werden.
+
+. Wählen Sie *Speichern*.
+
+
+--
+.Ohne gesperrte Snapshots
+--
+.Schritte
+. Wählen Sie im System Manager *Schutz > Replikation*.
+. Wählen Sie diese Option aus, um die Replikationsbeziehung mit einem lokalen Ziel oder einer lokalen Quelle zu erstellen.
++
+[cols="2,2"]
+|===
+| Option | Schritte 
+
+
+| Lokale Ziele  a| 
+.. Wählen Sie *Lokale Ziele* und dannimage:icon_replicate_blue_bg.png["Rechteck mit blauem Hintergrund und dem Wort „replizieren“ in weißen Buchstaben"] .
+.. Suchen Sie nach der Quellkonsistenzgruppe und wählen Sie sie aus.
++
+Die _Quell_-Konsistenzgruppe bezieht sich auf die Konsistenzgruppe auf Ihrem lokalen Cluster, die Sie replizieren möchten.
+
+
+
+
+
+| Lokale Quellen  a| 
+.. Wählen Sie *Lokale Quellen* und dannimage:icon_replicate_blue_bg.png["Rechteck mit blauem Hintergrund und dem Wort „replizieren“ in weißen Buchstaben"] .
+.. Suchen Sie nach der Quellkonsistenzgruppe und wählen Sie sie aus.
++
+Die _Quell_-Konsistenzgruppe bezieht sich auf die Konsistenzgruppe auf Ihrem lokalen Cluster, die Sie replizieren möchten.
+
+.. Wählen Sie unter *Replikationsziel* den Cluster aus, in den repliziert werden soll, und wählen Sie dann die Speicher-VM aus.
+
+
+|===
+. Wählen Sie eine Replikationsrichtlinie aus.
+. Um den Beginn der Datenübertragung zu verzögern, wählen Sie *Zieleinstellungen* und deaktivieren Sie anschließend *Übertragung sofort starten*.
++
+Die erste Datenübertragung beginnt standardmäßig sofort.
+
+. Um den Standardübertragungszeitplan zu überschreiben, wählen Sie optional *Zieleinstellungen* und dann *Übertragungszeitplan überschreiben*.
++
+Ihr Transferplan muss mindestens 30 Minuten betragen, um unterstützt zu werden.
+
+. Wählen Sie *Speichern*.
+
+
+--
+====
+.Wie geht es weiter?
+Nachdem Sie nun eine Replikationsrichtlinie und -beziehung erstellt haben, beginnt Ihre erste Datenübertragung, wie in Ihrer Replikationsrichtlinie definiert.  Sie können optional Ihr Replikations-Failover testen, um zu überprüfen, ob ein erfolgreiches Failover erfolgen kann, wenn Ihr AFX-System offline geht.
+
+
+
+== Schritt 4: Testen des Replikationsfailovers
+
+Überprüfen Sie optional, ob Sie Daten von replizierten Volumes auf einem Remotecluster erfolgreich bereitstellen können, wenn der Quellcluster offline ist.
+
+.Schritte
+. Wählen Sie im System Manager *Schutz > Replikation*.
+. Bewegen Sie den Mauszeiger über die Replikationsbeziehung, die Sie testen möchten, und wählen Sie dannimage:icon_kabob.gif["drei vertikale blaue Punkte"] .
+. Wählen Sie *Failover testen*.
+. Geben Sie die Failover-Informationen ein und wählen Sie dann *Failover testen*.
+
+
+.Wie geht es weiter?
+Nachdem Ihre Daten nun durch die Snapshot-Replikation für die Notfallwiederherstellung geschützt sind, sollten Sielink:../secure-data/encrypt-data-at-rest.html["Verschlüsseln Sie Ihre Daten im Ruhezustand"] sodass sie nicht gelesen werden kann, wenn eine Festplatte in Ihrem AFX-System zweckentfremdet, zurückgegeben, verlegt oder gestohlen wird.

@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: administer/upgrade-ontap.html 
+keywords: afx, afx system, upgrade, upgrade ontap 
+summary: Wenn Sie Ihre ONTAP -Software auf Ihrem AFX-System aktualisieren, können Sie die Vorteile neuer und verbesserter ONTAP Funktionen nutzen, mit denen Sie Kosten senken, kritische Workloads beschleunigen, die Sicherheit verbessern und den Umfang des für Ihr Unternehmen verfügbaren Datenschutzes erweitern können. 
+---
+= Upgrade von ONTAP auf einem AFX-Speichersystem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie Ihre ONTAP -Software auf Ihrem AFX-System aktualisieren, können Sie die Vorteile neuer und verbesserter ONTAP Funktionen nutzen, mit denen Sie Kosten senken, kritische Workloads beschleunigen, die Sicherheit verbessern und den Umfang des für Ihr Unternehmen verfügbaren Datenschutzes erweitern können.
+
+ONTAP -Software-Upgrades für AFX-Speichersysteme folgen demselben Prozess wie Upgrades für andere ONTAP Systeme.  Wenn Sie einen aktiven SupportEdge Vertrag für Active IQ Digital Advisor (auch bekannt als Digital Advisor) haben, sollten Sielink:https://docs.netapp.com/us-en/ontap/upgrade/create-upgrade-plan.html["Bereiten Sie sich mit Upgrade Advisor auf das Upgrade vor"^] .  Upgrade Advisor bietet Informationen, die Ihnen helfen, Unsicherheiten und Risiken zu minimieren, indem es Ihren Cluster bewertet und einen auf Ihre Konfiguration zugeschnittenen Upgradeplan erstellt.  Wenn Sie keinen aktiven SupportEdge -Vertrag für Active IQ Digital Advisor haben, sollten Sielink:https://docs.netapp.com/us-en/ontap/upgrade/prepare.html["Vorbereiten des Upgrades ohne Upgrade Advisor"^] .
+
+Nachdem Sie Ihr Upgrade vorbereitet haben, wird empfohlen, Upgrades mitlink:https://docs.netapp.com/us-en/ontap/upgrade/task_upgrade_andu_sm.html["automatisiertes unterbrechungsfreies Upgrade (ANDU) vom System Manager"] .  ANDU nutzt die Hochverfügbarkeits-Failover-Technologie (HA) von ONTAP, um sicherzustellen, dass Cluster während des Upgrades weiterhin ohne Unterbrechung Daten bereitstellen.
+
+.Ähnliche Informationen
+* https://docs.netapp.com/us-en/ontap/upgrade/index.html["Erfahren Sie mehr über das ONTAP -Upgrade"^] .
+

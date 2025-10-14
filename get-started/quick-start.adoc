@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: get-started/quick-start.html 
+keywords: afx, afx system, quick start 
+summary: Um Ihr AFX-System zum ersten Mal in Betrieb zu nehmen, müssen Sie die Hardwarekomponenten installieren, Ihren Cluster einrichten und die Verwaltung Ihres Clusters und Ihrer SVMs vorbereiten. 
+---
+= Schnellstart zum Einrichten eines AFX-Speichersystems
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um Ihr AFX-System zum ersten Mal in Betrieb zu nehmen, müssen Sie die Hardwarekomponenten installieren, Ihren Cluster einrichten und die Verwaltung Ihres Clusters und Ihrer SVMs vorbereiten.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"]Installieren und Einrichten Ihrer Hardware
+[role="quick-margin-para"]
+link:../install-setup/install-setup-workflow.html["Installieren"]Ihr AFX-Speichersystem und bereiten Sie die Einrichtung des Clusters vor.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]Einrichten Ihres Clusters
+[role="quick-margin-para"]
+Folgen Sie dem schnellen und einfachen Prozess, umlink:../install-setup/cluster-setup.html["aufstellen"] Ihr ONTAP Cluster mithilfe von System Manager.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"]Vorbereiten der Clusterverwaltung
+[role="quick-margin-para"]
+Bevor Sie AFX in einer Produktionsumgebung einsetzen, ist es wichtig,link:../get-started/prepare-cluster-admin.html["vorbereiten"] durch das Verständnis der Verwaltungsstruktur – einschließlich virtueller Speichermaschinen (SVMs), Benutzer, Rollen und Verwaltungsschnittstellen – um eine sichere, effiziente und effektive Clusterverwaltung zu gewährleisten.

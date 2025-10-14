@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: protect-data/policies-schedules.html 
+keywords: afx, afx system, data protection, protection policies, protection schedules 
+summary: Sie können Snapshot-Richtlinien verwenden, um Daten in Ihren Konsistenzgruppen basierend auf einem automatisierten Zeitplan zu schützen.  Die Richtlinienpläne innerhalb der Snapshot-Richtlinien bestimmen, wie oft Snapshots erstellt werden. 
+---
+= Verwalten Sie Datenschutzrichtlinien und -pläne für AFX-Speichersysteme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Snapshot-Richtlinien verwenden, um Daten in Ihren Konsistenzgruppen basierend auf einem automatisierten Zeitplan zu schützen.  Die Richtlinienpläne innerhalb der Snapshot-Richtlinien bestimmen, wie oft Snapshots erstellt werden.
+
+
+
+== Erstellen eines neuen Schutzrichtlinienzeitplans
+
+Ein Schutzrichtlinienplan definiert, wie oft eine Snapshot-Richtlinie ausgeführt wird.  Sie können Zeitpläne erstellen, die in regelmäßigen Abständen basierend auf einer Anzahl von Tagen, Stunden oder Minuten ausgeführt werden.  Sie können beispielsweise einen Zeitplan erstellen, der stündlich oder nur einmal pro Tag ausgeführt wird.  Sie können auch Zeitpläne erstellen, die zu bestimmten Zeiten an bestimmten Wochen- oder Monatstagen ausgeführt werden.  Sie können beispielsweise einen Zeitplan erstellen, der am 20. jedes Monats um 0:15 Uhr ausgeführt wird.
+
+Durch die Definition verschiedener Schutzrichtlinienpläne haben Sie die Flexibilität, die Häufigkeit von Snapshots für verschiedene Anwendungen zu erhöhen oder zu verringern.  Auf diese Weise können Sie für Ihre kritischen Workloads ein höheres Maß an Schutz und ein geringeres Risiko eines Datenverlusts bereitstellen, als dies bei weniger kritischen Workloads erforderlich wäre.
+
+.Schritte
+. Wählen Sie *Schutz* und dann *Richtlinien*; wählen Sie dann *Zeitplan*.
+. Wählenimage:icon_add_blue_bg.png["ein blaues Rechteck mit einem Pluszeichen, gefolgt vom Wort „Add“ in weißen Buchstaben"] .
+. Geben Sie einen Namen für den Zeitplan ein und wählen Sie dann die Zeitplanparameter aus.
+. Wählen Sie *Speichern*.
+
+
+.Wie geht es weiter?
+Nachdem Sie nun einen neuen Richtlinienzeitplan erstellt haben, können Sie den neu erstellten Zeitplan innerhalb Ihrer Richtlinien verwenden, um zu definieren, wann Snapshots erstellt werden.
+
+
+
+== Erstellen einer Snapshot-Richtlinie
+
+Eine Snapshot-Richtlinie definiert, wie oft Snapshots erstellt werden, wie viele Snapshots maximal zulässig sind und wie lange Snapshots aufbewahrt werden.
+
+.Schritte
+. Wählen Sie im System Manager *Schutz* und dann *Richtlinien*; wählen Sie dann *Snapshot-Richtlinien*.
+. Wählenimage:icon_add_blue_bg.png["blaues Rechteck mit einem Pluszeichen, gefolgt vom Wort „Add“ in weißen Buchstaben"] .
+. Geben Sie einen Namen für die Snapshot-Richtlinie ein.
+. Wählen Sie *Cluster* aus, um die Richtlinie auf den gesamten Cluster anzuwenden.  Wählen Sie *Storage-VM* aus, um die Richtlinie auf eine einzelne Storage-VM anzuwenden.
+. Wählen Sie *Zeitplan hinzufügen* und geben Sie dann den Zeitplan für die Snapshot-Richtlinie ein.
+. Wählen Sie *Richtlinie hinzufügen*.
+
+
+.Wie geht es weiter?
+Nachdem Sie nun eine Snapshot-Richtlinie erstellt haben, können Sie sie auf eine Konsistenzgruppe anwenden.  Basierend auf den Parametern, die Sie in Ihrer Snapshot-Richtlinie festgelegt haben, werden Snapshots der Konsistenzgruppe erstellt.
+
+
+
+== Anwenden einer Snapshot-Richtlinie auf eine Konsistenzgruppe
+
+Wenden Sie eine Snapshot-Richtlinie auf eine Konsistenzgruppe an, um Snapshots der Konsistenzgruppe automatisch zu erstellen, aufzubewahren und zu kennzeichnen.
+
+.Schritte
+. Wählen Sie im System Manager *Schutz* und dann *Richtlinien*; wählen Sie dann *Snapshot-Richtlinien*.
+. Bewegen Sie den Mauszeiger über den Namen der Snapshot-Richtlinie, die Sie anwenden möchten.
+. Wählenimage:icon_kabob.gif["drei vertikale blaue Punkte"] ; wählen Sie dann *Übernehmen*.
+. Wählen Sie die Konsistenzgruppen aus, auf die Sie die Snapshot-Richtlinie anwenden möchten, und wählen Sie dann *Übernehmen*.
+
+
+.Wie geht es weiter?
+Nachdem Ihre Daten nun mit Snapshots geschützt sind, sollten Sielink:snapshot-replication.html#step-3-create-a-replication-relationship["Richten Sie eine Replikationsbeziehung ein"] um Ihre Konsistenzgruppen zur Sicherung und Notfallwiederherstellung an einen geografisch entfernten Standort zu kopieren.
+
+
+
+== Bearbeiten, Löschen oder Deaktivieren einer Snapshot-Richtlinie
+
+Bearbeiten Sie eine Snapshot-Richtlinie, um den Richtliniennamen, die maximale Anzahl von Snapshots oder die SnapMirror -Bezeichnung zu ändern.  Löschen Sie eine Richtlinie, um sie und die zugehörigen Sicherungsdaten aus Ihrem Cluster zu entfernen.  Deaktivieren Sie eine Richtlinie, um die Erstellung oder Übertragung der in der Richtlinie angegebenen Snapshots vorübergehend zu stoppen.
+
+.Schritte
+. Wählen Sie im System Manager *Schutz* und dann *Richtlinien*; wählen Sie dann *Snapshot-Richtlinien*.
+. Bewegen Sie den Mauszeiger über den Namen der Snapshot-Richtlinie, die Sie bearbeiten möchten.
+. Wählenimage:icon_kabob.gif["drei vertikale blaue Punkte"] ; wählen Sie dann *Bearbeiten*, *Löschen* oder *Deaktivieren*.
+
+
+.Ergebnis
+Sie haben die Snapshot-Richtlinie geändert, gelöscht oder deaktiviert.
+
+
+
+== Bearbeiten einer Replikationsrichtlinie
+
+Bearbeiten Sie eine Replikationsrichtlinie, um die Richtlinienbeschreibung, den Übertragungsplan und die Regeln zu ändern.  Sie können die Richtlinie auch bearbeiten, um die Netzwerkkomprimierung zu aktivieren oder zu deaktivieren.
+
+.Schritte
+. Wählen Sie im System-Manager *Schutz* und dann *Richtlinien*.
+. Wählen Sie *Replikationsrichtlinien* aus.
+. Bewegen Sie den Mauszeiger über die Replikationsrichtlinie, die Sie bearbeiten möchten. Wählen Sie dannimage:icon_kabob.gif["drei vertikale blaue Punkte"] .
+. Wählen Sie *Bearbeiten*.
+. Aktualisieren Sie die Richtlinie und wählen Sie dann *Speichern*.
+

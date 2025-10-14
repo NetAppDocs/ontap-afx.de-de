@@ -1,0 +1,14 @@
+---
+sidebar: sidebar 
+permalink: administer/maintain-hardware.html 
+keywords: afx, afx system, maintain hardware, hardware 
+summary: Navigieren Sie zur AFX-Wartungsdokumentation, um zu erfahren, wie Sie Wartungsverfahren an Ihrem AFX-Speichersystem durchführen. 
+---
+= Warten der AFX-Speichersystemhardware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Navigieren Sie zum https://docs.netapp.com/us-en/ontap-systems/afx-landing-maintain/index.html["AFX-Wartungsdokumentation"^] um zu erfahren, wie Sie Wartungsarbeiten an Ihrem AFX-Speichersystem durchführen.

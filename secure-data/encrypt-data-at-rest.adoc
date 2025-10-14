@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: secure-data/encrypt-data-at-rest.html 
+keywords: afx, afx system, encryption, encrypt data 
+summary: Sie können Ihre Daten auf Hardware- und Softwareebene verschlüsseln, um einen zweischichtigen Schutz zu gewährleisten.  Wenn Sie ruhende Daten verschlüsseln, können diese nicht gelesen werden, wenn das Speichermedium zweckentfremdet, zurückgegeben, verlegt oder gestohlen wird. 
+---
+= Verschlüsseln Sie ruhende Daten auf einem AFX-Speichersystem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Ihre Daten auf Hardware- und Softwareebene verschlüsseln, um einen zweischichtigen Schutz zu gewährleisten.  Wenn Sie ruhende Daten verschlüsseln, können diese nicht gelesen werden, wenn das Speichermedium zweckentfremdet, zurückgegeben, verlegt oder gestohlen wird.
+
+NetApp Storage Encryption (NSE) unterstützt die Hardwareverschlüsselung mithilfe von selbstverschlüsselnden Laufwerken (SEDs).  SEDs verschlüsseln Daten beim Schreiben.  Jedes SED enthält einen einzigartigen Verschlüsselungsschlüssel.  Auf dem SED gespeicherte verschlüsselte Daten können ohne den Verschlüsselungsschlüssel des SED nicht gelesen werden.  Knoten, die versuchen, von einem SED zu lesen, müssen authentifiziert werden, um auf den Verschlüsselungsschlüssel des SED zugreifen zu können.  Knoten werden authentifiziert, indem sie einen Authentifizierungsschlüssel von einem Schlüsselmanager erhalten und diesen dann dem SED vorlegen.  Wenn der Authentifizierungsschlüssel gültig ist, gibt das SED dem Knoten seinen Verschlüsselungsschlüssel, um auf die darin enthaltenen Daten zuzugreifen.
+
+.Bevor Sie beginnen
+Verwenden Sie den integrierten AFX-Schlüsselmanager oder einen externen Schlüsselmanager, um Ihren Knoten Authentifizierungsschlüssel bereitzustellen.  Zusätzlich zu NSE können Sie auch die Softwareverschlüsselung aktivieren, um Ihren Daten eine weitere Sicherheitsebene hinzuzufügen.
+
+.Schritte
+. Wählen Sie im Systemmanager *Cluster* und dann *Einstellungen*.
+. Wählen Sie im Abschnitt *Sicherheit* unter *Verschlüsselung* die Option *Konfigurieren* aus.
+. Konfigurieren Sie den Schlüsselmanager.
++
+[cols="2"]
+|===
+| Option | Schritte 
+
+
+| Konfigurieren des Onboard-Schlüsselmanagers  a| 
+.. Wählen Sie *Onboard Key Manager*, um die Schlüsselserver hinzuzufügen.
+.. Geben Sie eine Passphrase ein.
+
+
+
+
+| Konfigurieren eines externen Schlüsselmanagers  a| 
+.. Wählen Sie *Externer Schlüsselmanager* aus, um die Schlüsselserver hinzuzufügen.
+.. Wählenimage:icon_add.gif["ein blaues Pluszeichen gefolgt vom Wort „Add“"] um die Schlüsselserver hinzuzufügen.
+.. Fügen Sie die CA-Zertifikate des KMIP-Servers hinzu.
+.. Fügen Sie die KMIP-Client-Zertifikate hinzu.
+
+
+|===
+. Wählen Sie *Dual-Layer-Verschlüsselung*, um die Softwareverschlüsselung zu aktivieren.
+. Wählen Sie *Speichern*.
+

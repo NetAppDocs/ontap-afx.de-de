@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: rest/first-call.html 
+keywords: afx, afx system, rest api, first call, curl 
+summary: Sie können einen einfachen Curl-Befehl ausführen, um mit der Verwendung der AFX REST-API zu beginnen und ihre Verfügbarkeit zu bestätigen. 
+---
+= Ihr erster REST-API-Aufruf für das AFX-Speichersystem
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen einfachen Curl-Befehl ausführen, um mit der Verwendung der AFX REST-API zu beginnen und ihre Verfügbarkeit zu bestätigen.
+
+.Informationen zu diesem Vorgang
+AFX ist eine von drei unterschiedlichen ONTAP Persönlichkeiten.  Sie können einen Aufruf der REST-API verwenden, um die ONTAP Persönlichkeit Ihres Clusters anhand von zwei in der Antwort enthaltenen Feldern zu bestimmen.
+
+.Bevor Sie beginnen
+Zusätzlich zum Curl-Dienstprogramm auf Ihrer lokalen Workstation benötigen Sie Folgendes:
+
+* IP-Adresse oder FQDN des AFX-Systemcluster-Management-LIF
+* ONTAP -Anmeldeinformationen für ein Konto mit Berechtigung zum Zugriff auf die ONTAP REST API
+
+
+.Schritte
+. Geben Sie den folgenden Befehl an der CLI Ihrer lokalen Arbeitsstation ein:
++
+[source, curl]
+----
+curl --request GET \
+"https://$FQDN_IP/api/cluster?fields=disaggregated,san_optimized" \
+--user username:password
+----
+. Bestimmen Sie anhand der Antwort die ONTAP Persönlichkeit wie folgt:
++
+** Wenn „disaggregiert“ *wahr* ist und:
++
+*** Wenn „san_optimized“ *false* ist, ist die Persönlichkeit AFX
+*** Wenn „san_optimized“ *true* ist, ist die Persönlichkeit ASA r2
+
+
+** Wenn „disaggregiert“ *falsch* ist, ist die Persönlichkeit Unified ONTAP
+
+
+
+
+.Ähnliche Informationen
+* link:../faq-ontap-afx.html["FAQ zu AFX-Speichersystemen"]
+

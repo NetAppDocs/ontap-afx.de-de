@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: administer/view-jobs.html 
+keywords: afx, afx system, view jobs 
+summary: AFX umfasst eine interne Plattform zum Ausführen von Hintergrundjobs basierend auf Ihrer Konfiguration und Ihren Verwaltungsaktionen.  Bei diesen Jobs kann es sich um lang laufende AFX-Komponenten oder kurzlebige Prozesse handeln, die als Reaktion auf administrative Aufgaben oder REST-API-Anfragen ausgeführt werden.  Sie können die Jobs nach Bedarf anzeigen und überwachen. 
+---
+= AFX-Speichersystemjobs anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFX umfasst eine interne Plattform zum Ausführen von Hintergrundjobs basierend auf Ihrer Konfiguration und Ihren Verwaltungsaktionen.  Bei diesen Jobs kann es sich um lang laufende AFX-Komponenten oder kurzlebige Prozesse handeln, die als Reaktion auf Verwaltungsaufgaben oder REST-API-Anfragen ausgeführt werden.  Sie können die Jobs nach Bedarf anzeigen und überwachen.
+
+.Schritte
+. Wählen Sie im System Manager *Events & Jobs* und dann *Jobs*.
+. Passen Sie die Anzeige an und suchen und laden Sie die Jobinformationen nach Bedarf herunter.
+

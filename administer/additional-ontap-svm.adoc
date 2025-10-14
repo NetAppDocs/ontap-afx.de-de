@@ -1,0 +1,73 @@
+---
+sidebar: sidebar 
+permalink: administer/additional-ontap-svm.html 
+keywords: afx, afx system, additional administration, advanced administration 
+summary: Zusätzlich zur typischen AFX SVM-Administration müssen Sie je nach Ihrer Umgebung möglicherweise noch weitere Aufgaben ausführen.  Die meisten zusätzlichen Aufgaben können mit System Manager ausgeführt werden, in einigen Fällen müssen Sie jedoch möglicherweise die CLI verwenden. 
+---
+= Zusätzliche Verwaltung für eine AFX-Speichersystem-SVM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zusätzlich zur typischen AFX SVM-Administration müssen Sie je nach Ihrer Umgebung möglicherweise noch weitere Aufgaben ausführen.  Die meisten zusätzlichen Aufgaben können mit System Manager ausgeführt werden, in einigen Fällen müssen Sie jedoch möglicherweise die CLI verwenden.
+
+
+NOTE: Die beschriebenen ONTAP -Funktionen und -Verwaltung gelten für AFX-Speichersysteme und AFF oder FAS -Systeme mit Unified ONTAP.  Links zur entsprechenden Unified ONTAP Dokumentation sind gegebenenfalls enthalten.
+
+
+
+== Speicherverwaltung und Leistung
+
+Es gibt mehrere optionale Speicherverwaltungs- und Leistungsfunktionen, die Sie konfigurieren und mit Ihrer AFX-Bereitstellung verwenden können.
+
+
+
+=== ONTAP NAS-Speicherverwaltung
+
+Network Attached Storage (NAS) bietet dedizierten Dateispeicher, auf den mehrere Clients im Netzwerk zugreifen können.  ONTAP unterstützt mehrere NAS-Protokolle. Siehe https://docs.netapp.com/us-en/ontap/nas-management/index.html["NAS-Speicherverwaltung"^] für weitere Informationen.
+
+
+
+=== ONTAP FlexCache -Volumes
+
+FlexCache ist eine Remote-Caching-Funktion von ONTAP .  Es bringt Daten näher an die Kunden, was die Zugriffsleistung verbessert und die Kosten senkt.  Das Erstellen eines FlexCache -Volumes, das zunächst nur die Metadaten aus dem ursprünglichen Dateisystem kopiert, vereinfacht die Dateiverteilung und reduziert den WAN-Verkehr. Siehe https://docs.netapp.com/us-en/ontap/flexcache/index.html["Erfahren Sie mehr über ONTAP FlexCache -Volumes"^] für weitere Informationen.
+
+
+
+=== ONTAP FlexGroup Volumes
+
+Ein FlexGroup -Volume besteht aus mehreren Mitgliedsvolumes, die den Datenverkehr automatisch und transparent teilen.  FlexGroup -Volumes bieten mehrere Vorteile, darunter hohe Leistung und vereinfachte Verwaltung. Siehe https://docs.netapp.com/us-en/ontap/flexgroup/creation-workflow-task.html["FlexGroup -Volumeneinrichtung"^] für weitere Informationen.
+
+
+
+== Datenschutz
+
+Es gibt mehrere optionale Datenschutzfunktionen, die Sie konfigurieren und mit Ihrer AFX-Bereitstellung verwenden können.
+
+
+
+=== Konsistenzgruppen
+
+Eine Konsistenzgruppe ist eine Sammlung von Volumes, die als eine Einheit verwaltet werden. Siehe https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["Erfahren Sie mehr über ONTAP Consistency Groups"^] für weitere Informationen.
+
+
+
+=== SnapLock
+
+Sie können Ihre Dateien schützen, indem Sie sie auf Volumeebene in einen WORM-Zustand (Write Once Read Many) konvertieren.  SnapLock unterstützt zwei Modi.  Der Compliance-Modus stellt sicher, dass die Dateien erst gelöscht werden können, wenn ihre Aufbewahrungsfrist abgelaufen ist, was behördlichen oder branchenspezifischen Vorschriften entspricht.  Im Enterprise-Modus können privilegierte Benutzer Dateien löschen, bevor ihre Aufbewahrungsfrist abläuft. Siehe https://docs.netapp.com/us-en/ontap/snaplock/index.html["Erfahren Sie mehr über ONTAP SnapLock"^] für weitere Informationen.
+
+
+
+== ONTAP Ereignis- und Leistungsüberwachung
+
+Sie können den Zustand und die Leistung eines Clusters überwachen.  Hierzu gehört das Einrichten von Alarmen für Ereignisse und das Verwalten von Benachrichtigungen für Systemzustandsalarme.  Siehe https://docs.netapp.com/us-en/ontap/event-performance-monitoring/index.html["Ereignis-, Leistungs- und Integritätsüberwachung"^] für mehr Informationen
+
+
+
+== Ähnliche Informationen
+
+* link:../faq-ontap-afx.html["FAQ zu AFX-Speichersystemen"]
+* link:../administer/additional-ontap-cluster.html["Zusätzliche Administration für AFX-Cluster"]
+

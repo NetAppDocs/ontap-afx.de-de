@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: administer/submit-view-case.html 
+keywords: afx, afx system, support, support case 
+summary: Wenn Sie ein Problem haben, bei dem Sie Hilfe benötigen, können Sie mit ONTAP System Manager einen Fall an den technischen Support senden.  Sie können ONTAP System Manager auch verwenden, um laufende oder abgeschlossene Fälle anzuzeigen. 
+---
+= Senden und Anzeigen von Supportfällen für ein AFX-Speichersystem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie ein Problem haben, bei dem Sie Hilfe benötigen, können Sie mit ONTAP System Manager einen Fall an den technischen Support senden.  Sie können ONTAP System Manager auch verwenden, um laufende oder abgeschlossene Fälle anzuzeigen.
+
+.Bevor Sie beginnen
+Sie müssenlink:https://activeiq-link.netapp.com/["bei Active IQ registriert"] um Supportfälle für Ihr AFX-Speichersystem anzuzeigen.
+
+.Schritte
+. Um einen neuen Supportfall zu erstellen und einzureichen, wählen Sie im System Manager:
++
+.. *Cluster* und dann *Support*
+.. *Zum NetApp Support*
+
+
+. Um einen zuvor übermittelten Fall anzuzeigen, wählen Sie im System Manager:
++
+.. *Cluster* und dann *Support*
+.. *Meine Fälle ansehen*
+
+
+
+
+.Ähnliche Informationen
+* https://docs.netapp.com/us-en/ontap/task_admin_view_submit_support_cases.html["Anzeigen und Senden von Supportfällen mit ONTAP System Manager"^]
+

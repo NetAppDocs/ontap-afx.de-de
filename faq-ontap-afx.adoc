@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: faq-ontap-afx.html 
+keywords: afx, afx system, faq, frequently asked questions 
+summary: Diese FAQ-Liste bietet Antworten auf Fragen, die Kunden typischerweise zu ihrem AFX-Speichersystem haben.  Es enthält Konzepte und Terminologie, die hilfreich sein können, wenn Sie AFX genauer erkunden oder erweiterte Verwaltungsaufgaben ausführen. 
+---
+= FAQ zu AFX-Speichersystemen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese FAQ-Liste bietet Antworten auf Fragen, die Sie möglicherweise zu Ihrem AFX-Speichersystem haben.  Es enthält Konzepte und Terminologie, die hilfreich sein können, wenn Sie AFX genauer erkunden oder erweiterte Verwaltungsaufgaben ausführen.
+
+
+
+== Allgemein
+
+.Was ist eine ONTAP Persönlichkeit?
+ONTAP ist eine robuste und vielseitige Speicherplattform, die für ihren umfassenden Funktionsumfang und ihre Anpassungsfähigkeit an eine Vielzahl von Speicheranforderungen bekannt ist.  Diese Flexibilität macht es zu einer ausgezeichneten Wahl für Unternehmen mit unterschiedlichen Arbeitslasten, manche Kunden können jedoch von einer maßgeschneiderten Speicherlösung profitieren, die für die Anforderungen ihrer spezifischen Umgebung optimiert ist.
+
+Um diesen speziellen Anforderungen gerecht zu werden, bieten einige NetApp Speichersysteme unterschiedliche ONTAP Persönlichkeiten, von denen jede einen Funktionsumfang umfasst, der auf die Unterstützung der individuellen Kundenanforderungen ausgelegt ist.  Eine ONTAP Persönlichkeit ist typischerweise eine Kombination aus Hardware- und Softwarefunktionen und wurde speziell entwickelt, um ein optimiertes Erlebnis für gezielte Anwendungsfälle zu bieten.  NetApp bietet drei ONTAP -Persönlichkeiten:
+
+Einheitliches ONTAP:: Die Unified ONTAP Persönlichkeit bietet eine breite Palette an Datenverwaltungsfunktionen und unterstützt NAS-, SAN- und S3-Protokolle für maximale Flexibilität.  Dies ist das Flaggschiff-Angebot von NetApp , verfügbar auf AFF und FAS -Systemen sowie virtualisierten Bereitstellungen wie ONTAP Select und Cloud Volumes ONTAP.
+AFX:: Die Persönlichkeit von AFX ONTAP bietet eine disaggregierte Lösung, die entwickelt wurde, um die strengen Anforderungen von Hochleistungs-NAS- und S3-Workloads, einschließlich KI/ML-Anwendungen, zu erfüllen.  AFX-Systeme bieten spezielle Funktionen für Kunden, die skalierbaren Datei- und Objektspeicher mit hohem Durchsatz benötigen.
+ASA r2:: Die ASA r2 ONTAP -Persönlichkeit bietet eine disaggregierte Lösung, die speziell für reine SAN-Umgebungen entwickelt wurde. https://docs.netapp.com/us-en/asa-r2/["ASA r2-Systeme"^]   Optimieren Sie die Speichererfahrung für Block-Workloads und bieten Sie vereinfachte Verwaltung und optimierte Leistung für SAN-Kunden.
+
+
+Durch das Angebot dieser unterschiedlichen ONTAP -Persönlichkeiten ermöglicht NetApp Unternehmen die Auswahl einer Speicherlösung, die auf ihre Betriebsanforderungen und Anwendungs-Workloads abgestimmt ist.
+
+.Kann ich die ONTAP Persönlichkeit meines NetApp Speichersystems ändern?
+Nein. Die Persönlichkeit Ihres ONTAP Speichersystems ist unveränderlich und kann nicht geändert werden.  Beispielsweise können Sie ein FAS oder AFF -Speichersystem (auf dem die Unified ONTAP Persönlichkeit ausgeführt wird) nicht in ein AFX-Speichersystem konvertieren oder aktualisieren.
+
+.Die System Manager-Schnittstellen für die verschiedenen ONTAP -Persönlichkeiten sehen alle sehr ähnlich aus.  Wie kann ich die Persönlichkeit eines bestimmten Systems bestimmen?
+Wählen Sie im System Manager im linken Navigationsbereich *Cluster* und dann *Übersicht* aus.  Sie sehen die auf der Seite angezeigte Persönlichkeit.  Alternativ können Sie den Befehl „system node show“ an der CLI ausgeben.  Sie können die Persönlichkeit eines ONTAP Clusters auch mithilfe der REST-API bestimmen; siehelink:./rest/first-call.html["Ihr erster REST-API-Aufruf des AFX-Systems"] für Details.
+
+.Was bedeutet „disaggregiert“ im Kontext von AFX-Speichersystemen?
+Der Begriff „disaggregiert“ kann bei AFX je nach Kontext zwei unterschiedliche, aber verwandte Bedeutungen haben.
+
+Ein wichtiges Konzept ist zunächst die Entkopplung der Rechenleistung in den Controllerknoten von den Speicherregalen.  Mit AFX sind die Rechen- und Speicherkomponenten des Clusters nicht mehr so ​​eng miteinander verbunden wie bei FAS und AFF -Systemen, auf denen die Unified ONTAP -Persönlichkeit ausgeführt wird.  Stattdessen sind sie über Cluster-Switches verbunden.  Jeder AFX-Knotencontroller verfügt über eine vollständige Ansicht des gesamten Cluster-Speicherpools.
+
+Das zweite verwandte Konzept mit disaggregiertem Speicher besteht darin, dass die Aggregate und die RAID-Verwaltung als verwaltbare Einheiten entfernt werden.  Eine Speicherabstraktionsschicht innerhalb von AFX konfiguriert und verwaltet automatisch die Low-Level-Aspekte des Speichers, einschließlich der physischen Festplatten und RAID-Gruppen.  Dadurch kann sich der AFX-Administrator auf die übergeordnete Speicherkonfiguration basierend auf Volumes und Buckets konzentrieren.
+
+
+
+== Interoperabilität
+
+.Kann ich AFX-Systemknoten mit AFF, ASA oder FAS Systemknoten im selben ONTAP Cluster mischen?
+Nein. Jede ONTAP Persönlichkeit ist anders.  Beispielsweise können Sie AFX- und Unified ONTAP Knoten nicht im selben Cluster mischen.
+
+.Wenn ich Systeme verwenden möchte, auf denen Unified ONTAP (FAS, AFF, ASA) mit AFX-Systemen für SnapMirror oder FlexCache ausgeführt wird, welche ONTAP Version benötige ich?
+Die SnapMirror -Versionsregeln für AFX sind identisch mit Unified ONTAP.  Dies bedeutet, dass das Quellsystem zum Replizieren von Unified ONTAP innerhalb des unterstützten Versionsbereichs liegen muss.  Für die Replikation von AFX muss das Unified ONTAP -System ONTAP 9.16.1 oder höher aufweisen (die früheste Version, die die Funktion „Advanced Capacity Balancing“ unterstützt).  Für FlexCache gelten für Quell- und Zielsysteme die gleichen Regeln wie in https://www.netapp.com/pdf.html?item=/media/7336-tr4743.pdf["TR-4743"^] .
+
+Es gibt einige Unterschiede bei der Unterstützung von FlexGroup -Volumes.  Ein FlexGroup -Volume auf AFX kann kein Ursprungsvolume für ein FlexCache -Volume sein, das den Writeback-Modus verwendet.
+
+.Kann ich ONTAPI (ZAPI)-API-Aufrufe an einen AFX-Cluster senden?
+Nein. Mit AFX wird nur die ONTAP REST API unterstützt.  Jeder Automatisierungscode, der ZAPI verwendet, muss zur Verwendung mit AFX in die REST-API konvertiert werden.
+
+
+
+== Erweiterte Konzepte
+
+.Welche Datenprotokolle werden von einem AFX-Speichersystem unterstützt?
+Zu den von AFX unterstützten Datenprotokollen gehören die folgenden:
+
+* NFSv3, NFSv4.0, NFSv4.1, NFSv4.2
+* SMB2.x, SMB3.x
+* S3
+* NDMP
+
+
+.Funktionieren die Datenprotokolle in AFX anders?
+Nein. Die Datenprotokolle in AFX funktionieren auf die gleiche Weise wie bei AFF und FAS Systemen.
+
+.Wird Advanced Disk Partitioning (ADP) in AFX verwendet?
+Nein. ADP wird nicht mit AFX verwendet.  Da es bei AFX keine Root-Aggregate gibt, ist die ADP-Funktion zur Maximierung der Speicherplatzeffizienz nicht erforderlich.
+
+.Kann ich für das Backend-Netzwerk meines AFX-Speichersystems verschiedene Switch-Typen verwenden?
+Nein. Für das Backend-Netzwerk werden nur Switches unterstützt, die speziell für die AFX-Speicherplattform zugelassen und mit dieser bereitgestellt sind.
+
+.Wie ist der Speicher in einem AFX-Cluster organisiert?
+Alle an einen AFX-Cluster angeschlossenen Festplatten und Speicherregale sind Teil einer Storage Availability Zone (SAZ).  Jeder AFX-Cluster unterstützt nur eine SAZ, die nicht über mehrere AFX-Cluster hinweg gemeinsam genutzt werden kann (mit Ausnahme von SnapMirror Replikation und FlexCache -Vorgängen).
+
+Jeder Knoten hat Einblick in den gesamten Speicher in der SAZ.  Wenn einem Cluster Speicherregale hinzugefügt werden, fügt ONTAP die Festplatten automatisch hinzu.
+
+.Wie funktioniert ein Volume-Verschiebungsvorgang in Unified ONTAP im Vergleich zu AFX?
+Mit Unified ONTAP ist es möglich, ein Volume unterbrechungsfrei von einem Knoten oder Aggregat zu einem anderen im Cluster zu verschieben.  Dies wird mithilfe eines Kopiervorgangs im Hintergrund mit SnapMirror -Technologie durchgeführt, bei dem am neuen Speicherort ein neues Zielvolume erstellt wird.  Je nach Größe des Volumes und Auslastung der Clusterressourcen kann die Zeit, die für die Verlagerung eines Volumes benötigt wird, variieren.
+
+Bei AFX gibt es keine Aggregate.  Der gesamte Speicher ist in einer einzigen Storage Availability Zone enthalten, auf die jeder Knoten im Cluster zugreifen kann.  Daher müssen die Daten bei Volume-Verschiebungen nie wirklich kopiert werden.  Stattdessen werden alle Volume-Verschiebungen mit Zeigeraktualisierungen zwischen Knoten durchgeführt.  Dies wird als Zero Copy Volume Move (ZCVM) bezeichnet und geschieht sofort, da keine Daten tatsächlich kopiert oder verschoben werden.  Dies ist im Wesentlichen derselbe Volume-Verschiebungsvorgang, der mit Unified ONTAP ohne die SnapMirror Kopie verwendet wird.
+
+Beachten Sie, dass Volumes in der ersten Version nur in Speicherfailover-Szenarien und beim Hinzufügen oder Entfernen von Knoten zum Cluster verschoben werden.  Diese Bewegungen werden nur über ONTAP gesteuert.
+
+.Wie bestimmt AFX, wo Daten in der SAZ platziert werden sollen?
+AFX enthält eine Funktion namens Automated Topology Management (ATM), die auf Ungleichgewichte zwischen System- und Benutzerobjekten reagiert.  Das Hauptziel von ATM besteht darin, die Volumina im gesamten AFX-Cluster auszugleichen.  Wenn ein Ungleichgewicht erkannt wird, wird ein interner Job ausgelöst, um die Daten gleichmäßig auf die aktiven Knoten zu verteilen.  Die Daten werden mithilfe von ZCVM neu zugewiesen, wobei nur die Objektmetadaten kopiert und aktualisiert werden müssen.
