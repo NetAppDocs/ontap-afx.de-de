@@ -14,7 +14,7 @@ summary: Bevor Sie Ihre AFX-Daten schützen, sollten Sie mit einigen der wichtig
 Bevor Sie Ihre AFX-Daten schützen, sollten Sie mit einigen der wichtigsten Konzepte und Funktionen vertraut sein.
 
 
-TIP: Da viele der auf AFF und FAS -Systemen verfügbaren Konzepte und Verwaltungsverfahren mit denen von AFX-Speichersystemen identisch sind, kann es hilfreich sein, die Unified ONTAP -Dokumentation durchzusehen.
+TIP: Da viele der Konzepte und Administrationsverfahren, die auf AFF und FAS -Systemen verfügbar sind, mit denen auf AFX-Speichersystemen identisch sind, sollten Sie die Unified ONTAP Dokumentation für https://docs.netapp.com/us-en/ontap/data-protection-disaster-recovery/index.html["Datenschutz und Notfallwiederherstellung"^] kann hilfreich sein.
 
 
 
@@ -27,6 +27,15 @@ Konsistenzgruppe:: Eine Konsistenzgruppe ist eine Sammlung von Volumes, die als 
 Hierarchische Konsistenzgruppe:: Hierarchische Konsistenzgruppen wurden mit ONTAP 9.16.1 eingeführt und sind mit AFX verfügbar.  Bei einer hierarchischen Struktur können eine oder mehrere Konsistenzgruppen als untergeordnete Elemente unter einem übergeordneten Element konfiguriert werden.  Mit diesen hierarchischen Gruppen können Sie individuelle Snapshot-Richtlinien auf untergeordnete Konsistenzgruppen anwenden und die Snapshots aller untergeordneten Elemente durch Replikation des übergeordneten Elements als einzelne Einheit auf einem Remote-Cluster replizieren.
 SnapLock:: SnapLock ist eine ONTAP Funktion, mit der Sie Ihre Dateien schützen können, indem Sie sie in einen WORM-Zustand (Write Once Read Many) versetzen.  Dadurch wird eine Änderung oder Löschung für einen festgelegten Aufbewahrungszeitraum verhindert.  SnapLock -Volumes können nach der Erstellung basierend auf der Aufbewahrung nicht aus Nicht- SnapLock -Volumes konvertiert werden.
 
+
+
+
+== Einschränkungen des AFX-Datenschutzes
+
+Sie sollten sich der ONTAP Datenschutzgrenzen und -beschränkungen bewusst sein, die durch das AFX-Speichersystem erzwungen werden.
+
+.SnapMirror synchron (SM-S)
+Bei der Verwendung von SM-S gibt es eine Skalierungsbeschränkung. Sie können maximal 400 Beziehungen in einem einzelnen AFX-Systemcluster haben.
 
 
 
