@@ -17,7 +17,7 @@ summary: Sie können einen einfachen Curl-Befehl ausführen, um mit der Verwendu
 Sie können einen einfachen Curl-Befehl ausführen, um mit der Verwendung der AFX REST-API zu beginnen und ihre Verfügbarkeit zu bestätigen.
 
 .Informationen zu diesem Vorgang
-AFX ist eine von drei unterschiedlichen ONTAP Persönlichkeiten.  Sie können einen Aufruf der REST-API verwenden, um die ONTAP Persönlichkeit Ihres Clusters anhand von zwei in der Antwort enthaltenen Feldern zu bestimmen.
+AFX ist eine von drei ONTAP -Persönlichkeiten, die von NetApp erhältlich sind.  Sie können einen REST-API-Aufruf ausgeben, um die Persönlichkeit Ihres ONTAP Clusters zu bestimmen.  Sie können auch System Manager oder die CLI verwenden, um die ONTAP Persönlichkeit zu bestimmen. Weitere Informationen finden Sie auf der FAQ-Seite.
 
 .Bevor Sie beginnen
 Zusätzlich zum Curl-Dienstprogramm auf Ihrer lokalen Workstation benötigen Sie Folgendes:
