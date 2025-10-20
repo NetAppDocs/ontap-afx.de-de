@@ -85,7 +85,7 @@ Nein. Die Datenprotokolle in AFX funktionieren auf die gleiche Weise wie bei AFF
 .Wird Advanced Disk Partitioning (ADP) in AFX verwendet?
 Nein. ADP wird nicht mit AFX verwendet.  Da es bei AFX keine Root-Aggregate gibt, ist die ADP-Funktion zur Maximierung der Speicherplatzeffizienz nicht erforderlich.
 
-.Kann ich für mein AFX-System im Backend-Cluster-Netzwerk beliebige Switch-Typen verwenden?
+.Kann ich für mein AFX-Speichersystem im Backend-Clusternetzwerk beliebige Switchtypen verwenden?
 Nein. Für das Clusternetzwerk werden nur Switches unterstützt, die speziell für die AFX-Speicherplattform zugelassen und mit dieser bereitgestellt sind. Außerdem sind diese Backend-Switches für AFX-Clustervorgänge vorgesehen. Die Clientzugriffsvorgänge (mit NFS, SMB und S3) sollten nur über das Frontend-Clientdatennetzwerk ausgeführt werden.
 
 .Wie sind die Cluster-Switches konfiguriert?

@@ -17,13 +17,28 @@ Das NetApp AFX-Speichersystem basiert auf einer Speicherarchitektur der nächste
 
 == Typische Anwendungs-Workloads
 
-AFX-Speicher erfüllt die einzigartigen Anforderungen, die für KI/ML-Umgebungen und andere verwandte datenzentrierte Anwendungen typisch sind.  Das AFX-Speichersystem ist ideal für Organisationen, die mehrere unterschiedliche Workloads verwalten, darunter:
+Das NetApp AFX-Speichersystem erfüllt die einzigartigen Anforderungen, die für KI/ML-Umgebungen und andere damit verbundene datenzentrierte Anwendungen typisch sind. Das AFX-Speichersystem ist ideal für Organisationen, die mehrere unterschiedliche Workloads verwalten, darunter:
 
 * Training und iterative Modellverfeinerung im Zusammenhang mit Deep Learning, wo kontinuierlich eine hohe Bandbreite und Zugriff auf riesige Datensätze erforderlich sind.
 * Verarbeitung verschiedener Datentypen, einschließlich Text, Bildern und Videos.
 * Echtzeit-Inferenzanwendungen mit geringer Latenz, bei denen strenge Antwortzeitfenster erforderlich sind.
 * Data Science- und Machine Learning-Pipelines, die von der Self-Service-Datenverwaltung durch Dateningenieure und Datenwissenschaftler profitieren können.
 * Workloads, die eine hohe Gleichzeitigkeit und parallele E/A erfordern, wie z. B. Multi-GPU-Systeme mit RDMA-Transport.
+
+
+
+
+== Systemdesignmerkmale
+
+Das AFX-System verfügt über mehrere Designmerkmale, die es ermöglichen, es als leistungsstarke NAS-Plattform zu betreiben.
+
+Entkoppeln Sie Speicher- und Rechenkapazitäten:: Im Gegensatz zu AFF und FAS Speichersystemen sind die AFX-Speicher- und Rechenelemente des Clusters entkoppelt.  AFX-Controller sind nicht auf den Zugriff auf eine begrenzte Anzahl lokaler Festplatten beschränkt.
+Entfernung der Aggregat- und RAID-Verwaltung:: Der Speicheradministrator muss die Aggregate und RAID-Gruppen nicht mehr verwalten.  AFX übernimmt diese Aufgaben, was die Verwaltung vereinfacht und Nichtspezialisten die Möglichkeit bietet, ihre Daten zu verwalten.
+Einzelner Speicherpool für den Cluster:: Durch die Entkopplung von AFX-Rechenleistung und -Speicher sowie eine vereinfachte Speicherverwaltung entsteht ein einziger Speicherpool.  Diese Storage Availability Zone (SAZ) steht allen Controller-Knoten in einem AFX-Cluster zur Verfügung. Sehenlink:../faq-ontap-afx.html["FAQ zu AFX-Speichersystemen"] für weitere Details.
+Hohe Leistung:: AFX ist auf die hohe Leistung ausgelegt, die spezialisierte KI/ML-Anwendungen benötigen.  Es kann moderne Hardware effizienter nutzen, um eine hohe und anhaltende Bandbreite mit extrem niedriger Latenz bereitzustellen.
+Einfache Bedienung:: Der einzelne Speicherpool bietet zusammen mit anderen Funktionen, einschließlich der automatischen Speicherverwaltung, ein viel einfacheres Verwaltungs- und Betriebsmodell.
+Skalierbarkeit:: Die Menge der Controllerknoten und Speicherregale in einem Cluster kann je nach Anwendungsanforderungen unabhängig erweitert werden.  Beim Hinzufügen von Controllern oder Regalen gibt es nur begrenzte Verwaltungsanforderungen und Unterbrechungen.
+Verbesserte Datenmobilität:: Volumes können unterbrechungsfrei zwischen den Cluster-Controller-Knoten verschoben werden, ohne dass tatsächlich Daten kopiert werden müssen.  Stattdessen werden das Metadatenverzeichnis und die Indexzeiger aktualisiert.  Dadurch wird die Leistung bei typischen Verwaltungsvorgängen sowie die Wiederherstellung in Fehlerszenarien erheblich verbessert.
 
 
 
@@ -37,4 +52,11 @@ Die folgenden Hardwarekomponenten werden bei AFX-Clustern verwendet:
 * AFX 1K-Controller
 * NX224 Regale
 * Cisco Nexus 9332D-GX2B- oder Nexus 9364D-GX2A-Switches
+
+
+
+
+== Ähnliche Informationen
+
+* https://www.netapp.com/afx/["NetApp AFX"^]
 

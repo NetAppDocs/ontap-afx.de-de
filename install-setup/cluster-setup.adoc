@@ -41,7 +41,7 @@ Sie benötigen außerdem Folgendes:
 * DNS-Domänennamen
 * IP-Adressen des DNS-Nameservers
 * NTP-Server-IP-Adressen
-* Daten-Subnetzmaske
+* Subnetzmaske
 
 
 .Schritte
@@ -104,6 +104,6 @@ Sie benötigen folgende Informationen:
 Du solltestlink:../get-started/prepare-cluster-admin.html["Vorbereiten der AFX-Verwaltung"] bevor Sie Ihren AFX-Cluster in einer Produktionsumgebung verwenden.
 
 .Ähnliche Informationen
-* link:../administer/configure-svm.html["Konfigurieren einer AFX-Daten-SVM"]
+* link:../administer/configure-svm.html["Konfigurieren einer AFX SVM"]
 * link:../get-started/prepare-cluster-admin.html["Vorbereiten der AFX-Verwaltung"]
 

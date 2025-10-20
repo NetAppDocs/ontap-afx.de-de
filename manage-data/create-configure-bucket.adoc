@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-data/create-configure-bucket.html 
 keywords: afx, afx system, create bucket 
-summary: Sie können einen Bucket erstellen und ihn an eine Daten-SVM anhängen.  Jeder Bucket kann Clients mithilfe des von AFX unterstützten S3-Zugriffsprotokolls zugänglich gemacht werden. 
+summary: Sie können einen Bucket erstellen und ihn an eine SVM anhängen. Jeder Bucket kann Clients mithilfe des von AFX unterstützten S3-Zugriffsprotokolls zugänglich gemacht werden. 
 ---
 = Erstellen und Konfigurieren eines S3-Buckets auf einem AFX-Speichersystem
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: Sie können einen Bucket erstellen und ihn an eine Daten-SVM anhängen.
 
 
 [role="lead"]
-Sie können einen Bucket erstellen und ihn an eine Daten-SVM anhängen.  Jeder Bucket kann Clients mithilfe des von AFX unterstützten S3-Zugriffsprotokolls zugänglich gemacht werden.
+Sie können einen Bucket erstellen und ihn an eine SVM anhängen. Jeder Bucket kann Clients mithilfe des von AFX unterstützten S3-Zugriffsprotokolls zugänglich gemacht werden.
 
 .Informationen zu diesem Vorgang
-Beim Erstellen eines Buckets müssen Sie eine Mindestmenge an Konfigurationsdetails angeben.  Zusätzliche Details können während der Erstellung oder später durch Bearbeiten des Buckets angegeben werden.  Sie müssen die SVM für den Bucket auswählen, wenn Sie zusätzliche Daten-SVMs erstellt haben.
+Beim Erstellen eines Buckets müssen Sie eine Mindestmenge an Konfigurationsdetails angeben. Zusätzliche Details können während der Erstellung oder später durch Bearbeiten des Buckets angegeben werden. Sie müssen das SVM für den Bucket auswählen, wenn Sie zusätzliche SVMs erstellt haben.
 
 .Bevor Sie beginnen
 Sie müssen den S3-Dienst für die SVM konfigurieren, damit Clients auf den Bucket zugreifen können.

@@ -14,7 +14,7 @@ summary: 'NetApp AFX-Systeme führen eine angepasste ONTAP -Persönlichkeit aus,
 NetApp AFX-Systeme führen eine angepasste ONTAP -Persönlichkeit aus, die sich von der ONTAP Persönlichkeit (als Unified ONTAP bezeichnet) unterscheidet, die auf AFF und FAS -Speicher ausgeführt wird.  Sie sollten sich darüber im Klaren sein, dass AFX-Systeme FAS und AFF Systemen ähneln und sich von ihnen unterscheiden.  Dies bietet eine wertvolle Perspektive und kann bei der Bereitstellung von AFX in Ihrer Umgebung hilfreich sein.
 
 
-TIP: Diese AFX-Dokumentation enthält Links zu verschiedenen Themen auf der Unified ONTAP Dokumentationssite.  Die zusätzlichen Inhalte bieten mehr Tiefe und eine andere Perspektive, die bei der Verwaltung Ihres AFX-Speichersystems hilfreich sein können.
+TIP: Die AFX-Dokumentation enthält Links zu verschiedenen Themen auf der Unified ONTAP Dokumentationssite mit Details zu Funktionen, die sich unabhängig von der ONTAP Persönlichkeit gleich verhalten.  Die zusätzlichen Inhalte bieten mehr Tiefe, die bei der Verwaltung Ihres AFX-Speichersystems hilfreich sein kann.
 
 
 
@@ -22,7 +22,7 @@ TIP: Diese AFX-Dokumentation enthält Links zu verschiedenen Themen auf der Unif
 
 Es gibt einige Bereiche, in denen sich die AFX-Konfiguration von AFF und FAS Systemen unterscheidet.
 
-Erweiterter Kapazitätsausgleich:: Die erweiterte Kapazitätsausgleichsfunktion, gesteuert über die `-gdd` CLI-Parameter, ist standardmäßig für alle FlexGroup -Volumes aktiviert.
+Erweiterter Kapazitätsausgleich:: Die erweiterte Kapazitätsausgleichsfunktion, gesteuert über `-gdd` CLI-Parameter, ist standardmäßig für alle FlexGroup -Volumes aktiviert.
 
 
 
@@ -69,7 +69,7 @@ Die folgenden Aggregatfunktionen sind bei AFX-Systemen nicht verfügbar:
 === Datenreplikation
 
 * Keine Replikation eines Volumes von einem AFF oder FAS System, das eine LUN enthält
-* AFX FlexGroup Volumes können nur auf Unified ONTAP 9.16.1 oder höher repliziert werden
+* FlexGroup -Volumes können nur auf Unified ONTAP 9.16.1 oder höher repliziert werden
 
 
 
