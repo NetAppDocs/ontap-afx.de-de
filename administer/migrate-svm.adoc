@@ -11,7 +11,7 @@ summary: Sie können eine SVM von einem ONTAP Cluster zu einem anderen migrieren
 
 
 [role="lead"]
-Sie können eine SVM von einem ONTAP Cluster zu einem anderen migrieren. Die SVM-Migration mit AFX funktioniert genauso wie mit Unified ONTAP, es gibt jedoch mehrere Überlegungen zur Interoperabilität. Einzelheiten zur Durchführung einer SVM-Migration finden Sie in der bereitgestellten Unified ONTAP Dokumentation.
+Sie können eine SVM von einem ONTAP Cluster zu einem anderen migrieren. Die SVM-Migration mit AFX funktioniert im Prinzip genauso wie mit Unified ONTAP, allerdings sind einige Interoperabilitätsaspekte und Einschränkungen zu beachten. Weitere Informationen zur Durchführung einer SVM-Migration finden Sie in der Unified ONTAP Dokumentation.
 
 
 
@@ -23,9 +23,9 @@ Bevor Sie eine SVM-Migration planen und durchführen, sollten Sie sich über die
 
 === Anwendungsfälle
 
-Clusteradministratoren können eine SVM von einem Quellcluster in einen Zielcluster verschieben.  Dies können Sie im Rahmen der Kapazitätsverwaltung und des Lastenausgleichs tun oder um Geräte-Upgrades oder Rechenzentrumskonsolidierungen zu ermöglichen.
+Clusteradministratoren können eine SVM von einem Quellcluster in einen Zielcluster verschieben. Dies können Sie im Rahmen der Kapazitätsverwaltung und des Lastenausgleichs tun oder um Geräte-Upgrades oder Rechenzentrumskonsolidierungen zu ermöglichen. Da das AFX-Speichersystem keine direkten Upgrades von Unified ONTAP unterstützt, ist die SVM-Migration ein wichtiger Anwendungsfall.
 
-Und da das AFX-Speichersystem keine direkten Upgrades von Unified ONTAP unterstützt, ist die SVM-Migration ein wichtiger Anwendungsfall.  Sie können Ihre Anwendungs-Workloads ohne Unterbrechung von Unified ONTAP9-Clustern auf AFX-Cluster verschieben.  Darüber hinaus können SVMs auf andere Weise migriert werden, beispielsweise von einem AFX-Cluster zu einem Unified ONTAP Cluster sowie zwischen AFX-Clustern.
+Sie können Ihre Anwendungsworkloads von einem Unified ONTAP Cluster auf AFX-Cluster ohne Unterbrechung migrieren.  Darüber hinaus können SVMs auch auf andere Weise migriert werden, beispielsweise von einem AFX-Cluster zu einem Unified ONTAP -Cluster sowie zwischen AFX-Clustern.
 
 
 
@@ -60,7 +60,7 @@ Unified ONTAP umfasst mehrere Vorprüfungen, die auch mit AFX implementiert werd
 
 === Volume-Bereitstellung
 
-Die AFX-Volumes werden bereitgestellt, um ihre Platzierung in der Storage Availability Zone (SAZ) des Clusters auszugleichen.
+Die Volumes werden so bereitgestellt, dass ihre Platzierung innerhalb der Storage Availability Zone (SAZ) des AFX-Clusters ausgeglichen ist.
 
 Platzgarantie:: AFX unterstützt kein Thick Provisioning.  Eine Vorprüfung wird verwendet, um eine Migration fehlschlagen zu lassen, wenn ein Volume in der migrierten SVM über Thick Provisioning verfügt.
 Verschlüsselung:: Ein AFX-System unterstützt die NetApp Volume-Verschlüsselung (NVE), jedoch nicht die NetApp Aggregat-Verschlüsselung (NAE).  Aus diesem Grund werden alle NAE-Volumes in einem Unified ONTAP Cluster bei der Migration zu AFX in NVE-Volumes konvertiert.  Die folgende Tabelle fasst die Kompatibilität und Konvertierung zusammen.
@@ -81,8 +81,18 @@ Verschlüsselung:: Ein AFX-System unterstützt die NetApp Volume-Verschlüsselun
 |===
 
 
+=== Zusätzliche Beschränkungen
+
+Es gibt weitere Einschränkungen, die Sie vor der Migration einer SVM beachten sollten.
+
+MetroCluster:: Das AFX-Speichersystem unterstützt NetApp MetroCluster nicht.  Dies stellt eine Einschränkung bei der Migration einer SVM dar.  Sie können eine AFX SVM nicht auf ein AFF oder FAS -System (oder ein beliebiges NetApp System, auf dem die Unified ONTAP Persönlichkeit ausgeführt wird) migrieren, das für die Verwendung von MetroCluster konfiguriert ist.  Diese Migrationsszenarien werden zwar nicht unterstützt, sind aber auch nicht explizit durch die AFX-Vorabprüfungen blockiert. Daher sollten Sie vorsichtig sein und sie nicht versuchen.
+
+
+
+
 == Ähnliche Informationen
 
 * https://docs.netapp.com/us-en/ontap/svm-migrate/index.html["ONTAP SVM Datenmobilität"^]
+* link:../get-started/compare-unified-ontap.html["Vergleichen Sie das AFX-Speichersystem mit AFF und FAS -Systemen"]
 * link:../faq-ontap-afx.html["FAQ zu AFX-Speichersystemen"]
 
