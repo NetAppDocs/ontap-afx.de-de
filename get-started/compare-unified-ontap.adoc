@@ -29,47 +29,51 @@ Erweiterter Kapazitätsausgleich:: Die erweiterte Kapazitätsausgleichsfunktion,
 
 == Nicht unterstützte oder eingeschränkte Unified ONTAP Funktionen
 
-Obwohl die Speichersysteme AFX, AFF und FAS sehr ähnlich sind, gibt es mehrere Funktionen, die von AFX nicht unterstützt werden.  Sie sollten die Aktualisierungen und Änderungen für AFX in den entsprechendenlink:../release-notes/whats-new-9171.html["Was ist neu"] Abschnitt basierend auf Ihrer Veröffentlichung.
-
-Die folgenden, in mehrere Kategorien unterteilten Funktionen sind mit AFX nicht verfügbar oder haben sich geändert.
+NetApp AFX ist für leistungsstarke NAS- und Objekt-Workloads optimiert.  Aus diesem Grund gibt es Unterschiede zu AFF und FAS sowie zu den anderen Unified ONTAP Speichersystemen.  Die folgenden Funktionen sind mit dem NetApp AFX nicht verfügbar; die Liste ist nach Hauptfunktionen oder Funktionsbereich geordnet.  Sie sollten auch die Aktualisierungen und Änderungen für AFX überprüfen.link:../release-notes/whats-new-9171.html["Was ist neu"] basierend auf Ihrer Freigabe.
 
 
 
-=== Allgemeine Merkmale
-
-* FabricPool
-* MetroCluster
-* KI-basierter Anti-Ransomware-Schutz
-* ONTAPI-API (ZAPI)
-
-
-
-
-=== SAN-bezogene Funktionen
+=== Block und SAN
 
 * SAN-Administration und Client-Zugriff
-* Thick-Provisioning-Volumes
+* LUNs und NVMe-Namensräume
+* Dicke Bereitstellung von Volumen
 
 
 
 
-=== Aggregatbezogene Funktionen
+=== Zuschlagstoffe und physische Lagerung
 
-Die folgenden Aggregatfunktionen sind bei AFX-Systemen nicht verfügbar:
-
-* Direkter Zugriff auf Festplattenaggregate
+* MetroCluster
+* Physische, knoteneigene Aggregate
+* RAID-Verwaltung
 * NetApp Aggregate Encryption (NAE)
 * Deduplizierung auf Aggregatebene
 * SyncMirror (Aggregatspiegelung)
-* RAID-Verwaltung
+* FabricPool -Stufen
 
 
 
 
-=== Datenreplikation
+=== Datenreplikation (SnapMirror)
 
-* Keine Replikation eines Volumes von einem AFF oder FAS System, das eine LUN enthält
-* FlexGroup -Volumes können nur auf Unified ONTAP 9.16.1 oder höher repliziert werden
+
+NOTE: Die Datenreplikation zwischen Unified ONTAP und AFX wird in beide Richtungen unterstützt, wobei die gleichen Versionsbeschränkungen gelten, die in [Referenz einfügen] beschrieben sind. https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["Kompatible ONTAP Versionen für SnapMirror -Beziehungen"^] (mit wenigen kleineren Ausnahmen).
+
+* Keine Replikation eines Volumes von einem AFF oder FAS System, das einen LUN- oder NVMe-Namespace enthält
+* FlexGroup Volumes können nur von AFX auf Unified ONTAP Version 9.16.1 oder höher repliziert werden (aufgrund der Notwendigkeit von Advanced Capacity Balancing).
+
+
+
+
+=== Verwaltbarkeit
+
+* ONTAPI-API (ZAPI)
+* REST-APIs für nicht unterstützte Funktionen (wie z. B. MetroCluster)
+* Einige anfängliche Einschränkungen von REST-APIs für Leistungsstatistiken
+* AIQ Unified Manager-Unterstützung
+* Grafana Harvest Version 25.08.1 und höher
+* NetApp Trident Version 25.10 und höher
 
 
 
@@ -86,7 +90,7 @@ Die mit AFX verfügbare ONTAP CLI spiegelt im Allgemeinen die mit AFF und FAS Sy
 
 * Keine SAN-bezogenen Befehle
 * Aggregate-Management-Befehle sind nicht mehr erforderlich
-* FlexAggr-Befehle können nur die FlexAggrs anzeigen oder anzeigen
+* Die aggregierte Ansicht zeigt nun die gesamte Speicherverfügbarkeitszone (SAZ) an.
 
 
 

@@ -17,13 +17,12 @@ Das NetApp AFX-Speichersystem basiert auf einer Speicherarchitektur der nächste
 
 == Typische Anwendungs-Workloads
 
-Das NetApp AFX-Speichersystem erfüllt die einzigartigen Anforderungen, die für KI/ML-Umgebungen und andere damit verbundene datenzentrierte Anwendungen typisch sind. Das AFX-Speichersystem ist ideal für Organisationen, die mehrere unterschiedliche Workloads verwalten, darunter:
+Das NetApp AFX-Speichersystem erfüllt die besonderen Anforderungen von NAS- und S3-Objekt-Workloads, die hohe Leistung und unabhängige Skalierbarkeit erfordern.  Diese Anwendungen profitieren von einem fortschrittlichen Design, das auf hoher Parallelität und paralleler Ein-/Ausgabe basiert.  AFX eignet sich ideal für Organisationen, die verschiedene Arten von Anwendungsworkloads bereitstellen und verwalten, darunter:
 
 * Training und iterative Modellverfeinerung im Zusammenhang mit Deep Learning, wo kontinuierlich eine hohe Bandbreite und Zugriff auf riesige Datensätze erforderlich sind.
 * Verarbeitung verschiedener Datentypen, einschließlich Text, Bildern und Videos.
 * Echtzeit-Inferenzanwendungen mit geringer Latenz, bei denen strenge Antwortzeitfenster erforderlich sind.
 * Data Science- und Machine Learning-Pipelines, die von der Self-Service-Datenverwaltung durch Dateningenieure und Datenwissenschaftler profitieren können.
-* Workloads, die eine hohe Gleichzeitigkeit und parallele E/A erfordern, wie z. B. Multi-GPU-Systeme mit RDMA-Transport.
 
 
 
@@ -32,13 +31,13 @@ Das NetApp AFX-Speichersystem erfüllt die einzigartigen Anforderungen, die für
 
 Das AFX-System verfügt über mehrere Designmerkmale, die es ermöglichen, es als leistungsstarke NAS-Plattform zu betreiben.
 
-Entkoppeln Sie Speicher- und Rechenkapazitäten:: Im Gegensatz zu AFF und FAS Speichersystemen sind die AFX-Speicher- und Rechenelemente des Clusters entkoppelt.  AFX-Controller sind nicht auf den Zugriff auf eine begrenzte Anzahl lokaler Festplatten beschränkt.
-Entfernung der Aggregat- und RAID-Verwaltung:: Der Speicheradministrator muss die Aggregate und RAID-Gruppen nicht mehr verwalten.  AFX übernimmt diese Aufgaben, was die Verwaltung vereinfacht und Nichtspezialisten die Möglichkeit bietet, ihre Daten zu verwalten.
-Einzelner Speicherpool für den Cluster:: Durch die Entkopplung von AFX-Rechenleistung und -Speicher sowie eine vereinfachte Speicherverwaltung entsteht ein einziger Speicherpool.  Diese Storage Availability Zone (SAZ) steht allen Controller-Knoten in einem AFX-Cluster zur Verfügung. Sehenlink:../faq-ontap-afx.html["FAQ zu AFX-Speichersystemen"] für weitere Details.
-Hohe Leistung:: AFX ist auf die hohe Leistung ausgelegt, die spezialisierte KI/ML-Anwendungen benötigen.  Es kann moderne Hardware effizienter nutzen, um eine hohe und anhaltende Bandbreite mit extrem niedriger Latenz bereitzustellen.
-Einfache Bedienung:: Der einzelne Speicherpool bietet zusammen mit anderen Funktionen, einschließlich der automatischen Speicherverwaltung, ein viel einfacheres Verwaltungs- und Betriebsmodell.
-Skalierbarkeit:: Die Menge der Controllerknoten und Speicherregale in einem Cluster kann je nach Anwendungsanforderungen unabhängig erweitert werden.  Beim Hinzufügen von Controllern oder Regalen gibt es nur begrenzte Verwaltungsanforderungen und Unterbrechungen.
-Verbesserte Datenmobilität:: Volumes können unterbrechungsfrei zwischen den Cluster-Controller-Knoten verschoben werden, ohne dass tatsächlich Daten kopiert werden müssen.  Stattdessen werden das Metadatenverzeichnis und die Indexzeiger aktualisiert.  Dadurch wird die Leistung bei typischen Verwaltungsvorgängen sowie die Wiederherstellung in Fehlerszenarien erheblich verbessert.
+Entkoppeln Sie Speicher- und Rechenkapazitäten:: Im Gegensatz zu anderen NetApp ONTAP Speichersystemen sind die Rechen- und Speicherelemente eines AFX-Clusters entkoppelt und über ein Switched Network verbunden.  Die Festplattenzugehörigkeit ist nicht mehr an bestimmte Knoten gebunden, was mehrere Vorteile mit sich bringt.  Beispielsweise können die Rechen- und Speicherkomponenten eines AFX-Clusters unabhängig voneinander erweitert werden.
+Automatisierte Speicherverwaltung:: Die physischen Aggregate stehen dem AFX-Speicheradministrator nicht mehr zur Verfügung.  Stattdessen verwaltet AFX automatisch die virtuellen Kapazitätszuweisungen für die Knoten sowie die RAID-Gruppenkonfiguration, wenn neue Speichersysteme zum Cluster hinzugefügt werden.  Dieses Design vereinfacht die Administration und bietet auch Nicht-Fachleuten die Möglichkeit, ihre Daten zu verwalten.
+Einzelner Speicherpool für den Cluster:: Da die Speicherknoten und -gehäuse von NetApp AFX entkoppelt sind, wird die gesamte Speicherkapazität des Clusters in einem einzigen Pool zusammengefasst, der als Storage Availability Zone (SAZ) bezeichnet wird.  Die Festplatten und Gehäuse in einer SAZ stehen allen Speicherknoten in einem AFX-Cluster für Lese- und Schreibvorgänge zur Verfügung.  Darüber hinaus können im Falle eines Ausfalls alle Clusterknoten an der Wiederherstellung der Festplatte teilnehmen. Siehelink:../faq-ontap-afx.html["FAQ zu AFX-Speichersystemen"] für weitere Details.
+Hohe Leistung:: NetApp AFX bietet eine hohe und dauerhafte Bandbreite bei extrem niedriger Latenz und ist daher für leistungsstarke NAS- und Objekt-Workloads konzipiert.  AFX nutzt modernste Hardware sowie Speichersysteme, die dank ihrer einzigartigen Architektur ein hohes Verhältnis von Knoten zu Festplatten bewältigen können.  Durch die Skalierung der Speicherknoten über das typische Verhältnis von 1:1 (Knoten:Gehäuse) hinaus wird das mögliche Leistungsprofil der Festplatten bis an ihre Grenzen maximiert.  Dieses Design bietet Effizienz und Speicherdichte für Ihre wichtigsten Anwendungen.
+Unabhängig und von enormem Ausmaß:: Auf Basis der entkoppelten Speicherknoten und -gehäuse kann ein AFX-Cluster je nach Anwendungsbedarf unabhängig und unterbrechungsfrei erweitert werden.  Sie können Speicherknoten hinzufügen, um mehr CPU-Leistung und Durchsatz zu erhalten, oder Regale hinzufügen, um mehr Speicherkapazität und Festplattenleistung zu erhalten.  Die NetApp AFX-Architektur eröffnet neue Möglichkeiten für die maximale Größe Ihres Clusters.  Die aktuellsten Grenzwerte für den AFX-Cluster, basierend auf Ihrer ONTAP Version, finden Sie im NetApp Hardware Universe.
+Datenmobilität ohne Kopien:: NAS- und Objektclients greifen auf Volumes im ONTAP Cluster zu.  Sie können Datenmengen unterbrechungsfrei zwischen den Knoten verschieben, um Ihre Ziele hinsichtlich Kapazität und Leistungsbalance zu erreichen.  Bei Unified ONTAP wird eine Volumenverschiebung mithilfe der SnapMirror Technologie durchgeführt, was Zeit in Anspruch nehmen und zusätzliche temporäre Kapazität erfordern kann.  Mit AFX ist jedoch kein Datenkopiervorgang mehr innerhalb der gemeinsam genutzten Storage Availability Zone (SAZ) erforderlich.  Stattdessen werden nur die Datenträger-Metadaten verschoben, was die Leistung deutlich verbessert. Siehelink:../faq-ontap-afx.html["FAQ zu AFX-Speichersystemen"] für weitere Details.
+Erweiterte HA-Funktionalität:: NetApp AFX bietet eine Reihe von Verbesserungen für die Konfiguration und Verarbeitung von Hochverfügbarkeit (HA).  AFX macht die direkte Verbindung von HA-Partnerknoten überflüssig und ermöglicht stattdessen die Kommunikation zwischen HA-Paaren über das interne Clusternetzwerk.  Dieses Design bietet Administratoren die Möglichkeit, HA-Paare in separaten Racks oder Reihen in einem Rechenzentrum einzusetzen, um die Fehlertoleranz zu erhöhen.  Darüber hinaus erstreckt sich die AFX-Zero-Copy-Mobilität auch auf HA-Failover-Szenarien.  Wenn ein Knoten ausfällt, werden seine Volumes an den HA-Partner übertragen, um alle verbleibenden Schreibvorgänge auf die Festplatte zu speichern.  Anschließend verteilt ONTAP die Datenmengen gleichmäßig auf alle verbleibenden Knoten im Cluster.  Das bedeutet, dass Sie die Ausfallsicherheit des Speichers nicht mehr bei der ursprünglichen Planung Ihrer Datenplatzierung berücksichtigen müssen.
 
 
 
@@ -46,6 +45,9 @@ Verbesserte Datenmobilität:: Volumes können unterbrechungsfrei zwischen den Cl
 == Hardware-Infrastruktur
 
 Das NetApp AFX-Speichersystem bietet eine einheitliche Hardware- und Softwarelösung, die ein vereinfachtes Erlebnis bietet, das speziell auf die Anforderungen von Hochleistungs-NAS-Kunden zugeschnitten ist.
+
+
+TIP: Sie sollten dielink:../faq-ontap-afx.html["FAQ zu AFX-Speichersystemen"] Weitere Informationen zur Hardware-Interoperabilität und zu Upgrade-Optionen finden Sie hier.
 
 Die folgenden Hardwarekomponenten werden bei AFX-Clustern verwendet:
 
@@ -58,5 +60,6 @@ Die folgenden Hardwarekomponenten werden bei AFX-Clustern verwendet:
 
 == Ähnliche Informationen
 
+* https://hwu.netapp.com/["NetApp Hardware Universe"^]
 * https://www.netapp.com/afx/["NetApp AFX"^]
 

@@ -59,13 +59,13 @@ In AFX sind mehrere logische Komponenten enthalten.  Sie werden zusammen mit den
 
 === Gemeinsamer Speicherpool
 
-Die Storage Availability Zone (SAZ) ist ein gemeinsamer Speicherpool für den gesamten Cluster.  Es handelt sich um eine Sammlung von Festplatten in den Speicherregalen, die allen Controllerknoten einen einzigen einheitlichen Namespace bereitstellt.  Die SAZ bietet ein Bereitstellungsmodell ohne feste Einschränkungen hinsichtlich der von den Knoten verwendeten Speicherregale.  Kunden können freien Speicherplatz und Speichernutzung als Eigenschaften des gesamten AFX-Clusters anzeigen.
+Die Storage Availability Zone (SAZ) ist ein gemeinsamer Speicherpool für den gesamten Cluster. Es handelt sich um eine Sammlung von Festplatten in den Speichergehäusen, auf die alle Controller-Knoten Lese- und Schreibzugriff haben.  Die SAZ bietet ein Bereitstellungsmodell ohne feste Einschränkungen hinsichtlich der von den Knoten nutzbaren Speichersysteme; die Verteilung der Datenträger auf die Knoten wird automatisch von ONTAP übernommen. Kunden können freien Speicherplatz und Speichernutzung als Eigenschaften des gesamten AFX-Clusters anzeigen.
 
 
 
 === FlexVolumes, FlexGroups und Buckets
 
-FlexVolumes, FlexGroups und S3-Buckets sind die _Datencontainer_, die den AFX-Administratoren basierend auf den Clientzugriffsprotokollen zur Verfügung gestellt werden.  Diese skalierbaren Container sind darauf ausgelegt, viele der komplexen internen Speicherdetails zu abstrahieren.
+FlexVolumes, FlexGroups und S3-Buckets sind die _Datencontainer_, die den AFX-Administratoren basierend auf den Clientzugriffsprotokollen zur Verfügung gestellt werden. Sie funktionieren identisch zu Unified ONTAP.  Diese skalierbaren Container sind so konzipiert, dass sie viele der komplexen internen Speicherdetails, wie z. B. Datenplatzierung und Kapazitätsausgleich, abstrahieren.
 
 
 
@@ -77,12 +77,12 @@ Das Datenlayout und der Datenzugriff sind auf nahtlosen Zugriff und effiziente N
 
 === SVMs und Mandantenfähigkeit
 
-AFX bietet ein Mandantenmodell, das auf dem mit AFF und FAS Systemen verfügbaren SVM-Modell aufbaut.  Das AFX-Mietermodell wurde zur Vereinfachung der Verwaltung optimiert.
+AFX bietet ein Mandantenmodell, das auf dem mit AFF und FAS Systemen verfügbaren SVM-Modell aufbaut. Das AFX-Tenant-Modell ist identisch mit dem Unified ONTAP , wurde jedoch für eine vereinfachte Administration in einer NAS- und S3-Objektumgebung optimiert.  Beispielsweise wurden Konfigurationsoptionen für SAN sowie Aggregate und RAID-Gruppen entfernt.
 
 
 
 == AFX-Clusterbereitstellung
 
-Die folgende Abbildung veranschaulicht eine typische AFX-Clusterbereitstellung.  Controllerknoten sind von den Speicherregalen entkoppelt und über ein gemeinsames Netzwerk verbunden.
+Die folgende Abbildung veranschaulicht eine typische AFX-Clusterbereitstellung. Der AFX-Cluster umfasst Controller-Knoten, die von den Speichersystemen entkoppelt und über ein gemeinsames internes Netzwerk verbunden sind.  Außerhalb der Grenzen des AFX-Clusters greifen Clients über ein separates Clientnetzwerk auf den Cluster zu.
 
 image:afx-cluster.png["AFX-Clusterarchitektur"]

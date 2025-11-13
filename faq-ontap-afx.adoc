@@ -96,12 +96,18 @@ Alle an einen AFX-Cluster angeschlossenen Festplatten und Speicherregale sind Te
 
 Jeder Knoten hat Einblick in den gesamten Speicher in der SAZ.  Wenn einem Cluster Speicherregale hinzugefügt werden, fügt ONTAP die Festplatten automatisch hinzu.
 
-.Wie funktionieren Volume-Verschiebungsvorgänge mit AFX anders als mit AFF oder FAS Systemen?
-Mit AFF und FAS -Systemen, auf denen die Unified ONTAP Persönlichkeit ausgeführt wird, ist es möglich, ein Volume unterbrechungsfrei von einem Knoten oder Aggregat zu einem anderen im Cluster zu verschieben. Dies wird mithilfe eines Kopiervorgangs im Hintergrund mit SnapMirror -Technologie durchgeführt, bei dem am neuen Speicherort ein neues Zielvolume erstellt wird. Je nach Größe des Volumes und Auslastung der Clusterressourcen kann die Zeit, die für die Verlagerung eines Volumes benötigt wird, variieren.
+.Wie werden Daten in einem AFX-Cluster verteilt?
+Sobald Daten zugeordnet sind, können sie auf einer beliebigen Festplatte in der SAZ abgelegt werden.  Sobald die Daten platziert sind, müssen sie nicht mehr verschoben werden.  Auf Basis der zugrunde liegenden Daten wird ein Volume erstellt und einem bestimmten Knoten zugewiesen.  Die Volumina können von AFX verschoben werden, typischerweise im Rahmen eines Ausgleichsprozesses.  Dies beeinflusst, welcher NVRAM des Knotens die Schreibvorgänge auf die Festplatte ausführt.  Durch eine Volume-Verschiebung ändert sich, welcher Knoten das Volume besitzt, die Daten selbst können aber an ihrem ursprünglichen Platz bleiben.
 
-Bei AFX gibt es keine Aggregate.  Der gesamte Speicher ist in einer einzigen Storage Availability Zone enthalten, auf die jeder Knoten im Cluster zugreifen kann.  Daher müssen die Daten bei Volume-Verschiebungen nie wirklich kopiert werden.  Stattdessen werden alle Volume-Verschiebungen mit Zeigeraktualisierungen zwischen Knoten durchgeführt.  Dies wird als Zero Copy Volume Move (ZCVM) bezeichnet und geschieht sofort, da keine Daten tatsächlich kopiert oder verschoben werden.  Dies ist im Wesentlichen derselbe Volume-Verschiebungsvorgang, der mit Unified ONTAP ohne die SnapMirror Kopie verwendet wird.
-
-In der ersten AFX-Version werden Volumes nur in Speicherfailover-Szenarien und beim Hinzufügen oder Entfernen von Knoten zum Cluster verschoben. Diese Bewegungen werden nur über ONTAP gesteuert.
-
-.Wie bestimmt AFX, wo Daten in der SAZ platziert werden sollen?
+.Wie verwaltet AFX die Volumen innerhalb der SAZ?
 AFX enthält eine Funktion namens Automated Topology Management (ATM), die auf Ungleichgewichte zwischen System- und Benutzerobjekten reagiert.  Das Hauptziel von ATM besteht darin, die Volumina im gesamten AFX-Cluster auszugleichen.  Wenn ein Ungleichgewicht erkannt wird, wird ein interner Job ausgelöst, um die Daten gleichmäßig auf die aktiven Knoten zu verteilen.  Die Daten werden mithilfe von ZCVM neu zugewiesen, wobei nur die Objektmetadaten kopiert und aktualisiert werden müssen.
+
+.Wie werden Volumes auf den Knoten in einem AFX-Cluster platziert?
+NetApp AFX gleicht die Platzierung von Volumes automatisch auf alle Knoten in einem Cluster aus.  Ab ONTAP 9.18.1 wurde der Platzierungsalgorithmus so verbessert, dass er die Leistung der Knoten beim Platzieren oder Verschieben von Volumen berücksichtigt.  Dies führt zu einer verbesserten Leistungsverteilung über die Knoten im AFX-Cluster und verringert die Wahrscheinlichkeit einer Überlastung einzelner Knoten erheblich.  Bei früheren AFX-Versionen basierte die Platzierung auf der Gesamtzahl der Volumes im Cluster.  Jedem Knoten wird unabhängig von der Aktivität die gleiche Anzahl an Datenträgern zugewiesen.
+
+.Wie funktionieren Volume-Verschiebungsvorgänge mit AFX anders als mit AFF oder FAS Systemen?
+Mit AFF und FAS -Systemen, auf denen die Unified ONTAP Persönlichkeit ausgeführt wird, ist es möglich, ein Volume unterbrechungsfrei von einem Knoten oder Aggregat zu einem anderen im Cluster zu verschieben. Dies wird mithilfe eines Hintergrundkopiervorgangs mit SnapMirror -Technologie durchgeführt.  Am Zielort wird ein neues Zielvolume erstellt.  Je nach Größe des Datenträgers und Auslastung der Clusterressourcen kann die Dauer eines Datenträgerverschiebungsvorgangs variieren.
+
+Bei AFX gibt es keine Aggregate. Der gesamte Speicher befindet sich in einer einzigen Storage Availability Zone (SAZ), die von jedem Knoten im Cluster aus zugänglich ist. Daher müssen die Daten bei Volume-Verschiebungen nie wirklich kopiert werden.  Stattdessen werden alle Volumenverschiebungen durch Zeigeraktualisierungen zwischen den Knoten durchgeführt. Dies wird als Zero Copy Volume Move (ZCVM) bezeichnet und geschieht sofort, da keine Daten tatsächlich kopiert oder verschoben werden. Dies ist im Wesentlichen derselbe Volume-Verschiebungsvorgang, der mit Unified ONTAP ohne die SnapMirror Kopie verwendet wird.
+
+In der ersten AFX-Version 9.17.1 werden Volumes nur in Szenarien der Speicherausfallwiederherstellung und beim Hinzufügen oder Entfernen von Knoten aus dem Cluster verschoben. Diese Bewegungen werden nur über ONTAP gesteuert.

@@ -29,7 +29,7 @@ S3-Bucket:: Ein S3-Bucket ist ein Speichercontainer, der Objekte oder Daten in d
 Datencontainer:: Im Kontext eines AFX-Systems ist ein Datencontainer ein allgemeiner Begriff und kann entweder ein Volume oder ein S3-Bucket sein.
 Qtree:: Ein Qtree ist eine logische Unterteilung innerhalb eines Datenträgers, die Sie zum Verwalten und Organisieren von Daten erstellen können.  Sie können die Eigenschaften und den Sicherheitsstil (NTFS oder UNIX) festlegen und die Exportrichtlinien des übergeordneten Volumes übernehmen oder eigene haben.  Qtrees können Dateien und Verzeichnisse enthalten und werden häufig verwendet, um Berechtigungen und Kontingente innerhalb eines Volumes detaillierter zu verwalten.
 Quote:: Ein Kontingent in ONTAP ist eine Begrenzung der Speicherplatzmenge oder der Anzahl der Dateien, die von einem Benutzer, einer Gruppe oder einem Qtree verwendet werden können.  Kontingente werden verwendet, um die Ressourcennutzung innerhalb eines Speichersystems zu verwalten und zu steuern. So wird sichergestellt, dass kein einzelner Benutzer oder keine einzelne Anwendung eine übermäßige Menge an Ressourcen verbraucht.
-NFS-Trunking:: NFS-Trunking ist eine Technologie, die es NFS v4.1-Clients ermöglicht, mehrere Verbindungen zu verschiedenen LIFs auf dem NFS-Server zu öffnen. Dies erhöht die Datenübertragungsgeschwindigkeit und bietet Ausfallsicherheit über mehrere Pfade beim Exportieren von FlexVol -Volumes an Trunking-fähige Clients.
+NFS-Sitzungsbündelung:: NFS-Trunking ist eine Technologie, die es NFS v4.1-Clients ermöglicht, mehrere Verbindungen zu verschiedenen LIFs auf dem NFS-Server zu öffnen. Dies erhöht die Datenübertragungsgeschwindigkeit und bietet Ausfallsicherheit durch mehrere Pfade beim Export von Datenmengen an Clients mit Trunking-Funktion.  Die LIFs müssen sich auf demselben Knoten befinden, um am Trunk teilnehmen zu können.
 +
 --
 Um Trunking zu aktivieren, müssen Sie eine für NFS konfigurierte SVM haben und NFSv4.1 sollte aktiviert sein. Außerdem müssen alle NFSv4.x-Clients nach einer Konfigurationsänderung neu gemountet werden, was zu Störungen führen kann. Die Support- und Konfigurationsverfahren für NFS-Trunking sind für alle ONTAP Systeme gleich. Erfahren Sie mehr über https://docs.netapp.com/us-en/ontap/nfs-trunking/index.html["NFS-Trunking"^]
@@ -61,7 +61,7 @@ Darüber hinaus können FlexCache Volumes in beide Richtungen zwischen AFX- und 
 
 === Migrieren von Daten aus einer Nicht- ONTAP -Quelle
 
-Die Datenmigration von Nicht- ONTAP -Systemen kann mithilfe von Kopiervorgängen auf Dateiebene durchgeführt werden. Schnelle Kopierprogramme wie https://docs.netapp.com/us-en/xcp/["XCP"^] Es können sowohl Standard-Dienstprogramme wie RoboCopy (für SMB) und rsync (für NFS) als auch Tools von Drittanbietern wie DataDobi verwendet werden.
+Die Datenmigration von Nicht- ONTAP -Systemen kann mithilfe von Kopiervorgängen auf Dateiebene durchgeführt werden. Schnelle Kopierprogramme wie z.B. https://docs.netapp.com/us-en/xcp/["XCP"^] oder https://docs.netapp.com/us-en/data-services-copy-sync/["Kopieren und Synchronisieren"^] Kann ebenso wie Standardprogramme wie RoboCopy (für SMB) und rsync (für NFS) sowie Drittanbieter-Tools wie DataDobi verwendet werden.
 
 
 
