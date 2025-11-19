@@ -38,14 +38,14 @@ Die Steckerteile sind empfindlich und beim Einrasten ist Vorsicht geboten.
 * Wenn Sie eine Glasfaserverbindung verkabeln, stecken Sie den optischen Transceiver in den Controller-Port, bevor Sie die Verkabelung mit dem Switch-Port herstellen.
 * Das AFX 1K-Speichersystem verwendet 4x100GbE-Breakout-Kabel im Cluster- und Speichernetzwerk.  Die 400-GbE-Verbindungen werden zu den Switch-Ports und die 100-GbE-Verbindungen zu den Controller- und Laufwerksregal-Ports hergestellt.  Speicher- und HA/Cluster-Verbindungen können zu jedem Nicht-ISL-Port auf dem Switch hergestellt werden.
 +
-Für eine bestimmte 4x100GbE-Breakout-Kabelverbindung zum spezifischen Switch-Port verbinden Sie alle 4 Ports, die zum Switch führen, über dieses einzelne Breakout-Kabel.
+Bei einer gegebenen 4x100GbE-Breakout-Kabelverbindung zu dem jeweiligen Switch-Port werden alle vier Ports eines bestimmten Controllers über dieses eine Breakout-Kabel mit dem Switch verbunden.
 
 +
 ** 1 x HA-Port (Steckplatz 1)
 ** 1 x Cluster-Port (Steckplatz 7)
-** 2 X Speicherports (Steckplätze 10, 11)
+** 2 x Speicheranschlüsse (Steckplätze 10, 11)
 +
-Alle „a“-Ports sind mit Switch A verbunden und alle „b“-Ports sind mit Switch B verbunden.
+Alle „a“-Ports sind mit Switch A verbunden, und alle „b“-Ports sind mit Switch B verbunden.
 
 
 
@@ -148,14 +148,14 @@ Verwenden Sie das Cluster- und HA-Verbindungskabel, um die Ports e1a und e7a mit
 +
 ** Controller A
 +
-*** e1a
-*** e7a
+*** e1a (HA)
+*** e7a (Cluster)
 
 
 ** Controller B
 +
-*** e1a
-*** e7a
+*** e1a (HA)
+*** e7a (Cluster)
 +
 *100GbE-Kabel*
 
@@ -173,14 +173,14 @@ image::../media/drw_afx_switched_cluster_cabling_a_ieops-2352.svg[Verkabeln Sie 
 +
 ** Controller A
 +
-*** e1b
-*** e7b
+*** e1b (HA)
+*** e7b (Cluster)
 
 
 ** Controller B
 +
-*** e1b
-*** e7b
+*** e1b (HA)
+*** e7b (Cluster)
 +
 *100GbE-Kabel*
 
