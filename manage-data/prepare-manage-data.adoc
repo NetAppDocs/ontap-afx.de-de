@@ -14,7 +14,7 @@ summary: Bevor Sie Ihre AFX-Daten verwalten, sollten Sie mit den grundlegenden K
 Bevor Sie Ihre AFX-Daten verwalten, sollten Sie mit den grundlegenden Konzepten und Funktionen vertraut sein.
 
 
-TIP: Da viele der auf AFF und FAS -Systemen verfügbaren Konzepte und Verwaltungsverfahren mit denen von AFX-Speichersystemen identisch sind, kann es hilfreich sein, die Unified ONTAP -Dokumentation durchzusehen.
+TIP: Da viele der auf AFF und FAS -Systemen verfügbaren Konzepte und Verwaltungsverfahren mit denen von AFX-Speichersystemen identisch sind, kann es hilfreich sein, die Unified ONTAP -Dokumentation durchzusehen. Siehe die Links in <<Ähnliche Informationen>> für weitere Informationen.
 
 
 
@@ -89,6 +89,7 @@ Sie können auf alle für den AFX-Cluster definierten Volumes und Buckets zugrei
 
 == Ähnliche Informationen
 
+* https://docs.netapp.com/us-en/ontap/concept_nas_file_system_analytics_overview.html["Erfahren Sie mehr über ONTAP File System Analytics"^]
 * link:../administer/additional-ontap-svm.html["Zusätzliche AFX SVM-Verwaltung"]
 * link:../get-started/prepare-cluster-admin.html["Bereiten Sie sich auf die Verwaltung Ihres AFX-Systems vor"]
 * link:../administer/migrate-svm.html["Migrieren einer AFX-System-SVM"]
