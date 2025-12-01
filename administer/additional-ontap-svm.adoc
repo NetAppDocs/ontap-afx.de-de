@@ -60,9 +60,21 @@ Sie können Ihre Dateien schützen, indem Sie sie auf Volumeebene in einen WORM-
 
 
 
+== Sicherheit
+
+Es gibt mehrere optionale Sicherheitsfunktionen, die Sie konfigurieren und mit Ihrer AFX-Bereitstellung verwenden können.
+
+
+
+=== Fpolicy
+
+FPolicy ist ein Framework zur Benachrichtigung über Dateizugriffe, das zur Überwachung und Verwaltung von Dateizugriffsereignissen auf Storage Virtual Machines (SVMs) verwendet wird.  Mit FPolicy können Sie Richtlinien erstellen, die festlegen, welche Dateivorgänge überwacht und optional blockiert werden sollen, basierend auf von Ihnen definierten Kriterien.  FPolicy wird häufig für Sicherheitsaudits, Compliance und Daten-Governance eingesetzt. Siehe https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["Erfahren Sie mehr über die ONTAP FPolicy-Lösungen"^] für weitere Informationen.
+
+
+
 == ONTAP Ereignis- und Leistungsüberwachung
 
-Sie können den Zustand und die Leistung eines Clusters überwachen.  Hierzu gehört das Einrichten von Alarmen für Ereignisse und das Verwalten von Benachrichtigungen für Systemzustandsalarme.  Siehe https://docs.netapp.com/us-en/ontap/event-performance-monitoring/index.html["Ereignis-, Leistungs- und Integritätsüberwachung"^] für mehr Informationen
+Sie können den Zustand und die Leistung eines Clusters überwachen. Hierzu gehört das Einrichten von Alarmen für Ereignisse und das Verwalten von Benachrichtigungen für Systemzustandsalarme. Siehe https://docs.netapp.com/us-en/ontap/event-performance-monitoring/index.html["Ereignis-, Leistungs- und Integritätsüberwachung"^] für weitere Informationen.
 
 
 
