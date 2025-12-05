@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: secure-data/secure-ip-connections.html 
+keywords: netapp afx, afx, ip security, ipsec, secure data, data security, encryption, data-in-flight, secure connections, hardware offload 
+summary: 'IP Security (IPsec) ist ein Internetprotokollstandard, der Datenverschlüsselung, -integrität und -authentifizierung für den Datenverkehr zwischen Netzwerkendpunkten auf IP-Ebene bietet.  Mit IPsec lässt sich die Sicherheit des Front-End-Netzwerks zwischen einem AFX-Cluster und den Clients verbessern.' 
+---
+= Sichere IP-Verbindungen auf Ihren AFX-Speichersystemen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+IP Security (IPsec) ist ein Internetprotokollstandard, der Datenverschlüsselung, -integrität und -authentifizierung für den Datenverkehr zwischen Netzwerkendpunkten auf IP-Ebene bietet.  Mit IPsec lässt sich die Sicherheit des Front-End-Netzwerks zwischen einem AFX-Cluster und den Clients verbessern.
+
+
+
+== Konfigurieren von IPsec auf einem AFX-System
+
+Die IPsec-Konfigurationsverfahren für AFX-Speichersysteme sind die gleichen wie für AFF und FAS -Systeme, mit Ausnahme der unterstützten Netzwerkschnittstellenkarten (NIC), die mit der Hardware-Offload-Funktion verwendet werden. Siehe https://docs.netapp.com/us-en/ontap/networking/ipsec-prepare.html["Bereiten Sie die Konfiguration der IP-Sicherheit für das ONTAP Netzwerk vor."^] für weitere Informationen.
+
+
+
+== Hardware-Entlastungsfunktion
+
+Mehrere IPsec-Kryptografieoperationen, wie Verschlüsselung und Integritätsprüfungen, können auf eine unterstützte Netzwerkkarte Ihres AFX-Systems ausgelagert werden.  Dies kann die Leistung und den Durchsatz des durch IPsec geschützten Netzwerkverkehrs erheblich verbessern.
+
+
+NOTE: Ab ONTAP 9.18.1 wurde die IPsec-Hardware-Offload-Funktion erweitert, um IPv6-Datenverkehr zu unterstützen.
+
+Die folgenden Netzwerkkarten werden für die IPsec-Hardware-Offload-Funktion auf AFX-Speichersystemen ab ONTAP 9.17.1 unterstützt:
+
+* X50130B (2p, 40G/100G Ethernet-Controller)
+* X50131B (2p, 40G/100G/200G/400G Ethernet-Controller)
+
+
+Siehe die https://hwu.netapp.com/["NetApp Hardware Universe"^] Weitere Informationen zu den unterstützten Grafikkarten für die ONTAP Version auf Ihrem AFX-System finden Sie hier.
+
+
+
+== Ähnliche Informationen
+
+* https://docs.netapp.com/us-en/ontap/networking/ipsec-prepare.html["Bereiten Sie die Konfiguration der IP-Sicherheit für das ONTAP Netzwerk vor."^]
+* https://hwu.netapp.com/["NetApp Hardware Universe"^]
+

@@ -132,5 +132,6 @@ Sie haben ein vorhandenes Client-/Server-Zertifikat oder eine lokale Zertifizier
 
 == Ähnliche Informationen
 
+* https://docs.netapp.com/us-en/ontap/authentication/install-server-certificate-cluster-svm-ssl-server-task.html["Generieren und installieren Sie ein CA-signiertes Serverzertifikat in ONTAP"^]
 * https://docs.netapp.com/us-en/ontap/authentication/manage-certificates-sm-task.html["Verwalten Sie ONTAP -Zertifikate mit System Manager"^]
 

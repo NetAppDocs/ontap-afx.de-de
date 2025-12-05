@@ -14,17 +14,15 @@ summary: Bevor Sie Ihre AFX-Daten verwalten, sollten Sie mit den wichtigsten Kon
 Bevor Sie Ihre AFX-Daten verwalten, sollten Sie mit den wichtigsten Konzepten und Funktionen vertraut sein.
 
 
-TIP: Da viele der auf AFF und FAS -Systemen verfügbaren Konzepte und Verwaltungsverfahren mit denen von AFX-Speichersystemen identisch sind, kann es hilfreich sein, die Unified ONTAP -Dokumentation durchzusehen.
-
-
 
 == Terminologie und Optionen
 
 Es gibt mehrere Begriffe im Zusammenhang mit der AFX-Datensicherheit, mit denen Sie vertraut sein sollten.
 
-Ransomware:: Ransomware ist Schadsoftware, die Dateien verschlüsselt und sie für den Benutzer unzugänglich macht.  Für die Entschlüsselung der Daten wird normalerweise eine Zahlung verlangt.  NetApp ONTAP bietet Lösungen zum Schutz vor Ransomware durch Funktionen wie Autonomous Ransomware Protection (ARP).
-Verschlüsselung:: Bei der Verschlüsselung handelt es sich um den Prozess der Konvertierung von Daten in ein sicheres Format, das ohne entsprechende Autorisierung nicht einfach gelesen werden kann.  ONTAP bietet sowohl software- als auch hardwarebasierte Verschlüsselungstechnologien zum Schutz ruhender Daten.  Dadurch wird sichergestellt, dass es nicht gelesen werden kann, wenn das Speichermedium zweckentfremdet, zurückgegeben, verlegt oder gestohlen wird.  Diese Verschlüsselungslösungen können entweder mit einem externen Schlüsselverwaltungsserver oder dem von ONTAP bereitgestellten Onboard Key Manager verwaltet werden.
-Digitale Zertifikate und PKI:: Ein digitales Zertifikat ist ein elektronisches Dokument, mit dem der Besitz eines öffentlichen Schlüssels nachgewiesen wird.  Der öffentliche Schlüssel und der zugehörige private Schlüssel können auf verschiedene Weise verwendet werden, unter anderem zur Feststellung der Identität, typischerweise als Teil eines größeren Sicherheitsrahmens wie TLS und IPsec.  Diese Schlüssel sowie die unterstützenden Protokolle und Formatierungsstandards bilden die Grundlage für die Public Key Infrastructure (PKI).
+Ransomware:: Ransomware ist Schadsoftware, die Dateien verschlüsselt und sie für den Benutzer unzugänglich macht. In der Regel wird eine Art Zahlung verlangt, um die Daten zu entschlüsseln.  ONTAP bietet Lösungen zum Schutz vor Ransomware durch Funktionen wie den autonomen Ransomware-Schutz (ARP).
+Verschlüsselung:: Bei der Verschlüsselung handelt es sich um den Prozess der Konvertierung von Daten in ein sicheres Format, das ohne entsprechende Autorisierung nicht einfach gelesen werden kann. ONTAP bietet sowohl software- als auch hardwarebasierte Verschlüsselungstechnologien zum Schutz ruhender Daten. Dadurch wird sichergestellt, dass es nicht gelesen werden kann, wenn das Speichermedium zweckentfremdet, zurückgegeben, verlegt oder gestohlen wird. Diese Verschlüsselungslösungen können entweder mit einem externen Schlüsselverwaltungsserver oder dem von ONTAP bereitgestellten Onboard Key Manager verwaltet werden. Siehelink:../secure-data/encrypt-data-at-rest.html["Verschlüsseln Sie ruhende Daten auf einem AFX-Speichersystem"] für weitere Informationen.
+Digitale Zertifikate und PKI:: Ein digitales Zertifikat ist ein elektronisches Dokument, mit dem der Besitz eines öffentlichen Schlüssels nachgewiesen wird. Der öffentliche Schlüssel und der zugehörige private Schlüssel können auf verschiedene Weise verwendet werden, unter anderem zur Feststellung der Identität, typischerweise als Teil eines größeren Sicherheitsrahmens wie TLS und IPsec. Diese Schlüssel sowie die unterstützenden Protokolle und Formatierungsstandards bilden die Grundlage für die Public Key Infrastructure (PKI). Siehelink:../administer/manage-certificates.html#generate-a-certificate-signing-request["Verwalten von Zertifikaten auf einem AFX-Speichersystem"] für weitere Informationen.
+Internetprotokollsicherheit:: IPsec ist ein Internetstandard, der die Verschlüsselung, Integrität und Authentifizierung von Daten während der Übertragung zwischen Netzwerkendpunkten auf IP-Ebene gewährleistet.  Es sichert den gesamten IP-Verkehr zwischen ONTAP und Clients, einschließlich höherer Protokolle wie NFS und SMB.  IPsec bietet Schutz vor böswilligen Replay- und Man-in-the-Middle-Angriffen auf Ihre Daten. Siehelink:../secure-data/secure-ip-connections.html["Sichere IP-Verbindungen auf Ihren AFX-Speichersystemen"] für weitere Informationen.
 
 
 

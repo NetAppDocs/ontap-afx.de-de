@@ -46,3 +46,7 @@ Verwenden Sie den integrierten AFX-Schlüsselmanager oder einen externen Schlüs
 . Wählen Sie *Dual-Layer-Verschlüsselung*, um die Softwareverschlüsselung zu aktivieren.
 . Wählen Sie *Speichern*.
 
+
+.Ähnliche Informationen
+* https://docs.netapp.com/us-en/ontap/concepts/encryption-concept.html["Verschlüsselung"^]
+
