@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: administer/revert-ontap.html 
+keywords: afx, afx system, revert, revert ontap, revert limitation 
+summary: Das Zurücksetzen eines ONTAP Clusters ist der Prozess, bei dem alle Knoten auf die vorherige Hauptversion von ONTAP zurückgesetzt werden. 
+---
+= ONTAP -Revertierung wird mit AFX-Speichersystemen nicht unterstützt.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Zurücksetzen eines ONTAP Clusters ist der Prozess, bei dem alle Knoten auf die vorherige Hauptversion von ONTAP zurückgesetzt werden.
+
+NetApp AFX-Speichersysteme unterstützen kein ONTAP Revert. Der Versuch, mit AFX eine Rückgängigmachung durchzuführen, kann zu Clusterinstabilität und Datenverlust führen. Sie sollten auf einem AFX-System keine Reverse-Operation durchführen.
