@@ -7,7 +7,7 @@ summary: Navigieren Sie zur AFX-Wartungsdokumentation, um zu erfahren, wie Sie W
 = Warten der AFX-Speichersystemhardware
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]

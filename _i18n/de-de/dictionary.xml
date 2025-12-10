@@ -444,7 +444,6 @@
   <block id="c06b2149bbe3e94f6eac8a64039cc025" category="list-text">Lesen Sie die EULA.</block>
   <block id="d6aeb9cf91111f522e0f1901518a3836" category="list-text">Akzeptieren Sie die Standardeinstellung „Benachrichtigung über empfohlene Updates anzeigen“.  Wählen Sie optional „Automatisch aktualisieren“ oder „Empfohlene Updates automatisch ablehnen“ aus.</block>
   <block id="17ac6cdd9934a4f4aca00f5228a64555" category="list-text">Wählen Sie diese Option aus, um zu bestätigen, dass Ihre Update-Änderungen auf alle aktuellen und zukünftigen Updates angewendet werden.</block>
-  <block id="09190524572cf4f2b42ddf32f3f54ce7" category="paragraph">Empfohlene Updates werden basierend auf Ihrer Update-Auswahl automatisch heruntergeladen und auf Ihrem OTAP AFX-System installiert.</block>
   <block id="5de0adb95551ff3c1458ae6247a4959f" category="section-title">Automatische Updates deaktivieren</block>
   <block id="6141cdc0ba26479d87d6b8c24af9fc18" category="paragraph">Deaktivieren Sie automatische Updates, wenn Sie die Flexibilität haben möchten, empfohlene Updates anzuzeigen, bevor sie installiert werden.  Wenn Sie automatische Updates deaktivieren, müssen Sie Firmware- und Systemdatei-Updates manuell durchführen.</block>
   <block id="9c2cdad0235d8d361f21c8343ef95363" category="list-text">Wählen Sie im System-Manager *Cluster &gt; Einstellungen*.</block>
@@ -1409,8 +1408,6 @@
   <block id="ce587252d09bb3dfb2d53f154ba81d93" category="section-title">Schritt 3: Erstellen einer Replikationsbeziehung</block>
   <block id="c8733c85583475859780bc7c89c97d92" category="paragraph">Eine Snapshot-Replikationsbeziehung stellt eine Verbindung zwischen Ihrem AFX-System und einem Remotestandort her, sodass Sie Konsistenzgruppen auf einen Remotecluster replizieren können.  Replizierte Konsistenzgruppen können zur Notfallwiederherstellung oder zur Datenmigration verwendet werden.</block>
   <block id="c5d439ea8d2444de271a6842180ae515" category="paragraph">Zum Schutz vor Ransomware-Angriffen können Sie beim Einrichten Ihrer Replikationsbeziehung die Ziel-Snapshots sperren.  Gesperrte Snapshots können nicht versehentlich oder böswillig gelöscht werden.  Sie können gesperrte Snapshots verwenden, um Daten wiederherzustellen, wenn ein Volume durch einen Ransomware-Angriff kompromittiert wurde.</block>
-  <block id="bf5d4ab274f571d57107a348e35cb081" category="inline-link-macro">Initialisieren Sie die Snapshot-Compliance-Uhr</block>
-  <block id="a2070fe1416691eeb91c53762fd2a74c" category="paragraph">Wenn Sie Ihre Ziel-Snapshots sperren möchten, müssen Sie<block ref="27d9d0ff36409c51abdcd0a6f30da304" category="inline-link-macro-rx"></block> bevor Sie die Replikationsbeziehung erstellen.</block>
   <block id="f07148b3f2fd0f0a23b807626916df29" category="paragraph">Erstellen Sie eine Replikationsbeziehung mit oder ohne gesperrte Ziel-Snapshots.</block>
   <block id="b581751404702669bf568b5f9581e76c" category="open-title">Mit gesperrten Snapshots</block>
   <block id="82fd6aa34bfb21de39dd81c963a0a2e8" category="list-text">Wählen Sie im System Manager *Schutz &gt; Konsistenzgruppen*.</block>
@@ -1772,4 +1769,5 @@
   <block id="b34a4582eb04bf97b29749b7a8e1ee38" category="inline-link-macro">ONTAP Rückstellung</block>
   <block id="dbca7577f0796430f28fd2f1f5805bc9" category="admonition">AFX-Speichersysteme werden nicht unterstützt <block ref="af98218b92f959dac30e2de6f742409f" category="inline-link-macro-rx"></block> Operationen.</block>
   <block id="0f3715b1b8b72110fa162f2666d15f10" category="sidebar">Einschränkung rückgängig machen</block>
+  <block id="c29e3429d133a5255487ffdb4b3cd5b3" category="paragraph">Empfohlene Updates werden basierend auf Ihrer Update-Auswahl automatisch heruntergeladen und auf Ihrem ONTAP AFX-System installiert.</block>
 </blocks>

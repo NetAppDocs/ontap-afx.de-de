@@ -29,7 +29,7 @@ Wenn Sie automatische Updates für Ihren AFX-Cluster aktivieren, werden empfohle
 
 
 .Ergebnis
-Empfohlene Updates werden basierend auf Ihrer Update-Auswahl automatisch heruntergeladen und auf Ihrem OTAP AFX-System installiert.
+Empfohlene Updates werden basierend auf Ihrer Update-Auswahl automatisch heruntergeladen und auf Ihrem ONTAP AFX-System installiert.
 
 
 

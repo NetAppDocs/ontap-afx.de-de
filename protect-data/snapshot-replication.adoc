@@ -86,8 +86,6 @@ Eine Snapshot-Replikationsbeziehung stellt eine Verbindung zwischen Ihrem AFX-Sy
 Zum Schutz vor Ransomware-Angriffen können Sie beim Einrichten Ihrer Replikationsbeziehung die Ziel-Snapshots sperren.  Gesperrte Snapshots können nicht versehentlich oder böswillig gelöscht werden.  Sie können gesperrte Snapshots verwenden, um Daten wiederherzustellen, wenn ein Volume durch einen Ransomware-Angriff kompromittiert wurde.
 
 .Bevor Sie beginnen
-Wenn Sie Ihre Ziel-Snapshots sperren möchten, müssen Sielink:../secure-data/ransomware-protection.html#initialize-the-snaplock-compliance-clock["Initialisieren Sie die Snapshot-Compliance-Uhr"] bevor Sie die Replikationsbeziehung erstellen.
-
 Erstellen Sie eine Replikationsbeziehung mit oder ohne gesperrte Ziel-Snapshots.
 
 [role="tabbed-block"]
