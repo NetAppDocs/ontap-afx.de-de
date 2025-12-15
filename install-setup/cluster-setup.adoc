@@ -72,6 +72,10 @@ Definieren Sie die Details für Ihre DNS- und NTP-Server.
 +
 Sie können die Details für die Cluster-Verschlüsselung definieren. Wählen Sie *Weiter*.
 
++
+
+NOTE: Informationen zum Erstellen eines Clusters für eine Nicht-Windows-Umgebung finden Sie unter link:https://docs.netapp.com/us-en/ontap/software_setup/setup-cluster.html["Erstellen Sie einen ONTAP Cluster und verbinden Sie Knoten."^]Die
+
 
 
 .Was kommt als nächstes

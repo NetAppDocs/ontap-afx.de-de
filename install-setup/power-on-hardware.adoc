@@ -136,7 +136,7 @@ Anweisungen zum Konfigurieren des seriellen Konsolenports finden Sie in der Onli
 .. Schließen Sie das Konsolenkabel an den Laptop an und verbinden Sie den seriellen Konsolenanschluss am Controller mit dem Konsolenkabel, das mit Ihrem Speichersystem geliefert wurde.
 .. Verbinden Sie den Laptop mit dem Switch im Verwaltungssubnetz.
 +
-image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[Konsolenverbindungen]
+image::../media/drw_afx_1k_console_connection_ieops-2708.svg[Konsolenverbindungen]
 
 
 
