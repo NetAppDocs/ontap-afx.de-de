@@ -15,6 +15,12 @@ Nachdem Sie Ihr AFX 1K-Speichersystem verkabelt haben, müssen Sie die Cisco Nex
 
 .Schritte
 . Stecken Sie die Netzkabel der Schalter in die Stromquellen.
+. Verbinden Sie die ISL-Kabel zwischen den beiden Switches.
++
+** Für Cisco Nexus 9332D-GX2B Switches verwenden Sie die Ports 31/32 für die ISL-Verbindungen. Siehe die link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9332d-gx2b/cisco-nexus-9332d-gx2b-nx-os-mode-switch-hardware-installation-guide/m_overview1.html["Cisco Nexus 9332D-GX2B NX-OS-Modusschalter – Hardwareinstallationshandbuch"^] für weitere Informationen.
+** Für Cisco Nexus 9364D-GX2A Switches verwenden Sie die Ports 63/64 für die ISL-Verbindungen. Siehe die link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9364d-gx2a/cisco-nexus-9364d-gx2a-nx-os-mode-switch-hardware-installation-guide/m_overview1.html["Cisco Nexus 9364D-GX2A NX-OS-Modusschalter – Hardwareinstallationshandbuch"^] für weitere Informationen.
+
+
 . Schalten Sie jeden Schalter ein.
 . Konfigurieren Sie die Switches zur Unterstützung des AFX 1K-Speichersystems.
 +
