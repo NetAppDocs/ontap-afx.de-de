@@ -29,7 +29,7 @@ Erweiterter Kapazitätsausgleich:: Die erweiterte Kapazitätsausgleichsfunktion,
 
 == Nicht unterstützte oder eingeschränkte Unified ONTAP Funktionen
 
-NetApp AFX ist für leistungsstarke NAS- und Objekt-Workloads optimiert.  Aus diesem Grund gibt es Unterschiede zu AFF und FAS sowie zu den anderen Unified ONTAP Speichersystemen.  Die folgenden Funktionen sind mit dem NetApp AFX nicht verfügbar; die Liste ist nach Hauptfunktionen oder Funktionsbereich geordnet.  Sie sollten auch die Aktualisierungen und Änderungen für AFX überprüfen.link:../release-notes/whats-new-9171.html["Was ist neu"] basierend auf Ihrer Freigabe.
+NetApp AFX ist für leistungsstarke NAS- und Objekt-Workloads optimiert. Daher bestehen Unterschiede zu AFF und FAS Storage-Systemen. Die folgenden Funktionen sind bei NetApp AFX nicht verfügbar; die Liste ist nach Hauptfunktionen oder Funktionsbereichen geordnet. Sie sollten außerdem die Aktualisierungen und Änderungen für AFX in link:../release-notes/whats-new-9171.html["Was ist neu"] basierend auf Ihrer ONTAP-Version überprüfen.
 
 
 
@@ -51,6 +51,7 @@ NetApp AFX ist für leistungsstarke NAS- und Objekt-Workloads optimiert.  Aus di
 * Deduplizierung auf Aggregatebene
 * SyncMirror (Aggregatspiegelung)
 * FabricPool -Stufen
+* Load-sharing-Spiegel
 
 
 
