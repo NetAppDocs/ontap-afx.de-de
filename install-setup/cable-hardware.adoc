@@ -139,12 +139,14 @@ image::../media/drw_afx_network_cabling_b_ieops-2351.svg[Kabel zum Ethernet-Netz
 
 
 
-== Schritt 3: Verkabeln Sie die Cluster- und HA-Verbindungen
+== Schritt 3: Verkabeln Sie die Cluster-, HA- und Speicherverbindungen mit Switch A
 
-Verwenden Sie das Cluster- und HA-Verbindungskabel, um die Ports e1a und e7a mit Switch A und e1b und e7b mit Switch B zu verbinden. Die Ports e1a/e1b werden für die HA-Verbindungen verwendet und die Ports e7a/e7b für die Cluster-Verbindungen.
+Verwenden Sie das 4x100GbE-Breakout-Kabel, um die Cluster-, HA- und Speicherports der Controller mit Netzwerk-Switch A zu verbinden. Verwenden Sie das Cluster- und HA-Interconnect-Kabel, um die Ports e1a und e7a mit Switch A zu verbinden. Die Ports e1a werden für die HA-Verbindungen verwendet, und die Ports e7a werden für die Cluster-Verbindungen verwendet. Für die Speicherverbindungen verbinden Sie die Ports e10a und e11a mit Switch A.
+
+Stellen Sie sicher, dass Sie die richtigen Kabel und Stecker für Ihre Switches haben. Siehe  https://hwu.netapp.com["Hardware Universe"^] für weitere Informationen.
 
 .Schritte
-. Verbinden Sie die folgenden Controller-Ports mit einem beliebigen Nicht-ISL-Port am Cluster-Netzwerk-Switch A.
+. Verbinden Sie die folgenden Controller-Ports mit einem beliebigen Nicht-ISL-Port am Netzwerk-Switch A.
 +
 ** Controller A
 +
@@ -160,47 +162,11 @@ Verwenden Sie das Cluster- und HA-Verbindungskabel, um die Ports e1a und e7a mit
 *100GbE-Kabel*
 
 +
-image::../media/oie_cable_25Gb_Ethernet_SFP28_ieops-1069.png[Cluster-HA-Kabel]
-
-+
-image::../media/drw_afx_switched_cluster_cabling_a_ieops-2352.svg[Verkabeln Sie Clusterverbindungen mit dem Clusternetzwerk]
+image::../media/oie_cable100_gbe_qsfp28.png[100-Gb-Kabel]
 
 
 
 
-
-. Verbinden Sie die folgenden Controller-Ports mit einem beliebigen Nicht-ISL-Port am Cluster-Netzwerk-Switch B.
-+
-** Controller A
-+
-*** e1b (HA)
-*** e7b (Cluster)
-
-
-** Controller B
-+
-*** e1b (HA)
-*** e7b (Cluster)
-+
-*100GbE-Kabel*
-
-+
-image::../media/oie_cable_25Gb_Ethernet_SFP28_ieops-1069.png[Cluster-HA-Kabel]
-
-+
-image::../media/drw_afx_switched_cluster_cabling_b_ieops-2353.svg[Verkabeln Sie Clusterverbindungen mit dem Clusternetzwerk]
-
-
-
-
-
-
-
-
-
-== Schritt 4: Verkabeln Sie die Speicherverbindungen zwischen Controller und Switch
-
-Verbinden Sie die Speicherports des Controllers mit den Switches.  Stellen Sie sicher, dass Sie die richtigen Kabel und Anschlüsse für Ihre Switches haben. Sehen https://hwu.netapp.com["Hardware Universe"^] für weitere Informationen.
 
 . Verbinden Sie die folgenden Speicherports mit einem beliebigen Nicht-ISL-Port auf Switch A.
 +
@@ -221,7 +187,39 @@ Verbinden Sie die Speicherports des Controllers mit den Switches.  Stellen Sie s
 image::../media/oie_cable100_gbe_qsfp28.png[100-Gb-Kabel]
 
 +
-image::../media/drw_afx_controller_storage_cable_a_ieops-2354.svg[Kabel-Controller-Speicher an Schalter A]
+image::../media/drw_afx_ha_cluster_storage_a_ieops-2779.svg[Kabelcontroller-Cluster,HA,and storage to switch A]
+
+
+
+
+
+
+
+
+
+== Schritt 4: Verkabeln Sie die Cluster-, HA- und Speicherverbindungen mit Switch B
+
+Verwenden Sie das 4x100GbE-Breakout-Kabel, um die Cluster-, HA- und Speicherports der Controller mit Netzwerk-Switch B zu verbinden. Verwenden Sie das Cluster- und HA-Interconnect-Kabel, um die Ports e1b und e7b mit Switch B zu verbinden. Die Ports e1b werden für die HA-Verbindungen verwendet, und die Ports e7b werden für die Cluster-Verbindungen verwendet. Für die Speicherverbindungen verbinden Sie die Ports e10b und e11b mit Switch B.
+
+Stellen Sie sicher, dass Sie die richtigen Kabel und Stecker für Ihre Switches haben. Siehe  https://hwu.netapp.com["Hardware Universe"^] für weitere Informationen.
+
+. Verbinden Sie die folgenden Controller-Ports mit einem beliebigen Nicht-ISL-Port am Netzwerk-Switch B.
++
+** Controller A
++
+*** e1b (HA)
+*** e7b (Cluster)
+
+
+** Controller B
++
+*** e1b (HA)
+*** e7b (Cluster)
++
+*100GbE-Kabel*
+
++
+image::../media/oie_cable100_gbe_qsfp28.png[100-Gb-Kabel]
 
 
 
@@ -246,7 +244,7 @@ image::../media/drw_afx_controller_storage_cable_a_ieops-2354.svg[Kabel-Controll
 image::../media/oie_cable100_gbe_qsfp28.png[100-Gb-Kabel]
 
 +
-image::../media/drw_afx_controller_storage_cable_b_ieops-2355.svg[Kabel-Controller-Speicher an Schalter B]
+image::../media/drw_afx_ha_cluster_storage_b_ieops-2780.svg[Kabelcontroller-Cluster,HA,and storage to switch B]
 
 
 

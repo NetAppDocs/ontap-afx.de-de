@@ -792,28 +792,18 @@
   <block id="808f3fa88e6266b2beb8f1153dd991ec" category="list-text">Verbinden Sie die folgenden Ports mit Ihrem Ethernet-Datennetzwerk-Switch B.</block>
   <block id="53c535a8b8a2c8bb670d136b82e73f99" category="list-text">e2b</block>
   <block id="969d430598a257671bdf944480e4d46b" category="list-text">e3b</block>
-  <block id="4015e00b406d10c628519f953d69e086" category="section-title">Schritt 3: Verkabeln Sie die Cluster- und HA-Verbindungen</block>
-  <block id="093fe9dff1e5370d0b97313cefba5acd" category="paragraph">Verwenden Sie das Cluster- und HA-Verbindungskabel, um die Ports e1a und e7a mit Switch A und e1b und e7b mit Switch B zu verbinden. Die Ports e1a/e1b werden für die HA-Verbindungen verwendet und die Ports e7a/e7b für die Cluster-Verbindungen.</block>
-  <block id="7d1e8fb2f50320f7b5004ba0fd39055b" category="list-text">Verbinden Sie die folgenden Controller-Ports mit einem beliebigen Nicht-ISL-Port am Cluster-Netzwerk-Switch A.</block>
   <block id="595df28a8a4a9361a6231a9d84e8cd08" category="list-text">Controller A</block>
   <block id="9cb7b36b3f2bccc776862e6f2f494077" category="list-text">e1a</block>
   <block id="a9e70fa35de61f4ac25cc4bcd706a55d" category="list-text">Controller B</block>
-  <block id="29b62d617481485649ea2d5b54fca512" category="image-alt">Cluster-HA-Kabel</block>
-  <block id="f1d133e33e29362e931a34312a961d0b" category="image-alt">Verkabeln Sie Clusterverbindungen mit dem Clusternetzwerk</block>
-  <block id="ac32cb5bd4dc17916ab1ece800d39226" category="list-text">Verbinden Sie die folgenden Controller-Ports mit einem beliebigen Nicht-ISL-Port am Cluster-Netzwerk-Switch B.</block>
   <block id="e737b5ac24a63afc00e81377a906728d" category="list-text">e1b</block>
-  <block id="c61349783073807f1993874d0e3a4a8c" category="section-title">Schritt 4: Verkabeln Sie die Speicherverbindungen zwischen Controller und Switch</block>
   <block id="da160308e3b4b4a80bf1b72b5bdbedb8" category="inline-link">Hardware Universe</block>
-  <block id="7bebd570400c9d8d9796caad43fdcebd" category="paragraph">Verbinden Sie die Speicherports des Controllers mit den Switches.  Stellen Sie sicher, dass Sie die richtigen Kabel und Anschlüsse für Ihre Switches haben. Sehen<block ref="16a6d09025d51cb8dd3516798b3fee8a" category="inline-link-rx"></block> für weitere Informationen.</block>
   <block id="d7434100057b78673eee73421ad29942" category="list-text">Verbinden Sie die folgenden Speicherports mit einem beliebigen Nicht-ISL-Port auf Switch A.</block>
   <block id="405e469b4aa3065616ee04f4a4b2b35e" category="list-text">e10a</block>
   <block id="2772fdc65a945771c18178a5b650c575" category="list-text">e11a</block>
   <block id="b222cca23840b6a495e76b8c300b08f2" category="image-alt">100-Gb-Kabel</block>
-  <block id="56812cf9e76eb2dfaa41475474798d4b" category="image-alt">Kabel-Controller-Speicher an Schalter A</block>
   <block id="dc1921771bb6c193442045d9a99b8c9d" category="list-text">Verbinden Sie die folgenden Speicherports mit einem beliebigen Nicht-ISL-Port auf Switch B.</block>
   <block id="d5dec99b9c0f6ad0c56335c85d42e40b" category="list-text">e10b</block>
   <block id="6dfe0149eb6951bd7c7e5c94c1713869" category="list-text">e11b</block>
-  <block id="73b33ccdc5c989a11800499004721836" category="image-alt">Kabel-Controller-Speicher an Schalter B</block>
   <block id="18154dcfffa2547c8d59ed9df65fb3ac" category="section-title">Schritt 5: Verkabeln Sie die Verbindungen zwischen Regal und Switch</block>
   <block id="b1ea5415ee8f031dcace291f9c98e0be" category="paragraph">Verbinden Sie die NX224-Speicherregale mit den Switches.</block>
   <block id="5a684badbec5242d1800f819ca49559e" category="paragraph">Informationen zur maximalen Anzahl der für Ihr Speichersystem unterstützten Einschübe und zu allen Verkabelungsoptionen finden Sie unter<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> .</block>
@@ -1776,4 +1766,12 @@
   <block id="f8979ce4e5d66f41e330415672140ef8" category="list-text">Für Cisco Nexus 9364D-GX2A Switches verwenden Sie die Ports 63/64 für die ISL-Verbindungen. Siehe die <block ref="d3ef7ae1e3bea631e525704fa9f8906b" category="inline-link-macro-rx"></block> für weitere Informationen.</block>
   <block id="35baa74f76db10604e3f71a16b4078d1" category="paragraph">NetApp AFX ist für leistungsstarke NAS- und Objekt-Workloads optimiert. Daher bestehen Unterschiede zu AFF und FAS Storage-Systemen. Die folgenden Funktionen sind bei NetApp AFX nicht verfügbar; die Liste ist nach Hauptfunktionen oder Funktionsbereichen geordnet. Sie sollten außerdem die Aktualisierungen und Änderungen für AFX in <block ref="e4ac4a7dd877729340e2b0880473ea1b" category="inline-link-macro-rx"></block> basierend auf Ihrer ONTAP-Version überprüfen.</block>
   <block id="86daf5160966102a39f5f3c0390bde11" category="list-text">Load-sharing-Spiegel</block>
+  <block id="8c60e60e96c6540bd35beb72adc17cb0" category="section-title">Schritt 3: Verkabeln Sie die Cluster-, HA- und Speicherverbindungen mit Switch A</block>
+  <block id="1255d6bb11db98e4f919212687145a90" category="paragraph">Verwenden Sie das 4x100GbE-Breakout-Kabel, um die Cluster-, HA- und Speicherports der Controller mit Netzwerk-Switch A zu verbinden. Verwenden Sie das Cluster- und HA-Interconnect-Kabel, um die Ports e1a und e7a mit Switch A zu verbinden. Die Ports e1a werden für die HA-Verbindungen verwendet, und die Ports e7a werden für die Cluster-Verbindungen verwendet. Für die Speicherverbindungen verbinden Sie die Ports e10a und e11a mit Switch A.</block>
+  <block id="245afd341214dde6198c6abfdac71264" category="paragraph">Stellen Sie sicher, dass Sie die richtigen Kabel und Stecker für Ihre Switches haben. Siehe <block ref="16a6d09025d51cb8dd3516798b3fee8a" category="inline-link-rx"></block> für weitere Informationen.</block>
+  <block id="e42929c9f069074fd111dfa1c107772e" category="list-text">Verbinden Sie die folgenden Controller-Ports mit einem beliebigen Nicht-ISL-Port am Netzwerk-Switch A.</block>
+  <block id="c1209a2ef5ab3b20312d0aebe91b01d3" category="image-alt">Kabelcontroller-Cluster</block>
+  <block id="c42589aeb6cdc4aab7c9ee5517ef1f84" category="section-title">Schritt 4: Verkabeln Sie die Cluster-, HA- und Speicherverbindungen mit Switch B</block>
+  <block id="14aa705a8a71a02fb1b277002e0c52ed" category="paragraph">Verwenden Sie das 4x100GbE-Breakout-Kabel, um die Cluster-, HA- und Speicherports der Controller mit Netzwerk-Switch B zu verbinden. Verwenden Sie das Cluster- und HA-Interconnect-Kabel, um die Ports e1b und e7b mit Switch B zu verbinden. Die Ports e1b werden für die HA-Verbindungen verwendet, und die Ports e7b werden für die Cluster-Verbindungen verwendet. Für die Speicherverbindungen verbinden Sie die Ports e10b und e11b mit Switch B.</block>
+  <block id="8cff5fa6944271f10e636cadf3153077" category="list-text">Verbinden Sie die folgenden Controller-Ports mit einem beliebigen Nicht-ISL-Port am Netzwerk-Switch B.</block>
 </blocks>
