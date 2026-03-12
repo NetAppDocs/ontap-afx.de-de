@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: get-started/learn-about-aide.html 
+keywords: ai, ai data engine, aide, learn about aide, aide pipeline data management, data governance 
+summary: 'NetApp AI Data Engine (AIDE) ist ein speicherintegrierter AI Data Service, der auf Data Compute Nodes ausgeführt wird, die an einen AFX-Cluster angeschlossen sind. Sie können optional AIDE mit Ihrem AFX-Cluster installieren und integrieren, wodurch AFX um dedizierte, GPU-beschleunigte Datenverarbeitung für AI- und ML-Workloads erweitert wird, während alle Vorteile von ONTAP erhalten bleiben.' 
+---
+= Erfahren Sie mehr über die NetApp AI Data Engine
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp AI Data Engine (AIDE) ist ein speicherintegrierter AI Data Service, der auf Data Compute Nodes ausgeführt wird, die an einen AFX-Cluster angeschlossen sind. Sie können optional AIDE mit Ihrem AFX-Cluster installieren und integrieren, wodurch AFX um dedizierte, GPU-beschleunigte Datenverarbeitung für AI- und ML-Workloads erweitert wird, während alle Vorteile von ONTAP erhalten bleiben.
+
+
+
+== AIDE-Übersicht
+
+AIDE ist ein System, das die Aufbereitung und Verwaltung Ihrer Daten für KI- und ML-Workloads beschleunigt und vereinfacht. Es wird separat installiert und ist eng mit einem AFX-Speichersystem-Cluster integriert. AIDE nutzt die leistungsstarke und skalierbare AFX-Speicherbasis und ergänzt sie um spezialisierte Dienste für KI-Datenverarbeitung, Governance und Workflow-Automatisierung.
+
+Eine Kernstärke von AIDE ist seine Fähigkeit, die Verwaltung von Metadaten über große, verteilte Datensätze hinweg zu zentralisieren und zu automatisieren. Es kann so konfiguriert werden, dass der Metadatenspeicher kontinuierlich katalogisiert und aktualisiert wird, basierend auf den Daten in Ihren ONTAP Volumes, sodass Benutzer effizient suchen, klassifizieren und Governance-Richtlinien anwenden können. Die interne Verarbeitungspipeline generiert KI-bereite Datensätze, einschließlich der erforderlichen Erstellung von Vektoreinbettungen für semantische Such- und Abrufaufgaben.
+
+Sicherheit und Governance sind ebenfalls zentrale Bestandteile des Designs. AIDE bietet Authentifizierung, Zugriffskontrolle mit neuen RBAC-Rollen, Datenklassifizierung und richtlinienbasierte Durchsetzung zum Schutz sensibler Informationen. Funktionen wie automatische Schwärzung, Maskierung und Audit-Protokollierung helfen Ihnen, geltende regulatorische Anforderungen zu erfüllen und kritische Daten während des gesamten AI-Lebenszyklus zu schützen.
+
+AIDE unterstützt Data Engineers und Data Scientists, indem es Tools für die schnelle Datenfindung, -aufbereitung und das Workflow-Management bereitstellt. Mit der dedizierten AIDE-Konsole und der erweiterten AFX REST API können Anwender kuratierte Datensammlungen erstellen, Vektorsuchen durchführen und sich mit externen AI- und GenAI-Anwendungen integrieren. AIDE reduziert den erforderlichen manuellen Aufwand und ermöglicht es Teams, sich auf die Gewinnung von Erkenntnissen aus ihren Daten zu konzentrieren.
+
+
+
+== Installationsoptionen
+
+Es gibt zwei Optionen, um AIDE mit Ihrem AFX-Speichercluster zu installieren und zu integrieren.
+
+
+
+=== Richten Sie AFX und AIDE gemeinsam ein
+
+Die gleichzeitige Bereitstellung des AFX-Speichersystems und von AIDE ermöglicht einen einheitlichen und optimierten Installationsprozess und gewährleistet so die sofortige Integration und optimale Konfiguration. Dieser schlüsselfertige Ansatz vereinfacht die Inbetriebnahme, garantiert Kompatibilität und ermöglicht Ihnen, eine voll funktionsfähige AI Data Engine Datenplattform schnell zu nutzen – ideal für neue Deployments, die eine rasche Time-to-Value anstreben.
+
+
+
+=== AIDE in einen bestehenden AFX-Cluster integrieren
+
+Wenn Sie bereits einen AFX-Speichercluster installiert und in Betrieb haben, können Sie AIDE jederzeit hinzufügen, um den Zugriff und den Wert Ihrer Daten zu verbessern. AIDE wird als Add-on zur bestehenden AFX-Speicherumgebung bereitgestellt und verbindet sich mit dem etablierten Cluster-Speichernetzwerk, ohne den Betrieb zu unterbrechen. Der Integrationsprozess erkennt automatisch verfügbare ONTAP Volumes und synchronisiert Metadaten. Ihre Datenverarbeitungs-Workflows werden durch KI-Automatisierung, Governance und Kurationstools verbessert, während ihre bestehende Speicherbasis erhalten bleibt.
+
+
+
+== Ähnliche Informationen
+
+* https://docs.netapp.com/us-en/ai-data-engine/get-started/learn-about.html["Erfahren Sie mehr über AI Data Engine"^]
+* https://docs.netapp.com/us-en/ai-data-engine/faq-aide.html["FAQ für NetApp AI Data Engine"^]
+* https://docs.netapp.com/us-en/ai-data-engine/install-setup/cluster-setup-afx.html["Richten Sie Ihren ONTAP AIDE Cluster ein"^]
+* https://www.netapp.com/data-services/ai-data-engine/["NetApp AI Data Engine"^]
+

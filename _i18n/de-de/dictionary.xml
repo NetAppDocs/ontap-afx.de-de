@@ -686,15 +686,8 @@
   <block id="67901f429b628d99fcc5a2d234be3c16" category="list-text"><block ref="67901f429b628d99fcc5a2d234be3c16" category="inline-link-rx"></block></block>
   <block id="be295ac553513eb5e74d13f03267efb7" category="inline-link">Erfahren Sie mehr über die Clusterverwaltung mit der ONTAP CLI</block>
   <block id="b1ca62b8e216e4c4af0bae762b5c33bf" category="list-text"><block ref="b1ca62b8e216e4c4af0bae762b5c33bf" category="inline-link-rx"></block></block>
-  <block id="6496e25d87d450f75eeeac2307f5d601" category="summary">Um Ihr AFX-System zum ersten Mal in Betrieb zu nehmen, müssen Sie die Hardwarekomponenten installieren, Ihren Cluster einrichten und die Verwaltung Ihres Clusters und Ihrer SVMs vorbereiten.</block>
   <block id="22735d3e264cefb0543000862e7f0904" category="doc">Schnellstart zum Einrichten eines AFX-Speichersystems</block>
-  <block id="40a0d9b63d17cd9ee40121b195ad7812" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>Installieren und Einrichten Ihrer Hardware</block>
-  <block id="349838fb1d851d3e2014b9fe39203275" category="inline-link-macro">Installieren</block>
-  <block id="a89571e2a58d58d092c115e8476ed9e9" category="paragraph"><block ref="956a819b10989cd1b828400e2784a3e3" category="inline-link-macro-rx"></block>Ihr AFX-Speichersystem und bereiten Sie die Einrichtung des Clusters vor.</block>
-  <block id="d950f0cc340509cac6299d8daed8cf0a" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>Einrichten Ihres Clusters</block>
   <block id="d5158c215f75d40b3dc3a9efd519b60a" category="inline-link-macro">aufstellen</block>
-  <block id="952715d9fa928d1059a800473c5469c0" category="paragraph">Folgen Sie dem schnellen und einfachen Prozess, um<block ref="5f55a5e0ef0b631e2040a3d854a6456f" category="inline-link-macro-rx"></block> Ihr ONTAP Cluster mithilfe von System Manager.</block>
-  <block id="373a0502633d2333dd8b952009c2d1ad" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>Vorbereiten der Clusterverwaltung</block>
   <block id="0ee63ccea22773b7b711a299adc32792" category="inline-link-macro">vorbereiten</block>
   <block id="862b23ef0c9f5a6e409d8a2a17fe80e2" category="paragraph">Bevor Sie AFX in einer Produktionsumgebung einsetzen, ist es wichtig,<block ref="8b4d8002fc8012c25c048b6e7a24771f" category="inline-link-macro-rx"></block> durch das Verständnis der Verwaltungsstruktur – einschließlich virtueller Speichermaschinen (SVMs), Benutzer, Rollen und Verwaltungsschnittstellen – um eine sichere, effiziente und effektive Clusterverwaltung zu gewährleisten.</block>
   <block id="0a6e83c5c4575b7e80d6da08f9735aa2" category="summary">Die AFX-Architektur besteht aus mehreren Hardware- und Softwarekomponenten.  Diese Systemkomponenten sind in verschiedene Kategorien unterteilt.</block>
@@ -818,9 +811,7 @@
   <block id="4a7ee7fbba5bc8a1a276d9ee6a63ed38" category="list-text">Verbindungen von Modul B zu Switch B</block>
   <block id="fd237566ec57d5c7d07a07d2de3f5da4" category="inline-link-macro">Schalten Sie die Switches ein und konfigurieren Sie sie</block>
   <block id="f5a20b01e4e92799bd754e081d26baa2" category="paragraph">Nach der Verkabelung der Hardware<block ref="ea78b4766c5f2cc6aaf348a949513439" category="inline-link-macro-rx"></block> .</block>
-  <block id="61aa41645e90edf222517c80068cc2c5" category="summary">Nachdem Ihre AFX-Hardware installiert wurde, können Sie die Cluster-Einrichtung abschließen.  Dieser Prozess umfasst zwei miteinander verbundene Konfigurationsphasen, die Sie nacheinander durchführen müssen.</block>
   <block id="555d2f7366ee48937103a84c2e34ab15" category="doc">Richten Sie Ihren AFX-Speichersystem- ONTAP Cluster ein</block>
-  <block id="1a03950a8b042e50b4fa0a4ba5ebf056" category="paragraph">Nachdem Ihre AFX-Hardware installiert wurde, können Sie die Einrichtung des ONTAP Clusters abschließen.  Dieser Prozess umfasst zwei miteinander verbundene Konfigurationsphasen, die Sie nacheinander durchführen müssen.</block>
   <block id="4a10c4c51ce8042f23d8552dbd29c615" category="section-title">Durchführen der ersten Clustereinrichtung</block>
   <block id="d67e08295ddac36d182423f29b6d953e" category="paragraph">Sie können Ihr Laptop-Gerät mit dem AFX-Cluster verbinden und mehrere globale Konfigurationseinstellungen festlegen.</block>
   <block id="a357a6dc879fb21456a023174999f986" category="paragraph">Es gibt vier Bereiche des AFX-Clusters, die zunächst konfiguriert werden müssen.  Die ersten drei sind erforderlich, während der letzte optional ist.</block>
@@ -829,7 +820,6 @@
   <block id="98120899673f27e9689b61d6b3870732" category="paragraph">Die Clusterverwaltungs-IP-Adresse ist eine eindeutige IPv4-Adresse für die Clusterverwaltungsschnittstelle, die vom Clusteradministrator verwendet wird, um auf die Admin-SVM zuzugreifen und den Cluster zu verwalten.  Diese IP-Adresse erhalten Sie von dem Administrator, der in Ihrer Organisation für die Vergabe von IP-Adressen zuständig ist.</block>
   <block id="cbb81dee4f5c03c21f392a86f157336d" category="list-text">Netzwerk-Subnetzmaske</block>
   <block id="c434bb8b0d4ff4f8c72a02f79eb9224a" category="paragraph">Während der Clustereinrichtung benötigt ONTAP eine Reihe von Netzwerkschnittstellen, die für Ihre Konfiguration geeignet sind.  Sie können die Empfehlung bei Bedarf anpassen.</block>
-  <block id="04a28563d9cca86ff33d1886c922c8d7" category="paragraph">Sie benötigen außerdem Folgendes:</block>
   <block id="e62d1b7c016fb6f9a0829b685c2ab1ea" category="list-text">IP-Adresse des Netzwerk-Gateways</block>
   <block id="4f003881b79490db2f8b01b7c398fce1" category="list-text">DNS-Domänennamen</block>
   <block id="e28af899651d52d4e958ed29e85f0c9c" category="list-text">IP-Adressen des DNS-Nameservers</block>
@@ -843,9 +833,7 @@
   <block id="59b375f59423995965c5949c469b768e" category="paragraph">Die Benutzeroberfläche des System Managers wird angezeigt.</block>
   <block id="e041869cafad45776d41ace1eaf57baf" category="list-text">Legen Sie das Administratorkennwort fest.</block>
   <block id="1a3fdad9d641133a1e19c5fdbfe21255" category="paragraph">Geben Sie das Passwort für die<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block> Konto. Wählen Sie *Weiter*.</block>
-  <block id="65dc37fafad28c1a8a9c109af3d8d976" category="list-text">Konfigurieren Sie die IP-Adressen für die Cluster- und Controller-Knoten.</block>
   <block id="35c7fe01157254d80eb6615358234c6a" category="paragraph">Geben Sie IP-Adressen und Subnetzmasken an.</block>
-  <block id="8165f1d7607b0e72446c39d17955414b" category="list-text">Konfigurieren Sie die Netzwerkdienste. Wählen Sie *Weiter*.</block>
   <block id="2d044c807325a8c22321174a6d18dbd9" category="paragraph">Definieren Sie die Details für Ihre DNS- und NTP-Server.</block>
   <block id="083faa6cc4d08f602b1c409c9b142a4c" category="list-text">Optional können Sie eine Verschlüsselung einrichten.</block>
   <block id="29c706988d6c18477050ac049bc0a43a" category="paragraph">Sie können die Details für die Cluster-Verschlüsselung definieren. Wählen Sie *Weiter*.</block>
@@ -1680,8 +1668,6 @@
   <block id="a701ac944f045a1319dfa2aefa340a51" category="list-text">REST-APIs für nicht unterstützte Funktionen (wie z. B. MetroCluster)</block>
   <block id="79c2b38f38c51ccecb846e7b61411345" category="list-text">Einige anfängliche Einschränkungen von REST-APIs für Leistungsstatistiken</block>
   <block id="53c74ff394516eb726fa498958baa748" category="list-text">AIQ Unified Manager-Unterstützung</block>
-  <block id="9778559854e477e3145f111560df12c2" category="list-text">Grafana Harvest Version 25.08.1 und höher</block>
-  <block id="2d13ab42fbf58a40e728ee212f01218c" category="list-text">NetApp Trident Version 25.10 und höher</block>
   <block id="ccb648feabbcf21905f5b3e3b6da2bfe" category="list-text">Die aggregierte Ansicht zeigt nun die gesamte Speicherverfügbarkeitszone (SAZ) an.</block>
   <block id="853b2544b8e3ce0ee8744c82e99c89a0" category="paragraph">Das NetApp AFX-Speichersystem erfüllt die besonderen Anforderungen von NAS- und S3-Objekt-Workloads, die hohe Leistung und unabhängige Skalierbarkeit erfordern.  Diese Anwendungen profitieren von einem fortschrittlichen Design, das auf hoher Parallelität und paralleler Ein-/Ausgabe basiert.  AFX eignet sich ideal für Organisationen, die verschiedene Arten von Anwendungsworkloads bereitstellen und verwalten, darunter:</block>
   <block id="25b0ede2a92c78f78da91d95666bf71d" category="list-text">Im Gegensatz zu anderen NetApp ONTAP Speichersystemen sind die Rechen- und Speicherelemente eines AFX-Clusters entkoppelt und über ein Switched Network verbunden.  Die Festplattenzugehörigkeit ist nicht mehr an bestimmte Knoten gebunden, was mehrere Vorteile mit sich bringt.  Beispielsweise können die Rechen- und Speicherkomponenten eines AFX-Clusters unabhängig voneinander erweitert werden.</block>
@@ -1779,4 +1765,66 @@
   <block id="9f17a32279457eb3f0ec945352a82e96" category="inline-link-macro">Richten Sie einen AFX-Cluster ein</block>
   <block id="65baec5e9f4a78defefb1154f095ae89" category="list-text">Für dedizierte AFX 1K-Speichersystembereitstellungen gehen Sie zu <block ref="b434a61d8681e909828695f9b932fe31" category="inline-link-macro-rx"></block>.</block>
   <block id="2958d97f86a68931454e4d5cb0f3fa2a" category="list-text">Für AFX 1K mit AI Data Engine (AIDE)-Bereitstellungen gehen Sie zu <block ref="770e46e4a0d2400ce8dd3c354b4e69c6" category="inline-link-macro-rx"></block>.</block>
+  <block id="7485a9a2ae4ee9755a52213e23e1172c" category="inline-link">So laden Sie NLF-Lizenzen von der NetApp Support Site herunter</block>
+  <block id="0d31e45cb458235b1c184c1176df0af6" category="list-text"><block ref="0d31e45cb458235b1c184c1176df0af6" category="inline-link-rx"></block></block>
+  <block id="d0e68fc1dba1032a2fa3af9f7e71bfc4" category="list-text">Grafana Harvest versions vor 25.08.1</block>
+  <block id="f4400f8e3998b00dc936390760dfa0b2" category="summary">NetApp AI Data Engine (AIDE) ist ein speicherintegrierter AI Data Service, der auf Data Compute Nodes ausgeführt wird, die an einen AFX-Cluster angeschlossen sind. Sie können optional AIDE mit Ihrem AFX-Cluster installieren und integrieren, wodurch AFX um dedizierte, GPU-beschleunigte Datenverarbeitung für AI- und ML-Workloads erweitert wird, während alle Vorteile von ONTAP erhalten bleiben.</block>
+  <block id="a488cbabbe8d00d891faddf3e2aaedec" category="doc">Erfahren Sie mehr über die NetApp AI Data Engine</block>
+  <block id="fd73f0069f1d3fe412b6cc9624e9d727" category="section-title">AIDE-Übersicht</block>
+  <block id="6bcc7c95100882ca261552d0ffd8f1b6" category="paragraph">AIDE ist ein System, das die Aufbereitung und Verwaltung Ihrer Daten für KI- und ML-Workloads beschleunigt und vereinfacht. Es wird separat installiert und ist eng mit einem AFX-Speichersystem-Cluster integriert. AIDE nutzt die leistungsstarke und skalierbare AFX-Speicherbasis und ergänzt sie um spezialisierte Dienste für KI-Datenverarbeitung, Governance und Workflow-Automatisierung.</block>
+  <block id="37b3dc451b95ca444c011393639868c7" category="paragraph">Eine Kernstärke von AIDE ist seine Fähigkeit, die Verwaltung von Metadaten über große, verteilte Datensätze hinweg zu zentralisieren und zu automatisieren. Es kann so konfiguriert werden, dass der Metadatenspeicher kontinuierlich katalogisiert und aktualisiert wird, basierend auf den Daten in Ihren ONTAP Volumes, sodass Benutzer effizient suchen, klassifizieren und Governance-Richtlinien anwenden können. Die interne Verarbeitungspipeline generiert KI-bereite Datensätze, einschließlich der erforderlichen Erstellung von Vektoreinbettungen für semantische Such- und Abrufaufgaben.</block>
+  <block id="e4a694a3dc8671d50ac2711d735738d2" category="paragraph">Sicherheit und Governance sind ebenfalls zentrale Bestandteile des Designs. AIDE bietet Authentifizierung, Zugriffskontrolle mit neuen RBAC-Rollen, Datenklassifizierung und richtlinienbasierte Durchsetzung zum Schutz sensibler Informationen. Funktionen wie automatische Schwärzung, Maskierung und Audit-Protokollierung helfen Ihnen, geltende regulatorische Anforderungen zu erfüllen und kritische Daten während des gesamten AI-Lebenszyklus zu schützen.</block>
+  <block id="a4a07490b53ede56eedd6615965e9098" category="paragraph">AIDE unterstützt Data Engineers und Data Scientists, indem es Tools für die schnelle Datenfindung, -aufbereitung und das Workflow-Management bereitstellt. Mit der dedizierten AIDE-Konsole und der erweiterten AFX REST API können Anwender kuratierte Datensammlungen erstellen, Vektorsuchen durchführen und sich mit externen AI- und GenAI-Anwendungen integrieren. AIDE reduziert den erforderlichen manuellen Aufwand und ermöglicht es Teams, sich auf die Gewinnung von Erkenntnissen aus ihren Daten zu konzentrieren.</block>
+  <block id="ea206a7167c7e693d778525a7c87c869" category="section-title">Installationsoptionen</block>
+  <block id="a4fe9c37a470f8ecf5564e8a245e6426" category="paragraph">Es gibt zwei Optionen, um AIDE mit Ihrem AFX-Speichercluster zu installieren und zu integrieren.</block>
+  <block id="e47448b4066bbe2bcd70858f5bace656" category="section-title">Richten Sie AFX und AIDE gemeinsam ein</block>
+  <block id="76114086772ee7fa8f48ad37d5d95dcb" category="paragraph">Die gleichzeitige Bereitstellung des AFX-Speichersystems und von AIDE ermöglicht einen einheitlichen und optimierten Installationsprozess und gewährleistet so die sofortige Integration und optimale Konfiguration. Dieser schlüsselfertige Ansatz vereinfacht die Inbetriebnahme, garantiert Kompatibilität und ermöglicht Ihnen, eine voll funktionsfähige AI Data Engine Datenplattform schnell zu nutzen – ideal für neue Deployments, die eine rasche Time-to-Value anstreben.</block>
+  <block id="a94dcc736627933f5609e28e7ef85321" category="section-title">AIDE in einen bestehenden AFX-Cluster integrieren</block>
+  <block id="08b9205a85210f5785e7bf74bc45457c" category="paragraph">Wenn Sie bereits einen AFX-Speichercluster installiert und in Betrieb haben, können Sie AIDE jederzeit hinzufügen, um den Zugriff und den Wert Ihrer Daten zu verbessern. AIDE wird als Add-on zur bestehenden AFX-Speicherumgebung bereitgestellt und verbindet sich mit dem etablierten Cluster-Speichernetzwerk, ohne den Betrieb zu unterbrechen. Der Integrationsprozess erkennt automatisch verfügbare ONTAP Volumes und synchronisiert Metadaten. Ihre Datenverarbeitungs-Workflows werden durch KI-Automatisierung, Governance und Kurationstools verbessert, während ihre bestehende Speicherbasis erhalten bleibt.</block>
+  <block id="75d38d77f71f859f0e6bfa05a8868b12" category="inline-link">Erfahren Sie mehr über AI Data Engine</block>
+  <block id="14905966d4697587a926c48b4f3b6868" category="list-text"><block ref="14905966d4697587a926c48b4f3b6868" category="inline-link-rx"></block></block>
+  <block id="dcaec67f8b6685884b28ce763c3b6b20" category="inline-link">FAQ für NetApp AI Data Engine</block>
+  <block id="19d7d8892fce8fa9173b4cd097aeae29" category="list-text"><block ref="19d7d8892fce8fa9173b4cd097aeae29" category="inline-link-rx"></block></block>
+  <block id="9781d9b60a3156749ead991d1b8f8476" category="inline-link">Richten Sie Ihren ONTAP AIDE Cluster ein</block>
+  <block id="72c3ab9fda47d2c464e4e6035e5ee7d5" category="list-text"><block ref="72c3ab9fda47d2c464e4e6035e5ee7d5" category="inline-link-rx"></block></block>
+  <block id="2f05d6cddb39e99b401c758387957ed6" category="inline-link">NetApp AI Data Engine</block>
+  <block id="97bf7903281438713379444f1d00bdfe" category="list-text"><block ref="97bf7903281438713379444f1d00bdfe" category="inline-link-rx"></block></block>
+  <block id="cb2003e71a82c4946bc9b91168398431" category="summary">Um Ihr AFX-System in Betrieb zu nehmen, müssen Sie zunächst die Hardwarekomponenten installieren, Ihren Cluster einrichten und sich auf die Administration des Clusters und der SVMs vorbereiten.</block>
+  <block id="14c19ed730096036466b6f8aa6689f4e" category="paragraph">Um Ihr AFX-System in Betrieb zu nehmen, müssen Sie die Hardwarekomponenten installieren, Ihren Cluster einrichten und sich auf die Administration des Clusters und der SVMs vorbereiten.</block>
+  <block id="08c7f01b69af18ad32a13c64bc8b43d1" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Wird AI Data Engine (AIDE) ebenfalls mit AFX installiert?</block>
+  <block id="5089e4b50d1f4e886a231cd5c043ad9d" category="inline-link">AIDE Installationsoptionen</block>
+  <block id="d3d9eaa68fa2acc25f51847944519bc7" category="paragraph">Sie müssen entscheiden, ob Sie nur AFX oder AFX zusammen mit AI Data Engine installieren. Überprüfen Sie die <block ref="b158da038797eb3a533563ed16d340e2" category="inline-link-rx"></block> , um die beste Lösung für Ihre Anforderungen zu ermitteln.</block>
+  <block id="99882077cc5150985de38b05fe43c5bf" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Installieren und richten Sie Ihre Hardware ein</block>
+  <block id="1f9c2a9600aa7017fad495f671dfcc9d" category="inline-link-macro">Installieren Sie Ihr AFX storage system</block>
+  <block id="11aa15e40e1637eea4cb9402a0d516ac" category="inline-link">Installieren Sie die AIDE data compute nodes</block>
+  <block id="699373ac8ea184bb06b16fa3333018c8" category="paragraph"><block ref="a832b8bc8244484582041183718520b7" category="inline-link-macro-rx"></block> und optional <block ref="c3c6cfb14f39c305fe598a32c865c296" category="inline-link-rx"></block>, wenn Sie AIDE als Teil der Erstkonfiguration einbeziehen.</block>
+  <block id="8a28e13725679cf81ae7a97f135f3151" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Richten Sie Ihren Cluster ein</block>
+  <block id="67cf641733ab3c2361c8f1f769a0874b" category="inline-link">AIDE mit einem neuen AFX-Cluster einrichten</block>
+  <block id="35a50ba3ebcc67e69ce937368b540ae9" category="paragraph">Folgen Sie dem schnellen und einfachen Prozess, um <block ref="5f55a5e0ef0b631e2040a3d854a6456f" category="inline-link-macro-rx"></block>Ihr ONTAP Cluster mithilfe des System Manager zu konfigurieren. Wenn Sie AIDE zusammen mit den Datenrechenknoten und AFX installieren, überprüfen Sie <block ref="ea340cdc1a42614e036446f1b104ebdd" category="inline-link-rx"></block>die zusätzlich erforderliche Konfiguration.</block>
+  <block id="927e370f9384cda0a4f5d88224cb1fdb" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block>Bereiten Sie die Verwaltung Ihres Clusters vor</block>
+  <block id="40b9c78d4cb87fc896b9f0629f52df42" category="summary">Nach der Installation Ihrer AFX-Hardware können Sie die ONTAP-Cluster-Einrichtung abschließen. Dieser Prozess umfasst verwandte Konfigurationsphasen, die Sie nacheinander durchführen sollten. Im Rahmen dessen können Sie optional die Datenrechenknoten (DCNs) hinzufügen, die die AI Data Engine (AIDE) ausführen, sodass der AFX-Speichercluster und der DCN-Cluster als ein einziges System betrieben werden, das über dieselbe ONTAP-Steuerungsebene verwaltet wird.</block>
+  <block id="437d7eedd2da2ae1c1685c0d0c80c679" category="section-title">Bereiten Sie die Einrichtung eines AFX-Speichersystems vor</block>
+  <block id="f41ed4469bd565e9483931052957aea1" category="paragraph">Bevor Sie Ihren ONTAP Cluster einrichten, sollten Sie die grundlegenden AFX-Anforderungen und zusätzliche AIDE-Überlegungen überprüfen, um sicherzustellen, dass Sie über alle notwendigen Informationen und Ressourcen verfügen, um den Einrichtungsprozess erfolgreich abzuschließen.</block>
+  <block id="9d88ee465b7f03fb4741ec9544797f42" category="section-title">Kernanforderungen von AFX</block>
+  <block id="c2eb7333972f3fa93553cd7a06df958c" category="paragraph">Bei der Einrichtung Ihres AFX-Clusters sind mehrere grundlegende Anforderungen zu beachten.</block>
+  <block id="2381aa60d42fb06772fbc2c2f051f150" category="paragraph-title">Hardwareinstallation</block>
+  <block id="6bdae78158db3aed30f99e4020e54ba0" category="paragraph">Stellen Sie sicher, dass Sie die Hardwareinstallation Ihres AFX-Systems abgeschlossen haben. Weitere Informationen finden Sie unter <block ref="24f1c81fd520b56826d37df1f34835fc" category="inline-link-macro-rx"></block>.</block>
+  <block id="9dac04dd5c39331c1b9184292052ca5f" category="paragraph-title">Grundlegende IP-Adressierung</block>
+  <block id="bbadb22f847f13b3fb765b4ca3e45a35" category="paragraph">Sie benötigen die folgende IP-Adressierungskonfiguration:</block>
+  <block id="754aeda810cf43298af8b5d9682a3ff0" category="paragraph-title">Zusätzliche Netzwerkkonfiguration</block>
+  <block id="3716d7de1273609f72cac60d3ce80a8b" category="paragraph">Sie benötigen außerdem die folgenden zugehörigen Netzwerkinformationen:</block>
+  <block id="6f17f12812465b184f0ec95def3e37b7" category="section-title">Weitere AIDE-Überlegungen</block>
+  <block id="9b7a97724bdee6ba810c5f7ed7bb4a23" category="paragraph">Bei der erstmaligen Installation und Einrichtung von AFX können Sie optional NetApp AI Data Engine (AIDE) einbinden. Wenn Sie planen, AIDE einzurichten, müssen Sie zunächst Folgendes tun:</block>
+  <block id="d403e07cdcb82bc6254e18c43e49b61e" category="inline-link">AIDE installieren</block>
+  <block id="f67110073c1073ed49e669e523c3d0aa" category="list-text">Stellen Sie sicher, dass <block ref="a88dad6aff82834a7260b0bc0d75cb8f" category="inline-link-rx"></block> und die Rechenknoten an das AFX-Speichernetzwerk angeschlossen sind.</block>
+  <block id="56e6d9b90dd803813cfcc4eafb5af9c2" category="list-text">Ermitteln Sie die Adressen und alle zugehörigen Netzwerkkonfigurationen für die Datenrechenknoten.</block>
+  <block id="51a1e9578b7b51efdaedcad5b2df0d09" category="list-text">Konfigurieren Sie die IP-Adressen für den AFX Cluster und die Controller-Knoten.</block>
+  <block id="8e8eb81d1e3ccb55cbe0fb7ab62931e6" category="list-text">Wenn Sie AI Data Engine mit Ihrem AFX-Speichersystem installieren, geben Sie die IP-Adressen für die drei AIDE DCN Nodes an.</block>
+  <block id="b8bd3c09a7652f21306db623894a4a8e" category="list-text">Konfigurieren Sie die Netzwerkdienste einschließlich DNS und NIS. Wählen Sie *Weiter*.</block>
+  <block id="b0124f2be19a540828d3e1c546d45955" category="inline-link">AI Data Engine einrichten</block>
+  <block id="9aaf27dbeb82d284903572456c7a9c4b" category="list-text">Wenn Sie AIDE als Teil der AFX-Cluster-Einrichtung eingeschlossen haben, müssen Sie zusätzliche Konfigurationsschritte durchführen, einschließlich Lizenzierung und Authentifizierung. Siehe <block ref="bd3118f2bb5e86ecaca641a7e2c5d81b" category="inline-link-rx"></block> für weitere Informationen.</block>
+  <block id="e656cce89d1f00ff5696185aaf4f7d5d" category="list-text"><block ref="e656cce89d1f00ff5696185aaf4f7d5d" category="inline-link-macro-rx"></block></block>
+  <block id="6afed200d44923974d96400177a883ce" category="inline-link">Neue und verbesserte Unterstützung für AI Data Engine</block>
+  <block id="eae4a2342adfae45b252359cd535161d" category="list-text">Erfahren Sie mehr über<block ref="ac735c3e650d75aa2b1309606d309f7d" category="inline-link-rx"></block>.</block>
+  <block id="ec728291e475cad65a149d393bcb1011" category="sidebar">Erfahren Sie mehr über AIDE</block>
 </blocks>

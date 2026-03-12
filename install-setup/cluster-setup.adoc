@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: install-setup/cluster-setup.html 
 keywords: afx, afx system, cluster setup, setup 
-summary: Nachdem Ihre AFX-Hardware installiert wurde, können Sie die Cluster-Einrichtung abschließen.  Dieser Prozess umfasst zwei miteinander verbundene Konfigurationsphasen, die Sie nacheinander durchführen müssen. 
+summary: 'Nach der Installation Ihrer AFX-Hardware können Sie die ONTAP-Cluster-Einrichtung abschließen. Dieser Prozess umfasst verwandte Konfigurationsphasen, die Sie nacheinander durchführen sollten. Im Rahmen dessen können Sie optional die Datenrechenknoten (DCNs) hinzufügen, die die AI Data Engine (AIDE) ausführen, sodass der AFX-Speichercluster und der DCN-Cluster als ein einziges System betrieben werden, das über dieselbe ONTAP-Steuerungsebene verwaltet wird.' 
 ---
 = Richten Sie Ihren AFX-Speichersystem- ONTAP Cluster ein
 :allow-uri-read: 
@@ -11,19 +11,25 @@ summary: Nachdem Ihre AFX-Hardware installiert wurde, können Sie die Cluster-Ei
 
 
 [role="lead"]
-Nachdem Ihre AFX-Hardware installiert wurde, können Sie die Einrichtung des ONTAP Clusters abschließen.  Dieser Prozess umfasst zwei miteinander verbundene Konfigurationsphasen, die Sie nacheinander durchführen müssen.
+Nach der Installation Ihrer AFX-Hardware können Sie die ONTAP-Cluster-Einrichtung abschließen. Dieser Prozess umfasst verwandte Konfigurationsphasen, die Sie nacheinander durchführen sollten. Im Rahmen dessen können Sie optional die Datenrechenknoten (DCNs) hinzufügen, die die AI Data Engine (AIDE) ausführen, sodass der AFX-Speichercluster und der DCN-Cluster als ein einziges System betrieben werden, das über dieselbe ONTAP-Steuerungsebene verwaltet wird.
 
 
 
-== Durchführen der ersten Clustereinrichtung
+== Bereiten Sie die Einrichtung eines AFX-Speichersystems vor
 
-Sie können Ihr Laptop-Gerät mit dem AFX-Cluster verbinden und mehrere globale Konfigurationseinstellungen festlegen.
+Bevor Sie Ihren ONTAP Cluster einrichten, sollten Sie die grundlegenden AFX-Anforderungen und zusätzliche AIDE-Überlegungen überprüfen, um sicherzustellen, dass Sie über alle notwendigen Informationen und Ressourcen verfügen, um den Einrichtungsprozess erfolgreich abzuschließen.
 
-.Informationen zu diesem Vorgang
-Es gibt vier Bereiche des AFX-Clusters, die zunächst konfiguriert werden müssen.  Die ersten drei sind erforderlich, während der letzte optional ist.
 
-.Bevor Sie beginnen
-Sie benötigen folgende Informationen:
+
+=== Kernanforderungen von AFX
+
+Bei der Einrichtung Ihres AFX-Clusters sind mehrere grundlegende Anforderungen zu beachten.
+
+.Hardwareinstallation
+Stellen Sie sicher, dass Sie die Hardwareinstallation Ihres AFX-Systems abgeschlossen haben. Weitere Informationen finden Sie unter link:../install-setup/install-setup-workflow.html["Installieren Sie Ihr AFX-System"].
+
+.Grundlegende IP-Adressierung
+Sie benötigen die folgende IP-Adressierungskonfiguration:
 
 * IP-Adresse für die Clusterverwaltung
 +
@@ -35,7 +41,8 @@ Während der Clustereinrichtung benötigt ONTAP eine Reihe von Netzwerkschnittst
 
 
 
-Sie benötigen außerdem Folgendes:
+.Zusätzliche Netzwerkkonfiguration
+Sie benötigen außerdem die folgenden zugehörigen Netzwerkinformationen:
 
 * IP-Adresse des Netzwerk-Gateways
 * DNS-Domänennamen
@@ -43,6 +50,25 @@ Sie benötigen außerdem Folgendes:
 * NTP-Server-IP-Adressen
 * Subnetzmaske
 
+
+
+
+=== Weitere AIDE-Überlegungen
+
+Bei der erstmaligen Installation und Einrichtung von AFX können Sie optional NetApp AI Data Engine (AIDE) einbinden. Wenn Sie planen, AIDE einzurichten, müssen Sie zunächst Folgendes tun:
+
+* Stellen Sie sicher, dass  https://docs.netapp.com/us-en/ai-data-engine/install-setup/aide-hardware-requirements.html["AIDE installieren"^] und die Rechenknoten an das AFX-Speichernetzwerk angeschlossen sind.
+* Ermitteln Sie die Adressen und alle zugehörigen Netzwerkkonfigurationen für die Datenrechenknoten.
+
+
+
+
+== Durchführen der ersten Clustereinrichtung
+
+Sie können Ihr Laptop-Gerät mit dem AFX-Cluster verbinden und mehrere globale Konfigurationseinstellungen festlegen.
+
+.Informationen zu diesem Vorgang
+Es gibt vier Bereiche des AFX-Clusters, die zunächst konfiguriert werden müssen.  Die ersten drei sind erforderlich, während der letzte optional ist.
 
 .Schritte
 . Entdecken Sie Ihr Clusternetzwerk.
@@ -60,11 +86,12 @@ Die Benutzeroberfläche des System Managers wird angezeigt.
 +
 Geben Sie das Passwort für die `admin` Konto. Wählen Sie *Weiter*.
 
-. Konfigurieren Sie die IP-Adressen für die Cluster- und Controller-Knoten.
+. Konfigurieren Sie die IP-Adressen für den AFX Cluster und die Controller-Knoten.
 +
 Geben Sie IP-Adressen und Subnetzmasken an.
 
-. Konfigurieren Sie die Netzwerkdienste. Wählen Sie *Weiter*.
+. Wenn Sie AI Data Engine mit Ihrem AFX-Speichersystem installieren, geben Sie die IP-Adressen für die drei AIDE DCN Nodes an.
+. Konfigurieren Sie die Netzwerkdienste einschließlich DNS und NIS. Wählen Sie *Weiter*.
 +
 Definieren Sie die Details für Ihre DNS- und NTP-Server.
 
@@ -105,9 +132,15 @@ Sie benötigen folgende Informationen:
 
 
 .Was kommt als nächstes
-Du solltestlink:../get-started/prepare-cluster-admin.html["Vorbereiten der AFX-Verwaltung"] bevor Sie Ihren AFX-Cluster in einer Produktionsumgebung verwenden.
+* Wenn Sie AIDE als Teil der AFX-Cluster-Einrichtung eingeschlossen haben, müssen Sie zusätzliche Konfigurationsschritte durchführen, einschließlich Lizenzierung und Authentifizierung. Siehe  https://docs.netapp.com/us-en/ai-data-engine/install-setup/cluster-setup-afx.html["AI Data Engine einrichten"^] für weitere Informationen.
+* Du solltestlink:../get-started/prepare-cluster-admin.html["Vorbereiten der AFX-Verwaltung"] bevor Sie Ihren AFX-Cluster in einer Produktionsumgebung verwenden.
 
-.Ähnliche Informationen
+
+
+
+== Ähnliche Informationen
+
+* link:../get-started/learn-about-aide.html["Erfahren Sie mehr über die NetApp AI Data Engine"]
 * link:../administer/configure-svm.html["Konfigurieren einer AFX SVM"]
 * link:../get-started/prepare-cluster-admin.html["Vorbereiten der AFX-Verwaltung"]
 

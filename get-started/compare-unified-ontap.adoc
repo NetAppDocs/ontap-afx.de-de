@@ -73,8 +73,7 @@ NOTE: Die Datenreplikation zwischen Unified ONTAP und AFX wird in beide Richtung
 * REST-APIs für nicht unterstützte Funktionen (wie z. B. MetroCluster)
 * Einige anfängliche Einschränkungen von REST-APIs für Leistungsstatistiken
 * AIQ Unified Manager-Unterstützung
-* Grafana Harvest Version 25.08.1 und höher
-* NetApp Trident Version 25.10 und höher
+* Grafana Harvest versions vor 25.08.1
 
 
 
