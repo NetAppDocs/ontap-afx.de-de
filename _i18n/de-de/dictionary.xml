@@ -1078,8 +1078,6 @@
   <block id="eccb4d5293fe0dd408e74aab9093fb9b" category="list-text">Die LEDs blinken und die Lüfter starten, was darauf hinweist, dass die Controller eingeschaltet werden.</block>
   <block id="2a15831b428ec92914dd2d9b9c14a463" category="list-text">Beim Starten können die Lüfter laut sein, was normal ist.</block>
   <block id="d420064a5f4919f9be16d853c6d1997c" category="list-text">Sichern Sie die Netzkabel mit der Sicherungsvorrichtung an jedem Netzteil.</block>
-  <block id="d86c8f4fff3fb2feed3ee9c6ab6626ed" category="inline-link-macro">Einrichten eines AFX-Clusters</block>
-  <block id="4eb20ef06f12f582d4ebd27eaee89115" category="paragraph">Nachdem Sie Ihr AFX 1K-Speichersystem eingeschaltet haben,<block ref="a4e3e0c950d1563a6f1d32259f274df6" category="inline-link-macro-rx"></block> .</block>
   <block id="4037f9dba9d587023878b63255863f7d" category="summary">Bereiten Sie die Installation des AFX 1K-Speichersystems in Ihrer ONTAP Umgebung vor und registrieren Sie die Hardware, um auf Supportvorteile zuzugreifen.</block>
   <block id="b81fa34f137f3d44fa104594a5caaef5" category="paragraph">Bereiten Sie die Installation Ihres AFX 1K-Speichersystems vor, indem Sie den Standort vorbereiten, die Kartons auspacken, den Inhalt der Kartons mit dem Lieferschein vergleichen und das System registrieren, um auf Supportleistungen zugreifen zu können.</block>
   <block id="92c8397408f55d9526d554c55cde3d22" category="section-title">Schritt 1: Bereiten Sie die Site vor</block>
@@ -1774,4 +1772,11 @@
   <block id="c42589aeb6cdc4aab7c9ee5517ef1f84" category="section-title">Schritt 4: Verkabeln Sie die Cluster-, HA- und Speicherverbindungen mit Switch B</block>
   <block id="14aa705a8a71a02fb1b277002e0c52ed" category="paragraph">Verwenden Sie das 4x100GbE-Breakout-Kabel, um die Cluster-, HA- und Speicherports der Controller mit Netzwerk-Switch B zu verbinden. Verwenden Sie das Cluster- und HA-Interconnect-Kabel, um die Ports e1b und e7b mit Switch B zu verbinden. Die Ports e1b werden für die HA-Verbindungen verwendet, und die Ports e7b werden für die Cluster-Verbindungen verwendet. Für die Speicherverbindungen verbinden Sie die Ports e10b und e11b mit Switch B.</block>
   <block id="8cff5fa6944271f10e636cadf3153077" category="list-text">Verbinden Sie die folgenden Controller-Ports mit einem beliebigen Nicht-ISL-Port am Netzwerk-Switch B.</block>
+  <block id="3e43f7eeca64d5c830b0064870a6156b" category="admonition">Tragen Sie bei Installations- und Wartungsarbeiten stets ein geerdetes Armband, das mit einem geprüften Erdungspunkt verbunden ist. Die Nichtbeachtung der richtigen ESD-Schutzmaßnahmen kann zu dauerhaften Schäden an Controller-Knoten, Storage Shelves und Network Switches führen.</block>
+  <block id="1e64a8c98278cbf94fdc5e55cf23d748" category="inline-link-macro">Installieren Sie AIDE Data Compute Nodes</block>
+  <block id="5d16f9931acd5c0aea8659ad61ec6628" category="admonition">Wenn Sie AFX 1K mit der AI Data Engine (AIDE) einsetzen, installieren Sie die AIDE Datenrechenknoten nach dem Einschalten des AFX-Systems. Weitere Informationen finden Sie unter <block ref="770e46e4a0d2400ce8dd3c354b4e69c6" category="inline-link-macro-rx"></block>.</block>
+  <block id="d9af9d0a822fab56f67da32f96760bcd" category="paragraph">Nach dem Einschalten Ihres AFX 1K Storage-Systems schließen Sie die Einrichtung entsprechend Ihrer Bereitstellungsoption ab:</block>
+  <block id="9f17a32279457eb3f0ec945352a82e96" category="inline-link-macro">Richten Sie einen AFX-Cluster ein</block>
+  <block id="65baec5e9f4a78defefb1154f095ae89" category="list-text">Für dedizierte AFX 1K-Speichersystembereitstellungen gehen Sie zu <block ref="b434a61d8681e909828695f9b932fe31" category="inline-link-macro-rx"></block>.</block>
+  <block id="2958d97f86a68931454e4d5cb0f3fa2a" category="list-text">Für AFX 1K mit AI Data Engine (AIDE)-Bereitstellungen gehen Sie zu <block ref="770e46e4a0d2400ce8dd3c354b4e69c6" category="inline-link-macro-rx"></block>.</block>
 </blocks>

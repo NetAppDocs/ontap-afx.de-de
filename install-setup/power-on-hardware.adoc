@@ -159,4 +159,8 @@ image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[A1K-Speichersystem u
 
 
 .Wie geht es weiter?
-Nachdem Sie Ihr AFX 1K-Speichersystem eingeschaltet haben,link:../install-setup/cluster-setup.html["Einrichten eines AFX-Clusters"] .
+Nach dem Einschalten Ihres AFX 1K Storage-Systems schließen Sie die Einrichtung entsprechend Ihrer Bereitstellungsoption ab:
+
+* Für dedizierte AFX 1K-Speichersystembereitstellungen gehen Sie zu link:../install-setup/cluster-setup.html["Richten Sie einen AFX-Cluster ein"].
+* Für AFX 1K mit AI Data Engine (AIDE)-Bereitstellungen gehen Sie zu link:https://docs.netapp.com/us-en/ai-data-engine/install-setup/aide-hardware-requirements.html["Installieren Sie AIDE Data Compute Nodes"].
+

@@ -19,6 +19,9 @@ Nachdem Sie die Switches installiert haben, sollten Sie die Hardware für Ihr AF
 * Beachten Sie, dass der Luftstrom durch das Speichersystem von vorne eintritt, wo die Blende oder Endkappen installiert sind, und von hinten, wo sich die Anschlüsse befinden, ausströmt.
 
 
+
+CAUTION: Tragen Sie bei Installations- und Wartungsarbeiten stets ein geerdetes Armband, das mit einem geprüften Erdungspunkt verbunden ist. Die Nichtbeachtung der richtigen ESD-Schutzmaßnahmen kann zu dauerhaften Schäden an Controller-Knoten, Storage Shelves und Network Switches führen.
+
 .Schritte
 . Installieren Sie die Schienensätze für Ihr Lagersystem und die Lagerregale nach Bedarf anhand der den Sätzen beiliegenden Anweisungen.
 . Installieren und sichern Sie Ihren Controller im Schrank oder Telco-Rack:
