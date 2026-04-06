@@ -58,9 +58,7 @@ NOTE: Für Cisco Nexus 9332D-GX2B- und 9364D-GX2A-Switch-Konfigurationen zum AFX
 
 == Schritt 1: Verbinden Sie die Controller mit dem Verwaltungsnetzwerk
 
-Verbinden Sie den Verwaltungsport an jedem Switch mit einem der Verwaltungsswitches (falls bestellt) oder verbinden Sie sie direkt mit Ihrem Verwaltungsnetzwerk.
-
-Der Verwaltungsport ist der obere rechte Port auf der Netzteilseite des Switches.  Das CAT6-Kabel für jeden Switch muss nach der Installation der Switches durch das Durchgangspanel geführt werden, um eine Verbindung zu den Verwaltungs-Switches oder dem Verwaltungsnetzwerk herzustellen.
+Verbinden Sie den Management-Anschluss (Schraubenschlüssel) jedes Controllers mit einem der Management-Switches oder verbinden Sie ihn direkt mit Ihrem Management-Netzwerk.
 
 Verwenden Sie die 1000BASE-T RJ-45-Kabel, um die Verwaltungsanschlüsse (Schraubenschlüssel) an jedem Controller mit den Verwaltungsnetzwerk-Switches zu verbinden.
 
@@ -68,7 +66,7 @@ image::../media/oie_cable_rj45.png[RJ-45-Kabel]
 
 *1000BASE-T RJ-45-Kabel*
 
-image::../media/drw_afx_management_connection_ieops-2349.svg[Stellen Sie eine Verbindung zu Ihrem Verwaltungsnetzwerk her]
+image::../media/drw_afx_management_connection_ieops-2815.svg[Stellen Sie eine Verbindung zu Ihrem Verwaltungsnetzwerk her]
 
 
 IMPORTANT: Stecken Sie die Netzkabel noch nicht ein.
@@ -87,13 +85,7 @@ Dieses Verfahren kann je nach Konfiguration Ihres E/A-Moduls unterschiedlich sei
 .Schritte
 . Verbinden Sie die folgenden Ports mit Ihrem Ethernet-Datennetzwerk-Switch A.
 +
-** Controller A (Beispiel)
-+
-*** e2a
-*** e3a
-
-
-** Controller B (Beispiel)
+** Controller (Beispiel)
 +
 *** e2a
 *** e3a
@@ -104,7 +96,7 @@ Dieses Verfahren kann je nach Konfiguration Ihres E/A-Moduls unterschiedlich sei
 image::../media/oie_cable100_gbe_qsfp28.png[100-Gb-Ethernet-Kabel]
 
 +
-image::../media/drw_afx_network_cabling_a_ieops-2350.svg[Kabel zum Ethernet-Netzwerk]
+image::../media/drw_afx_network_cabling_a_ieops-2813.svg[Kabel zum Ethernet-Netzwerk]
 
 
 
@@ -112,13 +104,7 @@ image::../media/drw_afx_network_cabling_a_ieops-2350.svg[Kabel zum Ethernet-Netz
 
 . Verbinden Sie die folgenden Ports mit Ihrem Ethernet-Datennetzwerk-Switch B.
 +
-** Controller A (Beispiel)
-+
-*** e2b
-*** e3b
-
-
-** Controller B (Beispiel)
+** Controller (Beispiel)
 +
 *** e2b
 *** e3b
@@ -129,7 +115,7 @@ image::../media/drw_afx_network_cabling_a_ieops-2350.svg[Kabel zum Ethernet-Netz
 image::../media/oie_cable100_gbe_qsfp28.png[100-Gb-Ethernet-Kabel]
 
 +
-image::../media/drw_afx_network_cabling_b_ieops-2351.svg[Kabel zum Ethernet-Netzwerk]
+image::../media/drw_afx_network_cabling_b_ieops-2814.svg[Kabel zum Ethernet-Netzwerk]
 
 
 
@@ -148,38 +134,12 @@ Stellen Sie sicher, dass Sie die richtigen Kabel und Stecker für Ihre Switches 
 .Schritte
 . Verbinden Sie die folgenden Controller-Ports mit einem beliebigen Nicht-ISL-Port am Netzwerk-Switch A.
 +
-** Controller A
+** Controller
 +
 *** e1a (HA)
 *** e7a (Cluster)
-
-
-** Controller B
-+
-*** e1a (HA)
-*** e7a (Cluster)
-+
-*100GbE-Kabel*
-
-+
-image::../media/oie_cable100_gbe_qsfp28.png[100-Gb-Kabel]
-
-
-
-
-
-. Verbinden Sie die folgenden Speicherports mit einem beliebigen Nicht-ISL-Port auf Switch A.
-+
-** Controller A
-+
-*** e10a
-*** e11a
-
-
-** Controller B
-+
-*** e10a
-*** e11a
+*** e10a (Speicher)
+*** e11a (Speicher)
 +
 *100GbE-Kabel*
 
@@ -205,38 +165,12 @@ Stellen Sie sicher, dass Sie die richtigen Kabel und Stecker für Ihre Switches 
 
 . Verbinden Sie die folgenden Controller-Ports mit einem beliebigen Nicht-ISL-Port am Netzwerk-Switch B.
 +
-** Controller A
+** Controller
 +
 *** e1b (HA)
 *** e7b (Cluster)
-
-
-** Controller B
-+
-*** e1b (HA)
-*** e7b (Cluster)
-+
-*100GbE-Kabel*
-
-+
-image::../media/oie_cable100_gbe_qsfp28.png[100-Gb-Kabel]
-
-
-
-
-
-. Verbinden Sie die folgenden Speicherports mit einem beliebigen Nicht-ISL-Port auf Switch B.
-+
-** Controller A
-+
-*** e10b
-*** e11b
-
-
-** Controller B
-+
-*** e10b
-*** e11b
+*** e10b (Speicher)
+*** e11b (Speicher)
 +
 *100GbE-Kabel*
 
