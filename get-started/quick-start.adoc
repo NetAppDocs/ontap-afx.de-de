@@ -19,7 +19,7 @@ Sie müssen entscheiden, ob Sie nur AFX oder AFX zusammen mit AI Data Engine ins
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"] Installieren und richten Sie Ihre Hardware ein
 [role="quick-margin-para"]
-link:../install-setup/install-setup-workflow.html["Installieren Sie Ihr AFX storage system"] und optional  https://docs.netapp.com/us-en/ai-data-engine/install-setup/aide-hardware-requirements.html["Installieren Sie die AIDE data compute nodes"] wenn Sie AIDE als Teil der Erstkonfiguration einbeziehen.
+link:../install-setup/install-setup-workflow.html["Installieren Sie Ihr AFX storage system"] und optional  https://docs.netapp.com/us-en/ai-data-engine/install-aide-server/aide-mde-server-hardware-requirements.html["AIDE-Drittanbieterserver installieren"] oder  https://docs.netapp.com/us-en/ai-data-engine/install-dcn/aide-dcn-hardware-requirements.html["AIDE NetApp-Datenrechenknoten installieren"] wenn Sie AIDE als Teil der Erstkonfiguration einbeziehen.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"] Richten Sie Ihren Cluster ein
 [role="quick-margin-para"]

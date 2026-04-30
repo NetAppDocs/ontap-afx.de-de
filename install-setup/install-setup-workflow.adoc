@@ -41,5 +41,12 @@ Verkabeln Sie die Hardware, schalten Sie die Switches ein und konfigurieren Sie 
 [role="quick-margin-para"]
 Schalten Sie jedes Speicherregal ein und weisen Sie vor dem Einschalten der Controllerknoten eine eindeutige Regal-ID zu, um jedes Regal im Setup eindeutig zu identifizieren.
 
+[NOTE]
+====
+Wenn Sie AFX 1K mit AI Data Engine (AIDE) einsetzen, können Sie AIDE Datenrechenknoten installieren, nachdem Sie die Installation des AFX-Systems abgeschlossen haben.
 
-NOTE: Wenn Sie AFX 1K mit der AI Data Engine (AIDE) einsetzen, installieren Sie die AIDE Datenrechenknoten nach dem Einschalten des AFX-Systems. Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/ai-data-engine/install-setup/aide-hardware-requirements.html["Installieren Sie AIDE Data Compute Nodes"].
+* Informationen zur Bereitstellung von Servern durch Drittanbieter finden Sie unter  https://docs.netapp.com/us-en/ai-data-engine/install-aide-server/aide-mde-server-hardware-requirements.html["Anforderungen an AI Data Engine mit AIDE Software auf Servern von Drittanbietern"^] und  https://docs.netapp.com/us-en/ai-data-engine/install-setup/install-aide-as-software.html["AIDE-Software auf Servern von Drittanbietern installieren"^].
+* Für NetApp DCN Implementierungen siehe https://docs.netapp.com/us-en/ai-data-engine/install-dcn/aide-dcn-hardware-requirements.html["Anforderungen für AI Data Engine auf von NetApp bereitgestellten Datenrechenknoten"^].
+
+
+====
