@@ -23,3 +23,13 @@ Nachdem Sie Ihr Upgrade vorbereitet haben, wird empfohlen, Upgrades mitlink:http
 .Ähnliche Informationen
 * https://docs.netapp.com/us-en/ontap/upgrade/index.html["Erfahren Sie mehr über das ONTAP -Upgrade"^] .
 
+
+
+
+== Führen Sie vor einem geplanten Upgrade automatisierte Vorabprüfungen durch.
+
+Sie müssen sich nicht im Prozess der Aktualisierung Ihrer ONTAP-Software befinden, um die automatisierten ONTAP-Vorabprüfungen auszuführen. Das Ausführen der Vorabprüfungen unabhängig vom automatisierten ONTAP-Upgrade-Prozess ermöglicht es Ihnen zu sehen, welche Prüfungen an Ihrem Cluster durchgeführt werden, und gibt Ihnen eine Liste aller Fehler oder Warnungen, die vor dem eigentlichen Upgrade behoben werden sollten.
+
+Ab ONTAP 9.19.1 werden Fehler und Warnungen separat angezeigt, damit Sie Probleme, die vor dem Upgrade behoben werden müssen, leichter erkennen können.
+
+link:https://docs.netapp.com/us-en/ontap/upgrade/automated-pre-checks.html["Lernen Sie, automatisierte Vorab-Upgrade-Prüfungen in ONTAP auszuführen"^].

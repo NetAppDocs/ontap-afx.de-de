@@ -1,0 +1,109 @@
+---
+sidebar: sidebar 
+permalink: release-notes/whats-new-9191.html 
+keywords: 'afx, release notes, what"s new, 9.19.1, ai data engine, aide' 
+summary: Erfahren Sie mehr über die neuen Funktionen von ONTAP 9.19.1, die mit Ihrem AFX-Speichersystem verfügbar sind. 
+---
+= Was ist neu in ONTAP 9.19.1 für AFX-Speichersysteme
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Erfahren Sie mehr über die neuen Funktionen von ONTAP 9.19.1, die mit Ihrem AFX-Speichersystem verfügbar sind.
+
+
+TIP: Erfahren Sie mehr über die neue und verbesserte Unterstützung für https://docs.netapp.com/us-en/ai-data-engine/release-notes/whats-new.html["AI Data Engine"^].
+
+
+
+== Leistung und Skalierbarkeit
+
+[cols="2,4"]
+|===
+| Aktualisieren | Beschreibung 
+
+
+| Erweiterte AFX-Clustergröße  a| 
+ONTAP 9.19.1 unterstützt die Erweiterung eines AFX-Clusters auf maximal 32 Knoten. Dadurch können Sie Ihr AFX-Speichersystem skalieren, um den wachsenden Anforderungen Ihrer Workloads und Anwendungen gerecht zu werden.
+
+
+
+| Cross File Sequential Read (CFSR)  a| 
+Cross File Sequential Read kann die Leseleistung für bestimmte Medien- und Unterhaltungs-Workloads erheblich verbessern. Die Funktion lädt sequenzielle Videoframes intelligent vor, um den Durchsatz drastisch zu erhöhen und die Latenz für Videobearbeitungsanwendungen zu reduzieren. Weitere Informationen finden Sie unter link:../administer/additional-ontap-svm.html["Zusätzliche Verwaltung für eine AFX-Speichersystem-SVM"].
+
+
+
+| Globale Deduplizierung  a| 
+Die globale Deduplizierung erweitert die ONTAP-Deduplizierungseinsparungen auf die gesamte Storage Availability Zone (SAZ). Durch das Entfernen doppelter Datenblöcke über alle Volumes in der SAZ hinweg kann die Speichereffizienz deutlich verbessert und die Gesamtbetriebskosten gesenkt werden. Die Funktion ist auf AFX-Systemen standardmäßig aktiviert und arbeitet transparent, ohne dass eine administrative Konfiguration erforderlich ist. Weitere Informationen finden Sie unter link:../administer/additional-ontap-svm.html["Zusätzliche Verwaltung für eine AFX-Speichersystem-SVM"].
+
+|===
+
+
+== REST-API
+
+[cols="2,4"]
+|===
+| Aktualisieren | Beschreibung 
+
+
+| Optimierung der ausgewogenen Platzierung für die Kubernetes-Speicherorchestrierung  a| 
+ONTAP 9.19.1 fügt sechs Parameter hinzu, die derzeit im  `/storage/volumes` REST API-Endpunkt verfügbar sind, zum  `/applications/containers` Endpunkt. Diese Erweiterung ermöglicht es Kunden, die NetApp Trident für die Kubernetes-Speicherorchestrierung verwenden, Volumes mit ONTAPs nativer Balanced-Placement-Fähigkeit zu erstellen.
+
+|===
+
+
+== Sicherheit
+
+[cols="2,4"]
+|===
+| Aktualisieren | Beschreibung 
+
+
+| ARP/AI-Unterstützung für geeignete SnapMirror primary volumes  a| 
+ARP/AI unterstützt geeignete primäre Volumes in SnapMirror synchronen Beziehungen mit AFX-Systemen. ARP/AI läuft auf dem aktiven Lese-/Schreib-Primärvolume, erstellt ausschließlich primäre ARP-Snapshots und bietet eine auf maschinellem Lernen basierende Ransomware-Erkennung.
+
+
+
+| link:../administer/additional-ontap-cluster.html["Unterstützung für TLS-Hardware-Offload"]  a| 
+Sie können die Transport Layer Security (TLS)-Verschlüsselung und -Entschlüsselung für Ihren gesamten Cluster auf unterstützte Ethernet-Karten auslagern. Dies reduziert die CPU-Auslastung und verbessert die Leistung von Systemen, die TLS verwenden.
+
+|===
+
+
+== Ressourcenmanagement
+
+[cols="2,4"]
+|===
+| Aktualisieren | Beschreibung 
+
+
+| link:../administer/monitor-cluster-performance.html["System Manager-Unterstützung für Details zur Speicherverfügbarkeitszonenkapazität."]  a| 
+Im System Manager können Sie die Details zur Speicherverfügbarkeitszone einsehen, einschließlich Speicherplatzschwellenwerten, Speicherplatzverbrauch durch Snapshots und Datenreduzierung. Sie können außerdem Schwellenwerte für die Speicherplatznutzung auf den Prozentsatz festlegen, bei dem ONTAP Warn- und kritische Benachrichtigungen generieren soll.
+
+
+
+| link:../administer/additional-ontap-cluster.html["Unterstützung für die Änderung von Standardeinstellungen, die automatische Erhöhungen der QoS-Durchsatzobergrenze steuern"]  a| 
+Sie können die Standardeinstellungen ändern, die steuern, wie QoS-Richtliniengruppen den QoS-Durchsatzgrenzwert automatisch erhöhen, um kurzfristig höhere Leistungsanforderungen zu erfüllen. Diese Einstellungen können in ONTAP 9.18.1 und früher nicht geändert werden.
+
+|===
+
+
+== Upgrade
+
+[cols="2,4"]
+|===
+| Aktualisieren | Beschreibung 
+
+
+| link:../administer/upgrade-ontap.html["Verbesserte Berichtsfunktion für automatisierte Vorabprüfungen vor dem Upgrade"]  a| 
+Bei der Ausführung automatisierter Vorabprüfungen vor dem Upgrade werden Fehler und Warnungen separat angezeigt, damit Sie Probleme, die vor dem Upgrade behoben werden müssen, leichter erkennen können.
+
+|===
+.Ähnliche Informationen
+* https://docs.netapp.com/us-en/ontap/release-notes/index.html["Highlights der ONTAP 9-Version"^]
+

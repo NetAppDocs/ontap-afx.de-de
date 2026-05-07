@@ -4,25 +4,42 @@ permalink: administer/monitor-cluster-performance.html
 keywords: afx, afx system, cluster performance 
 summary: Sie können eine allgemeine Übersicht über die Leistung Ihres AFX-Clusters anzeigen. 
 ---
-= Überwachen der Clusterleistung des AFX-Speichersystems
+= Überwachen Sie die Leistung und Speicherauslastung des AFX-Speichersystem-Clusters
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Sie können eine allgemeine Übersicht über die Leistung Ihres AFX-Clusters anzeigen.
+Sie können einen allgemeinen Überblick über die Leistung und Speicherauslastung Ihres AFX-Clusters anzeigen.
 
 
 
 == Speicherkapazität
 
-Das System Manager-Dashboard enthält eine allgemeine Anzeige der Speicherauslastung für den Cluster.
+Überwachen Sie Ihre Speicherauslastung, um sicherzustellen, dass Sie über ausreichend Speicherkapazität für aktuelle und zukünftige Arbeitslasten verfügen.
+
+
+
+=== Überwachung der Speicherauslastung des Clusters auf hoher Ebene
+
+Im ONTAP System Manager können Sie sich eine Übersicht über die Speicherauslastung des gesamten Clusters anzeigen lassen.
 
 .Schritte
 . Wählen Sie im System-Manager im Navigationsbereich *Dashboard* aus.
 . Suchen Sie die Kachel *Kapazität* und zeigen Sie den verfügbaren und verwendeten physischen Speicher an.
 . Wählen Sie *Verlauf*, um auf Active IQ zuzugreifen und die Verlaufsdaten anzuzeigen.
+
+
+
+
+=== Kapazitätsdetails der Speicherverfügbarkeitszone überwachen
+
+Ab ONTAP 9.19.1 können Sie die Kapazitätsdetails Ihrer Speicherverfügbarkeitszone einsehen, einschließlich Speicherplatzschwellenwerten, Speicherplatzverbrauch durch Snapshots und Datenreduzierung. Sie können außerdem Schwellenwerte für die Speicherplatznutzung als Prozentsatz festlegen, bei denen ONTAP Warnungen und kritische Meldungen generieren soll.
+
+.Schritte
+. Im System Manager wählen Sie *Cluster > Übersicht* und anschließend *Verfügbarkeitszone*.
+. Um die Warn- oder kritischen Speicherplatzschwellenwerte zu ändern, wählen Sie image:icon_edit_pencil_blue_outline.png["blaues Stift-Bearbeitungssymbol"] unter dem Schwellenwert, den Sie bearbeiten möchten.
 
 
 

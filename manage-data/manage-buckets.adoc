@@ -13,5 +13,10 @@ summary: Im Rahmen der Verwaltung von AFX S3-Buckets und Clientzugriff können S
 [role="lead"]
 Im Rahmen der Verwaltung von AFX S3-Buckets und Clientzugriff können Sie verschiedene Verwaltungsaufgaben ausführen.  Die S3-Konfiguration und -Unterstützung in AFX ist dieselbe wie bei Unified ONTAP.  Weitere Informationen finden Sie in der Unified ONTAP -Dokumentation.
 
+Es ist außerdem wichtig, sich über die neuesten Änderungen und Aktualisierungen der ONTAP-Unterstützung für S3-Speicher auf dem Laufenden zu halten. Ab ONTAP 9.19.1 können Sie beispielsweise für jeden S3-Benutzer einen zweiten Zugriffsschlüssel generieren. Dadurch bleibt der Zugriff auf S3-Ressourcen erhalten, falls der ursprüngliche Zugriffsschlüssel abläuft. Sie können auch die Durchsetzung bedingter Operationen (Schreiben, Kopieren, Löschen) steuern.
+
 .Ähnliche Informationen
-https://docs.netapp.com/us-en/ontap/s3-config/index.html["Erfahren Sie mehr über die ONTAP S3-Konfiguration"^]
+* https://docs.netapp.com/us-en/ontap/s3-config/index.html["Erfahren Sie mehr über die ONTAP S3-Konfiguration"^]
+* https://docs.netapp.com/us-en/ontap/s3-config/regenerate-access-keys.html["ONTAP S3-Schlüssel neu generieren und deren Aufbewahrungsdauer ändern"^]
+* https://docs.netapp.com/us-en/ontap/s3-config/create-modify-bucket-policy-task.html["Fügen Sie der standardmäßigen ONTAP S3-Bucket-Richtlinie Zugriffsregeln hinzu"^]
+

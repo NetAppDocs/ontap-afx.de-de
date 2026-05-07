@@ -34,6 +34,9 @@ Die administrativen ONTAP -Aufgaben, die Sie mit AFX ausführen, fallen im Allge
 
 Es ist wichtig zu beachten, dass diese Ebenen beschreiben, wie die Verwaltungsaufgaben organisiert und zugewiesen werden, und nicht unbedingt, wie die zugehörige Sicherheit konfiguriert ist.  Beispielsweise ist für die Verwaltung auf Clusterebene ein Clusteradministratorkonto erforderlich, es kann jedoch auch für die SVM-Verwaltung verwendet werden.
 
+
+NOTE: Ab ONTAP 9.19.1 können SVM-Administratoren ihre eigenen SVMs über ein dediziertes System Manager-Dashboard überwachen und verwalten. Erfahren Sie mehr über die https://docs.netapp.com/us-en/ontap/concept-svm-admin-dashboard-sm.html["ONTAP System Manager SVM-Administrator-Dashboard"^]
+
 Cluster-Administrator:: Der Clusteradministrator hat die vollständige Kontrolle über den AFX-Cluster einschließlich aller SVMs. Die Verwaltungsebene des AFX-Clusters umfasst nur die Aufgaben, die ein Clusteradministrator ausführen kann, und keine der SVM-spezifischen Verwaltungsaufgaben. Sehenlink:../administer/view-dashboard.html["Verwalten Ihres Clusters"] für weitere Informationen.
 SVM-Administrator:: Die Rolle eines SVM-Administrators ermöglicht die Kontrolle über eine bestimmte SVM und ist daher im Vergleich zum Cluster-Administrator stärker eingeschränkt. Zur SVM-Administration gehört die Durchführung von Aufgaben mit Objekten und Ressourcen, die einen SVM-Bereich haben, beispielsweise das Erstellen eines Volumes. Sehenlink:../manage-data/prepare-manage-data.html["Verwalten Sie Ihre Speicher-VMs und Daten"] für weitere Informationen.
 
@@ -111,9 +114,12 @@ Mit AFX wird den Backend-Cluster-Switches ein neues HA-VLAN hinzugefügt, damit 
 
 == Einschränkungen bei der AFX-Clusterbereitstellung
 
-Es gibt mehrere Einschränkungen, darunter Mindest- und Höchstwerte, die von AFX beim Konfigurieren und Verwenden Ihres Clusters erzwungen werden. Diese Grenzwerte lassen sich in mehrere Kategorien einteilen, darunter:
+Bei der Konfiguration und Nutzung Ihres Clusters gelten in AFX verschiedene Beschränkungen, darunter Mindest- und Höchstwerte. Diese Beschränkungen lassen sich in mehrere Kategorien einteilen.
 
-Controllerknoten pro Cluster:: Jeder AFX-Cluster muss mindestens vier Knoten haben.  Die maximale Anzahl an Knoten variiert je nach ONTAP Version.
+
+CAUTION: Bevor Sie einen Betriebsparameter Ihres AFX-Speichersystems erhöhen, sollten Sie die möglichen Auswirkungen auf Ihre Anwendungen und den gesamten Cluster prüfen. Beispielsweise erhöht die Erweiterung der Anzahl der Controller-Knoten zwar die Gesamtkapazität, kann aber auch den Datenverkehr im Clusternetzwerk steigern. Es ist wichtig, die Konsequenzen dieser Konfigurationsänderungen und deren Auswirkungen auf Ihre Umgebung zu verstehen.
+
+Controllerknoten pro Cluster:: Jeder AFX-Cluster muss mindestens vier Knoten umfassen. Die maximale Anzahl an Knoten variiert je nach ONTAP Release; beispielsweise erlaubt die 9.19.1 RC Release bis zu 32 Knoten pro AFX-Cluster.
 Speicherkapazität:: Dies ist die Gesamtkapazität aller SSD-Festplatten in der Storage Availability Zone (SAZ) des Clusters. Die maximale Speicherkapazität variiert je nach ONTAP Version.
 Cluster-Switches:: Sie benötigen mindestens zwei Switches in Ihrem Cluster-Speichernetzwerk.  Die maximal zulässige Anzahl wird anhand der Gesamtzahl der Controller-Knoten im Cluster bestimmt.
 
