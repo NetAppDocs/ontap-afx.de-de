@@ -124,7 +124,7 @@ Speicherkapazität:: Dies ist die Gesamtkapazität aller SSD-Festplatten in der 
 Cluster-Switches:: Sie benötigen mindestens zwei Switches in Ihrem Cluster-Speichernetzwerk.  Die maximal zulässige Anzahl wird anhand der Gesamtzahl der Controller-Knoten im Cluster bestimmt.
 
 
-Um die Leistungsfähigkeit Ihres AFX-Clusters zu ermitteln, sollten Sie die im NetApp Hardware Universe and Interoperability Matrix Tool verfügbaren Details überprüfen.
+Sie sollten die Details im NetApp Hardware Universe und im Interoperability Matrix Tool überprüfen, um die Leistungsfähigkeit Ihres AFX-Clusters zu bestimmen. Überprüfen Sie außerdem link:../release-notes/changes-to-limits-defaults.html["Änderungen an ONTAP Grenzwerten und Standardeinstellungen"] im Abschnitt der AFX-Versionshinweise.
 
 
 

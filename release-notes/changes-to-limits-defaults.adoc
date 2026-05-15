@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: release-notes/changes-to-limits-defaults.html 
+keywords: release notes, changes, updates, defaults, limits, afx storage system, afx system, afx 
+summary: Erfahren Sie mehr über die Änderungen an Grenzwerten und Standardeinstellungen, die AFX-Systeme betreffen. NetApp ist bestrebt, seinen Kunden die wichtigsten Änderungen an Standardeinstellungen und Grenzwerten in jeder ONTAP-Version zu erläutern. 
+---
+= Änderungen an ONTAP-Grenzwerten und Standardeinstellungen, die AFX-Systeme betreffen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Erfahren Sie mehr über die Änderungen an Grenzwerten und Standardeinstellungen, die AFX-Systeme betreffen. NetApp ist bestrebt, seinen Kunden die wichtigsten Änderungen an Standardeinstellungen und Grenzwerten in jeder ONTAP-Version zu erläutern.
+
+
+TIP: Um die Leistungsfähigkeit Ihres AFX-Clusters zu ermitteln, sollten Sie die im NetApp Hardware Universe and Interoperability Matrix Tool verfügbaren Details überprüfen.
+
+
+
+== Änderungen der ONTAP Grenzwerte
+
+[cols="2,4,4"]
+|===
+| Funktion | Limitänderung | In der Version geändert 
+
+
+| Knoten pro Cluster  a| 
+Sie können Ihren AFX-Cluster auf maximal 32 Knoten erweitern. Dadurch können Sie Ihr AFX-Speichersystem skalieren, um den wachsenden Anforderungen Ihrer Workloads und Anwendungen gerecht zu werden.
+| ONTAP 9.19.1 RC 
+|===
+
+
+== Ähnliche Informationen
+
+* https://hwu.netapp.com/["NetApp Hardware Universe"^]
+* https://imt.netapp.com/["NetApp Interoperabilitätsmatrix-Tool"^]
+* https://docs.netapp.com/us-en/interoperability-matrix-tool/["Übersicht über das Interoperabilitätsmatrix-Tool"^]
+

@@ -21,16 +21,11 @@ TIP: Erfahren Sie mehr über die neue und verbesserte Unterstützung für https:
 
 
 
-== Leistung und Skalierbarkeit
+== Performance
 
 [cols="2,4"]
 |===
 | Aktualisieren | Beschreibung 
-
-
-| Erweiterte AFX-Clustergröße  a| 
-ONTAP 9.19.1 unterstützt die Erweiterung eines AFX-Clusters auf maximal 32 Knoten. Dadurch können Sie Ihr AFX-Speichersystem skalieren, um den wachsenden Anforderungen Ihrer Workloads und Anwendungen gerecht zu werden.
-
 
 
 | Cross File Sequential Read (CFSR)  a| 
@@ -40,6 +35,11 @@ Cross File Sequential Read kann die Leseleistung für bestimmte Medien- und Unte
 
 | Globale Deduplizierung  a| 
 Die globale Deduplizierung erweitert die ONTAP-Deduplizierungseinsparungen auf die gesamte Storage Availability Zone (SAZ). Durch das Entfernen doppelter Datenblöcke über alle Volumes in der SAZ hinweg kann die Speichereffizienz deutlich verbessert und die Gesamtbetriebskosten gesenkt werden. Die Funktion ist auf AFX-Systemen standardmäßig aktiviert und arbeitet transparent, ohne dass eine administrative Konfiguration erforderlich ist. Weitere Informationen finden Sie unter link:../administer/additional-ontap-svm.html["Zusätzliche Verwaltung für eine AFX-Speichersystem-SVM"].
+
+
+
+| Dynamische Speichereffizienz  a| 
+Die dynamische Speichereffizienz optimiert intelligent die Speichereffizienzvorgänge (Komprimierung, Deduplizierung und Verdichtung) für große Workloads, die hohe Leistung und maximalen Durchsatz erfordern. Sie erkennt automatisch hohe Schreibaufkommen und pausiert Inline- und Hintergrund-Speichereffizienzprozesse vorübergehend, um Leistungseinbußen bei Spitzenlasten zu vermeiden. Sinkt der Durchsatz unter einen definierten Schwellenwert, werden die Speichereffizienzvorgänge wieder aufgenommen und die Einsparungen ohne manuelle Eingriffe wiederhergestellt. Die Funktion ist auf AFX-Speichersystemen verfügbar und standardmäßig aktiviert, eine Konfiguration ist nicht erforderlich.
 
 |===
 
