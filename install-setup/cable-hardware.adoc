@@ -147,7 +147,7 @@ Stellen Sie sicher, dass Sie die richtigen Kabel und Stecker für Ihre Switches 
 image::../media/oie_cable100_gbe_qsfp28.png[100-Gb-Kabel]
 
 +
-image::../media/drw_afx_ha_cluster_storage_a_ieops-2779.svg[Kabelcontroller-Cluster,HA,and storage to switch A]
+image::../media/drw_afx_ha_cluster_storage_a_ieops-2779.svg[Kabelcontroller-Cluster,800px,and storage to switch A]
 
 
 
@@ -178,7 +178,7 @@ Stellen Sie sicher, dass Sie die richtigen Kabel und Stecker für Ihre Switches 
 image::../media/oie_cable100_gbe_qsfp28.png[100-Gb-Kabel]
 
 +
-image::../media/drw_afx_ha_cluster_storage_b_ieops-2780.svg[Kabelcontroller-Cluster,HA,and storage to switch B]
+image::../media/drw_afx_ha_cluster_storage_b_ieops-2780.svg[Kabelcontroller-Cluster,800px,and storage to switch B]
 
 
 

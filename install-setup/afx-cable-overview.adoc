@@ -21,7 +21,7 @@ Die Erstkonfiguration des AFX 1K-Speichersystems unterstützt mindestens vier Co
 
 Zusätzliche Controllerknoten und Festplattenregale erweitern die anfängliche Konfiguration des AFX 1K-Speichersystems.  Erweiterte AFX 1K-Konfigurationen folgen derselben Switch-basierten Verkabelungsmethode wie das unten dargestellte Schema.
 
-image:../media/drw_afx_cable_overview_half_node_ieops-2358.svg["Beispielverkabelung für das AFK 1K-Speichersystem"]
+image:../media/drw_afx_cable_overview_half_node_ieops-2358.svg["Beispielverkabelung für ein AFX 1K Speichersystem, Breite=1000px"]
 
 
 

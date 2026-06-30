@@ -39,9 +39,10 @@ AFX-Speichercontroller und Speicherregale sind schwer.  Seien Sie beim Anheben u
 
 Treffen Sie die erforderlichen Vorsichtsmaßnahmen, wenn Sie Ihren AFX 1K-Speichercontroller bewegen oder anheben.
 
-Ein AFX 1K-Speichercontroller kann bis zu 28,5 kg (62,83 lbs) wiegen.  Zum Anheben des Speichercontrollers sind zwei Personen oder eine Hebebühne erforderlich.
+Ein AFX 1K Speichercontroller kann bis zu 62,83 lb (28,5 kg) wiegen. Für das Anheben des Speichercontrollers sind zwei Personen oder ein hydraulischer Hubwagen erforderlich.
 
-image::../media/drw_a1k_weight_caution_ieops-1698.svg[ASA A1K-Hebe-Warnsymbol]
+.Vorsichtsmaßnahme beim Anheben des AFX 1K Controllers.
+image::../media/drw_a1k_weight_caution_ieops-1698.svg[AFX 1K Hebe-Warnsymbol]
 
 
 
@@ -51,8 +52,9 @@ Treffen Sie die notwendigen Vorsichtsmaßnahmen, wenn Sie Ihr Regal bewegen oder
 
 .NX224 Regal
 --
-Ein NX224-Regal kann bis zu 27,3 kg (60,1 lbs) wiegen.  Zum Anheben des Regals sind zwei Personen oder eine Hebebühne erforderlich.  Bewahren Sie alle Komponenten im Regal auf (sowohl vorne als auch hinten), um ein Ungleichgewicht des Regalgewichts zu vermeiden.
+Ein NX224-Regal kann bis zu 60,1 lb (27,3 kg) wiegen. Zum Anheben des Regals sollten zwei Personen oder ein hydraulischer Lift verwendet werden. Alle Komponenten sollten sich im Regal befinden (sowohl vorne als auch hinten), um ein Ungleichgewicht des Regalgewichts zu vermeiden.
 
+.Vorsichtsmaßnahme beim Anheben des NX224 Shelfs.
 image::../media/drw_nx224_lifting_weight_ieops-2437.svg[NX224 NSM100 Hebevorsicht]
 
 .Ähnliche Informationen

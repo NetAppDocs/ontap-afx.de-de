@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: install-afx-2k/power-on-configure-switch.html 
+keywords: afx, afx 2k, cable controllers, Cisco Nexus 9332D-GX2B, Cisco Nexus 9364D-GX2A, switches, switch, power on, configure switches, 
+summary: Hier finden Sie Informationen zum Einschalten und Konfigurieren der Switches für Ihr AFX 2K Storage-System. 
+---
+= Die Schalter für Ihr AFX 2K Speichersystem werden eingeschaltet und konfiguriert.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie Ihr AFX 2K Speichersystem verkabelt haben, ist es erforderlich, die Cisco Nexus 9808, 9332D-GX2B oder 9364D-GX2A Switches einzuschalten und zu konfigurieren.
+
+.Schritte
+. Stecken Sie die Netzkabel der Schalter in die Stromquellen.
+. Verbinden Sie die ISL-Kabel zwischen den beiden Switches.
++
+** Weitere Informationen zu Cisco Nexus 9808 Switches finden sich in der link:https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/9800/9808/nx-os/cisco-nexus-9808-nx-os-mode-switch-hardware-installation-guide/m-8000-modular-overview-ph2.html["Cisco Nexus 9808 Mode Switch Hardware-Installationshandbuch"^].
+** Für Cisco Nexus 9332D-GX2B Switches verwenden Sie die Ports 31/32 für die ISL-Verbindungen. Siehe link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9332d-gx2b/cisco-nexus-9332d-gx2b-nx-os-mode-switch-hardware-installation-guide/m_overview1.html["Cisco Nexus 9332D-GX2B Mode Switch Hardware-Installationshandbuch"^] für weitere Informationen.
+** Für Cisco Nexus 9364D-GX2A Switches verwenden Sie die Ports 63/64 für die ISL-Verbindungen. Siehe link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9364d-gx2a/cisco-nexus-9364d-gx2a-nx-os-mode-switch-hardware-installation-guide/m_overview1.html["Cisco Nexus 9364D-GX2A Mode Switch Hardware-Installationshandbuch"^] für weitere Informationen.
+
+
+. Schalten Sie jeden Schalter ein.
+. Die Switches werden so konfiguriert, dass sie das AFX 2K Storage System unterstützen.
++
+** Weitere Informationen zur Konfiguration der Schalter enthält die link:https://docs.netapp.com/us-en/ontap-systems-switches/afx/index.html["Switches für AFX-Speichersysteme konfigurieren"^].
+
+
+
+
+.Wie geht es weiter?
+Nach der Konfiguration der Switches für Ihr AFX 2K-Speichersystem, link:power-on-hardware.html["Das AFX 2K Speichersystem einschalten"].

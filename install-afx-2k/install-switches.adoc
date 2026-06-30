@@ -1,19 +1,19 @@
 ---
 sidebar: sidebar 
-permalink: install-setup/install-switches.html 
-keywords: afx, afx 1k, install, setup, switches, cisco 9332, cisco 9336, switches, 
-summary: Erfahren Sie, wie Sie die Schalter für das AFX 1K-Speichersystem und die Speicherregale installieren. 
+permalink: install-afx-2k/install-switches.html 
+keywords: afx, afx 2k, install, setup, switches, cisco 9332, cisco 9336, switches, 
+summary: Informationen zur Installation der Switches für das AFX 2K Storage System und die Storage Shelves. 
 ---
-= Installieren Sie die Switches für Ihr AFX 1K-Speichersystem
+= Die Switches für Ihr AFX 2K Storage-System installieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Nachdem Sie Ihre Vorbereitungen für die Installation des AFX 1K-Speichersystems abgeschlossen haben, sollten Sie die Switches im Schrank oder Telco-Rack installieren.
+Nachdem Sie die Vorbereitungen für die Installation des AFX 2K Speichersystems abgeschlossen haben, sollten die Switches im Schrank oder im Telco-Rack installiert werden.
 
-Installieren Sie Cisco Nexus 9332D-GX2B- oder 9364D-GX2A-Switches im Schrank oder Rack.  Installieren Sie ein Pass-Through-Panel-Kit, wenn Sie den Cisco Nexus 9364D-GX2A-Switch verwenden.
+Cisco Nexus 9808, 9332D-GX2B oder 9364D-GX2A Switches im Schrank oder Rack installieren. Ein Pass-Through-Panel-Kit ist zu installieren, wenn der Cisco Nexus 9364D-GX2A Switch verwendet wird.
 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie über die folgenden Komponenten verfügen:
@@ -36,10 +36,22 @@ Das NetApp Pass-Through-Panel-Kit enthält die folgende Hardware:
 NOTE: Überbrückungskabel sind nicht im Durchgangskit enthalten.  Wenden Sie sich an NetApp , um die richtigen Überbrückungskabel zu bestellen, wenn diese nicht im Lieferumfang Ihrer Switches enthalten sind.
 
 
-NOTE: Wenn der Luftstrom für Ihre Switches für die Portseite als Lufteinlass konfiguriert ist (weinrote Lüfter und Netzteile), müssen die Netzwerkanschlüsse der Switches zur Vorderseite des Schranks installiert werden und die Abluftlüfter müssen zur Rückseite des Schranks zeigen. Mit dieser Konfiguration müssen Sie sicherstellen, dass Sie Kabel verwenden, die lang genug sind, um von den Netzwerkanschlüssen an der Vorderseite des Schranks zu den Speicheranschlüssen an der Rückseite des Schranks zu reichen. + Für detailliertere Informationen zu diesen Switches besuchen Sie bitte die Cisco Website: https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9332d-gx2b/cisco-nexus-9332d-gx2b-nx-os-mode-switch-hardware-installation-guide.html["Cisco Nexus 9332D-GX2B Mode Switch Hardware-Installationshandbuch"^] und https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9364d-gx2a/cisco-nexus-9364d-gx2a-nx-os-mode-switch-hardware-installation-guide.html["Cisco Nexus 9364D-GX2A Mode Switch Hardware-Installationshandbuch"^].
+NOTE: Wenn der Luftstrom Ihrer Switches für die Portseite als Lufteinlass konfiguriert ist (weinrote Lüfter und Netzteile), müssen die Netzwerkports der Switches zur Vorderseite des Schranks installiert werden und die Abluftlüfter zur Rückseite des Schranks zeigen. Mit dieser Konfiguration ist sicherzustellen, dass ausreichend lange Kabel verwendet werden, um von den Netzwerkports an der Vorderseite des Schranks zu den Storage-Ports an der Rückseite des Schranks zu gelangen. + Ausführlichere Informationen zu diesen Switches sind auf der Cisco Website verfügbar: link:https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/9800/9808/nx-os/cisco-nexus-9808-nx-os-mode-switch-hardware-installation-guide/m-8000-modular-overview-ph2.html["Cisco Nexus 9808 Mode Switch Hardware-Installationshandbuch"^], link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9332d-gx2b/cisco-nexus-9332d-gx2b-nx-os-mode-switch-hardware-installation-guide.html["Cisco Nexus 9332D-GX2B Mode Switch Hardware-Installationshandbuch"^] und link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9364d-gx2a/cisco-nexus-9364d-gx2a-nx-os-mode-switch-hardware-installation-guide.html["Cisco Nexus 9364D-GX2A Mode Switch Hardware-Installationshandbuch"^].
 
 
 CAUTION: Tragen Sie bei Installations- und Wartungsarbeiten stets ein geerdetes Armband, das mit einem geprüften Erdungspunkt verbunden ist. Die Nichtbeachtung der richtigen ESD-Schutzmaßnahmen kann zu dauerhaften Schäden an Controller-Knoten, Storage Shelves und Network Switches führen.
+
+
+
+== Installation des Cisco Nexus 9808 Switches
+
+Wenn Sie den Cisco Nexus 9808 Switch installieren, finden Sie im link:https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/9800/9808/nx-os/cisco-nexus-9808-nx-os-mode-switch-hardware-installation-guide/m-8000-install-chassis.html["Cisco Nexus 9808 Mode Switch Hardware-Installationshandbuch"^] detaillierte Anweisungen zur Installation der Switches im Schrank oder Rack.
+
+
+
+== Cisco Nexus 9332D-GX2B und 9364D-GX2A Switch Installation
+
+Wenn Sie Cisco Nexus 9332D-GX2B oder 9364D installieren, sind die folgenden Schritte zur Installation der Switches im Schrank oder Rack auszuführen.
 
 .Schritte
 . Installieren Sie die Durchgangs-Abdeckplatte.
@@ -47,7 +59,7 @@ CAUTION: Tragen Sie bei Installations- und Wartungsarbeiten stets ein geerdetes 
 .. Bestimmen Sie die vertikale Position der Schalter und der Blindplatte im Schrank oder Rack.
 .. Montieren Sie auf jeder Seite zwei Clipmuttern in den entsprechenden quadratischen Löchern für die vorderen Schrankschienen.
 .. Zentrieren Sie das Panel vertikal, um ein Eindringen in den angrenzenden Rack-Bereich zu verhindern, und ziehen Sie dann die Schrauben fest.
-.. Führen Sie die Buchsenstecker beider Überbrückungskabel von der Rückseite des Panels durch die Bürstenbaugruppe ein.
+.. Die Buchsen beider Überbrückungskabel werden von der Rückseite des Panels durch die Bürstenbaugruppe geführt.
 +
 image::../media/cisco_9148_jumper_cords.gif[Buchsenstecker des Starthilfekabels]
 
@@ -80,7 +92,7 @@ image::../media/3132q_front_bracket.gif[vordere Halterung]
 image::../media/ru_locations_for_3132q_v.gif[Positionen der Clipmuttern]
 
 +
-Montieren Sie die beiden 9332D-GX2B-Switches an Schrankpositionen, die einen effizienten Zugriff auf Controller und Regale ermöglichen, beispielsweise in den mittleren Reihen.
+Die beiden Switches sind an Schrankpositionen zu montieren, die einen effizienten Zugriff auf Controller und Shelves ermöglichen, beispielsweise in den mittleren Reihen.
 
 . Installieren Sie die Gleitschienen im Schrank oder Rack.
 +
@@ -174,4 +186,4 @@ Der Verwaltungsnetzwerkanschluss ist der untere RJ-45-Anschluss in der Nähe des
 
 
 .Wie geht es weiter?
-Nachdem Sie die Switches im Schrank oder Rack installiert haben,link:deploy-hardware.html["Installieren Sie das AFX 1K-Speichersystem und die Regale im Schrank oder Rack"] .
+Nachdem Sie die Schalter im Schrank oder Rack installiert haben, link:deploy-hardware.html["Das AFX 2K Storage System und die Shelves im Schrank oder Rack installieren"].

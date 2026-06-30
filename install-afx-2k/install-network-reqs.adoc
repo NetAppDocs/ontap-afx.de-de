@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: install-afx-2k/install-network-reqs.html 
+keywords: shared storage cluster switch 
+summary: Ab ONTAP 9.9.1 können Sie Cisco Nexus 9364d-gx2a-Switches verwenden, um Speicher- und Clusterfunktionen in einem Shared-Switch-Szenario zu kombinieren. 
+---
+= Netzwerkanforderungen für Ihr AFX 2K Speichersystem
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die erforderlichen Informationen für jedes Netzwerk, das mit dem AFX 2K Storage-System verbunden wird, sind zu dokumentieren.
+
+
+
+== Sammeln von Netzwerkinformationen
+
+Bevor die Installation Ihres AFX 2K Speichersystems beginnt, sollten die erforderlichen Netzwerkinformationen bereitliegen.
+
+* Hostnamen und IP-Adressen für jeden der Speichersystem-Controller und alle entsprechenden Switches.
++
+Die meisten Speichersystem-Controller werden über die e0M-Schnittstelle verwaltet, indem eine Verbindung zum Ethernet-Service-Port (Schraubenschlüsselsymbol) hergestellt wird.
+
++
+Weitere Informationen finden Sie im https://hwu.netapp.com["Hardware Universe"^] für die neuesten Informationen.
+
+* IP-Adresse für die Clusterverwaltung
++
+Die Clusterverwaltungs-IP-Adresse ist eine eindeutige IP-Adresse für die Clusterverwaltungsschnittstelle, die vom Clusteradministrator verwendet wird, um auf die Admin-Speicher-VM zuzugreifen und den Cluster zu verwalten.  Diese IP-Adresse erhalten Sie von dem Administrator, der in Ihrer Organisation für die Vergabe von IP-Adressen zuständig ist.
+
+* Netzwerk-Subnetzmaske
++
+Während der Clustereinrichtung empfiehlt ONTAP eine Reihe von Netzwerkschnittstellen, die für Ihre Konfiguration geeignet sind.  Sie können die Empfehlung bei Bedarf anpassen.
+
+* IP-Adresse des Netzwerk-Gateways
+* IP-Adressen für die Knotenverwaltung (eine pro Knoten)
+* DNS-Domänennamen
+* IP-Adressen des DNS-Nameservers
+* NTP-Server-IP-Adressen
+* Daten-Subnetzmaske
+* IP-Subnetz für den Verwaltungsnetzwerkverkehr.
+
+
+
+
+== Netzwerkanforderungen für Cisco -Switches
+
+Für die Installation und Wartung der Switches Cisco Nexus 9808, Cisco Nexus 9332D-GX2 und 9364D-GX2A empfiehlt sich eine Überprüfung der Verkabelungs- und Netzwerkanforderungen.
+
+
+
+=== Netzwerkanforderungen
+
+Für alle Switch-Konfigurationen benötigen Sie folgende Netzwerkinformationen.
+
+* IP-Subnetz für den Verwaltungsnetzwerkverkehr
+* Hostnamen und IP-Adressen für jeden Speichersystem-Controller und alle entsprechenden Switches
+* Weitere Informationen finden Sie im https://hwu.netapp.com["Hardware Universe"^] für die neuesten Informationen.
+
+
+
+
+=== Verkabelungsanforderungen
+
+* Sie verfügen über die passende Anzahl und Art an Kabeln und Kabelsteckern für Ihre Switches. Siehe die https://hwu.netapp.com["Hardware Universe"^] .
+* Je nach Art des Switches, den Sie zunächst konfigurieren, müssen Sie mit dem mitgelieferten Konsolenkabel eine Verbindung zum Switch-Konsolenport herstellen.
+
+
+.Wie geht es weiter?
+Nach Prüfung der Netzwerkanforderungen link:cable-hardware.html["Die Controller und Storage Shelves für Ihr AFX 2K Storage System verkabeln"].

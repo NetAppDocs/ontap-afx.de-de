@@ -51,9 +51,9 @@ TIP: Sie sollten dielink:../faq-ontap-afx.html["FAQ zu AFX-Speichersystemen"] We
 
 Die folgenden Hardwarekomponenten werden bei AFX-Clustern verwendet:
 
-* AFX 1K-Controller
+* AFX 1K oder 2K Controller
 * NX224 Regale
-* Cisco Nexus 9332D-GX2B- oder Nexus 9364D-GX2A-Switches
+* Cisco Nexus 9332D-GX2B, Nexus 9364D-GX2A oder Nexus 9808 Switches
 
 
 

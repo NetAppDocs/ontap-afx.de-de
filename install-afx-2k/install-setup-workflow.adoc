@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: install-afx-2k/install-setup-workflow.html 
+keywords: afx, afx 2k, install, setup, workflow 
+summary: Die Installation und Einrichtung des AFX 2K Storage Systems kann in Ihrer ONTAP Umgebung vorgenommen und dort bereitgestellt werden. 
+---
+= Installations- und Einrichtungsablauf für AFX 2K Speichersysteme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für die Installation und Konfiguration Ihres AFX 2K Storage Systems werden die Hardwareanforderungen überprüft, der Standort vorbereitet, die Switches installiert, die Hardwarekomponenten installiert und verkabelt, das System eingeschaltet und Ihr ONTAP AFX Cluster eingerichtet.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"]link:../install-setup/install-setup-requirements.html["Überprüfen Sie die Hardwareinstallationsanforderungen"]
+[role="quick-margin-para"]
+Die Hardwarevoraussetzungen für die Installation des AFX 2K-Speichersystems sind zu beachten.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]link:../install-setup/prepare-hardware.html["Vorbereitung der Installation Ihres AFX 2K Storage Systems"]
+[role="quick-margin-para"]
+Die Installation des AFX 2K Storage Systems wird vorbereitet, indem der Aufstellungsort vorbereitet, die Umgebungs- und elektrischen Anforderungen geprüft, ausreichend Rackplatz sichergestellt, die Geräte ausgepackt, der Inhalt mit dem Lieferschein abgeglichen und die Hardware für den Support registriert wird.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"]link:install-switches.html["Die Switches für Ihr AFX 2K Storage-System installieren"]
+[role="quick-margin-para"]
+Cisco Nexus 9808, 9332D-GX2B oder 9364D-GX2A Switches im Schrank oder Rack installieren. Ein Pass-Through-Panel-Kit ist zu installieren, wenn der Cisco Nexus 9364D-GX2A Switch verwendet wird.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Vier"]link:deploy-hardware.html["Die Hardware für Ihr AFX 2K Speichersystem installieren"]
+[role="quick-margin-para"]
+Installieren Sie die Schienensätze für Ihr Lagersystem und Ihre Regale.  Sichern Sie Ihr Speichersystem im Schrank oder Telekommunikations-Rack.  Schieben Sie anschließend die Regale auf die installierten Schienen.  Bringen Sie abschließend Kabelmanagementgeräte an der Rückseite des Speichersystems an, um eine geordnete Kabelführung zu gewährleisten.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Fünf"]link:cable-hardware.html["Die Controller und Shelves für Ihr AFX 2K Storage System verkabeln"]
+[role="quick-margin-para"]
+Um die Hardware zu verkabeln, verbinden Sie zuerst die Speichercontrollerknoten mit Ihrem Netzwerk und verbinden Sie dann die Controllerknoten und Speicherregale mit den Cluster-Switches.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Sechs"]link:power-on-configure-switch.html["Die Schalter für Ihr AFX 2K Speichersystem werden eingeschaltet und konfiguriert."]
+[role="quick-margin-para"]
+Die Switches für das AFX 2K Storage System werden eingeschaltet und konfiguriert. Die Konfigurationsanweisungen für die Cisco Nexus 9808, 9332D-GX2B und 9364D-GX2A Switches sind zu beachten.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Sieben"]link:power-on-hardware.html["AFX 2K Storage-System einschalten"]
+[role="quick-margin-para"]
+Schalten Sie jedes Speicherregal ein und weisen Sie vor dem Einschalten der Controllerknoten eine eindeutige Regal-ID zu, um jedes Regal im Setup eindeutig zu identifizieren.
