@@ -18,6 +18,7 @@ TIP: Die AFX-Dokumentation enthält Links zu verschiedenen Themen auf der Unifie
 
 
 
+[[configuration-differences]]
 == Konfigurationsunterschiede
 
 Es gibt einige Bereiche, in denen sich die AFX-Konfiguration von AFF und FAS Systemen unterscheidet.
@@ -27,12 +28,14 @@ Erweiterter Kapazitätsausgleich:: Die erweiterte Kapazitätsausgleichsfunktion,
 
 
 
+[[unsupported-or-restricted-unified-ontap-capabilities]]
 == Nicht unterstützte oder eingeschränkte Unified ONTAP Funktionen
 
 NetApp AFX ist für leistungsstarke NAS- und Objekt-Workloads optimiert. Daher bestehen Unterschiede zu AFF und FAS Storage-Systemen. Die folgenden Funktionen sind bei NetApp AFX nicht verfügbar; die Liste ist nach Hauptfunktionen oder Funktionsbereichen geordnet. Sie sollten außerdem die Aktualisierungen und Änderungen für AFX in link:../release-notes/whats-new-9171.html["Was ist neu"] basierend auf Ihrer ONTAP-Version überprüfen.
 
 
 
+[[block-and-san]]
 === Block und SAN
 
 * SAN-Administration und Client-Zugriff
@@ -42,6 +45,7 @@ NetApp AFX ist für leistungsstarke NAS- und Objekt-Workloads optimiert. Daher b
 
 
 
+[[aggregates-and-physical-storage]]
 === Zuschlagstoffe und physische Lagerung
 
 * MetroCluster
@@ -56,6 +60,7 @@ NetApp AFX ist für leistungsstarke NAS- und Objekt-Workloads optimiert. Daher b
 
 
 
+[[data-replication-snapmirror]]
 === Datenreplikation (SnapMirror)
 
 
@@ -67,6 +72,7 @@ NOTE: Die Datenreplikation zwischen Unified ONTAP und AFX wird in beide Richtung
 
 
 
+[[manageability]]
 === Verwaltbarkeit
 
 * ONTAPI-API (ZAPI)
@@ -78,6 +84,7 @@ NOTE: Die Datenreplikation zwischen Unified ONTAP und AFX wird in beide Richtung
 
 
 
+[[changes-to-the-command-line-interface]]
 == Änderungen an der Kommandozeilenschnittstelle
 
 Die mit AFX verfügbare ONTAP CLI spiegelt im Allgemeinen die mit AFF und FAS Systemen verfügbare CLI wider.  Es gibt jedoch mehrere Unterschiede, darunter:
@@ -95,6 +102,7 @@ Die mit AFX verfügbare ONTAP CLI spiegelt im Allgemeinen die mit AFF und FAS Sy
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * link:../get-started/system-design.html["AFX-Systemeigenschaften"]

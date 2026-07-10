@@ -15,6 +15,7 @@ Informieren Sie sich über die unterstützten Hardwarekomponenten und Verkabelun
 
 
 
+[[supported-afx-1k-cabling-configuration]]
 == Unterstützte AFX 1K-Verkabelungskonfiguration
 
 Die Erstkonfiguration des AFX 1K-Speichersystems unterstützt mindestens vier Controllerknoten, die über Dual-Switches mit den Speicherplatten-Shelves verbunden sind.
@@ -25,6 +26,7 @@ image:../media/drw_afx_cable_overview_half_node_ieops-2358.svg["Beispielverkabel
 
 
 
+[[supported-hardware-components]]
 == Unterstützte Hardwarekomponenten
 
 Überprüfen Sie die kompatiblen Speicherplattenregale, Switches und Kabeltypen für das AFX 1K-Speichersystem.

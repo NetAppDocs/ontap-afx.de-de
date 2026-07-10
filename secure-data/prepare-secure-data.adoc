@@ -15,6 +15,7 @@ Bevor Sie Ihre AFX-Daten verwalten, sollten Sie mit den wichtigsten Konzepten un
 
 
 
+[[terminology-and-options]]
 == Terminologie und Optionen
 
 Es gibt mehrere Begriffe im Zusammenhang mit der AFX-Datensicherheit, mit denen Sie vertraut sein sollten.
@@ -27,6 +28,7 @@ Internetprotokollsicherheit:: IPsec ist ein Internetstandard, der die Verschlüs
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * link:../administer/additional-ontap-svm.html["Zusätzliche AFX SVM-Verwaltung"]

@@ -15,6 +15,7 @@ Es gibt mehrere Verwaltungsaufgaben, die Sie im Rahmen der Verwaltung der in Ihr
 
 
 
+[[create-a-qtree]]
 == Erstellen Sie einen Qtree
 
 Ein Qtree ist eine logische Unterteilung innerhalb eines Datenträgers, die Sie zum Organisieren und Verwalten von Daten erstellen können.
@@ -27,6 +28,7 @@ Ein Qtree ist eine logische Unterteilung innerhalb eines Datenträgers, die Sie 
 
 
 
+[[create-a-quota]]
 == Erstellen Sie ein Kontingent
 
 Ein Kontingent ist eine Begrenzung der Speicherplatzmenge oder der Anzahl der Dateien, die von einem Benutzer, einer Gruppe oder einem Qtree verwendet werden können.  Kontingente werden verwendet, um die Ressourcennutzung innerhalb eines AFX-Systems zu verwalten und zu steuern.

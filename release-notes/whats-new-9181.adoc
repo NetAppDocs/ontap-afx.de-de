@@ -21,6 +21,7 @@ TIP: Erfahren Sie mehr über die neue und verbesserte Unterstützung für https:
 
 
 
+[[storage-resource-management-enhancements]]
 == Verbesserungen im Speicherressourcenmanagement
 
 [cols="2,4"]

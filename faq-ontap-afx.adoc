@@ -18,6 +18,7 @@ Diese FAQ-Liste bietet Antworten auf Fragen, die Sie möglicherweise zu Ihrem AF
 
 
 
+[[general]]
 == Allgemein
 
 .Was ist eine ONTAP Persönlichkeit?
@@ -50,6 +51,7 @@ Das zweite verwandte Konzept mit disaggregiertem Speicher besteht darin, dass di
 
 
 
+[[interoperability]]
 == Interoperabilität
 
 .Kann ich AFX-Systemknoten mit AFF, ASA oder FAS Systemknoten im selben ONTAP Cluster mischen?
@@ -68,6 +70,7 @@ Nein. Mit AFX wird nur die ONTAP REST API unterstützt.  Jeder Automatisierungsc
 
 
 
+[[advanced-concepts]]
 == Erweiterte Konzepte
 
 .Welche Datenprotokolle werden von einem AFX-Speichersystem unterstützt?

@@ -17,6 +17,7 @@ Um die Snapshot-Replikation einzurichten, müssen Sie eine Replikationsbeziehung
 
 
 
+[[step-1-create-a-cluster-peer-relationship]]
 == Schritt 1: Erstellen einer Cluster-Peer-Beziehung
 
 Bevor Sie Ihre Daten durch Replikation auf einen Remote-Cluster schützen können, müssen Sie eine Cluster-Peer-Beziehung zwischen dem lokalen und dem Remote-Cluster erstellen.
@@ -38,6 +39,7 @@ Sie haben mit einem Remote-Cluster eine Peering-Verbindung für einen lokalen AF
 
 
 
+[[step-2-optionally-create-a-replication-policy]]
 == Schritt 2: Optional eine Replikationsrichtlinie erstellen
 
 Die Snapshot-Replikationsrichtlinie definiert, wann auf dem AFX-Cluster durchgeführte Updates auf den Remote-Standort repliziert werden.
@@ -79,6 +81,7 @@ Sie haben eine Replikationsrichtlinie erstellt und sind nun bereit, eine Replika
 
 
 
+[[step-3-create-a-replication-relationship]]
 == Schritt 3: Erstellen einer Replikationsbeziehung
 
 Eine Snapshot-Replikationsbeziehung stellt eine Verbindung zwischen Ihrem AFX-System und einem Remotestandort her, sodass Sie Konsistenzgruppen auf einen Remotecluster replizieren können.  Replizierte Konsistenzgruppen können zur Notfallwiederherstellung oder zur Datenmigration verwendet werden.
@@ -166,6 +169,7 @@ Nachdem Sie nun eine Replikationsrichtlinie und -beziehung erstellt haben, begin
 
 
 
+[[step-4-test-replication-failover]]
 == Schritt 4: Testen des Replikationsfailovers
 
 Überprüfen Sie optional, ob Sie Daten von replizierten Volumes auf einem Remotecluster erfolgreich bereitstellen können, wenn der Quellcluster offline ist.

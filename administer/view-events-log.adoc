@@ -15,6 +15,7 @@ Sie können die von AFX generierten Ereignisse und Überwachungsprotokollmeldung
 
 
 
+[[events]]
 == Veranstaltungen
 
 Die Ereignismeldungen liefern wertvolle Aufzeichnungen der Systemaktivität.  Jedes Ereignis enthält eine Beschreibung und eine eindeutige Kennung sowie eine empfohlene Aktion.
@@ -28,6 +29,7 @@ Die Ereignismeldungen liefern wertvolle Aufzeichnungen der Systemaktivität.  Je
 
 
 
+[[audit-log]]
 == Überwachungsprotokoll
 
 Das Prüfprotokoll enthält eine Aufzeichnung der Systemaktivität basierend auf der Verwendung von Zugriffsprotokollen wie HTTP.
@@ -39,6 +41,7 @@ Das Prüfprotokoll enthält eine Aufzeichnung der Systemaktivität basierend auf
 
 
 
+[[manage-notifications]]
 == Benachrichtigungen verwalten
 
 Es gibt mehrere von AFX unterstützte Benachrichtigungstypen, die Sie weiterleiten können.

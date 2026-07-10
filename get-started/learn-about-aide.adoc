@@ -15,6 +15,7 @@ NetApp AI Data Engine (AIDE) ist ein speicherintegrierter KI-Datendienst, der au
 
 
 
+[[aide-overview]]
 == AIDE-Übersicht
 
 AIDE ist ein System, das die Aufbereitung und Verwaltung Ihrer Daten für KI- und ML-Workloads beschleunigt und vereinfacht. Es wird separat installiert und ist eng mit einem AFX-Speichersystem-Cluster integriert. AIDE nutzt die leistungsstarke und skalierbare AFX-Speicherbasis und ergänzt sie um spezialisierte Dienste für KI-Datenverarbeitung, Governance und Workflow-Automatisierung.
@@ -27,24 +28,28 @@ AIDE unterstützt Data Engineers und Data Scientists, indem es Tools für die sc
 
 
 
+[[installation-options]]
 == Installationsoptionen
 
 Es gibt zwei Optionen, um AIDE mit Ihrem AFX-Speichercluster zu installieren und zu integrieren.
 
 
 
+[[set-up-afx-and-aide-together]]
 === Richten Sie AFX und AIDE gemeinsam ein
 
 Die gleichzeitige Bereitstellung des AFX-Speichersystems und von AIDE ermöglicht einen einheitlichen und optimierten Installationsprozess und gewährleistet so die sofortige Integration und optimale Konfiguration. Dieser schlüsselfertige Ansatz vereinfacht die Inbetriebnahme, garantiert Kompatibilität und ermöglicht Ihnen, eine voll funktionsfähige AI Data Engine Datenplattform schnell zu nutzen – ideal für neue Deployments, die eine rasche Time-to-Value anstreben.
 
 
 
+[[integrate-aide-with-an-existing-afx-cluster]]
 === AIDE in einen bestehenden AFX-Cluster integrieren
 
 Wenn Sie bereits einen AFX-Speichercluster installiert und in Betrieb haben, können Sie AIDE jederzeit hinzufügen, um den Zugriff und den Wert Ihrer Daten zu verbessern. AIDE wird als Add-on zur bestehenden AFX-Speicherumgebung bereitgestellt und verbindet sich mit dem etablierten Cluster-Speichernetzwerk, ohne den Betrieb zu unterbrechen. Der Integrationsprozess erkennt automatisch verfügbare ONTAP Volumes und synchronisiert Metadaten. Ihre Datenverarbeitungs-Workflows werden durch KI-Automatisierung, Governance und Kurationstools verbessert, während ihre bestehende Speicherbasis erhalten bleibt.
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * https://docs.netapp.com/us-en/ai-data-engine/get-started/learn-about.html["Erfahren Sie mehr über AI Data Engine"^]

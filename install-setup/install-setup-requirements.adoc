@@ -15,6 +15,7 @@ summary: Überprüfen Sie die erforderliche Ausrüstung und die Hebevorkehrungen
 
 
 
+[[equipment-needed-for-install]]
 == Für die Installation benötigte Ausrüstung
 
 Zur Installation Ihres AFX 1K-Speichersystems benötigen Sie die folgende Ausrüstung und Werkzeuge.
@@ -29,12 +30,14 @@ Zur Installation Ihres AFX 1K-Speichersystems benötigen Sie die folgende Ausrü
 
 
 
+[[lifting-precautions]]
 == Vorsichtsmaßnahmen beim Heben
 
 AFX-Speichercontroller und Speicherregale sind schwer.  Seien Sie beim Anheben und Bewegen dieser Gegenstände vorsichtig.
 
 
 
+[[storage-controller-weights]]
 === Speichercontrollergewichte
 
 Treffen Sie die erforderlichen Vorsichtsmaßnahmen, wenn Sie Ihren AFX 1K-Speichercontroller bewegen oder anheben.
@@ -46,6 +49,7 @@ image::../media/drw_a1k_weight_caution_ieops-1698.svg[AFX 1K Hebe-Warnsymbol]
 
 
 
+[[storage-shelf-weights]]
 === Gewichte für Lagerregale
 
 Treffen Sie die notwendigen Vorsichtsmaßnahmen, wenn Sie Ihr Regal bewegen oder anheben.

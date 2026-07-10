@@ -15,6 +15,7 @@ Sie müssen die vom AFX-System verwendeten Authentifizierungs- und Autorisierung
 
 
 
+[[configure-ldap]]
 == LDAP konfigurieren
 
 Sie können einen LDAP-Server (Lightweight Directory Access Protocol) konfigurieren, um Authentifizierungsinformationen an einem zentralen Ort zu verwalten.
@@ -32,6 +33,7 @@ Sie müssen eine Zertifikatsignieranforderung generiert und ein von einer Zertif
 
 
 
+[[configure-saml-authentication]]
 == Konfigurieren der SAML-Authentifizierung
 
 Die Authentifizierung mit Security Assertion Markup Language (SAML) ermöglicht die Authentifizierung von Benutzern durch einen sicheren Identitätsanbieter (IdP) anstelle von Anbietern, die andere Protokolle wie LDAP verwenden.
@@ -59,6 +61,7 @@ Das IdP-System zeigt einen Authentifizierungsbildschirm an.
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * link:../administer/manage-users-roles.html["Verwalten von AFX-Clusterbenutzern und -Rollen"]

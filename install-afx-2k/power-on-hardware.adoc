@@ -15,6 +15,7 @@ Nachdem die Rack-Hardware für das AFX 2K-Speichersystem installiert und die Kab
 
 
 
+[[step-1-power-on-the-shelf-and-assign-shelf-id]]
 == Schritt 1: Schalten Sie das Regal ein und weisen Sie die Regal-ID zu
 
 Jedes Regal hat eine eindeutige Regal-ID, die seine Unterscheidung in der Einrichtung Ihres Lagersystems gewährleistet.
@@ -122,6 +123,7 @@ Das Netzteil schaltet sich ein, sobald Sie das Netzkabel einstecken.  Die zweifa
 
 
 
+[[step-2-power-on-the-controller-nodes]]
 == Schritt 2: Schalten Sie die Controller-Knoten ein
 
 Nachdem Sie Ihre Speicherregale eingeschaltet und ihnen eindeutige IDs zugewiesen haben, schalten Sie die Stromversorgung der Speichercontrollerknoten ein.
@@ -160,6 +162,7 @@ image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[Stromanschlussdiagra
 
 
 
+[[step-3-verify-the-switch-connections]]
 == Schritt 3: Switch-Verbindungen überprüfen
 
 Über die CLI des Switches lässt sich feststellen, ob die mit den Cluster-Ports verbundenen Switch-Ports aktiv sind, ob sich die Cluster-Knoten in den richtigen Cluster-VLANs befinden und ob die ISL-Verbindung zwischen den beiden Switches funktionsfähig ist.
@@ -639,7 +642,4 @@ cs1#
 
 
 .Wie geht es weiter?
-Nach dem Einschalten Ihres AFX 2K Storage-Systems schließen Sie die Einrichtung entsprechend Ihrer Bereitstellungsoption ab:
-
-* Für dedizierte AFX 2K-Speichersystembereitstellungen gehen Sie zu link:../install-setup/cluster-setup.html["Richten Sie einen AFX-Cluster ein"].
-
+Nach dem Einschalten Ihres AFX 2K Speichersystems, link:../install-setup/cluster-setup.html["den AFX Cluster einrichten"].

@@ -15,6 +15,7 @@ ONTAP lädt standardmäßig automatisch Firmware und Systemdateien auf Ihrem AFX
 
 
 
+[[enable-automatic-updates]]
 == Automatische Updates aktivieren
 
 Wenn Sie automatische Updates für Ihren AFX-Cluster aktivieren, werden empfohlene Updates für Speicher-Firmware, SP/ BMC -Firmware und Systemdateien standardmäßig automatisch heruntergeladen und installiert.
@@ -33,6 +34,7 @@ Empfohlene Updates werden basierend auf Ihrer Update-Auswahl automatisch herunte
 
 
 
+[[disable-automatic-updates]]
 == Automatische Updates deaktivieren
 
 Deaktivieren Sie automatische Updates, wenn Sie die Flexibilität haben möchten, empfohlene Updates anzuzeigen, bevor sie installiert werden.  Wenn Sie automatische Updates deaktivieren, müssen Sie Firmware- und Systemdatei-Updates manuell durchführen.
@@ -47,6 +49,7 @@ Automatische Updates sind deaktiviert.  Sie sollten regelmäßig nach empfohlene
 
 
 
+[[view-automatic-updates]]
 == Automatische Updates anzeigen
 
 Zeigen Sie eine Liste der Firmware- und Systemdatei-Updates an, die auf Ihren Cluster heruntergeladen wurden und für die automatische Installation geplant sind.  Zeigen Sie auch Updates an, die zuvor automatisch installiert wurden.
@@ -58,6 +61,7 @@ Zeigen Sie eine Liste der Firmware- und Systemdatei-Updates an, die auf Ihren Cl
 
 
 
+[[edit-automatic-updates]]
 == Automatische Updates bearbeiten
 
 Sie können wählen, ob empfohlene Updates für Ihre Speicher-Firmware, SP/ BMC -Firmware und Ihre Systemdateien automatisch heruntergeladen und auf Ihrem Cluster installiert werden sollen, oder ob empfohlene Updates automatisch abgelehnt werden sollen.  Wenn Sie die Installation oder Ablehnung von Updates manuell steuern möchten, wählen Sie aus, dass Sie benachrichtigt werden möchten, wenn ein empfohlenes Update verfügbar ist. Anschließend können Sie manuell auswählen, ob es installiert oder abgelehnt werden soll.
@@ -74,6 +78,7 @@ Automatische Updates werden basierend auf Ihrer Auswahl geändert.
 
 
 
+[[update-firmware-manually]]
 == Firmware manuell aktualisieren
 
 Wenn Sie die Flexibilität wünschen, empfohlene Updates anzuzeigen, bevor sie heruntergeladen und installiert werden, können Sie automatische Updates deaktivieren und Ihre Firmware manuell aktualisieren.

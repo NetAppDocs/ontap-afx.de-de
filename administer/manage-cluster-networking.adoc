@@ -18,6 +18,7 @@ NOTE: Das Erstellen einer Netzwerkressource ist ein wichtiger erster Schritt.  S
 
 
 
+[[create-a-broadcast-domain]]
 == Erstellen einer Broadcastdomäne
 
 Eine Broadcast-Domäne vereinfacht die Verwaltung Ihres Cluster-Netzwerks durch Gruppierung von Ports, die Teil desselben Layer-2-Netzwerks sind.  Den Storage Virtual Machines (SVMs) können dann Ports in der Gruppe für Daten- oder Verwaltungsverkehr zugewiesen werden.
@@ -49,6 +50,7 @@ Die MTU ist das größte Datenpaket, das im Broadcast-Bereich akzeptiert werden 
 
 
 
+[[create-an-ipspace]]
 == Erstellen Sie einen IPspace
 
 Ein IPspace ist eine Verwaltungsdomäne für IP-Adressen und die zugehörige Netzwerkkonfiguration.  Diese Bereiche können zur Unterstützung Ihrer SVMs durch isolierte Verwaltung und Weiterleitung verwendet werden.  Sie sind beispielsweise nützlich, wenn Clients überlappende IP-Adressen aus demselben IP-Adress- und Subnetzbereich haben.
@@ -71,6 +73,7 @@ Sie können den IPspace verwenden, um ein Subnetz zu erstellen.
 
 
 
+[[create-a-subnet]]
 == Erstellen eines Subnetzes
 
 Ein Subnetz oder Subnetz erzwingt eine logische Aufteilung des IP-Adressraums in Ihrem Netzwerk.  Es ermöglicht Ihnen, dedizierte IP-Adressblöcke für die Erstellung einer Netzwerkschnittstelle (LIF) zuzuweisen.  Subnetze vereinfachen die LIF-Erstellung, indem sie es Ihnen ermöglichen, den Subnetznamen anstelle einer bestimmten Kombination aus IP-Adresse und Netzwerkmaske zu verwenden.
@@ -94,6 +97,7 @@ Das neue Subnetz vereinfacht die Erstellung Ihrer Netzwerkschnittstellen.
 
 
 
+[[create-a-network-interface]]
 == Erstellen einer Netzwerkschnittstelle
 
 Eine logische Netzwerkschnittstelle (LIF) besteht aus einer IP-Adresse und zugehörigen Netzwerkkonfigurationsparametern.  Es kann einem physischen oder logischen Port zugeordnet werden und wird normalerweise von den Clients verwendet, um auf von einer SVM bereitgestellte Daten zuzugreifen.  LIFs bieten Ausfallsicherheit im Falle eines Fehlers und können zwischen den Knotenports migrieren, sodass die Kommunikation nicht unterbrochen wird.
@@ -107,6 +111,7 @@ Eine logische Netzwerkschnittstelle (LIF) besteht aus einer IP-Adresse und zugeh
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * link:../administer/manage-ethernet-ports.html["Verwalten von AFX-Ethernet-Ports"]

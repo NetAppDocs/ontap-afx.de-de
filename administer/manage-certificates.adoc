@@ -15,6 +15,7 @@ Abhängig von Ihrer Umgebung müssen Sie im Rahmen der AFX-Verwaltung digitale Z
 
 
 
+[[generate-a-certificate-signing-request]]
 == Generieren einer Zertifikatsignieranforderung
 
 Um mit der Verwendung eines digitalen Zertifikats zu beginnen, müssen Sie eine Zertifikatsignieranforderung (CSR) generieren.  Mit einem CSR wird ein signiertes Zertifikat von einer Zertifizierungsstelle (CA) angefordert. Dabei erstellt ONTAP ein öffentliches/privates Schlüsselpaar und fügt den öffentlichen Schlüssel in den CSR ein.
@@ -33,6 +34,7 @@ Sie haben eine CSR generiert, mit der Sie ein Public-Key-Zertifikat anfordern k�
 
 
 
+[[add-a-trusted-certificate-authority]]
 == Fügen Sie eine vertrauenswürdige Zertifizierungsstelle hinzu
 
 ONTAP bietet einen Standardsatz vertrauenswürdiger Stammzertifikate zur Verwendung mit Transport Layer Security (TLS) und anderen Protokollen.  Sie können bei Bedarf weitere vertrauenswürdige Zertifizierungsstellen hinzufügen.
@@ -50,6 +52,7 @@ Sie haben Ihrem AFX-System eine vertrauenswürdige Zertifizierungsstelle hinzuge
 
 
 
+[[renew-or-delete-a-trusted-certificate-authority]]
 == Erneuern oder Löschen einer vertrauenswürdigen Zertifizierungsstelle
 
 Vertrauenswürdige Zertifizierungsstellen müssen jährlich erneuert werden.  Wenn Sie ein abgelaufenes Zertifikat nicht erneuern möchten, sollten Sie es löschen.
@@ -83,6 +86,7 @@ Sie haben eine vorhandene vertrauenswürdige Zertifizierungsstelle auf Ihrem AFX
 
 
 
+[[add-a-clientserver-certificate-or-local-certificate-authority]]
 == Fügen Sie ein Client-/Server-Zertifikat oder eine lokale Zertifizierungsstelle hinzu
 
 Sie können im Rahmen der Aktivierung sicherer Webdienste ein Client-/Server-Zertifikat oder eine lokale Zertifizierungsstelle hinzufügen.
@@ -99,6 +103,7 @@ Sie haben Ihrem AFX-System ein neues Client-/Server-Zertifikat oder lokale Autor
 
 
 
+[[renew-or-delete-a-clientserver-certificate-or-local-certificate-authorities]]
 == Erneuern oder Löschen eines Client-/Server-Zertifikats oder lokaler Zertifizierungsstellen
 
 Client-/Server-Zertifikate und lokale Zertifizierungsstellen müssen jährlich erneuert werden.  Wenn Sie ein abgelaufenes Zertifikat oder lokale Zertifizierungsstellen nicht erneuern möchten, sollten Sie diese löschen.
@@ -130,6 +135,7 @@ Sie haben ein vorhandenes Client-/Server-Zertifikat oder eine lokale Zertifizier
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * https://docs.netapp.com/us-en/ontap/authentication/install-server-certificate-cluster-svm-ssl-server-task.html["Generieren und installieren Sie ein CA-signiertes Serverzertifikat in ONTAP"^]

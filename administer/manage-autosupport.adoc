@@ -20,6 +20,7 @@ NOTE: Sie müssen sich mit einem Clusteradministratorkonto beim System Manager a
 
 
 
+[[test-autosupport-connectivity]]
 == Testen Sie die AutoSupport Konnektivität
 
 Nachdem Sie Ihren Cluster eingerichtet haben, sollten Sie Ihre AutoSupport Konnektivität testen, um sicherzustellen, dass der technische Support die von AutoSupport generierten Nachrichten empfangen kann.
@@ -32,6 +33,7 @@ Nachdem Sie Ihren Cluster eingerichtet haben, sollten Sie Ihre AutoSupport Konne
 
 
 
+[[add-autosupport-recipients]]
 == AutoSupport -Empfänger hinzufügen
 
 Sie können optional Mitglieder Ihrer internen Supportorganisation zur Liste der E-Mail-Adressen hinzufügen, die AutoSupport Nachrichten erhalten.
@@ -54,6 +56,7 @@ Die von Ihnen hinzugefügten E-Mail-Adressen erhalten neue AutoSupport -Nachrich
 
 
 
+[[send-autosupport-data]]
 == AutoSupport -Daten senden
 
 Wenn bei Ihrem AFX-System ein Problem auftritt, sollten Sie die AutoSupport Daten manuell senden.  Dadurch kann die Zeit, die zum Identifizieren und Beheben des Problems benötigt wird, erheblich verkürzt werden.
@@ -70,6 +73,7 @@ Ihre AutoSupport Daten werden an den technischen Support gesendet.
 
 
 
+[[suppress-support-case-generation]]
 == Unterdrücken der Supportfallgenerierung
 
 Wenn Sie ein Upgrade oder eine Wartung an Ihrem AFX-System durchführen, möchten Sie möglicherweise die Generierung von AutoSupport Supportfällen unterdrücken, bis Ihr Upgrade oder Ihre Wartung abgeschlossen ist.
@@ -86,6 +90,7 @@ Während der von Ihnen angegebenen Zeit werden keine AutoSupport -Fälle generie
 
 
 
+[[resume-support-case-generation]]
 == Fortsetzen der Supportfallgenerierung
 
 Wenn Sie die Generierung von Supportfällen während eines Upgrade- oder Wartungsfensters unterdrückt haben, sollten Sie die Generierung von Supportfällen unmittelbar nach Abschluss Ihres Upgrades oder Ihrer Wartung wieder aufnehmen.
@@ -102,6 +107,7 @@ AutoSupport -Fälle werden bei Bedarf automatisch für Ihr AFX-System generiert.
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * https://docs.netapp.com/us-en/ontap/system-admin/manage-autosupport-concept.html["Erfahren Sie mehr über ONTAP AutoSupport"^]

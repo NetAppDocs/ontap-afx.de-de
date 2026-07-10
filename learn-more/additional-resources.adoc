@@ -15,6 +15,7 @@ Sie können auf zusätzliche Ressourcen zugreifen, die Ihnen bei der Verwaltung 
 
 
 
+[[ontap-documentation]]
 == ONTAP-Dokumentation
 
 * https://docs.netapp.com/us-en/ontap/["Einheitliches ONTAP"^]
@@ -24,6 +25,7 @@ Sie können auf zusätzliche Ressourcen zugreifen, die Ihnen bei der Verwaltung 
 
 
 
+[[netapp-support]]
 == NetApp Support
 
 * https://mysupport.netapp.com/["NetApp Support Site"^]

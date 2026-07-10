@@ -15,6 +15,7 @@ Die vom AFX-System verwendeten Ports bilden die Grundlage für Netzwerkkonnektiv
 
 
 
+[[create-a-vlan]]
 == Erstellen eines VLAN
 
 Ein VLAN besteht aus Switch-Ports, die in einer Broadcast-Domäne zusammengefasst sind.  Mithilfe von VLANs können Sie die Sicherheit erhöhen, potenzielle Probleme isolieren und verfügbare Pfade innerhalb Ihrer IP-Netzwerkinfrastruktur einschränken.
@@ -45,6 +46,7 @@ Sie haben ein VLAN erstellt, um die Sicherheit zu erhöhen, Probleme zu isoliere
 
 
 
+[[create-a-lag]]
 == Erstellen eines LAG
 
 Eine Link Aggregate Group (LAG) ist eine Technik, die mehrere physische Netzwerkverbindungen zu einer einzigen logischen Verbindung kombiniert.  Sie können es verwenden, um die Bandbreite zu erhöhen und Redundanz zwischen Knoten bereitzustellen.
@@ -58,6 +60,7 @@ Eine Link Aggregate Group (LAG) ist eine Technik, die mehrere physische Netzwerk
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * link:../administer/manage-cluster-networking.html["Verwalten des AFX-Clusternetzwerks"]

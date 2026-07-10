@@ -15,12 +15,14 @@ Sie können eine SVM von einem ONTAP Cluster zu einem anderen migrieren. Die SVM
 
 
 
+[[interoperability-considerations]]
 == Überlegungen zur Interoperabilität
 
 Bevor Sie eine SVM-Migration planen und durchführen, sollten Sie sich über die Interoperabilitätsaspekte, einschließlich der Möglichkeiten und Einschränkungen, im Klaren sein.
 
 
 
+[[use-cases]]
 === Anwendungsfälle
 
 Clusteradministratoren können eine SVM von einem Quellcluster in einen Zielcluster verschieben. Dies können Sie im Rahmen der Kapazitätsverwaltung und des Lastenausgleichs tun oder um Geräte-Upgrades oder Rechenzentrumskonsolidierungen zu ermöglichen. Da das AFX-Speichersystem keine direkten Upgrades von Unified ONTAP unterstützt, ist die SVM-Migration ein wichtiger Anwendungsfall.
@@ -29,6 +31,7 @@ Sie können Ihre Anwendungsworkloads von einem Unified ONTAP Cluster auf AFX-Clu
 
 
 
+[[version-interoperability]]
 === Versionsinteroperabilität
 
 Die folgende Tabelle beschreibt die zulässigen SVM-Migrationen basierend auf der ONTAP -Persönlichkeit und der Version des Quell- und Zielclusters.
@@ -48,6 +51,7 @@ Die folgende Tabelle beschreibt die zulässigen SVM-Migrationen basierend auf de
 |===
 
 
+[[prechecks]]
 === Vorprüfungen
 
 Unified ONTAP umfasst mehrere Vorprüfungen, die auch mit AFX implementiert werden.  Darüber hinaus wurden mehrere neue Vorprüfungen hinzugefügt, um Funktionen zu kennzeichnen, die von AFX nicht unterstützt werden, darunter:
@@ -58,6 +62,7 @@ Unified ONTAP umfasst mehrere Vorprüfungen, die auch mit AFX implementiert werd
 
 
 
+[[volume-provisioning]]
 === Volume-Bereitstellung
 
 Die Volumes werden so bereitgestellt, dass ihre Platzierung innerhalb der Storage Availability Zone (SAZ) des AFX-Clusters ausgeglichen ist.
@@ -81,6 +86,7 @@ Verschlüsselung:: Ein AFX-System unterstützt die NetApp Volume-Verschlüsselun
 |===
 
 
+[[additional-restrictions]]
 === Zusätzliche Beschränkungen
 
 Es gibt weitere Einschränkungen, die Sie vor der Migration einer SVM beachten sollten.
@@ -90,6 +96,7 @@ MetroCluster:: Das AFX-Speichersystem unterstützt NetApp MetroCluster nicht.  D
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * https://docs.netapp.com/us-en/ontap/svm-migrate/index.html["ONTAP SVM Datenmobilität"^]

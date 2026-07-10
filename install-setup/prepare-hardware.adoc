@@ -15,6 +15,7 @@ Bereiten Sie die Installation Ihres AFX 1K-Speichersystems vor, indem Sie den St
 
 
 
+[[step-1-prepare-the-site]]
 == Schritt 1: Bereiten Sie die Site vor
 
 Stellen Sie bei der Installation Ihres AFX 1K-Speichersystems sicher, dass der Standort und der Schrank oder das Rack, das Sie verwenden möchten, den Spezifikationen für Ihre Konfiguration entsprechen.
@@ -31,6 +32,7 @@ Stellen Sie bei der Installation Ihres AFX 1K-Speichersystems sicher, dass der S
 
 
 
+[[step-2-unpack-the-boxes]]
 == Schritt 2: Auspacken der Kartons
 
 Nachdem Sie sichergestellt haben, dass Standort und Schrank den Spezifikationen entsprechen, packen Sie die Kartons aus und vergleichen Sie den Inhalt mit dem Lieferschein.
@@ -72,6 +74,7 @@ Die folgenden Elemente sind einige der Inhalte, die Sie möglicherweise in den K
 
 
 
+[[step-3-register-your-storage-system]]
 == Schritt 3: Registrieren Sie Ihr Speichersystem
 
 Nachdem Sie sichergestellt haben, dass Ihr Standort die Anforderungen für die Spezifikationen Ihres AFX 1K-Speichersystems erfüllt, und überprüft haben, dass Sie alle bestellten Teile haben, registrieren Sie Ihr Speichersystem.
@@ -112,7 +115,7 @@ Bestehender NetApp Kunde
  a| 
 Neuer NetApp Kunde
  a| 
-.. Klicken Sie auf *Jetzt registrieren* und erstellen Sie ein Konto.
+.. *Jetzt registrieren* auswählen und ein Konto erstellen.
 .. Wählen Sie *Systeme* > *Systeme registrieren*.
 .. Geben Sie die Seriennummer des Speichersystems und die gewünschten Details ein.
 

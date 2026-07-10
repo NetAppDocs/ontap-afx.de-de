@@ -21,6 +21,7 @@ TIP: Erfahren Sie mehr über die neue und verbesserte Unterstützung für https:
 
 
 
+[[performance]]
 == Performance
 
 [cols="2,4"]
@@ -44,6 +45,7 @@ Die dynamische Speichereffizienz optimiert intelligent die Speichereffizienzvorg
 |===
 
 
+[[rest-api]]
 == REST-API
 
 [cols="2,4"]
@@ -57,6 +59,7 @@ ONTAP 9.19.1 fügt sechs Parameter hinzu, die derzeit im  `/storage/volumes`�
 |===
 
 
+[[security]]
 == Sicherheit
 
 [cols="2,4"]
@@ -75,6 +78,7 @@ Sie können die Transport Layer Security (TLS)-Verschlüsselung und -Entschlüss
 |===
 
 
+[[storage-resource-management]]
 == Ressourcenmanagement
 
 [cols="2,4"]
@@ -93,6 +97,7 @@ Sie können die Standardeinstellungen ändern, die steuern, wie QoS-Richtlinieng
 |===
 
 
+[[upgrade]]
 == Upgrade
 
 [cols="2,4"]

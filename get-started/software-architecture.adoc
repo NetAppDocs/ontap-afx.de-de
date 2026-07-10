@@ -15,72 +15,84 @@ Die AFX-Architektur besteht aus mehreren Hardware- und Softwarekomponenten.  Die
 
 
 
+[[physical-components]]
 == Physische Komponenten
 
 Wenn Sie zum ersten Mal mit AFX beginnen, ist es hilfreich, zunächst einen Überblick über die physischen Komponenten zu erhalten, wie sie in Ihrem Rechenzentrum installiert sind.
 
 
 
+[[controller-nodes]]
 === Controller-Knoten
 
 Auf AFX-Controllerknoten wird eine spezielle Persönlichkeit der ONTAP -Software ausgeführt, die zur Unterstützung der Anforderungen der AFX-Umgebung entwickelt wurde.  Clients greifen über mehrere Protokolle auf die Knoten zu, darunter NFS, SMB und S3.  Jeder Knoten verfügt über eine vollständige Ansicht des Speichers, auf den er basierend auf den Clientanforderungen zugreifen kann.  Die Knoten sind zustandsbehaftet und verfügen über einen nichtflüchtigen Speicher, um kritische Statusinformationen beizubehalten und zusätzliche, auf die Ziel-Workloads zugeschnittene Verbesserungen zu beinhalten.
 
 
 
+[[storage-shelves-and-disks]]
 === Lagerregale und -platten
 
 AFX-Speicherregale verwenden Non-Volatile Memory Express over Fabrics (NVMe-oF), um SSDs mit hoher Dichte anzuschließen.  Die Festplatten kommunizieren über ein Fabric mit extrem geringer Latenz mithilfe von RDMA over Converged Ethernet (RoCE).  Die Speicherregale, einschließlich der E/A-Module, Netzwerkkarten, Lüfter und Netzteile, sind vollständig redundant und weisen keine einzelne Fehlerquelle auf.  Mithilfe selbstverwalteter Technologie werden alle Aspekte der RAID-Konfiguration und des Festplattenlayouts verwaltet und gesteuert.
 
 
 
+[[cluster-storage-switch-network]]
 === Cluster-Speicher-Switch-Netzwerk
 
 Redundante und leistungsstarke Switches verbinden die AFX-Controllerknoten mit den Speicherregalen.  Zur Leistungsoptimierung werden erweiterte Protokolle verwendet.  Das Design basiert auf VLAN-Tagging mit mehreren Netzwerkpfaden sowie Tech-Refresh-Konfigurationen, um einen kontinuierlichen Betrieb und einfache Upgrades zu gewährleisten.
 
 
 
+[[client-training-environment]]
 === Kundenschulungsumgebung
 
 Die Client-Trainingsumgebung ist eine Laborumgebung mit vom Kunden bereitgestellter Hardware, wie z. B. GPU-Clustern und KI-Workstations.  Es ist in der Regel für die Unterstützung von Modelltraining, Inferenz und anderen KI/ML-bezogenen Arbeiten konzipiert.  Clients greifen über Industriestandardprotokolle wie NFS, SMB und S3 auf AFX zu.
 
 
 
+[[client-network]]
 === Client-Netzwerk
 
 Dieses interne Netzwerk verbindet die Client-Trainingsumgebung mit dem AFX-Speichercluster.  Das Netzwerk wird vom Kunden bereitgestellt und verwaltet, NetApp erwartet jedoch, Empfehlungen für Anforderungen und Design vor Ort abzugeben.
 
 
 
+[[logical-components]]
 == Logische Komponenten
 
 In AFX sind mehrere logische Komponenten enthalten.  Sie werden zusammen mit den physischen Komponenten des Clusters in Software implementiert.  Die logischen Komponenten erzwingen eine Struktur, die die Verwendung und Konfiguration der AFX-Systeme bestimmt.
 
 
 
+[[common-storage-pool]]
 === Gemeinsamer Speicherpool
 
 Die Storage Availability Zone (SAZ) ist ein gemeinsamer Speicherpool für den gesamten Cluster. Es handelt sich um eine Sammlung von Festplatten in den Speichergehäusen, auf die alle Controller-Knoten Lese- und Schreibzugriff haben.  Die SAZ bietet ein Bereitstellungsmodell ohne feste Einschränkungen hinsichtlich der von den Knoten nutzbaren Speichersysteme; die Verteilung der Datenträger auf die Knoten wird automatisch von ONTAP übernommen. Kunden können freien Speicherplatz und Speichernutzung als Eigenschaften des gesamten AFX-Clusters anzeigen.
 
 
 
+[[flexvolumes-flexgroups-and-buckets]]
 === FlexVolumes, FlexGroups und Buckets
 
 FlexVolumes, FlexGroups und S3-Buckets sind die _Datencontainer_, die den AFX-Administratoren basierend auf den Clientzugriffsprotokollen zur Verfügung gestellt werden. Sie funktionieren identisch zu Unified ONTAP.  Diese skalierbaren Container sind so konzipiert, dass sie viele der komplexen internen Speicherdetails, wie z. B. Datenplatzierung und Kapazitätsausgleich, abstrahieren.
 
 
 
+[[data-layout-and-access]]
 === Datenlayout und -zugriff
 
 Das Datenlayout und der Datenzugriff sind auf nahtlosen Zugriff und effiziente Nutzung der GPUs abgestimmt.  Dies spielt eine entscheidende Rolle bei der Beseitigung von Engpässen und der Aufrechterhaltung einer konstanten Leistung.
 
 
 
+[[svms-and-multi-tenancy]]
 === SVMs und Mandantenfähigkeit
 
 AFX bietet ein Mandantenmodell, das auf dem mit AFF und FAS Systemen verfügbaren SVM-Modell aufbaut. Das AFX-Tenant-Modell ist identisch mit dem Unified ONTAP , wurde jedoch für eine vereinfachte Administration in einer NAS- und S3-Objektumgebung optimiert.  Beispielsweise wurden Konfigurationsoptionen für SAN sowie Aggregate und RAID-Gruppen entfernt.
 
 
 
+[[afx-cluster-deployment]]
 == AFX-Clusterbereitstellung
 
 Die folgende Abbildung veranschaulicht eine typische AFX-Clusterbereitstellung. Der AFX-Cluster umfasst Controller-Knoten, die von den Speichersystemen entkoppelt und über ein gemeinsames internes Netzwerk verbunden sind.  Außerhalb der Grenzen des AFX-Clusters greifen Clients über ein separates Clientnetzwerk auf den Cluster zu.

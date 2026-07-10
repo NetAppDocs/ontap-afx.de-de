@@ -15,18 +15,21 @@ Sie können die Rechenkapazität eines AFX-Clusters unabhängig von der Speicher
 
 
 
+[[prepare-to-expand-a-cluster]]
 == Vorbereiten der Erweiterung eines Clusters
 
 Bevor Sie einen AFX-Cluster erweitern, sollten Sie mit den grundlegenden Anforderungen und der allgemeinen Vorgehensweise zur Fehlerbehebung vertraut sein.
 
 
 
+[[requirements]]
 === Anforderungen
 
 Sie benötigen die Anmeldeinformationen für ein Cluster-Administratorkonto und müssen in der Lage sein, per SSH eine Verbindung zur ONTAP -CLI herzustellen.  Beim Erweitern eines Clusters müssen Sie eine gerade Anzahl von Knoten hinzufügen und die Größenbeschränkungen Ihres AFX-Systems basierend auf der Version einhalten.
 
 
 
+[[troubleshooting]]
 === Fehlerbehebung
 
 Es gibt einige Konzepte und Szenarien zur Fehlerbehebung, die Sie bei der Clustererweiterung beachten sollten.
@@ -61,6 +64,7 @@ Für weitere Unterstützung sollten Sie sich bei Bedarf an den NetApp Support we
 
 
 
+[[add-nodes-to-expand-a-cluster]]
 == Hinzufügen von Knoten zum Erweitern eines Clusters
 
 Dieses Verfahren beschreibt, wie einem vorhandenen Cluster ein Knotenpaar hinzugefügt wird, und kann an andere Bereitstellungsumgebungen angepasst werden.  Sie müssen sowohl die ONTAP CLI als auch die System Manager-Verwaltungsschnittstellen verwenden.
@@ -140,6 +144,7 @@ Dieser Schritt ist nur erforderlich, wenn die anderen Schnittstellen nicht die v
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * link:../get-started/prepare-cluster-admin.html["Bereiten Sie sich auf die Verwaltung Ihres AFX-Systems vor"]

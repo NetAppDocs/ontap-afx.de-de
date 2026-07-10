@@ -15,6 +15,7 @@ Bevor Sie AFX in einer Produktionsumgebung bereitstellen, müssen Sie die Verwal
 
 
 
+[[understand-storage-virtual-machines]]
 == Grundlegendes zu virtuellen Speichermaschinen
 
 Eine Storage Virtual Machine (SVM) ist eine isolierte Server- oder Mandantenumgebung innerhalb eines ONTAP Clusters.  Sie können eine SVM so konfigurieren, dass sie den verbundenen Clients Daten bereitstellt.  Sie sollten mit den Funktionen und Eigenschaften der AFX-SVMs vertraut sein.
@@ -28,6 +29,7 @@ Dedizierte Netzwerkschnittstellen:: Jede SVM verfügt über einen eigenen dedizi
 
 
 
+[[two-afx-administrative-levels]]
 == Zwei AFX-Verwaltungsebenen
 
 Die administrativen ONTAP -Aufgaben, die Sie mit AFX ausführen, fallen im Allgemeinen in zwei verschiedene Kategorien.  Einige Aufgaben gelten für den gesamten ONTAP Cluster, während andere Aufgaben für eine bestimmte SVM gelten.  Dies führt zu einem zweistufigen Verwaltungsmodell.
@@ -43,6 +45,7 @@ SVM-Administrator:: Die Rolle eines SVM-Administrators ermöglicht die Kontrolle
 
 
 
+[[three-administrative-interfaces]]
 == Drei Verwaltungsschnittstellen
 
 Wie AFF und FAS -Systeme verfügt AFX über drei Verwaltungsschnittstellen.  Die LIF (oder IP-Adresse), die Sie verwenden müssen, variiert je nach Verwaltungsschnittstelle und Ihrer Umgebung.
@@ -65,12 +68,14 @@ NOTE: Für die meisten Verwaltungsaufgaben wird die Benutzeroberfläche des Syst
 |===
 
 
+[[learn-to-search-filter-and-sort-information-in-system-manager]]
 == Erfahren Sie, wie Sie im System Manager Informationen suchen, filtern und sortieren
 
 Die Benutzeroberfläche des System Managers umfasst eine Reihe robuster Funktionen, mit denen Sie auf die benötigten Informationen zugreifen und diese anzeigen können.  Wenn Sie lernen, diese Funktionen zu nutzen, können Sie das AFX-Speichersystem besser verwalten. Sehen https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html["Suchen, Filtern und Sortieren von Informationen im System Manager"^] für weitere Informationen.
 
 
 
+[[access-the-ontap-cli]]
 == Zugriff auf die ONTAP CLI
 
 Während Sie System Manager für die meisten AFX-Verwaltungsaufgaben verwenden können, gibt es einige Aufgaben, die Sie nur mit der ONTAP Befehlszeilenschnittstelle ausführen können.
@@ -104,6 +109,7 @@ Sie benötigen Folgendes:
 
 
 
+[[working-with-ontap-ha-pairs]]
 == Arbeiten mit ONTAP HA-Paaren
 
 Wie bei Unified ONTAP werden AFX-Clusterknoten in Hochverfügbarkeitspaaren (HA) konfiguriert, um Fehlertoleranz und unterbrechungsfreien Betrieb zu gewährleisten.  Durch die HA-Kopplung können Speichervorgänge im Falle eines Knotenausfalls, beispielsweise eines Speicher-Failovers, online bleiben.  Jeder Knoten ist mit einem anderen Knoten verbunden, um ein einzelnes Paar zu bilden.  Dies geschieht im Allgemeinen über eine direkte Verbindung zwischen den NVRAM -Modulen der beiden Knoten.
@@ -112,6 +118,7 @@ Mit AFX wird den Backend-Cluster-Switches ein neues HA-VLAN hinzugefügt, damit 
 
 
 
+[[afx-cluster-deployment-limitations]]
 == Einschränkungen bei der AFX-Clusterbereitstellung
 
 Bei der Konfiguration und Nutzung Ihres Clusters gelten in AFX verschiedene Beschränkungen, darunter Mindest- und Höchstwerte. Diese Beschränkungen lassen sich in mehrere Kategorien einteilen.
@@ -128,6 +135,7 @@ Sie sollten die Details im NetApp Hardware Universe und im Interoperability Matr
 
 
 
+[[confirm-afx-system-health]]
 == Bestätigen Sie die Integrität des AFX-Systems
 
 Bevor Sie AFX-Verwaltungsaufgaben ausführen, sollten Sie den Zustand des Clusters überprüfen.
@@ -170,6 +178,7 @@ link:../administer/view-insights.html["Verwenden Sie Insights, um die Leistung u
 
 
 
+[[quick-start-for-creating-and-using-an-svm]]
 == Schnellstart zum Erstellen und Verwenden einer SVM
 
 Nachdem Sie den AFX-Cluster installiert und eingerichtet haben, können Sie mit der Durchführung der für die meisten AFX-Bereitstellungen typischen Verwaltungsaufgaben beginnen.  Hier sind die grundlegenden Schritte, die erforderlich sind, um mit der Datenfreigabe für Clients zu beginnen.
@@ -192,6 +201,7 @@ link:../manage-data/prepare-manage-data.html["Vorbereiten"]zur Zuordnung und Ver
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * https://hwu.netapp.com/["NetApp Hardware Universe"^]

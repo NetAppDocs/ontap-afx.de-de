@@ -15,12 +15,14 @@ Nach der Installation Ihrer AFX-Hardware können Sie die ONTAP-Cluster-Einrichtu
 
 
 
+[[prepare-to-set-up-an-afx-storage-system]]
 == Bereiten Sie die Einrichtung eines AFX-Speichersystems vor
 
 Bevor Sie Ihren ONTAP Cluster einrichten, sollten Sie die grundlegenden AFX-Anforderungen und zusätzliche AIDE-Überlegungen überprüfen, um sicherzustellen, dass Sie über alle notwendigen Informationen und Ressourcen verfügen, um den Einrichtungsprozess erfolgreich abzuschließen.
 
 
 
+[[core-afx-requirements]]
 === Kernanforderungen von AFX
 
 Bei der Einrichtung Ihres AFX-Clusters sind mehrere grundlegende Anforderungen zu beachten.
@@ -53,6 +55,7 @@ Sie benötigen außerdem die folgenden zugehörigen Netzwerkinformationen:
 
 
 
+[[additional-aide-considerations]]
 === Weitere AIDE-Überlegungen
 
 Bei der erstmaligen Installation und Einrichtung von AFX können Sie optional die NetApp AI Data Engine (AIDE) einbinden. AIDE unterstützt zwei Bereitstellungsmodelle: AIDE Software auf Servern von Drittanbietern oder von NetApp bereitgestellte Data Compute Nodes (DCNs). Wenn Sie planen, AIDE einzurichten, erfüllen Sie zunächst die Voraussetzungen für Ihr Bereitstellungsmodell:
@@ -64,6 +67,7 @@ Bei der erstmaligen Installation und Einrichtung von AFX können Sie optional di
 
 
 
+[[perform-initial-cluster-setup]]
 == Durchführen der ersten Clustereinrichtung
 
 Sie können Ihr Laptop-Gerät mit dem AFX-Cluster verbinden und mehrere globale Konfigurationseinstellungen festlegen.
@@ -111,6 +115,7 @@ Sie werden zur Anmeldeseite des Systemmanagers weitergeleitet.  Führen Sie die 
 
 
 
+[[complete-cluster-setup]]
 == Vollständige Clustereinrichtung
 
 Nachdem die Erstkonfiguration durchgeführt wurde, können Sie die Einrichtung des ONTAP Clusters mit dem System Manager abschließen.
@@ -139,6 +144,7 @@ Sie benötigen folgende Informationen:
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * link:../get-started/learn-about-aide.html["Erfahren Sie mehr über die NetApp AI Data Engine"]

@@ -18,6 +18,7 @@ Notieren Sie die erforderlichen Informationen für jedes Netzwerk, das Sie mit I
 
 
 
+[[gather-network-information]]
 == Sammeln von Netzwerkinformationen
 
 Bevor Sie mit der Installation Ihres AFX 1K-Speichersystems beginnen, sammeln Sie die erforderlichen Netzwerkinformationen
@@ -48,12 +49,14 @@ Während der Clustereinrichtung empfiehlt ONTAP eine Reihe von Netzwerkschnittst
 
 
 
+[[network-requirements-for-cisco-switches]]
 == Netzwerkanforderungen für Cisco -Switches
 
 Überprüfen Sie bei der Installation und Wartung der Cisco Nexus 9332D-GX2B- und 9364D-GX2A-Switches unbedingt die Verkabelungs- und Netzwerkanforderungen.
 
 
 
+[[network-requirements]]
 === Netzwerkanforderungen
 
 Für alle Switch-Konfigurationen benötigen Sie folgende Netzwerkinformationen.
@@ -65,6 +68,7 @@ Für alle Switch-Konfigurationen benötigen Sie folgende Netzwerkinformationen.
 
 
 
+[[cabling-requirements]]
 === Verkabelungsanforderungen
 
 * Sie verfügen über die passende Anzahl und Art an Kabeln und Kabelsteckern für Ihre Switches. Siehe die https://hwu.netapp.com["Hardware Universe"^] .

@@ -18,6 +18,7 @@ NOTE: Jedem ONTAP -Benutzer muss eine Rolle zugewiesen sein.  Eine Rolle umfasst
 
 
 
+[[create-an-account-role]]
 == Erstellen einer Kontorolle
 
 Rollen für Clusteradministratoren und Speicher-VM-Administratoren werden automatisch erstellt, wenn Ihr AFX-Cluster eingerichtet und initialisiert wird.  Sie können zusätzliche Benutzerkontorollen erstellen, um bestimmte Funktionen zu definieren, die den Rollen zugewiesene Benutzer in Ihrem Cluster ausführen können.
@@ -32,6 +33,7 @@ Rollen für Clusteradministratoren und Speicher-VM-Administratoren werden automa
 
 
 
+[[create-a-cluster-account]]
 == Erstellen eines Clusterkontos
 
 Sie können ein Konto auf Clusterebene erstellen, das Sie bei der Cluster- oder SVM-Verwaltung verwenden können.
@@ -54,6 +56,7 @@ Ein neues Konto wird erstellt und steht zur Verwendung mit Ihrem AFX-Cluster zur
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * link:../administer/prepare-authentication.html["Vorbereiten von Authentifizierungsdiensten"]

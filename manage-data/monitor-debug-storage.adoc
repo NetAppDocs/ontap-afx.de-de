@@ -15,6 +15,7 @@ Das AFX-System umfasst mehrere Optionen zur Überwachung des von jedem Cluster v
 
 
 
+[[display-nas-clients]]
 == NAS-Clients anzeigen
 
 Sie können eine Liste der NFS- und SMB/CIFS-Clients anzeigen, die derzeit mit dem AFX-Cluster verbunden sind.
@@ -27,6 +28,7 @@ Sie können eine Liste der NFS- und SMB/CIFS-Clients anzeigen, die derzeit mit d
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * link:../manage-data/prepare-manage-data.html["Bereiten Sie sich auf die Verwaltung Ihrer AFX-Daten vor"]

@@ -15,6 +15,7 @@ Informationen zu den unterstützten Hardwarekomponenten und Verkabelungsoptionen
 
 
 
+[[supported-afx-2k-cabling-configuration]]
 == Unterstützte AFX 2K Kabelkonfiguration
 
 Die Erstkonfiguration des AFX 2K Speichersystems unterstützt mindestens vier Controller-Knoten, die über zwei Switches mit den Speicher-Disk-Shelfs verbunden sind.
@@ -25,6 +26,7 @@ image:../media/drw_afx_2k_cable_overview_half_node_ieops-2871.svg["Beispielverka
 
 
 
+[[supported-hardware-components]]
 == Unterstützte Hardwarekomponenten
 
 Die kompatiblen Storage-Disk-Shelves, Switches und Kabeltypen für das AFX 2K Storage System werden aufgeführt.

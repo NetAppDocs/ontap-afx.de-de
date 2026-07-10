@@ -26,6 +26,7 @@ Nachdem Sie Ihr Upgrade vorbereitet haben, wird empfohlen, Upgrades mitlink:http
 
 
 
+[[execute-automated-pre-upgrade-checks-before-a-planned-upgrade]]
 == Führen Sie vor einem geplanten Upgrade automatisierte Vorabprüfungen durch.
 
 Sie müssen sich nicht im Prozess der Aktualisierung Ihrer ONTAP-Software befinden, um die automatisierten ONTAP-Vorabprüfungen auszuführen. Das Ausführen der Vorabprüfungen unabhängig vom automatisierten ONTAP-Upgrade-Prozess ermöglicht es Ihnen zu sehen, welche Prüfungen an Ihrem Cluster durchgeführt werden, und gibt Ihnen eine Liste aller Fehler oder Warnungen, die vor dem eigentlichen Upgrade behoben werden sollten.

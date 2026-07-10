@@ -54,8 +54,19 @@ Alle „a“-Ports sind mit Switch A verbunden, und alle „b“-Ports sind mit 
 
 NOTE: Für Cisco Nexus 9332D-GX2B- und 9364D-GX2A-Switch-Konfigurationen zum AFX 1K-Speichersystem sind 4x100GbE-Breakout-Kabelverbindungen erforderlich.
 
+* Die gemischte Verwendung von Kupfer- und optischen Breakout-Verbindungen (Kabeln) wird von NVIDIA C6X-DX und CX7 (100GbE) NIC-Adaptern nicht unterstützt. Es sollten entweder ausschließlich Kupfer- oder ausschließlich optische Verbindungen verwendet werden, eine Kombination verschiedener Verbindungstypen ist zu vermeiden. Das Mischen der Verbindungstypen kann nach längerer Nutzung zu einer Sättigung der Verbindung führen.
++
+Stellen Sie sicher, dass die richtigen Kabel für Ihren Anschlusstyp vorhanden sind, bevor die Switches verkabelt werden.
+
++
+
+NOTE: Weitere Informationen zum Mischen von Verbindungstypen enthält der NetApp Knowledge Base Artikel link:https://kb.netapp.com/on-prem/ontap/OHW/OHW-Issues/CHW-3504["CRC-Link-Fehler treten auf der CX6-DX NIC mit gemischten Kupfer- und Glasfaser-Breakout-Kabeln an den Ports auf"^].
 
 
+
+
+
+[[step-1-connect-the-controllers-to-the-management-network]]
 == Schritt 1: Verbinden Sie die Controller mit dem Verwaltungsnetzwerk
 
 Verbinden Sie den Management-Anschluss (Schraubenschlüssel) jedes Controllers mit einem der Management-Switches oder verbinden Sie ihn direkt mit Ihrem Management-Netzwerk.
@@ -76,6 +87,7 @@ IMPORTANT: Stecken Sie die Netzkabel noch nicht ein.
 
 
 
+[[step-2-connect-the-controllers-to-the-host-network]]
 == Schritt 2: Verbinden Sie die Controller mit dem Host-Netzwerk
 
 Verbinden Sie die Ethernet-Modul-Ports mit Ihrem Host-Netzwerk.
@@ -125,6 +137,7 @@ image::../media/drw_afx_network_cabling_b_ieops-2814.svg[Kabel zum Ethernet-Netz
 
 
 
+[[step-3-cable-the-cluster-ha-and-storage-connections-to-switch-a]]
 == Schritt 3: Verkabeln Sie die Cluster-, HA- und Speicherverbindungen mit Switch A
 
 Verwenden Sie das 4x100GbE-Breakout-Kabel, um die Cluster-, HA- und Speicherports der Controller mit Netzwerk-Switch A zu verbinden. Verwenden Sie das Cluster- und HA-Interconnect-Kabel, um die Ports e1a und e7a mit Switch A zu verbinden. Die Ports e1a werden für die HA-Verbindungen verwendet, und die Ports e7a werden für die Cluster-Verbindungen verwendet. Für die Speicherverbindungen verbinden Sie die Ports e10a und e11a mit Switch A.
@@ -157,6 +170,7 @@ image::../media/drw_afx_ha_cluster_storage_a_ieops-2779.svg[Kabelcontroller-Clus
 
 
 
+[[step-4-cable-the-cluster-ha-and-storage-connections-to-switch-b]]
 == Schritt 4: Verkabeln Sie die Cluster-, HA- und Speicherverbindungen mit Switch B
 
 Verwenden Sie das 4x100GbE-Breakout-Kabel, um die Cluster-, HA- und Speicherports der Controller mit Netzwerk-Switch B zu verbinden. Verwenden Sie das Cluster- und HA-Interconnect-Kabel, um die Ports e1b und e7b mit Switch B zu verbinden. Die Ports e1b werden für die HA-Verbindungen verwendet, und die Ports e7b werden für die Cluster-Verbindungen verwendet. Für die Speicherverbindungen verbinden Sie die Ports e10b und e11b mit Switch B.
@@ -188,6 +202,7 @@ image::../media/drw_afx_ha_cluster_storage_b_ieops-2780.svg[Kabelcontroller-Clus
 
 
 
+[[step-5-cable-the-shelf-to-switch-connections]]
 == Schritt 5: Verkabeln Sie die Verbindungen zwischen Regal und Switch
 
 Verbinden Sie die NX224-Speicherregale mit den Switches.

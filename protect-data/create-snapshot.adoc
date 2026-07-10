@@ -15,6 +15,7 @@ Um Daten auf Ihrem AFX-System zu sichern, müssen Sie einen Snapshot erstellen. 
 
 
 
+[[before-you-begin]]
 == Bevor Sie beginnen
 
 Ein Snapshot ist eine lokale, schreibgeschützte Kopie Ihrer Daten, mit der Sie Volumes zu bestimmten Zeitpunkten wiederherstellen können.  Snapshots können manuell bei Bedarf oder automatisch in regelmäßigen Abständen basierend auf einemlink:policies-schedules.html["Snapshot-Richtlinie und -Zeitplan"] .
@@ -36,6 +37,7 @@ Basierend auf den Snapshot-Richtliniendefinitionen werden automatisierte Snapsho
 
 
 
+[[create-a-snapshot]]
 == Erstellen eines Snapshots
 
 Erstellen Sie einen Snapshot eines Volumes oder einer Konsistenzgruppe.
@@ -149,6 +151,7 @@ Die anfängliche Datenübertragung für die Replikation beginnt standardmäßig 
 ====
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["Erstellen einer ONTAP Snapshot-Richtlinie"^]

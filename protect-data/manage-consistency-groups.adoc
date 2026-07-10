@@ -15,6 +15,7 @@ Sie können die Konsistenzgruppen auf einem AFX-System verwalten.  Dies kann Ihr
 
 
 
+[[add-snapshot-data-protection-to-a-consistency-group]]
 == Hinzufügen des Snapshot-Datenschutzes zu einer Konsistenzgruppe
 
 Wenn Sie einer Konsistenzgruppe Snapshot-Datenschutz hinzufügen, können lokale Snapshots der Konsistenzgruppe in regelmäßigen Abständen basierend auf einem vordefinierten Zeitplan erstellt werden.
@@ -59,6 +60,7 @@ dannimage:icon_dropdown_arrow.gif["blauer Pfeil nach unten"] .
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["Erfahren Sie mehr über ONTAP Consistency Groups"^]

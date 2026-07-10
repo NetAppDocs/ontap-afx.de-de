@@ -25,7 +25,7 @@ Nachdem Sie Ihr AFX 2K Speichersystem verkabelt haben, ist es erforderlich, die 
 . Schalten Sie jeden Schalter ein.
 . Die Switches werden so konfiguriert, dass sie das AFX 2K Storage System unterstützen.
 +
-** Weitere Informationen zur Konfiguration der Schalter enthält die link:https://docs.netapp.com/us-en/ontap-systems-switches/afx/index.html["Switches für AFX-Speichersysteme konfigurieren"^].
+** Weitere Informationen zur Konfiguration der Schalter sind unter link:https://docs.netapp.com/us-en/ontap-systems-switches/afx/index.html["Switches für AFX-Speichersysteme konfigurieren"^] zu finden.
 
 
 
