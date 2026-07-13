@@ -978,9 +978,7 @@
   <block id="c62737cdd3f658b2c080ea393539da49" category="list-text">Schalten Sie jeden Schalter ein.</block>
   <block id="74d427d525eaaf37db5bbbb57657cb0c" category="list-text">Konfigurieren Sie die Switches zur Unterstützung des AFX 1K-Speichersystems.</block>
   <block id="72295557ee935de6dcaaa496e9ffac7b" category="inline-link-macro">Konfigurieren Sie den Cisco Nexus 9332D-GX2B-Switch</block>
-  <block id="ee580ea5ba41decce9294581c1bf8a36" category="list-text">Informationen zu Cisco Nexus 9332D-GX2B-Switches finden Sie in der Dokumentation zu Cluster- und Speicher-Switches.<block ref="ebd0953e922f25f223b8dff6a58fb84a" category="inline-link-macro-rx"></block> .</block>
   <block id="1817109031f229042672af151b53e20f" category="inline-link-macro">Konfigurieren Sie den Cisco Nexus 9364D-GX2A-Switch</block>
-  <block id="addfd44612da2038c3e3649fc9c115c5" category="list-text">Informationen zu Cisco Nexus 9364D-GX2A-Switches finden Sie in der Dokumentation zu Cluster- und Speicher-Switches.<block ref="d5fe58e0155150b259ce0bf656e34478" category="inline-link-macro-rx"></block> .</block>
   <block id="20dca0630adbb0d8f903778442041063" category="inline-link-macro">Schalten Sie das AFX 1K-Speichersystem ein</block>
   <block id="daf056bef029d58c97e3fcabf3ff8cc1" category="paragraph">Nachdem Sie die Switches für Ihr AFX 1K-Speichersystem konfiguriert haben,<block ref="cae83d99a1d1cc2243a2d6bbc5469664" category="inline-link-macro-rx"></block> .</block>
   <block id="337e9239544f1891a09a6b9c13192533" category="summary">Schalten Sie jedes Regal ein, um eine eindeutige Regal-ID zuzuweisen, schalten Sie die AFX-Controllerknoten ein und sichern Sie die Stromkabel.</block>
@@ -1995,7 +1993,6 @@
   <block id="5a5c4176551fe6dd6fe6ee11995ce220" category="list-text">Für Cisco Nexus 9332D-GX2B Switches verwenden Sie die Ports 31/32 für die ISL-Verbindungen. Siehe <block ref="2fc588ea5e031befba9fe0b0a6466061" category="inline-link-macro-rx"></block> für weitere Informationen.</block>
   <block id="1f87cb3b672fcebc0f3e8c027541a0f4" category="list-text">Für Cisco Nexus 9364D-GX2A Switches verwenden Sie die Ports 63/64 für die ISL-Verbindungen. Siehe <block ref="9a6587d5653529e56536e1d546440a92" category="inline-link-macro-rx"></block> für weitere Informationen.</block>
   <block id="3f09832565123d546de503a179a2a73a" category="list-text">Die Switches werden so konfiguriert, dass sie das AFX 2K Storage System unterstützen.</block>
-  <block id="6643d25175cee9ed135211156448f273" category="inline-link-macro">Switches für AFX-Speichersysteme konfigurieren</block>
   <block id="708b74e6831efbdefff002e1e0fa8f36" category="inline-link-macro">Das AFX 2K Speichersystem einschalten</block>
   <block id="bdd33111aa5c5ee954d515d83c1a9731" category="paragraph">Nach der Konfiguration der Switches für Ihr AFX 2K-Speichersystem, <block ref="50a620d565af3ded921cd2d40d21ce59" category="inline-link-macro-rx"></block>.</block>
   <block id="e9cff4d9b0d60850bd0c9246eb98b0bc" category="paragraph">Nachdem die Rack-Hardware für das AFX 2K-Speichersystem installiert und die Kabel für die Controller-Knoten und Speicherregale angeschlossen wurden, empfiehlt es sich, die Speicherregale und Controller-Knoten einzuschalten.</block>
@@ -2038,7 +2035,6 @@
   <block id="b1372c8bdf7b87f18c9db2e8270dce48" category="paragraph">Stellen Sie sicher, dass die richtigen Kabel für Ihren Anschlusstyp vorhanden sind, bevor die Switches verkabelt werden.</block>
   <block id="f4bbdec8095912d05fc0863b38ab874a" category="inline-link-macro">CRC-Link-Fehler treten auf der CX6-DX NIC mit gemischten Kupfer- und Glasfaser-Breakout-Kabeln an den Ports auf</block>
   <block id="81ee74208c5c71f60d84fb449cb06237" category="admonition">Weitere Informationen zum Mischen von Verbindungstypen enthält der NetApp Knowledge Base Artikel <block ref="c262586745798e29d31312374a9bf860" category="inline-link-macro-rx"></block>.</block>
-  <block id="9a459af3fb0538682e15c7e05c266aeb" category="list-text">Weitere Informationen zur Konfiguration der Schalter sind unter <block ref="c680c8d03caae4efc1e016b731ff8649" category="inline-link-macro-rx"></block> zu finden.</block>
   <block id="c1153f83175c5dee9b88a5e820d6bfef" category="inline-link-macro">den AFX Cluster einrichten</block>
   <block id="2a4823fb79409c272c92a0b82e9c3667" category="paragraph">Nach dem Einschalten Ihres AFX 2K Speichersystems, <block ref="2072e5ec3241d0a9ac16c974239f2f84" category="inline-link-macro-rx"></block>.</block>
   <block id="cb030b87229281c1b5ed398ba50abebb" category="list-text">*Jetzt registrieren* auswählen und ein Konto erstellen.</block>
@@ -2050,4 +2046,8 @@
   <block id="373a0502633d2333dd8b952009c2d1ad" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>Bereiten Sie die Verwaltung Ihres Clusters vor</block>
   <block id="b6bc9b43cb446eaa57e2615dc37d813a" category="summary">Nach der Installation Ihrer AFX-Hardware können Sie die ONTAP-Cluster-Einrichtung abschließen. Dieser Prozess umfasst verwandte Konfigurationsphasen, die Sie nacheinander durchführen sollten.</block>
   <block id="79977d403c6d53cd9f671794eeca0ed7" category="paragraph">Bevor Sie Ihren ONTAP Cluster einrichten, sollten Sie die grundlegenden AFX-Anforderungen überprüfen, um sicherzustellen, dass Sie über alle notwendigen Informationen und Ressourcen verfügen, um den Einrichtungsprozess erfolgreich abzuschließen.</block>
+  <block id="2c45e3fc76dd22d195877278acbafdf3" category="inline-link-macro">Cisco Nexus 9808 Switch konfigurieren</block>
+  <block id="f177c581ed9f9f9a2ade361b69f40000" category="list-text">Für Cisco Nexus 9808 Switches siehe die Dokumentation zu Cluster- und Storage-Switches <block ref="fd812bd375b22a989715c699eb7ed44d" category="inline-link-macro-rx"></block>.</block>
+  <block id="414467ebb81a54b0d2bfde0829d9be94" category="list-text">Für Cisco Nexus 9332D-GX2B Switches siehe die Dokumentation zu Cluster- und Storage-Switches <block ref="4267e88712cb2b91d08e1a42358e695f" category="inline-link-macro-rx"></block>.</block>
+  <block id="837d45987b31811e3c4dc00585c6683b" category="list-text">Für Cisco Nexus 9364D-GX2A Switches siehe die Dokumentation zu Cluster- und Storage-Switches <block ref="b235e965e82dd587688a629268d671aa" category="inline-link-macro-rx"></block>.</block>
 </blocks>

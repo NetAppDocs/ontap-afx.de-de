@@ -24,8 +24,8 @@ Nachdem Sie Ihr AFX 1K-Speichersystem verkabelt haben, müssen Sie die Cisco Nex
 . Schalten Sie jeden Schalter ein.
 . Konfigurieren Sie die Switches zur Unterstützung des AFX 1K-Speichersystems.
 +
-** Informationen zu Cisco Nexus 9332D-GX2B-Switches finden Sie in der Dokumentation zu Cluster- und Speicher-Switches.link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9332d-gx2b/configure-software-overview-9332d-cluster.html["Konfigurieren Sie den Cisco Nexus 9332D-GX2B-Switch"^] .
-** Informationen zu Cisco Nexus 9364D-GX2A-Switches finden Sie in der Dokumentation zu Cluster- und Speicher-Switches.link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9364d-gx2a/configure-software-overview-9364d-cluster.html["Konfigurieren Sie den Cisco Nexus 9364D-GX2A-Switch"^] .
+** Für Cisco Nexus 9332D-GX2B Switches siehe die Dokumentation zu Cluster- und Storage-Switches link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9332d-gx2b/configure-switch-workflow-9332d.html["Konfigurieren Sie den Cisco Nexus 9332D-GX2B-Switch"^].
+** Für Cisco Nexus 9364D-GX2A Switches siehe die Dokumentation zu Cluster- und Storage-Switches link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9364d-gx2a/configure-switch-workflow-9364d.html["Konfigurieren Sie den Cisco Nexus 9364D-GX2A-Switch"^].
 
 
 

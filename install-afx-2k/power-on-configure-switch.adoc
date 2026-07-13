@@ -25,7 +25,9 @@ Nachdem Sie Ihr AFX 2K Speichersystem verkabelt haben, ist es erforderlich, die 
 . Schalten Sie jeden Schalter ein.
 . Die Switches werden so konfiguriert, dass sie das AFX 2K Storage System unterstützen.
 +
-** Weitere Informationen zur Konfiguration der Schalter sind unter link:https://docs.netapp.com/us-en/ontap-systems-switches/afx/index.html["Switches für AFX-Speichersysteme konfigurieren"^] zu finden.
+** Für Cisco Nexus 9808 Switches siehe die Dokumentation zu Cluster- und Storage-Switches link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9808/configure-switch-workflow-9808.html["Cisco Nexus 9808 Switch konfigurieren"^].
+** Für Cisco Nexus 9332D-GX2B Switches siehe die Dokumentation zu Cluster- und Storage-Switches link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9332d-gx2b/configure-switch-workflow-9332d.html["Konfigurieren Sie den Cisco Nexus 9332D-GX2B-Switch"^].
+** Für Cisco Nexus 9364D-GX2A Switches siehe die Dokumentation zu Cluster- und Storage-Switches link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9364d-gx2a/configure-switch-workflow-9364d.html["Konfigurieren Sie den Cisco Nexus 9364D-GX2A-Switch"^].
 
 
 
