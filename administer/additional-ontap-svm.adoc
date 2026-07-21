@@ -93,6 +93,13 @@ Sie können Ihre Dateien schützen, indem Sie sie auf Volume-Ebene in den WORM-Z
 
 
 
+[[snapmirror-active-sync-for-nas]]
+=== SnapMirror Active Sync für NAS
+
+SnapMirror active sync ermöglicht, dass Unternehmensdienste auch bei einem vollständigen Standortausfall weiterhin funktionieren. Diese Technologie ermöglicht Anwendungen, nahtlos auf eine sekundäre Kopie umzuschalten, ohne manuelle Eingriffe oder benutzerdefinierte Skripte. Weitere Informationen zu https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/protect-nas-task.html["SnapMirror Active Sync für NAS"^].
+
+
+
 [[storage-efficiency]]
 == Speichereffizienz
 
@@ -122,6 +129,13 @@ Es gibt mehrere optionale Sicherheitsfunktionen, die Sie konfigurieren und mit I
 === Fpolicy
 
 FPolicy ist ein Dateizugriffs-Benachrichtigungs-Framework, das verwendet wird, um Dateizugriffsereignisse auf Storage Virtual Machines (SVMs) zu überwachen und zu verwalten. Sie können FPolicy verwenden, um Richtlinien zu erstellen, die definieren, welche Dateivorgänge überwacht und optional blockiert werden sollen, basierend auf von Ihnen festgelegten Kriterien. FPolicy wird häufig für Sicherheitsaudits, Compliance und Data Governance eingesetzt. Erfahren Sie mehr über https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["ONTAP FPolicy-Lösungen"^].
+
+
+
+[[nfs-over-tls]]
+=== NFS über TLS
+
+Ab ONTAP 9.19.1 bietet ONTAP lokale Unterstützung für NFS über TLS mit TLS 1.3 zur Verschlüsselung des NFS-Datenverkehrs während der Übertragung auf NFS-fähigen SVMs. Die Version unterstützt außerdem die optionale gegenseitige TLS-Authentifizierung pro LIF sowie Export-Policy-Kontrollen, um nicht-TLS-TCP-Zugriffe für passende Clients zu verweigern. NFS über TLS funktioniert mit der bestehenden ONTAP NFS-Infrastruktur, sodass Anwendungen NFS weiterhin wie gewohnt nutzen, während TLS den NFS-Datenverkehr während der Übertragung verschlüsselt. NFS über TLS ist in ONTAP 9.19.1 nicht für Cloud-Plattformen verfügbar. Weitere Informationen sind unter  https://docs.netapp.com/us-en/ontap/nfs-admin/enable-nfs-over-tls-task.html["NFS über TLS aktivieren"^] verfügbar.
 
 
 

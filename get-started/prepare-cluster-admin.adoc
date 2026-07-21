@@ -126,7 +126,7 @@ Bei der Konfiguration und Nutzung Ihres Clusters gelten in AFX verschiedene Besc
 
 CAUTION: Bevor Sie einen Betriebsparameter Ihres AFX-Speichersystems erhöhen, sollten Sie die möglichen Auswirkungen auf Ihre Anwendungen und den gesamten Cluster prüfen. Beispielsweise erhöht die Erweiterung der Anzahl der Controller-Knoten zwar die Gesamtkapazität, kann aber auch den Datenverkehr im Clusternetzwerk steigern. Es ist wichtig, die Konsequenzen dieser Konfigurationsänderungen und deren Auswirkungen auf Ihre Umgebung zu verstehen.
 
-Controllerknoten pro Cluster:: Jeder AFX-Cluster muss mindestens vier Knoten umfassen. Die maximale Anzahl an Knoten variiert je nach ONTAP Release; beispielsweise erlaubt die 9.19.1 RC Release bis zu 32 Knoten pro AFX-Cluster.
+Controllerknoten pro Cluster:: Jeder AFX Cluster muss mindestens vier Knoten umfassen. Die maximale Anzahl an Knoten variiert je nach ONTAP Version; beispielsweise erlaubt die Version 9.19.1 bis zu 32 Knoten pro AFX Cluster.
 Speicherkapazität:: Dies ist die Gesamtkapazität aller SSD-Festplatten in der Storage Availability Zone (SAZ) des Clusters. Die maximale Speicherkapazität variiert je nach ONTAP Version.
 Cluster-Switches:: Sie benötigen mindestens zwei Switches in Ihrem Cluster-Speichernetzwerk.  Die maximal zulässige Anzahl wird anhand der Gesamtzahl der Controller-Knoten im Cluster bestimmt.
 

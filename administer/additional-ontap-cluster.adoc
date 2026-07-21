@@ -64,6 +64,15 @@ Siehe link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throu
 
 
 
+[[ipspace-tcp-performance]]
+=== IPspace TCP-Leistung
+
+Ab ONTAP 9.19.1 verbessert ONTAP die TCP-Datentransferleistung über verlustbehaftete WAN-Verbindungen mit hoher Latenz durch die Integration von zwei Verlustwiederherstellungsfunktionen, PRR und RACK, in den ONTAP TCP-Stack. PRR eignet sich für alle Netzwerke und ist standardmäßig aktiviert. RACK eignet sich für überlastete Netzwerke mit Verbindungsgeschwindigkeiten von etwa 25 Gigabit/Sekunde und ist standardmäßig deaktiviert.
+
+Weitere Informationen sind unter link:https://docs.netapp.com/us-en/ontap/networking/improve-tcp-wan-performance.html["Verbesserung der TCP WAN Performance mit PRR und RACK"] verfügbar.
+
+
+
 [[security]]
 == Sicherheit
 
@@ -107,6 +116,22 @@ OAuth 2.0 ist das branchenübliche Autorisierungsframework, das zum Einschränke
 
 
 
+[[data-protection]]
+== Datenschutz
+
+Es ist wichtig, die folgenden ONTAP Datenschutzfunktionen und deren Zusammenhang mit dem AFX-Speichersystem zu kennen.
+
+
+
+[[load-share-mirrors]]
+=== Load-share Spiegel
+
+Bei ONTAP ist ein Load-Sharing Mirror (LSM) eine SnapMirror-Replik eines Root-Volumes einer Storage VM (SVM), die als Einstiegspunkt zum NAS-Namensraum der SVM dient. Durch das Vorhalten einer oder mehrerer schreibgeschützter Kopien des Root-Volumes auf anderen Knoten tragen Load-Sharing Mirrors dazu bei, dass der NAS-Namensraum für Clients auch dann zugänglich bleibt, wenn beide Knoten eines HA-Paares nicht verfügbar sind.
+
+*Das AFX-Speichersystem unterstützt keine Load-Sharing-Mirror-Konfigurationen.* Es ist nicht möglich, auf AFX eine Load-Sharing-Mirror-Beziehung zu erstellen, zu initialisieren oder zu aktualisieren. Um Namespace-Resilienz, Datenverteilung oder Leseskalierung auf AFX zu erreichen, sollten stattdessen FlexCache-Volumes oder SnapMirror-Replikation verwendet werden. Diese Funktionen bieten gleichwertige oder sogar bessere Möglichkeiten, Daten und Namespaces für Clients verfügbar zu halten, und werden von AFX vollständig unterstützt.
+
+
+
 [[related-information]]
 == Ähnliche Informationen
 
@@ -114,4 +139,5 @@ OAuth 2.0 ist das branchenübliche Autorisierungsframework, das zum Einschränke
 * https://kb.netapp.com/nss/Licensing/How_to_download_NLF_licenses_from_the_NetApp_Support_Site["So laden Sie NLF-Lizenzen von der NetApp Support Site herunter"^]
 * https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["Übersicht über die ONTAP OAuth 2.0-Implementierung"^]
 * link:../administer/additional-ontap-svm.html["Zusätzliche Verwaltung für AFX SVMs"]
+* https://docs.netapp.com/us-en/ontap/data-protection/manage-snapmirror-root-volume-replication-concept.html["Informationen zur Replikation des ONTAP SnapMirror Root-Volumes"^]
 
