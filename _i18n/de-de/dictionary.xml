@@ -2078,4 +2078,11 @@
   <block id="e8eb207e6de7c7757810bc07b0846e79" category="inline-link-macro">NFS über TLS v3</block>
   <block id="9f76431b14eae171858837b9c8175543" category="cell"><block ref="9f76431b14eae171858837b9c8175543" category="inline-link-macro-rx"></block></block>
   <block id="fb78157da1449370c33ba54cae495e1f" category="paragraph">Ab ONTAP 9.19.1 bietet ONTAP lokale Unterstützung für NFS über TLS mit TLS 1.3 zur Verschlüsselung des NFS-Datenverkehrs während der Übertragung auf NFS-fähigen SVMs. Die Version unterstützt außerdem optionale gegenseitige TLS-Authentifizierung pro LIF sowie Export-Policy-Kontrollen, um Nicht-TLS-TCP-Zugriff für passende Clients zu verweigern.</block>
+  <block id="5a7a5c8d2eee66d24f7458eee76c2938" category="inline-link">Daten in der Cloud mit ONTAP SnapMirror Cloud sichern</block>
+  <block id="989d9263b7c2ecdd061c7f8f17651198" category="list-text"><block ref="989d9263b7c2ecdd061c7f8f17651198" category="inline-link-rx"></block></block>
+  <block id="bf34fdc864301c032f0e276e4ff8833a" category="cell">SnapMirror Cloud-Unterstützung</block>
+  <block id="e23180ba684584a4c88cfa3b05724d54" category="paragraph">Die maximale Anzahl der von SnapMirror cloud unterstützten S3 Buckets wurde auf 100 erhöht. Dies ermöglicht die Erstellung von mehr S3 Buckets für Ihre Workloads und Anwendungen.</block>
+  <block id="9c1a79f4f2d2fd2b367f6ed1bb37d7ae" category="inline-link-macro">SnapMirror Cloud-Unterstützungsgrenzen wurden auf 100 S3 Buckets erhöht</block>
+  <block id="b2d786633879a334695de09f0ae3cfb0" category="cell"><block ref="b2d786633879a334695de09f0ae3cfb0" category="inline-link-macro-rx"></block></block>
+  <block id="0f2919ddc73a7864a3605abad5d389c6" category="paragraph">SnapMirror cloud erhöht die Anzahl der unterstützten S3-Buckets auf 100.</block>
 </blocks>

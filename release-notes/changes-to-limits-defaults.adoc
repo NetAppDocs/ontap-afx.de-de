@@ -37,6 +37,11 @@ Sie können Ihren AFX Cluster auf maximal 32 Knoten erweitern. Dadurch lässt si
 | Volumen pro FlexGroup  a| 
 Die maximale Anzahl an Volumes in einem FlexGroup wurde auf 512 mit 32 Knoten erhöht. Dies ermöglicht es dem AFX-Speichersystem, die Leistungskapazitäten für größere Cluster vollständig bereitzustellen.
 | ONTAP 9.19.1 
+
+
+| SnapMirror Cloud-Unterstützung  a| 
+Die maximale Anzahl der von SnapMirror cloud unterstützten S3 Buckets wurde auf 100 erhöht. Dies ermöglicht die Erstellung von mehr S3 Buckets für Ihre Workloads und Anwendungen.
+| ONTAP 9.19.1 
 |===
 
 

@@ -25,3 +25,7 @@ Sie müssen den S3-Dienst für die SVM konfigurieren, damit Clients auf den Buck
 . Wählen Sie optional *Weitere Optionen* für zusätzliche Konfigurationen in Bezug auf Datenschutz, Sperren und Berechtigungen.
 . Wählen Sie *Speichern*, um den Bucket hinzuzufügen.
 
+
+.Ähnliche Informationen
+* https://docs.netapp.com/us-en/ontap/data-protection/cloud-backup-with-snapmirror-task.html["Daten in der Cloud mit ONTAP SnapMirror Cloud sichern"^]
+
