@@ -42,3 +42,7 @@ Sie müssen entscheiden, welche SVM Sie anzeigen und aktualisieren möchten.
 . Wählen Sie die gewünschte SVM und anschließend den Reiter *Einstellungen* aus.
 . Überprüfen Sie die Konfigurationsoptionen auf der Seite. Wählen Sie die gewünschten Einstellungen aus und aktualisieren Sie sie.
 
+
+.Ähnliche Informationen
+* https://docs.netapp.com/us-en/ontap/performance-admin/adaptive-qos-policy-groups-task.html["Adaptive QoS Richtliniengruppen"^]
+
