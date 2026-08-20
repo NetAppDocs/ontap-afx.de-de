@@ -170,6 +170,10 @@ Sie können die Standardeinstellungen ändern, die steuern, wie QoS-Richtlinieng
 Bei der Ausführung automatisierter Vorabprüfungen vor dem Upgrade werden Fehler und Warnungen separat angezeigt, damit Sie Probleme, die vor dem Upgrade behoben werden müssen, leichter erkennen können.
 
 |===
-.Ähnliche Informationen
+
+
+[[related-information]]
+== Ähnliche Informationen
+
 * https://docs.netapp.com/us-en/ontap/release-notes/index.html["Highlights der ONTAP 9-Version"^]
 

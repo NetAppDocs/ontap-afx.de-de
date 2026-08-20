@@ -63,6 +63,10 @@ xref:../administer/configure-svm.html[Unterstützung für zweistufig verschachte
 Sie können einer SVM und gleichzeitig den Volumes unter der SVM eine QoS-Richtlinie zuweisen.
 
 |===
-.Ähnliche Informationen
+
+
+[[related-information]]
+== Ähnliche Informationen
+
 * https://docs.netapp.com/us-en/ontap/release-notes/index.html["Highlights der ONTAP 9-Version"^]
 

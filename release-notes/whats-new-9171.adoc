@@ -38,6 +38,26 @@ Die folgenden NetApp AFX-Speichersystemkomponenten sind zusammen mit der zugehö
 
 
 |===
-.Ähnliche Informationen
+
+
+[[storage-resource-management-enhancements]]
+== Verbesserungen im Speicherressourcenmanagement
+
+[cols="30%,70%"]
+|===
+| Aktualisieren | Beschreibung 
+
+
+ a| 
+xref:../manage-data/monitor-debug-storage.html[Überwachen und Fehlerbeheben eines AFX-Speichersystems]
+ a| 
+Auf neu erstellten SVMs auf ONTAP-Clustern, die für NAS-Protokolle zugewiesen sind, ist die Dateisystemanalyse (FSA) standardmäßig aktiviert. FSA wird automatisch aktiviert, sobald ein Volume erstellt wird, wodurch sofort Analysefunktionen ohne zusätzliche Konfiguration zur Verfügung stehen.
+
+|===
+
+
+[[related-information]]
+== Ähnliche Informationen
+
 * https://docs.netapp.com/us-en/ontap/release-notes/index.html["Highlights der ONTAP 9-Version"^]
 
