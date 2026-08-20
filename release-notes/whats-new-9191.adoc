@@ -17,6 +17,9 @@ summary: Erfahren Sie mehr über die neuen Funktionen von ONTAP 9.19.1, die mit 
 Erfahren Sie mehr über die neuen Funktionen von ONTAP 9.19.1, die mit Ihrem AFX-Speichersystem verfügbar sind.
 
 
+NOTE: Mit ONTAP 9.19.1 stehen für AFX mehrere neue Funktionen zur Verfügung. Einige dieser Funktionen sind spezifisch für AFX, während viele andere aus einer gemeinsamen Produktbasis abgeleitet sind. Zusätzlich zu den unten beschriebenen AFX-Funktionen wird auch auf  https://docs.netapp.com/us-en/ontap/release-notes/whats-new-9191.html["Was ist neu in ONTAP 9.19.1"^] verwiesen.
+
+
 
 [[data-protection]]
 == Datenschutz
@@ -85,6 +88,29 @@ Die dynamische Speichereffizienz optimiert intelligent die Speichereffizienzvorg
 
 | Optimierung der ausgewogenen Platzierung für die Kubernetes-Speicherorchestrierung  a| 
 ONTAP 9.19.1 fügt sechs Parameter hinzu, die derzeit im  `/storage/volumes` REST API-Endpunkt verfügbar sind, zum  `/applications/containers` Endpunkt. Diese Erweiterung ermöglicht es Kunden, die NetApp Trident für die Kubernetes-Speicherorchestrierung verwenden, Volumes mit ONTAPs nativer Balanced-Placement-Fähigkeit zu erstellen.
+
+|===
+
+
+[[s3-object-storage]]
+== S3 Objektspeicher
+
+[cols="30%,70%"]
+|===
+| Aktualisieren | Beschreibung 
+
+
+ a| 
+xref:../manage-data/manage-buckets.html[Verwalten der AFX-Speichersystem-Buckets]
+ a| 
+Sie können Bedingungen verwenden, um bedingte Schreibvorgänge beim Hochladen von Objekten und bedingte Löschvorgänge beim Löschen von Objekten zu erzwingen. Bedingte Schreib- und Löschvorgänge bieten eine Möglichkeit, das Überschreiben oder unbeabsichtigte Löschen von Objekten zu verhindern.
+
+
+
+ a| 
+xref:../manage-data/manage-buckets.html[Verwalten der AFX-Speichersystem-Buckets]
+ a| 
+Um den Benutzerzugriff auf S3-Ressourcen aufrechtzuerhalten, falls der ursprüngliche Zugriffsschlüssel abläuft, können ONTAP-Clusteradministratoren für jeden S3-Benutzer einen zweiten Zugriffsschlüssel generieren.
 
 |===
 
