@@ -1,0 +1,205 @@
+---
+sidebar: sidebar 
+permalink: administer/remove-nodes.html 
+keywords: netapp afx, remove node, unjoin, cluster remove-node, evacuate volumes, zero-copy volume move 
+summary: Informationen zur Entfernung von Speicherknoten aus einem NetApp AFX Cluster, einschließlich Volume-Evakuierung, LIF-Migration und HA-Partner-Trennung. 
+---
+= Knoten aus einem AFX Storage System Cluster entfernen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie Knoten aus Ihrem AFX Cluster für Wartungsarbeiten oder einen Hardwareaustausch entfernen. Es kann jeweils nur ein Knoten entfernt werden, und nach der Entfernung eines Knotens muss auch dessen HA-Partner entfernt werden.
+
+.Informationen zu diesem Vorgang
+* Bei AFX-Speichersystemen befindet sich der gesamte Speicher in einer einzigen Storage Availability Zone (SAZ), auf die jeder Knoten im Cluster zugreifen kann. Daher müssen beim Entfernen eines Knotens die Daten nicht vom ausscheidenden Knoten kopiert werden. Stattdessen werden die Verweise auf die Volumes des ausscheidenden Knotens unter den verbleibenden Knoten aktualisiert. Dies wird als Zero Copy Volume Move (ZCVM) bezeichnet und erfolgt sofort, da tatsächlich keine Daten kopiert oder verschoben werden.
++
+[NOTE]
+====
+Vor der Entfernung des Knotens sind alle Volumes, die nicht von ZCVM verschoben werden können, manuell zu behandeln. Dazu zählen Volume-Klone, Offline-Volumes, verschlüsselte Volumes, deren ursprünglicher Verschlüsselungsschlüssel geändert oder neu generiert wurde, sowie Volumes, die mithilfe von SnapMirror cloud wiederhergestellt wurden. Audit Staging Volumes und Root Volumes werden von ZCVM während des Node Unjoin-Prozesses verschoben.
+
+** Weitere Informationen zu link:https://docs.netapp.com/us-en/ontap/nas-audit/basic-auditing-concept.html["Audit Staging Volumes"^].
+** Weitere Informationen zu link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/rekey-encrypted-volume-task.html["neu verschlüsselte Volumes"^].
+
+
+====
+* Das erfolgreiche Entfernen eines Knotens aus dem Cluster bewirkt Folgendes:
++
+** Der Knoten wird als nicht teilnahmeberechtigt markiert und aus dem CLAM-Quorum entfernt.
+** Der Knoten wird ordnungsgemäß heruntergefahren und der Besitz wird auf einen verbleibenden Knoten übertragen.
+** Bereinigt den RAID-Hochverfügbarkeitsstatus (HA) auf dem Knoten und löscht ihn aus der Cluster-Datenbank.
+
+
+
+
+
+
+[[step-1-prepare-to-remove-nodes-from-an-afx-cluster]]
+== Schritt 1: Vorbereitung auf die Entfernung von Knoten aus einem AFX Cluster
+
+Bevor Sie Knoten aus Ihrem AFX Cluster entfernen, sollte überprüft werden, ob der Cluster fehlerfrei ist und sich auf dem zu entfernenden Knoten keine Daten-LIFs befinden.
+
+.Schritte
+. Bestätigen, dass der Cluster gesund ist:
++
+[source, cli]
+----
+cluster show
+----
+. Bestätigen Sie, dass der Knoten, den Sie entfernen möchten, online und funktionsfähig ist:
++
+[source, cli]
+----
+system node show -node <node> -health -epsilon
+----
+. Die LIFs auf dem Knoten werden angezeigt:
++
+[source, cli]
+----
+network interface show -curr-node <node>
+----
+. Daten-LIFs vom Knoten migrieren
++
+[source, cli]
+----
+network interface migrate -vserver <SVM> -lif <LIF> -dest-node <destination_node> -dest-port <destination_port>
+----
++
+Wiederholen Sie diesen Befehl für alle Daten-LIFs. Nur Cluster-LIFs und Knotenverwaltungs-LIFs sollten auf dem Knoten verbleiben.
+
+. Es sollte überprüft werden, dass alle Daten-LIFs entfernt wurden und nur noch Cluster-LIFs und Knotenmanagement-LIFs auf dem Node verbleiben:
++
+[source, cli]
+----
+network interface show -curr-node <node>
+----
+
+
+.Was kommt als Nächstes?
+Nachdem die Vorbereitungsschritte abgeschlossen sind, kann der erste Knoten im HA-Paar aus dem Cluster entfernt und anschließend dessen HA-Partner entfernt werden.
+
+
+
+[[step-2-unjoin-a-single-node-from-an-afx-cluster]]
+== Schritt 2: Einen einzelnen Knoten aus einem AFX Cluster entfernen
+
+Ein Knoten darf aus einem AFX-Cluster erst entfernt werden, nachdem die erforderlichen Schritte zur Vorbereitung des Knotens auf die Entfernung abgeschlossen wurden. Nach der Entfernung eines Knotens aus dem Cluster muss anschließend auch dessen HA-Partner entfernt werden.
+
+.Bevor Sie beginnen
+Es wird empfohlen, link:manage-autosupport.html["eine AutoSupport-Nachricht ausgeben"] den technischen Support von NetApp darüber zu informieren, dass ein Node aus dem Cluster entfernt wird.
+
+.Schritte
+. Die Knotenvolumes evakuieren:
++
+[source, cli]
+----
+system node evacuate-volumes start -node <node_to_remove>
+----
+. Es sollte überprüft werden, ob die Knotenvolumes evakuiert wurden:
++
+[source, cli]
+----
+system node evacuate-volumes show -node <node_to_remove>
+----
++
+Warten, bis der *Pending-Zähler* 0 ist, bevor fortgefahren wird. Epsilon oder Eligibility erst verschieben, wenn die Volumes vollständig evakuiert sind.
+
++
+Bei Bedarf kann der  `system node evacuate-volumes abort -node <node>` Befehl verwendet werden, um den Evakuierungsprozess abzubrechen.
+
+. Den Knoten ermitteln, der Epsilon enthält:
++
+[source, cli]
+----
+cluster show -epsilon true
+----
++
+.. Wenn der Knoten, den Sie entfernen möchten, Epsilon enthält, sollte Epsilon auf einen anderen Knoten verschoben werden:
++
+[source, cli]
+----
+cluster modify -node <surviving_node> -epsilon true
+----
+
+
+. Aktueller primärer Knoten identifizieren:
++
+[source, cli]
+----
+cluster ring show
+----
++
+.. Wenn der zu entfernende Knoten der aktuelle primäre Knoten ist, diesen für die Auswahl als primären Knoten ausschließen:
++
+[source, cli]
+----
+cluster modify -node <node_to_remove> -eligibility false
+----
+
+
+. Den Home-Node der verbleibenden Daten-LIFs anzeigen:
++
+[source, cli]
+----
+network interface show -home-node <node_to_remove>
+----
+. Den Home-Node der verbleibenden Daten-LIFs auf einen anderen Node ändern:
++
+[source, cli]
+----
+network interface modify -vserver <SVM> -lif <LIF> -home-node <surviving_node>
+----
++
+Cluster-LIFs und Knotenmanagement-LIFs verbleiben auf dem ausscheidenden Knoten.
+
+. Die Übernahme des zu entfernenden Knotens deaktivieren:
++
+[source, cli]
+----
+storage failover modify -node <node_to_remove> -enable-takeover-of false
+----
+. Es sollte überprüft werden, dass die Übernahme für den zu entfernenden Knoten deaktiviert ist:
++
+[source, cli]
+----
+storage failover show
+----
++
+Eine Übernahme ist beim HA-Paar nicht möglich, solange Failover deaktiviert ist.
+
+. Auf einem verbleibenden, fehlerfreien Knoten die Berechtigungsstufe auf „Erweitert“ setzen:
++
+[source, cli]
+----
+privilege set -level advanced
+----
+. Den Knoten aus dem Cluster entfernen:
++
+[source, cli]
+----
+cluster remove-node -node <node_to_remove>
+----
++
+Bestätigen Sie die Warnungen. Der Vorgang sollte mit der Meldung *Node remove succeeded* enden.
+
+
+
+.Wie geht es weiter?
+Wiederholen Sie die vorherigen Schritte, um den HA-Partner aus dem Cluster zu entfernen. Es können keine weiteren Knoten entfernt werden, bis der HA-Partner des nicht beigetretenen Knotens entfernt wurde.
+
+
+
+[[step-3-optionally-clean-the-removed-hardware]]
+== Schritt 3: Optional kann die entfernte Hardware gereinigt werden.
+
+Wenn ein Knoten, der aus einem Cluster entfernt wurde, für einen anderen Zweck verwendet wird, müssen die Knotenkonfiguration gelöscht und alle Festplatten initialisiert werden, bevor er wieder einem Cluster beitreten kann.
+
+.Schritte
+. Während des Bootvorgangs kann durch Drücken von Strg+C bei entsprechender Aufforderung das Bootmenü angezeigt werden.
+. Wählen Sie die Bootmenü-Option *(4) Konfiguration bereinigen und alle Festplatten initialisieren*.
+
+
+.Wie geht es weiter?
+Der  `cluster add-node`Befehl kann verwendet werden, um das HA Pair im selben Cluster wiederzuverwenden.

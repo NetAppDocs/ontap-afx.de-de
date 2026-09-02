@@ -46,6 +46,8 @@ entries:
   entries:
   - title: Cluster erweitern
     url: "/administer/expand-cluster.html"
+  - title: Knoten aus dem Cluster entfernen
+    url: "/administer/remove-nodes.html"
   - title: ONTAP -Upgrade
     url: "/administer/upgrade-ontap.html"
   - title: Firmware aktualisieren
