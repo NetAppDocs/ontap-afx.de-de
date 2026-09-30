@@ -39,7 +39,7 @@ Obwohl sich das Verhalten von FabricPool bei den ONTAP Ausprägungen (einheitlic
 | Objektspeicherbereich | Die Konfiguration erfolgt pro Aggregat in zwei Schritten: config create und anschließend attach | Die Konfiguration erfolgt auf Clusterebene mit einem einzigen Befehl; pro Cluster ist ein Bucket definiert. 
 
 
-| Standard-Tiering-Richtlinie | Die Standardrichtlinie ist `none`; zum Starten des Tiering muss explizit eine Volume-Richtlinie festgelegt werden | Die Standardrichtlinie ist `none`; zum Starten des Tiering muss explizit eine Volume-Richtlinie festgelegt werden 
+| Standard-Tiering-Richtlinie | Die Standardrichtlinie ist `none` außer bei FabricPool-aktivierten Aggregaten, bei denen der Standardwert `snapshot` ist. | Die Standardrichtlinie ist `none` 
 
 
 | Temperaturüberwachung | Granularität pro Volume | Granularität pro Volume 
