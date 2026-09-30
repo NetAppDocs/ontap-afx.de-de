@@ -36,6 +36,20 @@ entries:
     url: "/administer/configure-svm.html"
   - title: Migrieren einer SVM
     url: "/administer/migrate-svm.html"
+- title: Verwaltung von Clusterdaten
+  entries:
+  - title: FabricPool Tier-Management
+    entries:
+    - title: Informationen zu FabricPool
+      url: "/administer/fabricpool.html"
+    - title: Vorbereitung der Implementierung von FabricPool
+      url: "/administer/fabricpool-prepare.html"
+    - title: Konfiguration von FabricPool
+      url: "/administer/fabricpool-configure.html"
+    - title: Verwaltung von FabricPool
+      url: "/administer/fabricpool-manage.html"
+    - title: Weitere Überlegungen
+      url: "/administer/fabricpool-additional.html"
 - title: Unterstützen Sie den Cluster
   entries:
   - title: AutoSupport verwalten

@@ -1,0 +1,41 @@
+---
+permalink: administer/fabricpool-manage.html 
+sidebar: sidebar 
+keywords: afx, oam, fabricpool, manage, monitor, space, tiering policy, zcvm, volume move, node join, node unjoin, flexaggr 
+summary: Die laufende Verwaltung von FabricPool auf AFX Systemen ist ähnlich wie auf AFF und FAS Systemen. Die Kapazitätsauslastung muss überwacht, Volumes müssen verwaltet und Tiering-Richtlinien müssen angepasst werden. Für die AFX Umgebung gibt es einige bemerkenswerte Ergänzungen, darunter das Verhalten, wenn Knoten dem AFX Cluster beitreten oder ihn verlassen. 
+---
+= Verwaltung von FabricPool für AFX Speichersysteme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die laufende Verwaltung von FabricPool auf AFX Systemen ist ähnlich wie auf AFF und FAS Systemen. Die Kapazitätsauslastung muss überwacht, Volumes müssen verwaltet und Tiering-Richtlinien müssen angepasst werden. Für die AFX Umgebung gibt es einige bemerkenswerte Ergänzungen, darunter das Verhalten, wenn Knoten dem AFX Cluster beitreten oder ihn verlassen.
+
+
+
+[[monitor-space-and-manage-volumes]]
+== Speicherplatz überwachen und Volumes verwalten
+
+Die Verfahren zur Überwachung der Nutzung der Kapazitätsebene und der Leistungsebene sowie zur routinemäßigen Volume-Verwaltung in AFX entsprechen im Allgemeinen denen von ONTAP. Beachten Sie, dass die Speicherberichterstattung in AFX die disaggregierte Architektur berücksichtigt. Informationen zum Speicherplatz der Kapazitätsebene sind über Berichte auf Cluster-Ebene und Verfügbarkeitszonenebene verfügbar und nicht über ein für Administratoren sichtbares Aggregat.
+
+
+
+[[node-join-and-node-unjoin]]
+== Knotenbeitritt und Knotenaustritt
+
+Knotenoperationen sind auf AFX Systemen FabricPool-bewusst, was einen wesentlichen Unterschied zu ONTAP darstellt. Die folgenden Verhaltensweisen sind zu beachten:
+
+* *Knotenbeitritt.* Wenn ein Knoten dem AFX Cluster beitritt und bereits eine Cluster-Objektspeicherkonfiguration vorhanden ist, wird die Objektspeicheranbindung automatisch ausgelöst. Wenn die Anbindung fehlschlägt, schlägt auch der Knotenbeitritt fehl.
+* *Node Unjoin.* Wenn die Verbindung eines Knotens getrennt wird oder er aus dem Cluster entfernt wird, werden die Daten als „defunct“ gekennzeichnet. Die zugehörigen Volumes werden mithilfe von ZCVM verschoben. Die Metadateien der defunct-Objekte bleiben erhalten, sodass die zugehörigen Cloud-Objekte weiterhin zugänglich sind und per Garbage Collection bereinigt werden können.
+
+
+
+
+[[related-information]]
+== Ähnliche Informationen
+
+* https://docs.netapp.com/us-en/ontap/fabricpool/determine-data-inactive-reporting-task.html["Verwaltung von FabricPool"^]
+* link:../administer/expand-cluster.html["Erweitern eines AFX-Speichersystemclusters"]
+

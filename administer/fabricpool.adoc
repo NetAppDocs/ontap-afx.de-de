@@ -1,0 +1,65 @@
+---
+permalink: administer/fabricpool.html 
+sidebar: sidebar 
+keywords: afx, fabricpool, tiering, data tiering, cloud tier, object store 
+summary: Ab ONTAP 9.19.1 P3 können Sie FabricPool so konfigurieren, dass die nutzbare Kapazität Ihres AFX Speichersystems erweitert sowie Kosten gesenkt und die Effizienz verbessert werden. 
+---
+= Informationen zu FabricPool für AFX Speichersysteme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ab ONTAP 9.19.1 P3 können Sie FabricPool so konfigurieren, dass die nutzbare Kapazität Ihres AFX Speichersystems erweitert sowie Kosten gesenkt und die Effizienz verbessert werden.
+
+
+
+[[fabricpool-overview]]
+== FabricPool Überblick
+
+FabricPool ist eine ONTAP Funktion, die Daten basierend auf ihrer Aktivität oder „Temperatur“ zwischen einer leistungsstarken lokalen Ebene und einer kostengünstigeren Remote-Cloud- oder Kapazitätsebene verschiebt. Dabei verbleiben die häufig abgerufenen _hot_ Daten auf schnellem lokalem SSD-Speicher, während die selten verwendeten _cold_ Daten in kostengünstigeren Objektspeicher verschoben werden. FabricPool arbeitet automatisch und transparent im Hintergrund; es sind weder Anwendungsänderungen noch ein erheblicher laufender Verwaltungsaufwand erforderlich. Zugehörige ONTAP Speichereffizienzfunktionen wie Komprimierung und Deduplizierung bleiben erhalten, wenn Daten in die Cloud-Ebene und zurück verschoben werden.
+
+FabricPool Tiering wird für AFX Speichersysteme mit ONTAP 9.19.1 P3 und späteren Versionen unterstützt und erweitert die AFX Clusterkapazität über die lokale Ebene hinaus für datenintensive Workloads. Obwohl die AFX Implementierung von FabricPool einige architektonische Änderungen mit sich bringt, bleiben die grundlegende Funktionsweise und die Eigenschaften der ONTAP Funktion unverändert.
+
+Administratoren steuern das Daten-Tiering weiterhin über Richtlinien pro Volume sowie über eine Mindestabkühlungszeit, die festlegt, wann inaktive Daten für eine Verschiebung infrage kommen. Dieses richtlinienbasierte Modell verbessert die Speicherwirtschaftlichkeit, indem es teure Flash-Kapazität zurückgewinnt und einen einfachen Weg zu einer hybriden Speicherumgebung bietet. Es hält die tiered Daten geschützt und verfügbar, bei minimalen Leistungsauswirkungen auf den aktiven Workload.
+
+
+
+[[compare-aff-and-fas-with-afx-implementations]]
+== Vergleich von AFF und FAS mit AFX Implementierungen
+
+Obwohl sich das Verhalten von FabricPool bei den ONTAP Ausprägungen (einheitliches ONTAP für AFF und FAS Systeme sowie die AFX ONTAP Ausprägung für AFX Systeme) sehr ähnelt, führt die disaggregierte AFX Architektur einige Unterschiede ein. Die wichtigsten Vergleichsbereiche zwischen diesen beiden Implementierungen sind nachfolgend zusammengefasst.
+
+[cols="1,2,2"]
+|===
+| Bereich oder Vorgang | AFF und FAS Speicher | AFX-Speicher 
+
+
+| Objektspeicherbereich | Die Konfiguration erfolgt pro Aggregat in zwei Schritten: config create und anschließend attach | Die Konfiguration erfolgt auf Clusterebene mit einem einzigen Befehl; pro Cluster ist ein Bucket definiert. 
+
+
+| Standard-Tiering-Richtlinie | Die Standardrichtlinie ist `none`; zum Starten des Tiering muss explizit eine Volume-Richtlinie festgelegt werden | Die Standardrichtlinie ist `none`; zum Starten des Tiering muss explizit eine Volume-Richtlinie festgelegt werden 
+
+
+| Temperaturüberwachung | Granularität pro Volume | Granularität pro Volume 
+
+
+| Cloud-Tier-Anbieter | StorageGRID, ONTAP S3 und mehrere große Public Clouds | Nur StorageGRID oder ONTAP S3 
+
+
+| Spiegelung mit MetroCluster | Unterstützt | Nicht unterstützt 
+
+
+| Volume-Verschiebung | Standardmäßige und optimierte Volume-Verschiebung | Zero Copy Volume Move (ZCVM) ohne Verschieben von Kapazitätsebenendaten 
+|===
+
+
+[[related-information]]
+== Ähnliche Informationen
+
+* https://docs.netapp.com/us-en/ontap/concepts/fabricpool-concept.html["FabricPool Grundkonzepte"^]
+* https://docs.netapp.com/us-en/ontap/fabricpool/index.html["Informationen zum Data Tiering mit ONTAP FabricPool"^]
+* https://docs.netapp.com/us-en/ontap-technical-reports/tiering.html["Technische Berichte zum ONTAP Tiering"^]
+* link:../faq-ontap-afx.html["FAQ zu AFX-Speichersystemen"]
+

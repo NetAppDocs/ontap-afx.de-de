@@ -1,0 +1,104 @@
+---
+permalink: administer/fabricpool-configure.html 
+sidebar: sidebar 
+keywords: afx, fabricpool, object store, cluster object-store, tiering policy, attach, capacity tier 
+summary: Die Konfiguration und Aktivierung von FabricPool auf einem AFX Speichersystem umfasst auf hoher Ebene Prozesse auf zwei verschiedenen Ebenen. Zunächst muss auf Clusterebene eine Cloud-Ebene für Ihre Daten definiert werden. Anschließend kann das Tiering auf bestimmten Volumes mithilfe einer von mehreren Tiering-Richtlinien aktiviert werden. 
+---
+= Konfiguration von FabricPool für AFX Speichersysteme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Konfiguration und Aktivierung von FabricPool auf einem AFX Speichersystem umfasst auf hoher Ebene Prozesse auf zwei verschiedenen Ebenen. Zunächst muss auf Clusterebene eine Cloud-Ebene für Ihre Daten definiert werden. Anschließend kann das Tiering auf bestimmten Volumes mithilfe einer von mehreren Tiering-Richtlinien aktiviert werden.
+
+
+
+[[configure-fabricpool-at-the-ontap-cluster-level]]
+== Konfiguration von FabricPool auf ONTAP Clusterebene
+
+Es muss ein einzelner Objekt-Bucket definiert werden, der dem gesamten ONTAP Cluster zur Verfügung steht. Alle für FabricPool Data Tiering aktivierten Volumes verwenden denselben Bucket.
+
+.Informationen zu diesem Vorgang
+Im Gegensatz zum zweistufigen ONTAP Prozess, der ein Attach pro Aggregat umfasst, verwendet AFX einen einzigen clusterweiten Prozess, um den Objektspeicher zu konfigurieren und alle Knoten an den Bucket anzubinden. Die Konnektivität wird ebenfalls bestätigt, und die Zuordnung zum Objektspeicher ist dauerhaft.
+
+Die Konfiguration der Cloud-Ebene wird in System Manager beschrieben, es stehen jedoch auch andere Optionen zur Verfügung. Beispielsweise kann der Befehl  `cluster object-store config create` mit der CLI verwendet werden. Weitere Informationen finden Sie unter link:../administer/fabricpool-additional.html["Zusätzliche Überlegungen zur Verwendung von FabricPool auf AFX Speichersystemen"].
+
+.Bevor Sie beginnen
+* Die AFX FabricPool Voraussetzungen sollten überprüft werden. Beispielsweise sollte bestätigt werden, dass sich der Cluster auf dem Stand 9.19.1 oder höher befindet und nicht von einer früheren Version aktualisiert wurde. Weitere Einzelheiten sind in link:../administer/fabricpool-prepare.html["Vorbereitung auf die Implementierung von FabricPool auf einem AFX-Speichersystem"] enthalten.
+* Ein Objektspeicher-Bucket wird bereitgestellt. Ein Bucket wird auf NetApp StorageGRID oder ONTAP S3 mit ausreichender Kapazität für Ihre Daten erstellt. Optional kann ein CA-Zertifikat für den Objektspeicher installiert werden, um eine sicherere Verbindung bereitzustellen.
+* Die Intercluster-LIFs werden erstellt und die Verbindung zum Objektspeicher wird überprüft. Auf jedem Knoten im AFX Cluster muss ein Paar Intercluster-LIFs definiert werden, um den Objektspeicher zu erreichen. Es ist zu überprüfen, dass alle Knoten den Objektspeicher-Endpunkt erreichen können und die Namensauflösung funktioniert.
+
+
+.Schritte
+. Im System Manager wird im linken Navigationsbereich der Menüpunkt *Cloud Tiers* ausgewählt.
++
+Wenn keine Cloud-Ebene konfiguriert ist, wird eine leere Statusseite mit einer Schaltfläche „Hinzufügen“ angezeigt.
+
+. Mit *Hinzufügen* wird die Erstellung der Cloud-Ebene gestartet; ein Dialogfeld mit zwei Optionen wird angezeigt.
+. Wählen Sie entweder StorageGRID oder ONTAP S3 als Ihren Anbieter aus. Das entsprechende Formular *Cloud Tier hinzufügen* wird geöffnet.
+. Geben Sie die erforderlichen Informationen zum Objektspeicher an, einschließlich:
++
+.. Objektspeichername (Konfigurationskennung)
+.. Servername (FQDN oder IP-Adresse des Objektspeicherendpunkts)
+.. Container name (Bucket-Name)
+.. Zugriffsschlüssel und geheimer Schlüssel (Objektspeicher-Anmeldeinformationen)
+.. Einstellungen zur Zertifikatsvalidierung (empfohlen: mit ordnungsgemäßem CA-Zertifikat aktiviert)
+
+
+. Wählen Sie die Intercluster LIFs aus, die den Cloud-Tier-Datenverkehr transportieren sollen.
++
+Falls keine geeigneten Schnittstellen vorhanden sind, besteht die Möglichkeit, neue Schnittstellen zu erstellen.
+
+. Wählen Sie *Speichern*.
++
+System Manager erstellt die Objektspeicherkonfiguration auf Cluster-Ebene und hängt sie nach Überprüfung der Netzwerkverbindung automatisch an alle Knoten im Cluster an.
+
+. Die Details zur Cloud-Ebene sind auf der Karte der Seite „Cloud Tiers“ zu überprüfen.
+
+
+.Nachdem Sie fertig sind
+Bestätigen Sie, dass die Kapazitätskarte im Cluster Dashboard die Nutzung der Cloud-Ebene anzeigt. Beachten Sie, dass der zugewiesene Bucket nicht umbenannt werden kann, nachdem er für die Verwendung durch FabricPool identifiziert wurde. Sie können das Tiering bei Bedarf für die einzelnen Datenvolumes aktivieren.
+
+
+
+[[enable-tiering-with-volume-level-policies]]
+== Tiering mit Richtlinien auf Volume-Ebene aktivieren
+
+Nach der Konfiguration von FabricPool auf Clusterebene können Sie das Tiering auf den einzelnen Volumes aktivieren, indem Sie die entsprechende Tiering-Richtlinie festlegen. Im Allgemeinen funktionieren die Richtlinien bei AFX genauso wie bei ONTAP.
+
+* *Tiering auf Volume Ebene.* Tiering ist pro Volume aktiviert. Für jedes Volume kann eine andere Tiering-Richtlinie festgelegt werden. Die Daten des Volumes können basierend auf der Richtlinie in die Cloud-Ebene verschoben werden.
+* *Tiering-Richtlinien.* Für ein Volume können vier Tiering-Richtlinien definiert werden, darunter:
++
+** `snapshot-only`
+** `auto`
+** `all`
+** `none`
+
+
+* *Standardmäßige Tiering-Richtlinie.* Die Standardrichtlinie ist `none`, was bedeutet, dass keine Daten in das Cloud-Tier verschoben werden können. Im Vergleich dazu sind ONTAP Volumes auf einem neu angeschlossenen Aggregat standardmäßig `snapshot-only` auf AFF und FAS Systemen eingestellt.
+* *Richtlinientrigger.* Das Festlegen einer anderen Richtlinie als `none` löst eine Cloud-Verbindung aus und aktiviert die Datenschichtung.
+* *Abkühlphase.* Die Abkühlphase legt fest, wie lange Daten inaktiv bleiben müssen, bevor sie für die Einstufung in Tiers infrage kommen. Bei Verwendung der CLI wird dies normalerweise mit dem Parameter  `-tiering-minimum-cooling-days` festgelegt. Die Standard-Abkühlphase beträgt 31 Tage für die auto Richtlinie und effektiv ca. 2 Tage für snapshot-only. Die Abkühlphase kann für jedes Volume an die jeweilige Workload angepasst werden.
+* *Temperaturüberwachung.* Mit AFX erfolgt die Temperaturüberwachung pro Volume und nicht auf Aggregatebene.
+
+
+Weitere Informationen zu den FabricPool Tiering-Richtlinien finden Sie unter  https://docs.netapp.com/us-en/ontap/fabricpool/tiering-policies-concept.html["Daten effizient mit ONTAP FabricPool Richtlinien tieren"^].
+
+
+
+[[activate-volume-level-tiering-and-next-steps]]
+=== Tiering auf Volume-Ebene aktivieren und nächste Schritte
+
+Um Tiering für ein Volume zu aktivieren, können Sie in System Manager zur Seite *Volumes* navigieren und dann *Edit* sowie *Cloud Tier Settings* auswählen, um für jedes Volume nach Bedarf eine Tiering-Richtlinie und eine Abkühlungszeitraum zu konfigurieren. Die Standardrichtlinie ist none, daher muss Tiering pro Volume explizit aktiviert werden. Hierfür können Sie die vorhandenen Volume-Befehle in der CLI verwenden.
+
+Nach Beginn des Tierings sollten Sie Tiering und Kapazitätsauslastung überwachen. Überprüfen Sie außerdem den Status des Volume-Tierings und beobachten Sie die Speichernutzung der Performance Tier und Capacity Tier. Beachten Sie, dass Inactive Data Reporting (IDR/AutoIDR) auf AFX deaktiviert ist, sodass die Bewertung von tieringfähigen/kalten Daten anders geplant werden sollte als auf AFF oder FAS Systemen.
+
+
+
+[[related-information]]
+== Ähnliche Informationen
+
+* link:../administer/fabricpool-prepare.html["Vorbereitung auf die Implementierung von FabricPool auf einem AFX-Speichersystem"]
+* link:../administer/fabricpool.html["Informationen zu FabricPool für AFX Speichersysteme"]
+

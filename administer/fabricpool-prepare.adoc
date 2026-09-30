@@ -1,0 +1,67 @@
+---
+permalink: administer/fabricpool-prepare.html 
+sidebar: sidebar 
+keywords: afx, fabricpool, requirements, limitations, licensing, prepare, prerequisites, storagegrid, ontap s3 
+summary: Vor der Konfiguration von FabricPool auf einem AFX-Speichersystem sollten Sie sich mit den Anforderungen, Einschränkungen und der ausgewählten Technologie vertraut machen. 
+---
+= Vorbereitung auf die Implementierung von FabricPool auf einem AFX-Speichersystem
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vor der Konfiguration von FabricPool auf einem AFX-Speichersystem sollten Sie sich mit den Anforderungen, Einschränkungen und der ausgewählten Technologie vertraut machen.
+
+
+
+[[requirements]]
+== Anforderungen
+
+Die wichtigsten Anforderungen bei der Bereitstellung von FabricPool auf einem AFX-Speicher umfassen Folgendes:
+
+* *ONTAP Version.* FabricPool wird auf AFX Speichersystemen mit ONTAP 9.19.1 P3 und späteren Versionen unterstützt. Die Funktion wird auf AFX Clustern, die von 9.18.1 aktualisiert wurden, aufgrund interner Änderungen bei der Speicheradressierung nicht unterstützt.
+* *Objektspeicher.* Ein NetApp StorageGRID oder ONTAP S3 Bucket ist erforderlich. Wie bei AFF und FAS Speicher mit Unified ONTAP muss der Bucket bereits vorhanden sein und auf Grundlage Ihrer Daten über ausreichende Kapazität verfügen. Ein CA-Zertifikat wird empfohlen, sofern die Zertifikatsprüfung nicht ausdrücklich deaktiviert ist.
+* *Netzwerkanbindung.* Alle Knoten im AFX Cluster müssen über eine Netzwerkverbindung zum Objektspeicher verfügen. Dies wird mithilfe eines Paars von Intercluster LIFs auf jedem Knoten implementiert, genau wie bei AFF und FAS Systemen.
+
+
+Die AFX und ONTAP FabricPool Implementierungen sind sehr ähnlich. Weitere Informationen finden Sie unter  https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html["Anforderungen für die Nutzung von ONTAP FabricPool"^].
+
+
+
+[[limitations-and-restrictions]]
+== Einschränkungen und Beschränkungen
+
+Die AFX FabricPool Implementierung ist in mehrfacher Hinsicht restriktiver als Unified ONTAP. Die folgenden Funktionen werden mit FabricPool auf AFX *nicht unterstützt*:
+
+* Die öffentlichen Cloud-Objektspeicher, die für die Verwendung mit ONTAP verfügbar sind, wie Amazon S3 und Google Cloud Storage, werden von AFX nicht unterstützt. Nur StorageGRID und ONTAP S3 werden unterstützt.
+* FabricPool Spiegelung.
+* Mehrere Objektspeicher-Buckets oder Bucket-Anbindung mit Volume-Granularität; pro AFX Cluster wird ein einzelner Bucket auf Cluster-Ebene verwendet.
+* Optimierte Volume-Verschiebung, optimierte SVM-Migration und optimierte Klon-Teilung.
+* SVM Migration und Migration von AFF oder FAS Systemen zu AFX Systemen.
+* Berichterstellung für inaktive Daten (IDR/AutoIDR).
+
+
+
+
+[[licensing]]
+== Lizenzierung
+
+Bei AFF und FAS Systemen ist eine kapazitätsbasierte FabricPool Lizenz erforderlich, wenn Daten in öffentliche Cloud-Objektspeicher von Drittanbietern tieringbezogen ausgelagert werden, bei Verwendung von StorageGRID oder ONTAP S3 ist jedoch keine zusätzliche Lizenz erforderlich. Da AFX nur StorageGRID und ONTAP S3 unterstützt, ist für AFX FabricPool keine FabricPool Kapazitätslizenz erforderlich.
+
+
+
+[[intercluster-lifs]]
+== Intercluster-LIFs
+
+Eine Intercluster LIF ist eine logische Netzwerkschnittstelle für die clusterübergreifende oder externe Kommunikation. Bei AFF und FAS Systemen benötigen die FabricPool HA-Paare zwei Intercluster LIFs pro Paar, um die Cloud-Ebene zu erreichen, und NetApp empfiehlt zusätzliche Intercluster LIFs für eine höhere Ausfallsicherheit. Bei AFX werden Intercluster LIFs auch für die Kommunikation mit dem Objektspeicher verwendet. Die Konnektivität wird im Rahmen der Erstellung der Objektspeicherkonfiguration über alle Nodes im Cluster hinweg validiert.
+
+
+
+[[related-information]]
+== Ähnliche Informationen
+
+* https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html["Anforderungen für die Nutzung von ONTAP FabricPool"^]
+* https://docs.netapp.com/us-en/ontap/peering/peering-basics-concept.html["Grundlagen des ONTAP Peerings"^]
+* https://docs.netapp.com/us-en/ontap/peering/configure-intercluster-lifs-share-data-ports-task.html["ONTAP Intercluster-LIFs auf gemeinsam genutzten Datenports konfigurieren"^]
+

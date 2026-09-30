@@ -1,0 +1,114 @@
+---
+permalink: administer/fabricpool-additional.html 
+sidebar: sidebar 
+keywords: afx, fabricpool, mirrors, commands, cli, encryption, nve 
+summary: Bei der Bereitstellung von FabricPool auf einem AFX Speichersystem sind einige zusätzliche Aspekte zu berücksichtigen. 
+---
+= Zusätzliche Überlegungen zur Verwendung von FabricPool auf AFX Speichersystemen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei der Bereitstellung von FabricPool auf einem AFX Speichersystem sind einige zusätzliche Aspekte zu berücksichtigen.
+
+
+
+[[fabricpool-mirrors]]
+== FabricPool Spiegel
+
+Ein FabricPool Mirror ist eine Hochverfügbarkeitskonfiguration für abgestufte Cloud-Daten, die durch das Anhängen eines zweiten Objektspeichers an ein einzelnes FabricPool erstellt wird. Sobald der zusätzliche Mirror konfiguriert ist, stuft ONTAP Daten synchron gleichzeitig auf beide Objektspeicher aus und stellt so sicher, dass die Daten bei einem Ausfall oder einer Störung des Objektspeichers zugänglich bleiben. Da AFX einen einzelnen Objektspeicher auf Cluster-Ebene konfiguriert, wird die *FabricPool Spiegelung in der ersten Version auf AFX nicht unterstützt.
+
+
+
+[[encryption]]
+== Verschlüsselung
+
+Die Verschlüsselung funktioniert mit FabricPool auf AFX ohne zusätzliche Konfiguration. Folgendes ist jedoch zu beachten:
+
+* AFX unterstützt NetApp Volume Encryption (NVE); NetApp Aggregate Encryption (NAE) wird nicht unterstützt.
+* NVE verwendet denselben Schlüssel für die Performance-Tier und die Kapazitäts-Tier.
+* Bei einer Neuschlüsselung werden alle Daten des Volumes, einschließlich der Cloud-Tier-Daten, mit dem neuen Schlüssel neu geschrieben.
+* Ein Rekey-Vorgang und Zero Copy Volume Move können nicht gleichzeitig ausgeführt werden.
+
+
+
+
+[[alternative-administrative-interfaces]]
+== Alternative Administrationsschnittstellen
+
+System Manager ist die primäre und empfohlene Verwaltungsschnittstelle für die Konfiguration und Verwaltung von FabricPool auf AFX. Diese Aufgaben können alternativ auch über die Befehlszeilenschnittstelle (CLI) oder die REST API ausgeführt werden.
+
+
+
+[[command-line-interface]]
+=== Befehlszeilenschnittstelle
+
+Die AFX CLI wurde neu gestaltet, um FabricPool zu unterstützen und sie an den Clusterfokus sowie das Fehlen von Aggregaten anzupassen.
+
+
+
+==== Objektspeicher Befehle auf Clusterebene
+
+Die folgenden Befehle, die auf dieser  `admin`Ebene verfügbar sind, werden zum Verwalten des Objektspeichers für Tiering-Daten verwendet:
+
+* *cluster object-store config create* definiert die Konfiguration für einen StorageGRID oder ONTAP S3 Objektspeicher und bindet ihn automatisch an alle flexaggrs im Cluster an. Dieser einzelne Befehl ersetzt den zweistufigen Prozess (config create + attach), der in unified ONTAP verwendet wird. Der Vorgang ist idempotent und kann erneut ausgeführt werden, wenn das anfängliche Anhängen fehlschlägt.
+* *cluster object-store config modify* Ändert die Attribute der Objektspeicherkonfiguration. Dieselben Attribute, die in unified ONTAP (Verbindungseinstellungen, Anmeldeinformationen, Zertifikatsoptionen) geändert werden können, können auch in AFX geändert werden.
+* *cluster object-store config rename* Benennt eine bestehende Objektspeicherkonfiguration um.
+* *cluster object-store config show* zeigt die aktuelle Objektspeicherkonfiguration einschließlich Verbindungsdetails und Anbindungsstatus an.
+* *cluster space show* Zeigt die Kapazitätsauslastung auf Clusterebene an, einschließlich der kumulierten Objektspeichernutzung. Die Ausgabe umfasst genutzte logische Kapazität, logisch referenzierte Kapazität, logisch nicht referenzierte Kapazität und den gesamten physisch genutzten Speicherplatz auf der Cloud-Ebene.
+
+
+
+
+==== Befehle für Tiering auf Volume-Ebene (Administrator- und erweiterter Modus):
+
+Alle ONTAP Befehle zum Erstellen und Ändern von Volumes, die das Tiering-Verhalten steuern, werden auf AFX mit derselben Syntax vollständig unterstützt. Dies umfasst die Standardbefehle volume create und volume modify mit den tieringbezogenen Parametern, einschließlich:
+
+* -tiering-policy
+* -tiering-minimum-cooling-days
+* -cloud-retrieval-policy
+* -is-cloud-write-enabled
+* -tiering-object-tags
+
+
+Standardmäßig ist für Volumes keine Tiering-Richtlinie aktiviert, daher muss Tiering für jedes Volume explizit aktiviert werden.
+
+
+
+[[rest-api]]
+=== REST-API
+
+Die FabricPool REST API Endpunkte auf AFX unterstützen die clusterweite Objektspeicherverwaltung und die Tiering-Konfiguration auf Volume-Ebene. Aggregatbasierte Endpunkte werden aufgrund der clusterweiten Architektur nicht unterstützt.
+
+Zu den mehreren unterstützten Endpunkten gehören:
+
+* GET und POST für `/cloud/targets`
+* GET und PATCH für `/cloud/targets/{uuid}`
+* GET und POST für `/storage/volumes`
+* GET- und PATCH-Anfragen für `/storage/volumes/{uuid}` mit den folgenden Tiering-Parametern:
++
+** Tiering-Richtlinie
+** tiering.min_cooling_days
+** Tiering.Objekt-Tags
+** Cloud Abrufrichtlinie
+** cloud_write_enabled
+
+
+
+
+Nicht unterstützte Endpunkte und Parameter umfassen:
+
+* LÖSCHEN `/cloud/targets/{uuid}`
+* `tiering.supported parameter` zu Volume-Vorgängen
+* Alle Vorgänge für `/storage/aggregates/{aggregate.uuid}/cloud-stores`
+
+
+
+
+[[related-information]]
+== Ähnliche Informationen
+
+* https://docs.netapp.com/us-en/ontap/fabricpool/commands-manage-aggregates-reference.html["ONTAP-Befehle für die Verwaltung von FabricPool-Ressourcen"^]
+
