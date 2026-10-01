@@ -4,7 +4,7 @@ permalink: protect-data/snapshot-replication.html
 keywords: afx, afx system, manage replication, manage snapshot replication 
 summary: Bei der Snapshot-Replikation handelt es sich um einen Prozess, bei dem Konsistenzgruppen auf Ihrem AFX-System an einen geografisch entfernten Standort kopiert werden.  Nach der ersten Replikation werden Änderungen an Konsistenzgruppen basierend auf einer Replikationsrichtlinie an den Remote-Standort kopiert.  Replizierte Konsistenzgruppen können zur Notfallwiederherstellung oder Datenmigration verwendet werden. 
 ---
-= Verwalten der Snapshot-Replikation auf einem AFX-Speichersystem
+= Workflow der Snapshot Replikation für AFX Speichersysteme
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
