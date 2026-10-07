@@ -22,6 +22,9 @@ Nachdem Sie die Switches installiert haben, sollten Sie die Hardware für Ihr AF
 
 CAUTION: Tragen Sie bei Installations- und Wartungsarbeiten stets ein geerdetes Armband, das mit einem geprüften Erdungspunkt verbunden ist. Die Nichtbeachtung der richtigen ESD-Schutzmaßnahmen kann zu dauerhaften Schäden an Controller-Knoten, Storage Shelves und Network Switches führen.
 
+
+NOTE: AFX unterstützt keine unterschiedlichen Laufwerksgrößen innerhalb eines einzelnen Storage Shelf. Alle Laufwerke innerhalb eines Shelf müssen die gleiche Größe haben. Vollständige Kompatibilitätsinformationen zu Konfigurationen von AFX Storage-Systemen finden sich in https://hwu.netapp.com["NetApp Hardware Universe"^].
+
 .Schritte
 . Installieren Sie die Schienensätze für Ihr Lagersystem und die Lagerregale nach Bedarf anhand der den Sätzen beiliegenden Anweisungen.
 . Installieren und sichern Sie Ihren Controller im Schrank oder Telco-Rack:

@@ -2332,4 +2332,5 @@
   <block id="5933d9a0441d1f9543a9286674ef11b5" category="doc">AFX S3 Bucket Verwaltungsoptionen</block>
   <block id="b8efc14136159d215438d8120125f40e" category="doc">Informationen zur Verwaltung von Daten im AFX Speichersystem</block>
   <block id="f71f016f7ff1ffe09fcc0bb6c3f2c337" category="doc">Workflow der Snapshot Replikation für AFX Speichersysteme</block>
+  <block id="320808ffdec6f54122d23d5939b758f2" category="admonition">AFX unterstützt keine unterschiedlichen Laufwerksgrößen innerhalb eines einzelnen Storage Shelf. Alle Laufwerke innerhalb eines Shelf müssen die gleiche Größe haben. Vollständige Kompatibilitätsinformationen zu Konfigurationen von AFX Storage-Systemen finden sich in<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>.</block>
 </blocks>
