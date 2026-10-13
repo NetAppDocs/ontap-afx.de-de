@@ -1392,7 +1392,6 @@
   <block id="51048cf34d4c82d7ae92b4e8b33ccc35" category="inline-link">Highlights der ONTAP 9-Version</block>
   <block id="858426bc9cba92152de24f66ed20c19b" category="list-text"><block ref="858426bc9cba92152de24f66ed20c19b" category="inline-link-rx"></block></block>
   <block id="a94bc3cecb41ed2607e30e4137f48423" category="summary">Die AFX REST-API-Referenz enthält Details zu allen API-Aufrufen.  Diese Dokumentation ist hilfreich bei der Entwicklung von Automatisierungsanwendungen.</block>
-  <block id="9d9d25e0255ab68716120450f05905de" category="doc">REST-API-Referenz für das AFX-Speichersystem</block>
   <block id="21ffe7e5e1175fdf48a61fcd9c71ff47" category="list-text">IP-Adresse oder FQDN des AFX-Cluster-Management-LIF</block>
   <block id="33eb1e63e3f6eb080297d3d1813fb0fc" category="list-text">Anmeldeinformationen für ein Clusteradministratorkonto</block>
   <block id="1aaa22d05f688af827774a38c8cc4a4f" category="list-text">Verbinden Sie Ihren Webbrowser mit der IP-Adresse oder dem Domänennamen der Clusterverwaltung:</block>
@@ -1403,7 +1402,6 @@
   <block id="8162203e3ec38c896e5f6d688115d731" category="inline-link">ONTAP REST API-Referenz</block>
   <block id="99ec9f1726a6519eae656fd574344d13" category="list-text"><block ref="99ec9f1726a6519eae656fd574344d13" category="inline-link-rx"></block></block>
   <block id="1b145f28c9e1e4044efc92e3e1567780" category="summary">Sie können einen einfachen Curl-Befehl ausführen, um mit der Verwendung der AFX REST-API zu beginnen und ihre Verfügbarkeit zu bestätigen.</block>
-  <block id="82c5461d1a57f884eb846ca365801e17" category="doc">Ihr erster REST-API-Aufruf für das AFX-Speichersystem</block>
   <block id="7013ac323311e3dab810263b1d637a84" category="paragraph">Zusätzlich zum Curl-Dienstprogramm auf Ihrer lokalen Workstation benötigen Sie Folgendes:</block>
   <block id="e57ddd021ae925c610e301862e495d93" category="list-text">IP-Adresse oder FQDN des AFX-Systemcluster-Management-LIF</block>
   <block id="6c62a36f8e262347f2ba79452265a020" category="list-text">ONTAP -Anmeldeinformationen für ein Konto mit Berechtigung zum Zugriff auf die ONTAP REST API</block>
@@ -2335,4 +2333,6 @@
   <block id="320808ffdec6f54122d23d5939b758f2" category="admonition">AFX unterstützt keine unterschiedlichen Laufwerksgrößen innerhalb eines einzelnen Storage Shelf. Alle Laufwerke innerhalb eines Shelf müssen die gleiche Größe haben. Vollständige Kompatibilitätsinformationen zu Konfigurationen von AFX Storage-Systemen finden sich in<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>.</block>
   <block id="df0a5fa7367c040e26263e7f6bd5d3bb" category="paragraph-title">Kann ich in meinen AFX Storage Shelves unterschiedliche Laufwerksgrößen verwenden?</block>
   <block id="a5ca85d705ee24e667c1206bd5c112b4" category="paragraph">Nein. AFX unterstützt keine unterschiedlichen Laufwerksgrößen innerhalb eines einzelnen Storage Shelf. Alle Laufwerke in einem Shelf müssen die gleiche Größe haben. Vollständige Kompatibilitätsinformationen zu AFX Storage-System Konfigurationen finden Sie unter<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block>.</block>
+  <block id="147085887c747ae25d5c898682fdb3b2" category="doc">Zugriff auf die REST-API-Dokumentation für AFX Storage-Systeme</block>
+  <block id="e0bb0202db2abc666440192da58b5166" category="doc">Ausführen Ihres ersten REST API-Aufrufs des AFX Storage-Systems</block>
 </blocks>
