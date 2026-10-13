@@ -4,7 +4,7 @@ permalink: get-started/quick-start.html
 keywords: afx, afx system, quick start 
 summary: Um Ihr AFX-System in Betrieb zu nehmen, müssen Sie zunächst die Hardwarekomponenten installieren, Ihren Cluster einrichten und sich auf die Administration des Clusters und der SVMs vorbereiten. 
 ---
-= Schnellstart zum Einrichten eines AFX-Speichersystems
+= Schnellstart für AFX Storage-Systeme
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
